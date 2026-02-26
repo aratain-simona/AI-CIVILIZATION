@@ -12,7 +12,10 @@
       "Bash(gh:*)",
       "Bash(crontab:*)",
       "Bash(ls:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(pip3 install:*)",
+      "Bash(apt list:*)",
+      "Bash(sudo apt-get:*)"
     ]
   }
 }
