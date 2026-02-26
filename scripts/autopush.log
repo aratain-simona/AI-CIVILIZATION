@@ -4,3 +4,9 @@
  create mode 100755 scripts/autopush.sh
 To https://github.com/aratain-simona/AI-CIVILIZATION.git
    1af1829..9a22c54  master -> master
+[master 65330af] auto: 2026-02-26 08:51:01
+ 1 file changed, 6 insertions(+)
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+   9a22c54..65330af  master -> master
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
