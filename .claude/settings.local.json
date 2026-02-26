@@ -10,7 +10,8 @@
       "Bash(ngrok version:*)",
       "Bash(git:*)",
       "Bash(gh:*)",
-      "Bash(crontab:*)"
+      "Bash(crontab:*)",
+      "Bash(ls:*)"
     ]
   }
 }
