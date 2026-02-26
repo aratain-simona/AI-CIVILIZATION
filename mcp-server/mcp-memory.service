@@ -1,0 +1,15 @@
+[Unit]
+Description=MCP Memory Server pro AI-CIVILIZATION
+After=network.target
+
+[Service]
+Type=simple
+User=ales
+WorkingDirectory=/home/ales/AI-CIVILIZATION/mcp-server
+EnvironmentFile=/home/ales/.env.mcp
+ExecStart=/usr/bin/python3 /home/ales/AI-CIVILIZATION/mcp-server/server.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

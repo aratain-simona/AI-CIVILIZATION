@@ -1,0 +1,13 @@
+[Unit]
+Description=Ngrok tunel pro MCP Memory Server
+After=network.target mcp-memory.service
+
+[Service]
+Type=simple
+User=ales
+ExecStart=/snap/bin/ngrok http 8000 --domain=silvana-unfidgeting-electrothermally.ngrok-free.dev
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
