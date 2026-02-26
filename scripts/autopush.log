@@ -1074,3 +1074,9 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[master 76bf899] auto: 2026-02-26 17:42:01
+ 1 file changed, 12 insertions(+)
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+   b86a8a6..76bf899  master -> master
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
