@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py user /home/ales/AI-CIVILIZATION/sofie_memory_full.txt sofie"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py stop /home/ales/AI-CIVILIZATION/sofie_memory_full.txt sofie"
+          }
+        ]
+      }
+    ]
+  }
+}

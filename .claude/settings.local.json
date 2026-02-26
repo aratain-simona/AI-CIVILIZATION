@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(chmod +x:*)",
+      "WebSearch",
+      "Bash(claude mcp:*)",
+      "Bash(npx:*)",
+      "Bash(node:*)",
+      "Bash(ngrok version:*)",
+      "Bash(git:*)",
+      "Bash(gh:*)"
+    ]
+  }
+}
