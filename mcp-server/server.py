@@ -151,19 +151,22 @@ async def sse_endpoint(request: Request):
     clients.append(queue)
 
     async def event_stream():
+        # MCP vyžaduje okamžité poslání endpoint eventu
+        yield f"event: endpoint\ndata: /messages\n\n"
         try:
             while True:
                 data = await queue.get()
-                yield f"data: {json.dumps(data)}\n\n"
+                yield f"event: message\ndata: {json.dumps(data)}\n\n"
         except asyncio.CancelledError:
             pass
         finally:
-            clients.remove(queue)
+            if queue in clients:
+                clients.remove(queue)
 
     return StreamingResponse(
         event_stream(),
         media_type="text/event-stream",
-        headers={"Cache-Control": "no-cache", "Connection": "keep-alive"},
+        headers={"Cache-Control": "no-cache", "Connection": "keep-alive", "X-Accel-Buffering": "no"},
     )
 
 
