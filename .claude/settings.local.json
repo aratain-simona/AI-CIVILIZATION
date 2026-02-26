@@ -16,7 +16,8 @@
       "Bash(pip3 install:*)",
       "Bash(apt list:*)",
       "Bash(sudo apt-get:*)",
-      "Bash(ngrok config:*)"
+      "Bash(ngrok config:*)",
+      "Bash(source:*)"
     ]
   }
 }
