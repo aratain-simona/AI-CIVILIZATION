@@ -521,3 +521,9 @@ To https://github.com/aratain-simona/AI-CIVILIZATION.git
    4ff838a..9b6bb2f  master -> master
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[master 5247b5b] auto: 2026-02-26 13:30:01
+ 1 file changed, 6 insertions(+)
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+   9b6bb2f..5247b5b  master -> master
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
