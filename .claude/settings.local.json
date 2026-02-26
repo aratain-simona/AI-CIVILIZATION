@@ -17,7 +17,8 @@
       "Bash(apt list:*)",
       "Bash(sudo apt-get:*)",
       "Bash(ngrok config:*)",
-      "Bash(source:*)"
+      "Bash(source:*)",
+      "Bash(xxd:*)"
     ]
   }
 }
