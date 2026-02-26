@@ -361,3 +361,8 @@ error: please commit or stash them.
 fatal: unable to access 'https://github.com/aratain-simona/AI-CIVILIZATION.git/': Could not resolve host: github.com
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[master e26f747] auto: 2026-02-26 12:09:01
+ 1 file changed, 5 insertions(+)
+fatal: unable to access 'https://github.com/aratain-simona/AI-CIVILIZATION.git/': Could not resolve host: github.com
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
