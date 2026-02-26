@@ -62,6 +62,7 @@ def put_file(path: str, content: str, sha: str, message: str) -> bool:
     if sha:
         payload["sha"] = sha
     r = httpx.put(url, headers=github_headers(), json=payload)
+    print(f"[PUT] {path} → {r.status_code}: {r.text[:200]}")
     return r.status_code in (200, 201)
 
 
