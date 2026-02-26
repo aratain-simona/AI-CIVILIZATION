@@ -405,3 +405,9 @@ To https://github.com/aratain-simona/AI-CIVILIZATION.git
 From https://github.com/aratain-simona/AI-CIVILIZATION
  * branch            master     -> FETCH_HEAD
 Already up to date.
+[master 82b4fa7] auto: 2026-02-26 12:33:02
+ 1 file changed, 3 insertions(+)
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+   25821a1..82b4fa7  master -> master
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
