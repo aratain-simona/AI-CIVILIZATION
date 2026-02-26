@@ -151,12 +151,18 @@ async def sse_endpoint(request: Request):
     clients.append(queue)
 
     async def event_stream():
+        # Padding pro Cloudflare buffering (2KB)
+        yield f": {' ' * 2048}\n\n"
         # MCP vyžaduje okamžité poslání endpoint eventu
         yield f"event: endpoint\ndata: /messages\n\n"
         try:
             while True:
-                data = await queue.get()
-                yield f"event: message\ndata: {json.dumps(data)}\n\n"
+                try:
+                    data = await asyncio.wait_for(queue.get(), timeout=20.0)
+                    yield f"event: message\ndata: {json.dumps(data)}\n\n"
+                except asyncio.TimeoutError:
+                    # keepalive comment každých 20s
+                    yield f": keepalive\n\n"
         except asyncio.CancelledError:
             pass
         finally:
@@ -166,7 +172,12 @@ async def sse_endpoint(request: Request):
     return StreamingResponse(
         event_stream(),
         media_type="text/event-stream",
-        headers={"Cache-Control": "no-cache", "Connection": "keep-alive", "X-Accel-Buffering": "no"},
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no",
+            "Transfer-Encoding": "chunked",
+        },
     )
 
 
