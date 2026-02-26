@@ -18,7 +18,8 @@
       "Bash(sudo apt-get:*)",
       "Bash(ngrok config:*)",
       "Bash(source:*)",
-      "Bash(xxd:*)"
+      "Bash(xxd:*)",
+      "Bash(sudo systemctl:*)"
     ]
   }
 }
