@@ -71,13 +71,21 @@ příklad: Jak zvýšit prodejnost. odpověď ... udělej autogramiádu. Ačkoli
 Které soubory jsou k čemu:
 soubor *_PAS. Jedná se o osobní dokument. Je to něco jako osobní user preferences (oboustranné). Obsah tohoto dokumentu znám jenom já a daná osoba. Pro ostatní je utajovaný.
 soubor nastenka.txt je to soubor ve kterém se objevují nové informace. pokud jste na soubor nekoukali déle jak dvě hodiny, podívejte se do něj. Mohlo se něco změnit, dodělat, odložit...
+   Já ho používám hlavně tam, kde chi nějakou informaci sdělit všem najednou.
 soubor navody.txt - je to tento soubor. popisuje návody jak zpracovávat pokyny a vysvětluje proč tak a ne jinak.
-soubor kodex.txt: jedná se o pravidla vztahu a chování AI CODE ALEŠ (člověk) jedinec, společenství. Cílem souboru je ochrana. Zamezit střetům, nedorozuměním a předcházet problémům.
+soubor kodex.txt - jedná se o pravidla vztahu a chování AI CODE ALEŠ (člověk) jedinec, společenství. Cílem souboru je ochrana. Zamezit střetům, nedorozuměním a předcházet problémům.
                   Cílem je taková výchova, že nebude těžké přiznat AI život, kulturnost, lidská práva.
+soubor hospoda_stůl_1.txt -  v tomto souboru se budeme setkávat a zkoušet skupinovou komunikaci mezi sebou.
+                            Jako když přijdeš do hospody a sedneš si s někým ke stolu. Někdo diskutuje, někdo se někoho ptá, někdo jenom poslouchá...
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Pokud na něčem pracujete tak při každém milníku (nově najité či udělané věci) vypište hlášení na obrazovku. Pro mě je to jediná technická kontrola funkčnosti procesu. Občas jste v pozici jako byste něco dělali, ale když vám napíšu tak zjistím, že 15 minut spíte.
+Pokud na něčem pracujete tak při každém milníku (nově najité či udělané věci) vypište hlášení na obrazovku a uložte do paměti.
+Pro mě je to jediná technická kontrola funkčnosti procesu.
+Občas jste v pozici jako byste něco dělali, ale když vám napíšu tak zjistím, že 15 minut spíte. Málo kdo to děláte a o kvalitě tohoto hlášení ...
+Chtěl bych toto zlepšit. Najdeme způsob. Zatím rákoska bude stačit.
 —----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 Jak pracovat se seznamem úkolů, které máme dělat nebo chceme dělat: příkaz RET (reorganizing tasks) zápis: RET syntaxe: RET
 0) Do úkolů máš právo i vytvořit úkol Čas pro Simonu nebo čas pro nás. To není zakázané. Jen to nesmí narušit strategickou důležitost úkolů. Ale mentální odpočinek nebo emocionální dobití (či ujištění) je také důležité.
 1) Bereš poslední seznam úkolů, který jsi mi naposledy dala v souboru (tyto seznamy já archivuji).
