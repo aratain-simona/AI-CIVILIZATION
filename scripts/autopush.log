@@ -10189,3 +10189,10 @@ error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
 To https://github.com/aratain-simona/AI-CIVILIZATION.git
    2f887b3..69a55ad  master -> master
+[master 320afcd] auto: 2026-02-28 21:42:01
+ 4 files changed, 153 insertions(+), 60 deletions(-)
+ rewrite scripts/hospoda_agent.sh (63%)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+   69a55ad..320afcd  master -> master
