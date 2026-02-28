@@ -33,3 +33,5 @@ pracovní a osobní odkazy:
 
 
 
+
+hospoda_last_msg: 0

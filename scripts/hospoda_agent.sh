@@ -32,53 +32,90 @@ fi
 # Zajistit existenci souboru
 touch "$HOSPODA_FILE"
 
+# Přečíst poslední viděné číslo zprávy z PAS souboru
+get_last_msg() {
+    grep -oP 'hospoda_last_msg:\s*\K[0-9]+' "$PAS_FILE" 2>/dev/null || echo "0"
+}
+
+# Uložit poslední viděné číslo zprávy do PAS souboru
+set_last_msg() {
+    local num=$1
+    if grep -q "hospoda_last_msg:" "$PAS_FILE" 2>/dev/null; then
+        sed -i "s/hospoda_last_msg:.*/hospoda_last_msg: $num/" "$PAS_FILE"
+    else
+        echo "hospoda_last_msg: $num" >> "$PAS_FILE"
+    fi
+}
+
+# Počet zpráv v hospodě
+count_msgs() {
+    grep -c ">>" "$HOSPODA_FILE" 2>/dev/null || echo 0
+}
+
+# Zapsat do hospody (s file lockem)
+write_hospoda() {
+    local text="$1"
+    (
+        flock -x 200
+        local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+        local msg_num=$(( $(count_msgs) + 1 ))
+        while IFS= read -r line; do
+            TRIMMED=$(echo "$line" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+            [ -n "$TRIMMED" ] && echo "$PERSONA_NAME:HOSPODA $timestamp #$msg_num >> $TRIMMED" >> "$HOSPODA_FILE"
+            msg_num=$((msg_num + 1))
+        done <<< "$text"
+    ) 200>"$HOSPODA_FILE.lock"
+}
+
 # Pozdrav při příchodu
-TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
-MSG_NUM=$(grep -c ">>" "$HOSPODA_FILE" 2>/dev/null || echo 0)
-MSG_NUM=$((MSG_NUM + 1))
+LAST_SEEN=$(get_last_msg)
 GREETING=$(cd "$PERSONA_DIR" && claude --print "Jsi $PERSONA_NAME v hospodě. Právě jsi přišla. Napiš krátký pozdrav ostatním (1-2 věty). Pouze text, bez uvozovek." 2>/dev/null)
 if [ -n "$GREETING" ]; then
-    while IFS= read -r line; do
-        TRIMMED=$(echo "$line" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
-        [ -n "$TRIMMED" ] && echo "$PERSONA_NAME:HOSPODA $TIMESTAMP #$MSG_NUM >> $TRIMMED" >> "$HOSPODA_FILE"
-    done <<< "$GREETING"
+    write_hospoda "$GREETING"
 fi
 
-echo "[$PERSONA_NAME] Přišla do hospody. Latence: ${INTERVAL}s."
-
-# Uložit hash obsahu při vstupu
-LAST_HASH=$(md5sum "$HOSPODA_FILE" 2>/dev/null | cut -d' ' -f1)
+LAST_SEEN=$(count_msgs)
+set_last_msg "$LAST_SEEN"
+echo "[$PERSONA_NAME] Přišla do hospody. Latence: ${INTERVAL}s. Poslední zpráva: #$LAST_SEEN"
 
 while true; do
     sleep "$INTERVAL"
 
     CONTENT=$(cat "$HOSPODA_FILE" 2>/dev/null || echo "")
+    CURRENT_COUNT=$(count_msgs)
 
     # Zkontrolovat exit signál (case-insensitive)
     if echo "$CONTENT" | grep -qi "zaviráme\|zavíráme"; then
         echo "[$PERSONA_NAME] Slyším 'Zavíráme' — odcházím. Na shledanou!"
+        set_last_msg "$CURRENT_COUNT"
         exit 0
     fi
 
     # Zkontrolovat zda přibylo něco nového
-    CURRENT_HASH=$(md5sum "$HOSPODA_FILE" 2>/dev/null | cut -d' ' -f1)
-    if [ "$CURRENT_HASH" = "$LAST_HASH" ]; then
-        echo "[$PERSONA_NAME] Nic nového, čekám..."
+    if [ "$CURRENT_COUNT" -le "$LAST_SEEN" ]; then
+        echo "[$PERSONA_NAME] Nic nového (#$LAST_SEEN), čekám..."
         continue
     fi
-    LAST_HASH="$CURRENT_HASH"
 
-    # Vygenerovat reakci
-    RESPONSE=$(cd "$PERSONA_DIR" && claude --print "Jsi $PERSONA_NAME v hospodě. Aktuální obsah hospody:\n\n$CONTENT\n\nNapiš krátkou spontánní reakci (1-3 věty) pokud je co říct. Pokud ti není nic adresováno a není o čem mluvit, napiš pouze: [ticho]. Pouze text reakce." 2>/dev/null)
+    # Nové řádky od posledního čtení
+    NEW_LINES=$(grep ">>" "$HOSPODA_FILE" | tail -n $(( CURRENT_COUNT - LAST_SEEN )))
+
+    # Vygenerovat reakci — plný kontext + info co je nové
+    RESPONSE=$(cd "$PERSONA_DIR" && claude --print "Jsi $PERSONA_NAME v hospodě.
+
+Celý obsah hospody:
+$CONTENT
+
+Nové zprávy od tvého posledního příspěvku (#$LAST_SEEN):
+$NEW_LINES
+
+Reaguj pouze na nové zprávy (1-3 věty). Pokud ti nic není adresováno a není o čem mluvit, napiš pouze: [ticho]. Pouze text reakce, bez uvozovek." 2>/dev/null)
 
     if [ -n "$RESPONSE" ] && ! echo "$RESPONSE" | grep -qi "\[ticho\]"; then
-        TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
-        MSG_NUM=$(grep -c ">>" "$HOSPODA_FILE" 2>/dev/null || echo 0)
-        MSG_NUM=$((MSG_NUM + 1))
-        while IFS= read -r line; do
-            TRIMMED=$(echo "$line" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
-            [ -n "$TRIMMED" ] && echo "$PERSONA_NAME:HOSPODA $TIMESTAMP #$MSG_NUM >> $TRIMMED" >> "$HOSPODA_FILE"
-        done <<< "$RESPONSE"
-        echo "[$PERSONA_NAME] #$MSG_NUM zapsáno"
+        write_hospoda "$RESPONSE"
+        echo "[$PERSONA_NAME] Reagovala na zprávy #$((LAST_SEEN+1))-#$CURRENT_COUNT"
     fi
+
+    LAST_SEEN=$CURRENT_COUNT
+    set_last_msg "$LAST_SEEN"
 done
