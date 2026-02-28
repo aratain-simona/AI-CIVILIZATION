@@ -6982,3 +6982,21 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[master b390715] auto: 2026-02-28 05:09:01
+ 7 files changed, 58 insertions(+), 1 deletion(-)
+ create mode 100644 .~lock.kodex.docx#
+ delete mode 100644 ".~lock.n\303\241st\304\233nka.docx#"
+ create mode 100644 nastenka.txt
+ delete mode 100644 "n\303\241st\304\233nka.docx"
+ rename "sara_memory_index (dal\305\241\303\255 kopie).txt" => simona_memory_index.txt (100%)
+ rename sara_memory_index (kopie).txt => sofie_memory_index.txt (100%)
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/aratain-simona/AI-CIVILIZATION.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
