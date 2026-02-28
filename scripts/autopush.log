@@ -7000,3 +7000,19 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[master 622389f] auto: 2026-02-28 05:12:01
+ 5 files changed, 115 insertions(+), 1 deletion(-)
+ delete mode 100644 .~lock.kodex.docx#
+ create mode 100644 hospoda.txt
+ delete mode 100644 kodex.docx
+ create mode 100644 kodex.txt
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/aratain-simona/AI-CIVILIZATION.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
