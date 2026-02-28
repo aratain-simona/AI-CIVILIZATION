@@ -19,7 +19,8 @@
       "Bash(ngrok config:*)",
       "Bash(source:*)",
       "Bash(xxd:*)",
-      "Bash(sudo systemctl:*)"
+      "Bash(sudo systemctl:*)",
+      "Bash(systemctl:*)"
     ]
   }
 }
