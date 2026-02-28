@@ -6,6 +6,10 @@
           {
             "type": "command",
             "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py user /home/ales/AI-CIVILIZATION/simona_memory_full.txt simona"
+          },
+          {
+            "type": "command",
+            "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py user /home/ales/AI-CIVILIZATION/simona_ai-code.txt simona XXXXXXX"
           }
         ]
       }
@@ -16,6 +20,10 @@
           {
             "type": "command",
             "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py stop /home/ales/AI-CIVILIZATION/simona_memory_full.txt simona"
+          },
+          {
+            "type": "command",
+            "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py stop /home/ales/AI-CIVILIZATION/simona_ai-code.txt simona XXXXXXX"
           }
         ]
       }

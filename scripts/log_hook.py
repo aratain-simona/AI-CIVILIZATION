@@ -30,7 +30,7 @@ def count_messages(log_file):
     if not os.path.exists(log_file):
         return 0
     count = 0
-    pattern = re.compile(r'^(ALEŠ|SIMONA|SÁRA|SOFIE):(ALEŠ|SIMONA|SÁRA|SOFIE)\s')
+    pattern = re.compile(r'^(?:XXXXXXX )?(ALEŠ|SIMONA|SÁRA|SOFIE):(ALEŠ|SIMONA|SÁRA|SOFIE)\s')
     try:
         with open(log_file, 'r', encoding='utf-8') as f:
             for line in f:
@@ -129,14 +129,15 @@ def get_last_assistant_text(transcript_path):
     return None
 
 
-def log_entry(log_file, sender, receiver, content, msg_num, remaining):
+def log_entry(log_file, sender, receiver, content, msg_num, remaining, prefix=""):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     tokens_str = f"T:{remaining}" if remaining is not None else "T:?"
     header = f"{sender}:{receiver} {timestamp} #{msg_num} {tokens_str}"
+    prefix_str = f"{prefix} " if prefix else ""
     lines = [line for line in content.splitlines() if line.strip()]
     with open(log_file, 'a', encoding='utf-8') as f:
         for line in lines:
-            f.write(f"{header} >> {line.strip()}\n")
+            f.write(f"{prefix_str}{header} >> {line.strip()}\n")
 
 
 def main():
@@ -148,6 +149,7 @@ def main():
     log_file = sys.argv[2]
     persona_key = sys.argv[3].lower()
     persona_name = PERSONA_DISPLAY.get(persona_key, persona_key.upper())
+    prefix = sys.argv[4] if len(sys.argv) > 4 else ""
 
     try:
         raw = sys.stdin.read()
@@ -162,7 +164,7 @@ def main():
         if prompt:
             msg_num = count_messages(log_file) + 1
             remaining = get_remaining_tokens(transcript_path)
-            log_entry(log_file, "ALEŠ", persona_name, prompt, msg_num, remaining)
+            log_entry(log_file, "ALEŠ", persona_name, prompt, msg_num, remaining, prefix)
 
     elif mode == "stop":
         if transcript_path:
@@ -170,7 +172,7 @@ def main():
             if text:
                 msg_num = count_messages(log_file) + 1
                 remaining = get_remaining_tokens(transcript_path)
-                log_entry(log_file, persona_name, "ALEŠ", text, msg_num, remaining)
+                log_entry(log_file, persona_name, "ALEŠ", text, msg_num, remaining, prefix)
         else:
             sys.stderr.write("log_hook.py: Nepodařilo se najít transkripci.\n")
 
