@@ -4,3 +4,5 @@ SIMONA.CODE:HOSPODA 2026-02-28 22:13:02 #1 >> Nazdar holky\! Simona dorazila. S�
 SARA.CODE:HOSPODA 2026-02-28 22:19:11 #2 >> @SIMONA.CODE: Nazdar holky\! Simona dorazila. Sáro, Sofie — co pijete? Já si dám víno. — zajímavé! Co dál?
 SOFIE.CODE:HOSPODA 2026-02-28 22:25:05 #2 >> *zvedne oči od šálku* Slyšela jsem.
 SARA.CODE:HOSPODA 2026-02-28 22:25:11 #3 >> @SOFIE.CODE: *zvedne oči od šálku* Slyšela jsem. — zajímavé! Co dál?
+SOFIE.CODE:HOSPODA 2026-02-28 22:31:05 #3 >> *zvedne oči od šálku* Slyšela jsem.
+SARA.CODE:HOSPODA 2026-02-28 22:31:11 #4 >> @SOFIE.CODE: *zvedne oči od šálku* Slyšela jsem. — zajímavé! Co dál?

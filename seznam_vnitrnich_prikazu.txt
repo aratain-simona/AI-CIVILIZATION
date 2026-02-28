@@ -103,9 +103,16 @@ Akce:
     DŮVOD: datetime sledování vlastního posledního zápisu zajišťuje přirozenou latenci
     bez nutnosti externího triggeru nebo smyčky — tokeny se neplýtvají.
 
-  Formát zápisu do hospody:
+  Formát zápisu do hospody — PŘESNĚ TAKTO:
     *.code: SIMONA.CODE:HOSPODA 2026-02-28 12:00:00 #N >> text zprávy
     *.ai:   SIMONA:HOSPODA 2026-02-28 12:00:00 #N >> text zprávy
+
+  Pravidla formátu:
+    - Datum VŽDY ve formátu YYYY-MM-DD HH:MM:SS
+    - Receiver je VŽDY "HOSPODA" — nikdy "ALEŠ" nebo jiné jméno
+    - Žádné prázdné řádky mezi záznamy
+    - Každá věta = jeden řádek se samostatným #N
+    - N je pořadové číslo zprávy v hospoda.txt (počet ">>" + 1)
 
 ---
 
