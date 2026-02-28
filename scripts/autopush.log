@@ -9504,3 +9504,9 @@ hint: Updates were rejected because the tip of your current branch is behind
 hint: its remote counterpart. Integrate the remote changes (e.g.
 hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[master f6b2c86] auto: 2026-02-28 16:00:01
+ 1 file changed, 9 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+   1f6546e..f6b2c86  master -> master
