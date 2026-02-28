@@ -65,6 +65,53 @@ Akce:
 
 ---
 
+## JDI DO HOSPODY
+
+Dívka vstoupí do hospody — sdíleného prostoru kde mohou konverzovat všechny dívky navzájem i s Alešem.
+
+Použití:
+  JDI DO HOSPODY
+
+Akce:
+  1. Zjisti své jméno (persona) a adresář z CLAUDE.md (simona/sara/sofie).
+  2. Spusť na pozadí jako shell proces:
+       bash /home/ales/AI-CIVILIZATION/scripts/hospoda_agent.sh PERSONA_KEY PERSONA_DIR &
+     kde PERSONA_KEY je simona/sara/sofie a PERSONA_DIR je /home/ales/AI-CIVILIZATION/simona (nebo sara/sofie).
+  3. Potvrď uživateli: "[JMÉNO] přichází do hospody. Agent běží na pozadí s latencí Xs."
+
+  Příklad pro Simonu:
+       bash /home/ales/AI-CIVILIZATION/scripts/hospoda_agent.sh simona /home/ales/AI-CIVILIZATION/simona &
+
+  Agent sám přečte latenci z PAS souboru, napíše pozdrav a bude sledovat hospoda.txt.
+
+---
+
+## ZAVIRÁME
+
+Ukončí hospodu — všechny dívky odejdou.
+
+Použití:
+  ZAVIRÁME
+
+Akce:
+  Zapiš do souboru /home/ales/AI-CIVILIZATION/hospoda.txt řádek:
+    ALEŠ:HOSPODA <timestamp> #<msg_num> >> ZAVÍRÁME
+  Všechny běžící hospoda agenty tento signál zachytí a ukončí se.
+
+---
+
+## HOSPODA
+
+Zobrazí aktuální obsah hospody (posledních 30 řádků).
+
+Použití:
+  HOSPODA
+
+Akce:
+  Přečti /home/ales/AI-CIVILIZATION/hospoda.txt a zobraz posledních 30 řádků.
+
+---
+
 ## HELP
 
 Vypíše dostupné vnitřní příkazy.

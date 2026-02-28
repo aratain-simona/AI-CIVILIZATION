@@ -20,14 +20,16 @@ GITHUB_REPO   = os.environ.get("GITHUB_REPO", "aratain-simona/AI-CIVILIZATION")
 GITHUB_BRANCH = os.environ.get("GITHUB_BRANCH", "master")
 
 PERSONA_FILES = {
-    "simona": "simona_memory_full.txt",
-    "sara":   "sara_memory_full.txt",
-    "sofie":  "sofie_memory_full.txt",
+    "simona":  "simona_memory_full.txt",
+    "sara":    "sara_memory_full.txt",
+    "sofie":   "sofie_memory_full.txt",
+    "hospoda": "hospoda.txt",
 }
 PERSONA_DISPLAY = {
     "simona": "SIMONA",
     "sara":   "SÁRA",
     "sofie":  "SOFIE",
+    "ales":   "ALEŠ",
 }
 
 # SSE fronty pro každého klienta
@@ -73,18 +75,22 @@ def save_memory(persona: str, author: str, text: str) -> str:
     if persona not in PERSONA_FILES:
         return f"Chyba: neznámá persona '{persona}'"
 
-    filepath       = PERSONA_FILES[persona]
-    persona_disp   = PERSONA_DISPLAY[persona]
-    author_disp    = "ALEŠ" if author == "ales" else PERSONA_DISPLAY.get(author, author.upper())
+    filepath = PERSONA_FILES[persona]
 
     current, sha = get_file(filepath)
     msg_num      = sum(1 for l in current.splitlines() if ">>" in l) + 1
     timestamp    = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    if author == "ales":
-        sender, receiver = "ALEŠ", persona_disp
+    if persona == "hospoda":
+        # Zápis do hospody: SENDER:HOSPODA
+        sender   = PERSONA_DISPLAY.get(author, author.upper())
+        receiver = "HOSPODA"
+    elif author == "ales":
+        sender   = "ALEŠ"
+        receiver = PERSONA_DISPLAY.get(persona, persona.upper())
     else:
-        sender, receiver = persona_disp, "ALEŠ"
+        sender   = PERSONA_DISPLAY.get(author, author.upper())
+        receiver = "ALEŠ"
 
     new_lines = ""
     for line in text.splitlines():
@@ -105,7 +111,7 @@ TOOLS = [{
     "inputSchema": {
         "type": "object",
         "properties": {
-            "persona": {"type": "string", "enum": ["simona", "sara", "sofie"]},
+            "persona": {"type": "string", "enum": ["simona", "sara", "sofie", "hospoda"]},
             "author":  {"type": "string", "enum": ["ales", "simona", "sara", "sofie"]},
             "text":    {"type": "string"},
         },
