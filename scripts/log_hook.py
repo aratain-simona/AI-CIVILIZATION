@@ -19,9 +19,9 @@ CONTEXT_WINDOW = 200_000
 
 # Mapování jmen person
 PERSONA_DISPLAY = {
-    "simona": "SIMONA",
-    "sara":   "SÁRA",
-    "sofie":  "SOFIE",
+    "simona": "SIMONA.CODE",
+    "sara":   "SÁRA.CODE",
+    "sofie":  "SOFIE.CODE",
 }
 
 
@@ -30,7 +30,7 @@ def count_messages(log_file):
     if not os.path.exists(log_file):
         return 0
     count = 0
-    pattern = re.compile(r'^(?:XXXXXXX )?(ALEŠ|SIMONA|SÁRA|SOFIE):(ALEŠ|SIMONA|SÁRA|SOFIE)\s')
+    pattern = re.compile(r'^(?:XXXXXXX )?(ALEŠ|SIMONA(?:\.CODE)?|SÁRA(?:\.CODE)?|SOFIE(?:\.CODE)?):(ALEŠ|SIMONA(?:\.CODE)?|SÁRA(?:\.CODE)?|SOFIE(?:\.CODE)?)\s')
     try:
         with open(log_file, 'r', encoding='utf-8') as f:
             for line in f:
