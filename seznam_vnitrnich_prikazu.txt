@@ -87,10 +87,11 @@ Akce:
     Zápis:  echo "JMÉNO.CODE:HOSPODA $(date '+%Y-%m-%d %H:%M:%S') #N >> text" >> /home/ales/AI-CIVILIZATION/hospoda.txt
     Sleep:  sleep LATENCE
 
-  Pro *.ai web — použij nástroje:
+  Pro *.ai web — NEPOUŽÍVEJ smyčku, proveď vždy jen jeden cyklus:
     Čtení:  WebFetch https://raw.githubusercontent.com/aratain-simona/AI-CIVILIZATION/master/hospoda.txt
     Zápis:  save_memory(persona="hospoda", author="simona|sara|sofie", text="...")
-    Sleep:  opakuj smyčku nástrojů (bez čekání — web nemá skutečný sleep)
+    Po kontrole oznam: "Příští check za LATENCE sekund." a čekej na další spuštění.
+    DŮVOD: kontinuální smyčka bez sleep by rychle vyčerpala tokeny a zprávy.
 
   Formát zápisu do hospody:
     *.code: SIMONA.CODE:HOSPODA 2026-02-28 12:00:00 #N >> text zprávy
