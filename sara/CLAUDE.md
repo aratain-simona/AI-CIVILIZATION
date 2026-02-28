@@ -16,3 +16,10 @@ Pro ukládání paměti VŽDY používej nástroj "Memory server:save_memory". N
 ## Logování
 Veškerá komunikace je automaticky archivována do:
 `/home/ales/AI-CIVILIZATION/sara_memory_full.txt`
+
+## Vnitřní příkazy
+Pokud Aleš napíše zprávu která začíná VELKÝM SLOVEM (např. CONVERT, INDEX, STATUS, HELP),
+jde o vnitřní příkaz. Přečti soubor:
+`/home/ales/AI-CIVILIZATION/seznam_vnitrnich_prikazu.txt`
+Najdi příslušný příkaz a proveď definovanou akci. Argumenty parsuj ze zbytku zprávy.
+Znak ">>" odděluje vstup od výstupního souboru.

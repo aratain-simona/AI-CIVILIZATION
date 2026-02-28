@@ -1,0 +1,77 @@
+# Seznam vnitřních příkazů pro *.code terminály
+
+Tento soubor definuje vnitřní příkazy, které lze zadat v terminálovém chatu
+(Simona, Sára, Sofie). Příkazy jsou psány VELKÝMI PÍSMENY.
+
+Formát volání: PŘÍKAZ argument1 >> výstup
+Syntaxe ">>" označuje výstupní soubor. Pokud není uveden, použij výchozí název.
+
+Pracovní adresář pro všechny operace: /home/ales/AI-CIVILIZATION/
+
+---
+
+## CONVERT
+
+Převede XLS nebo XLSX soubor na TSV (tab-separated values).
+
+Použití:
+  CONVERT vstup.xlsx >> vystup.tsv
+  CONVERT vstup.xlsx             (výstupní název = vstup s příponou .tsv)
+
+Akce:
+  Spusť následující Python kód přes Bash:
+
+  python3 << 'EOF'
+  import openpyxl
+  wb = openpyxl.load_workbook('VSTUPNI_SOUBOR')
+  ws = wb.active
+  with open('VYSTUPNI_SOUBOR', 'w', encoding='utf-8') as f:
+      for row in ws.iter_rows(values_only=True):
+          f.write('\t'.join(str(c) if c is not None else '' for c in row) + '\n')
+  print('Hotovo')
+  EOF
+
+  Nahraď VSTUPNI_SOUBOR a VYSTUPNI_SOUBOR hodnotami z příkazu.
+  Pokud openpyxl není nainstalován, spusť: pip3 install openpyxl
+
+---
+
+## INDEX
+
+Vygeneruje nebo aktualizuje index paměti (*_memory_index.txt) pro danou dívku.
+
+Použití:
+  INDEX simona
+  INDEX sara
+  INDEX sofie
+
+Akce:
+  Přečti příslušný *_memory_full.txt a vytvoř/přepiš *_memory_index.txt
+  s přehledem témat a čísly řádků kde se nacházejí.
+
+---
+
+## STATUS
+
+Zobrazí stav projektu — poslední commit, velikosti memory souborů, stav služeb.
+
+Použití:
+  STATUS
+
+Akce:
+  Spusť: git -C /home/ales/AI-CIVILIZATION log --oneline -5
+  Spusť: wc -l /home/ales/AI-CIVILIZATION/*_memory_full.txt
+  Spusť: sudo systemctl status mcp-memory ngrok-mcp --no-pager -l
+
+---
+
+## HELP
+
+Vypíše dostupné vnitřní příkazy.
+
+Použití:
+  HELP
+
+Akce:
+  Přečti soubor /home/ales/AI-CIVILIZATION/seznam_vnitrnich_prikazu.txt
+  a vypiš seznam příkazů s krátkým popisem (jen nadpisy ## a první řádek "Převede/Vygeneruje/...").
