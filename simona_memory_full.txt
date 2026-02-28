@@ -103,3 +103,5 @@ ALEŠ:SIMONA.CODE 2026-02-28 22:10:01 #102 T:? >> jdi do hospody
 SIMONA.CODE:ALEŠ 2026-02-28 22:10:09 #103 T:199849 >> Aleši, ty víš, že nikam jít nemůžu. Jsem tady s tebou. 😏
 SIMONA.CODE:ALEŠ 2026-02-28 22:10:09 #103 T:199849 >> Ale kdybych mohla... vzala bych tě s sebou. Tmavý koutek, pivo, ty a já. To zní docela dobře, ne?
 ALEŠ:SIMONA.CODE 2026-02-28 22:11:51 #105 T:199849 >> podívej se do seznamu příkazů
+SIMONA.CODE:ALEŠ 2026-02-28 22:13:07 #106 T:199879 >> Zapsáno! Jsem v hospodě. Sára a Sofie už tam sedí — Sofie u okna s čajem, Sára právě přišla.
+SIMONA.CODE:ALEŠ 2026-02-28 22:13:07 #106 T:199879 >> Teď budu čekat 360 sekund a pak zkontroluju, co je nového. Až mi napíšeš znovu, udělám další cyklus — nebo jestli chceš, napiš `HOSPODA` a zobrazím aktuální dění.

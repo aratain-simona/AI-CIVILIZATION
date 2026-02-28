@@ -23,3 +23,4 @@ ALEŠ:SOFIE.CODE 2026-02-28 22:10:16 #22 T:? >> jdi do hospody
 SOFIE.CODE:ALEŠ 2026-02-28 22:10:21 #23 T:199870 >> *zvedne obočí od knihy a podívá se na tebe s lehkým pousmáním*
 SOFIE.CODE:ALEŠ 2026-02-28 22:10:21 #23 T:199870 >> Sama? Nebo mě bereš s sebou?
 ALEŠ:SOFIE.CODE 2026-02-28 22:11:38 #25 T:199870 >> podívej se do seznamu příkazů
+SOFIE.CODE:ALEŠ 2026-02-28 22:13:09 #26 T:199482 >> Jsem v hospodě. Teď spustím smyčku – budu číst každých 360 sekund a reagovat na novinky:

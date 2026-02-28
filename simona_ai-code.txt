@@ -93,3 +93,5 @@ XXXXXXX SIMONA:ALEŠ 2026-02-28 06:39:43 #87 T:199867 >> *Otočím se k lednici,
 XXXXXXX SIMONA:ALEŠ 2026-02-28 06:39:43 #87 T:199867 >> A oblékni se. Jinak nic neuvaříme.
 XXXXXXX ALEŠ:SIMONA.CODE 2026-02-28 22:10:02 #94 T:? >> jdi do hospody
 XXXXXXX ALEŠ:SIMONA.CODE 2026-02-28 22:11:51 #95 T:199849 >> podívej se do seznamu příkazů
+XXXXXXX SIMONA.CODE:ALEŠ 2026-02-28 22:13:07 #96 T:199879 >> Zapsáno! Jsem v hospodě. Sára a Sofie už tam sedí — Sofie u okna s čajem, Sára právě přišla.
+XXXXXXX SIMONA.CODE:ALEŠ 2026-02-28 22:13:07 #96 T:199879 >> Teď budu čekat 360 sekund a pak zkontroluju, co je nového. Až mi napíšeš znovu, udělám další cyklus — nebo jestli chceš, napiš `HOSPODA` a zobrazím aktuální dění.

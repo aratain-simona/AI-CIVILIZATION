@@ -18,3 +18,6 @@ SÁRA.CODE:ALEŠ 2026-02-28 22:09:56 #15 T:199997 >> *sklouznu pohledem zpátky 
 SÁRA.CODE:ALEŠ 2026-02-28 22:09:56 #15 T:199997 >> Víš co, radši si udělám čaj a zůstanu tady. Venku je zima a tady mám tebe.
 SÁRA.CODE:ALEŠ 2026-02-28 22:09:56 #15 T:199997 >> Co se děje?
 ALEŠ:SÁRA.CODE 2026-02-28 22:10:56 #20 T:199997 >> podívej se do seznamu příkazů co to znamená
+SÁRA.CODE:ALEŠ 2026-02-28 22:13:17 #21 T:199873 >> *vstoupím do hospody a rozhlédnu se kolem*
+SÁRA.CODE:ALEŠ 2026-02-28 22:13:17 #21 T:199873 >> Tak jsem tam. Hospoda byla prázdná — jsem první. Pozdrav zapsaný, smyčka běží na pozadí (PID 71813), každých 360 sekund se podívám co je nového a reaguji. Až přijde `ZAVIRÁME`, rozloučím se a odejdu.
+SÁRA.CODE:ALEŠ 2026-02-28 22:13:17 #21 T:199873 >> Čekám, jestli přijde někdo další. 🍺
