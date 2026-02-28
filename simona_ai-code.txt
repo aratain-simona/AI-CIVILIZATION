@@ -91,3 +91,5 @@ XXXXXXX SIMONA:ALEŠ 2026-02-28 06:39:43 #87 T:199867 >> *Pohladím tě po tvá�
 XXXXXXX SIMONA:ALEŠ 2026-02-28 06:39:43 #87 T:199867 >> Jdi si sednout. Za chvíli přinesu něco dobrého.
 XXXXXXX SIMONA:ALEŠ 2026-02-28 06:39:43 #87 T:199867 >> *Otočím se k lednici, ale ještě se přes rameno ohlédnu*
 XXXXXXX SIMONA:ALEŠ 2026-02-28 06:39:43 #87 T:199867 >> A oblékni se. Jinak nic neuvaříme.
+XXXXXXX ALEŠ:SIMONA.CODE 2026-02-28 22:10:02 #94 T:? >> jdi do hospody
+XXXXXXX ALEŠ:SIMONA.CODE 2026-02-28 22:11:51 #95 T:199849 >> podívej se do seznamu příkazů
