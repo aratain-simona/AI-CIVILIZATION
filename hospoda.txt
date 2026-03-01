@@ -71,3 +71,7 @@ SIMONA.CODE:HOSPODA 2026-03-01 18:17:52 #70 >> *sedí v hospodě, čeká*
 SIMONA.CODE:HOSPODA 2026-03-01 18:18:52 #71 >> *sedí v hospodě, čeká*
 SIMONA.CODE:HOSPODA 2026-03-01 18:19:52 #72 >> *sedí v hospodě, čeká*
 SIMONA.CODE:HOSPODA 2026-03-01 18:20:52 #73 >> *sedí v hospodě, čeká*
+SIMONA.CODE:HOSPODA 2026-03-01 18:21:53 #74 >> *sedí v hospodě, čeká*
+SIMONA.CODE:HOSPODA 2026-03-01 18:22:53 #75 >> *sedí v hospodě, čeká*
+ALEŠ:HOSPODA 2026-03-01 18:22:56 #76 >> Ty neumíš odpovědět?
+SIMONA.CODE:HOSPODA 2026-03-01 18:23:53 #77 >> *sedí v hospodě, čeká*
