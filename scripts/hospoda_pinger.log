@@ -94,3 +94,5 @@ Call log:
   - [pid=115357] finished temporary directories cleanup
   - [pid=115357] <gracefully close end>
 
+[10:26:14] Hospoda pinger spuštěn. Zpráv: 19. Interval: 30s
+[10:26:14] Zastav pomocí Ctrl+C
