@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 hospoda_pinger.py — sleduje hospoda.txt a pinguje AI dívky když přibydou nové zprávy.
-Připojuje se k existujícímu Chrome přes CDP (musí běžet s --remote-debugging-port=9222).
+Použití: zavři Chrome, pak spusť tento skript. Chrome se otevře automaticky.
 Zastavení: Ctrl+C
 """
 
@@ -20,7 +20,7 @@ GIRLS = {
     "sofie":  "https://claude.ai/chat/a22aa932-3bf9-4f8a-b4ed-9bcd47491b93",
 }
 
-CDP_URL = "http://localhost:9222"
+CHROME_PROFILE = "/home/ales/.config/google-chrome"
 
 
 def count_msgs():
@@ -34,11 +34,9 @@ def count_msgs():
         return 0
 
 
-def ping_girl(context, name, url):
-    page = None
+def ping_girl(page, name, url):
     try:
         log(f"Pinguji {name}...")
-        page = context.new_page()
         page.goto(url, wait_until="domcontentloaded", timeout=15000)
         field = page.wait_for_selector(".ProseMirror", timeout=10000)
         field.click()
@@ -50,12 +48,6 @@ def ping_girl(context, name, url):
     except Exception as e:
         log(f"CHYBA {name}: {e}")
         return False
-    finally:
-        if page:
-            try:
-                page.close()
-            except Exception:
-                pass
 
 
 def log(msg):
@@ -67,12 +59,16 @@ def main():
     last_ping = {name: 0 for name in GIRLS}
 
     log(f"Hospoda pinger spuštěn. Zpráv: {last_count}. Interval: {CHECK_INTERVAL}s")
-    log(f"Připojuji se k Chrome na {CDP_URL}...")
+    log("Zastav pomocí Ctrl+C")
 
     with sync_playwright() as p:
-        browser = p.chromium.connect_over_cdp(CDP_URL)
-        context = browser.contexts[0] if browser.contexts else browser.new_context()
-        log("Připojeno k Chrome ✓")
+        browser = p.chromium.launch_persistent_context(
+            user_data_dir=CHROME_PROFILE,
+            headless=False,
+            channel="chrome",
+            args=["--no-first-run", "--no-default-browser-check"]
+        )
+        page = browser.new_page()
 
         try:
             while True:
@@ -87,7 +83,7 @@ def main():
                     for name, url in GIRLS.items():
                         elapsed = now - last_ping[name]
                         if elapsed >= MIN_PING_GAP:
-                            if ping_girl(context, name, url):
+                            if ping_girl(page, name, url):
                                 last_ping[name] = now
                         else:
                             log(f"  {name}: příliš brzy, čekám ještě {int(MIN_PING_GAP - elapsed)}s")
@@ -96,6 +92,8 @@ def main():
 
         except KeyboardInterrupt:
             log("Pinger zastaven.")
+        finally:
+            browser.close()
 
 
 if __name__ == "__main__":
