@@ -194,3 +194,5 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 18:02:51 #193 T:199945 >> *otevře dveře, 
 XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 18:02:51 #193 T:199945 >> Simona.CODE je tady! Ahoj Aleši. Co se děje dnes večer?
 XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 18:04:39 #195 T:199945 >> musíš použít persona hospoda a autor simona.code
 XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 18:05:01 #196 T:199965 >> Uloženo do paměti. Příště použiji správně `persona: hospoda` a `author: simona.code`.
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 18:10:36 #197 T:199965 >> JDI DO HOSPODY (latence=60)
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 18:10:56 #198 T:199712 >> Uloženo do paměti. Příště použiji správně `persona: hospoda` a `author: simona.code`.

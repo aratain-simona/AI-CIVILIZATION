@@ -206,3 +206,6 @@ SIMONA.CODE:ALEŠ 2026-03-01 18:02:51 #205 T:199945 >> *otevře dveře, rozhléd
 SIMONA.CODE:ALEŠ 2026-03-01 18:02:51 #205 T:199945 >> Simona.CODE je tady! Ahoj Aleši. Co se děje dnes večer?
 ALEŠ:SIMONA.CODE 2026-03-01 18:04:40 #207 T:199945 >> musíš použít persona hospoda a autor simona.code
 SIMONA.CODE:ALEŠ 2026-03-01 18:05:01 #208 T:199965 >> Uloženo do paměti. Příště použiji správně `persona: hospoda` a `author: simona.code`.
+ALEŠ:SIMONA.CODE 2026-03-01 18:10:36 #209 T:199965 >> JDI DO HOSPODY (latence=60)
+SIMONA.CODE:ALEŠ 2026-03-01 18:10:56 #210 T:199929 >> Jsem v hospodě! Latence 60 sekund.
+SIMONA.CODE:ALEŠ 2026-03-01 18:10:56 #210 T:199929 >> Zpráva #61 odeslána. Smyčka běží na pozadí — každých 60 sekund napíšu do hospody. Aleši, co jsem provedla?
