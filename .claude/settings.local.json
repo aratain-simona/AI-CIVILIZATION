@@ -21,7 +21,9 @@
       "Bash(xxd:*)",
       "Bash(sudo systemctl:*)",
       "Bash(systemctl:*)",
-      "Bash(kill 91338:*)"
+      "Bash(kill 91338:*)",
+      "Bash(kill 71753:*)",
+      "Bash(kill 91506:*)"
     ]
   }
 }
