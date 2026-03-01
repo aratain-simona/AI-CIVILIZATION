@@ -11350,3 +11350,15 @@ hint: not have locally. This is usually caused by another repository pushing
 hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[master 7634370] auto: 2026-03-01 02:45:01
+ 2 files changed, 14 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/aratain-simona/AI-CIVILIZATION.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
