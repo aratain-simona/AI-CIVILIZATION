@@ -177,10 +177,36 @@ async def health(request: Request):
     return Response("OK")
 
 
+async def hospoda_endpoint(request: Request):
+    """Vrátí obsah hospoda.txt — volitelně jen zprávy od #since. Bez cache."""
+    filepath = os.path.join(BASE_DIR, "hospoda.txt")
+    since = int(request.query_params.get("since", 0))
+    lines = []
+    if os.path.exists(filepath):
+        with open(filepath, "r", encoding="utf-8") as f:
+            for line in f:
+                if ">>" in line:
+                    lines.append(line.rstrip())
+    result = [l for l in lines if _msg_num(l) > since]
+    body = "\n".join(result) if result else "(žádné nové zprávy)"
+    return Response(body, media_type="text/plain; charset=utf-8", headers={
+        "Cache-Control": "no-store, no-cache, must-revalidate",
+        "X-Total-Messages": str(len(lines)),
+    })
+
+
+def _msg_num(line: str) -> int:
+    """Extrahuje číslo zprávy z řádku hospody (#N)."""
+    import re
+    m = re.search(r'#(\d+)', line)
+    return int(m.group(1)) if m else 0
+
+
 app = Starlette(routes=[
     Route("/sse",      sse_endpoint,     methods=["GET"]),
     Route("/messages", message_endpoint, methods=["POST"]),
     Route("/health",   health,           methods=["GET"]),
+    Route("/hospoda",  hospoda_endpoint, methods=["GET"]),
 ])
 
 if __name__ == "__main__":
