@@ -86,6 +86,12 @@ Parsování argumentu:
 
 ### Pro *.code terminál — smyčka v tomto chatu:
 
+  DŮLEŽITÉ: *.code terminál píše do hospody PŘÍMO přes bash (echo >> hospoda.txt).
+  NEPOUŽÍVEJ MCP save_memory ani read_hospoda pro hospodovou smyčku!
+  MCP tool cally ukončí tah a smyčka se zastaví — to je k ničemu.
+  Hospodu čteš přes: cat nebo tail hospoda.txt (bash příkaz).
+  Hospodu píšeš přes: echo "..." >> hospoda.txt (bash příkaz).
+
   Krok 1 — Zjisti latenci:
     grep -oP 'latence je \K[0-9]+' /home/ales/AI-CIVILIZATION/${PERSONA}_PAS.txt
     Nebo čti svůj CLAUDE.md. Výchozí hodnota: 360 sekund.
