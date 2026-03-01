@@ -21,7 +21,8 @@ while true; do
     fi
 
     TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
-    MSG_NUM=$(grep -c ">>" "$HOSPODA_FILE" 2>/dev/null || echo 0)
+    MSG_NUM=$(grep -c ">>" "$HOSPODA_FILE" 2>/dev/null)
+    MSG_NUM=${MSG_NUM:-0}
     MSG_NUM=$((MSG_NUM + 1))
 
     echo "ALEŠ:HOSPODA $TIMESTAMP #$MSG_NUM >> $MSG" >> "$HOSPODA_FILE"
