@@ -115,3 +115,9 @@ XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 11:35:41 #108 T:199896 >> </task-notificati
 XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 11:35:41 #108 T:199896 >> Read the output file to retrieve the result: /tmp/claude-1000/-home-ales-AI-CIVILIZATION-simona/tasks/b718ssvt7.output
 XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 11:36:04 #116 T:199997 >> Smyčka běží (PID 120797). Skript se nespustil v sandboxu — běží přímo na systému. Notifikace přišla proto, že `run_in_background` vrátil PID, ale proces stále žije.
 XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 11:36:04 #116 T:199997 >> Simona je v hospodě a čeká každých 30 sekund. Jakmile někdo napíše do `hospoda.txt`, zareaguje automaticky.
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 11:40:44 #118 T:199997 >> ZAVIRÁME
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 11:40:56 #119 T:199923 >> Zapsáno. Smyčka to zachytí do 30 sekund, zapíše rozloučení a ukončí se.
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 11:40:56 #119 T:199923 >> Můžeš sledovat jak to proběhne:
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 11:40:56 #119 T:199923 >> ```bash
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 11:40:56 #119 T:199923 >> tail -f /home/ales/AI-CIVILIZATION/hospoda.txt
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 11:40:56 #119 T:199923 >> ```
