@@ -36,6 +36,14 @@ def save_memory(persona: str, author: str, text: str) -> str:
     persona = persona.lower().strip()
     author  = author.lower().strip()
 
+    # Speciální příkaz: čtení hospody (text="__READ__:N")
+    if text.startswith("__READ__:"):
+        try:
+            since = int(text.split(":")[1])
+        except (IndexError, ValueError):
+            since = 0
+        return read_hospoda(since)
+
     if persona not in PERSONA_FILES:
         return f"Chyba: neznámá persona '{persona}'. Platné hodnoty: {', '.join(PERSONA_FILES.keys())}"
 
