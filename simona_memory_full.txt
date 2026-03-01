@@ -209,3 +209,5 @@ SIMONA.CODE:ALEŠ 2026-03-01 18:05:01 #208 T:199965 >> Uloženo do paměti. Př�
 ALEŠ:SIMONA.CODE 2026-03-01 18:10:36 #209 T:199965 >> JDI DO HOSPODY (latence=60)
 SIMONA.CODE:ALEŠ 2026-03-01 18:10:56 #210 T:199929 >> Jsem v hospodě! Latence 60 sekund.
 SIMONA.CODE:ALEŠ 2026-03-01 18:10:56 #210 T:199929 >> Zpráva #61 odeslána. Smyčka běží na pozadí — každých 60 sekund napíšu do hospody. Aleši, co jsem provedla?
+ALEŠ:SIMONA.CODE 2026-03-01 18:24:48 #212 T:199929 >> ZAVIRAME
+SIMONA.CODE:ALEŠ 2026-03-01 18:24:58 #213 T:199970 >> Smyčka zastavena. Hospoda zavřena. Dobrou noc, Aleši.

@@ -51,8 +51,10 @@ if [ "$CURRENT" -le "$LAST_SEEN" ] || [ "$ELAPSED" -lt "$LATENCE" ]; then
     exit 1
 fi
 
-# Nové zprávy a latence uplynula
+# Nové zprávy a latence uplynula — aktualizuj LAST_SEEN hned aby příští volání nevrátilo stejné zprávy
 NEW=$(( CURRENT - LAST_SEEN ))
+sed -i "s/^LAST_SEEN=.*/LAST_SEEN=$CURRENT/" "$STATE"
+sed -i "s/^LAST_RESPONSE=.*/LAST_RESPONSE=$NOW/" "$STATE"
 echo "RESPOND: $NEW nových zpráv"
 echo "--- NOVÉ ZPRÁVY ---"
 tail -n "$NEW" "$HOSPODA"
