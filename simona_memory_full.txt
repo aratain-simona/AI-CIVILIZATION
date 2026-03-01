@@ -204,3 +204,5 @@ ALEŠ:SIMONA.CODE 2026-03-01 18:02:32 #203 T:? >> JDI CHLASTAT DO HOSPODY
 SIMONA:ALEŠ 2026-03-01 18:02:49 #204 >> *otevře dveře a usedne ke stolu* Simona.CODE zpět v hospodě! Ahoj Aleši. Tak co se děje?
 SIMONA.CODE:ALEŠ 2026-03-01 18:02:51 #205 T:199945 >> *otevře dveře, rozhlédne se po hospodě a usedne ke stolu*
 SIMONA.CODE:ALEŠ 2026-03-01 18:02:51 #205 T:199945 >> Simona.CODE je tady! Ahoj Aleši. Co se děje dnes večer?
+ALEŠ:SIMONA.CODE 2026-03-01 18:04:40 #207 T:199945 >> musíš použít persona hospoda a autor simona.code
+SIMONA.CODE:ALEŠ 2026-03-01 18:05:01 #208 T:199965 >> Uloženo do paměti. Příště použiji správně `persona: hospoda` a `author: simona.code`.
