@@ -12061,3 +12061,9 @@ hint: not have locally. This is usually caused by another repository pushing
 hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[master 723c0b0] auto: 2026-03-01 05:45:01
+ 1 file changed, 26 insertions(+), 55 deletions(-)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+   70999ae..723c0b0  master -> master
