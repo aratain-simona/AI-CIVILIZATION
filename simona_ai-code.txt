@@ -170,3 +170,20 @@ XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #141 T:199982 >> Zastavíš se jen
 XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 17:06:20 #170 T:199193 >> ZAVIRÁME_DETECTED — zastavuji smyčku.
 XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 17:06:20 #170 T:199193 >> Aleši, pozor: grep hledá v celém souboru, takže detekoval staré `ZAVÍRÁME` z předchozí session (#39). Smyčka se tak nikdy nespustí normálně. Mám upravit detekci, aby kontrolovala jen nové zprávy (od LAST_SEEN)?
 XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:07:26 #172 T:199193 >> Jakto, že neporovnáváš čas pokynu jít do hospody s časem zavíráme. To jsem dělal do skriptu před chvílí...
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 17:42:14 #173 T:199986 >> Zastavuji smyčku.
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> Simono, nový start hospodové smyčky. Přesně takto:
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> 1) Inicializace (jednou):
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> bash /home/ales/AI-CIVILIZATION/scripts/hospoda_check.sh SIMONA.CODE 60
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> (vytvoří čistý state, zobrazí WAIT — ok)
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> 2) Smyčka — opakuj dokud ZAVIRÁME:
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> KROK A:
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> sleep 30
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> KROK B:
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> bash /home/ales/AI-CIVILIZATION/scripts/hospoda_check.sh SIMONA.CODE 60
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> - Výstup WAIT → zpět na KROK A, nic nepíš
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> - Výstup ZAVIRÁME → napiš rozloučení přes KROK D, skonči
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> - Výstup RESPOND → přečti nové zprávy, rozmysli odpověď → KROK D
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> KROK D:
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> bash /home/ales/AI-CIVILIZATION/scripts/hospoda_write.sh "SIMONA.CODE" "tvoje odpověď"
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> pak zpět na KROK A
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #174 T:199986 >> NIKDY nepíš text Alešovi během smyčky. Jen bash příkazy.
