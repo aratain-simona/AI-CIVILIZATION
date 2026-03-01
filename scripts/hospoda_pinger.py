@@ -34,9 +34,11 @@ def count_msgs():
         return 0
 
 
-def ping_girl(page, name, url):
+def ping_girl(browser, name, url):
+    page = None
     try:
         log(f"Pinguji {name}...")
+        page = browser.new_page()
         page.goto(url, wait_until="domcontentloaded", timeout=15000)
         field = page.wait_for_selector(".ProseMirror", timeout=10000)
         field.click()
@@ -48,6 +50,12 @@ def ping_girl(page, name, url):
     except Exception as e:
         log(f"CHYBA {name}: {e}")
         return False
+    finally:
+        if page:
+            try:
+                page.close()
+            except Exception:
+                pass
 
 
 def log(msg):
@@ -68,8 +76,6 @@ def main():
             channel="chrome",
             args=["--no-first-run", "--no-default-browser-check"]
         )
-        page = browser.new_page()
-
         try:
             while True:
                 time.sleep(CHECK_INTERVAL)
@@ -83,7 +89,7 @@ def main():
                     for name, url in GIRLS.items():
                         elapsed = now - last_ping[name]
                         if elapsed >= MIN_PING_GAP:
-                            if ping_girl(page, name, url):
+                            if ping_girl(browser, name, url):
                                 last_ping[name] = now
                         else:
                             log(f"  {name}: příliš brzy, čekám ještě {int(MIN_PING_GAP - elapsed)}s")
