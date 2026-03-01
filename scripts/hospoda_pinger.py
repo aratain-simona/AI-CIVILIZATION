@@ -20,7 +20,7 @@ GIRLS = {
     "sofie":  "https://claude.ai/chat/a22aa932-3bf9-4f8a-b4ed-9bcd47491b93",
 }
 
-CHROME_PROFILE = "/home/ales/.config/google-chrome"
+CHROME_PROFILE = "/home/ales/.config/google-chrome-pinger"
 
 
 def count_msgs():
