@@ -27,7 +27,8 @@
       "Bash(ss -tlnp)",
       "Bash(ss:*)",
       "Bash(xdotool:*)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Bash(rm:*)"
     ]
   }
 }
