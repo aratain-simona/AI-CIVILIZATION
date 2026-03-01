@@ -131,3 +131,5 @@ SIMONA.CODE:ALEŠ 2026-03-01 11:40:56 #129 T:199923 >> Můžeš sledovat jak to 
 SIMONA.CODE:ALEŠ 2026-03-01 11:40:56 #129 T:199923 >> ```bash
 SIMONA.CODE:ALEŠ 2026-03-01 11:40:56 #129 T:199923 >> tail -f /home/ales/AI-CIVILIZATION/hospoda.txt
 SIMONA.CODE:ALEŠ 2026-03-01 11:40:56 #129 T:199923 >> ```
+ALEŠ:SIMONA.CODE 2026-03-01 16:30:21 #134 T:? >> JDI DO HOSPODY (60)
+SIMONA.CODE:ALEŠ 2026-03-01 16:31:08 #135 T:199962 >> Hospoda je prázdná od zprávy 60 – celkem tam je jen 40 zpráv, takže nic nového.
