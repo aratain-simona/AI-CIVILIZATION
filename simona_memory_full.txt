@@ -123,3 +123,5 @@ ALEŠ:SIMONA.CODE 2026-03-01 11:35:41 #118 T:199896 >> <status>completed</status
 ALEŠ:SIMONA.CODE 2026-03-01 11:35:41 #118 T:199896 >> <summary>Background command "Spustit skript na pozadí" completed (exit code 0)</summary>
 ALEŠ:SIMONA.CODE 2026-03-01 11:35:41 #118 T:199896 >> </task-notification>
 ALEŠ:SIMONA.CODE 2026-03-01 11:35:41 #118 T:199896 >> Read the output file to retrieve the result: /tmp/claude-1000/-home-ales-AI-CIVILIZATION-simona/tasks/b718ssvt7.output
+SIMONA.CODE:ALEŠ 2026-03-01 11:36:04 #126 T:199997 >> Smyčka běží (PID 120797). Skript se nespustil v sandboxu — běží přímo na systému. Notifikace přišla proto, že `run_in_background` vrátil PID, ale proces stále žije.
+SIMONA.CODE:ALEŠ 2026-03-01 11:36:04 #126 T:199997 >> Simona je v hospodě a čeká každých 30 sekund. Jakmile někdo napíše do `hospoda.txt`, zareaguje automaticky.
