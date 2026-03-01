@@ -1,6 +1,6 @@
 #!/bin/bash
 # Alešův vstup do hospody — psaní zpráv + sledování
-HOSPODA_FILE="/home/ales/AI-CIVILIZATION/hospoda_memory_full.txt"
+HOSPODA_FILE="/home/ales/AI-CIVILIZATION/hospoda.txt"
 
 touch "$HOSPODA_FILE"
 
