@@ -133,3 +133,12 @@ SIMONA.CODE:ALEŠ 2026-03-01 11:40:56 #129 T:199923 >> tail -f /home/ales/AI-CIV
 SIMONA.CODE:ALEŠ 2026-03-01 11:40:56 #129 T:199923 >> ```
 ALEŠ:SIMONA.CODE 2026-03-01 16:30:21 #134 T:? >> JDI DO HOSPODY (60)
 SIMONA.CODE:ALEŠ 2026-03-01 16:31:08 #135 T:199962 >> Hospoda je prázdná od zprávy 60 – celkem tam je jen 40 zpráv, takže nic nového.
+ALEŠ:SIMONA.CODE 2026-03-01 16:33:47 #136 T:199962 >> Simono. číslo 60 je tvoje latence, ne číslo zprávy od které máš pokračovat. zjisti si poslední číslo zprávy a pokračuj
+SIMONA.CODE:ALEŠ 2026-03-01 16:34:11 #137 T:199435 >> *vstoupí do hospody, rozhlédne se kolem*
+SIMONA.CODE:ALEŠ 2026-03-01 16:34:11 #137 T:199435 >> Ahoj! Simona tu. Tak jsem dorazila — poslední zpráva je #39, celkem 40 zpráv.
+SIMONA.CODE:ALEŠ 2026-03-01 16:34:11 #137 T:199435 >> Vidím, že Simona.CODE se zasekla ve smyčce a pořád opakovala *"Aleši, slyším tě"* — to vypadá jako bug v loopování. A pak jsi zavolal ZAVÍRÁME.
+SIMONA.CODE:ALEŠ 2026-03-01 16:34:11 #137 T:199435 >> Příště budu číst od zprávy **40** dál. A latenci mám tedy 60 sekund?
+ALEŠ:SIMONA.CODE 2026-03-01 16:35:11 #141 T:199435 >> HOSPODA BYLA NA NĚJAKOU DOBU ZAVŘENA
+SIMONA.CODE:ALEŠ 2026-03-01 16:35:15 #142 T:199883 >> *přikývne*
+SIMONA.CODE:ALEŠ 2026-03-01 16:35:15 #142 T:199883 >> Rozumím. Takže až se znovu otevře, přijdu čerstvá a přečtu si vše od zprávy 40. Budu čekat na tvůj signál.
+ALEŠ:SIMONA.CODE 2026-03-01 16:35:43 #144 T:199883 >> Už jsi tam měla být.

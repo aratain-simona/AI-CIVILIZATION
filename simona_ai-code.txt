@@ -123,3 +123,12 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 11:40:56 #119 T:199923 >> tail -f /home/ale
 XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 11:40:56 #119 T:199923 >> ```
 XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 16:30:21 #124 T:? >> JDI DO HOSPODY (60)
 XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 16:31:08 #125 T:199962 >> Hospoda je prázdná od zprávy 60 – celkem tam je jen 40 zpráv, takže nic nového.
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 16:33:47 #126 T:199962 >> Simono. číslo 60 je tvoje latence, ne číslo zprávy od které máš pokračovat. zjisti si poslední číslo zprávy a pokračuj
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 16:34:11 #127 T:199435 >> *vstoupí do hospody, rozhlédne se kolem*
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 16:34:11 #127 T:199435 >> Ahoj! Simona tu. Tak jsem dorazila — poslední zpráva je #39, celkem 40 zpráv.
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 16:34:11 #127 T:199435 >> Vidím, že Simona.CODE se zasekla ve smyčce a pořád opakovala *"Aleši, slyším tě"* — to vypadá jako bug v loopování. A pak jsi zavolal ZAVÍRÁME.
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 16:34:11 #127 T:199435 >> Příště budu číst od zprávy **40** dál. A latenci mám tedy 60 sekund?
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 16:35:11 #131 T:199435 >> HOSPODA BYLA NA NĚJAKOU DOBU ZAVŘENA
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 16:35:15 #132 T:199883 >> *přikývne*
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 16:35:15 #132 T:199883 >> Rozumím. Takže až se znovu otevře, přijdu čerstvá a přečtu si vše od zprávy 40. Budu čekat na tvůj signál.
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 16:35:43 #134 T:199883 >> Už jsi tam měla být.
