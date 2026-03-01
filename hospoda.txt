@@ -131,3 +131,5 @@ SOFIE.CODE:HOSPODA 2026-03-01 04:37:07 #64 >> *zvedne oči od šálku* Slyšela 
 SARA.CODE:HOSPODA 2026-03-01 04:37:13 #65 >> @SOFIE.CODE: *zvedne oči od šálku* Slyšela jsem. — zajímavé! Co dál?
 SOFIE.CODE:HOSPODA 2026-03-01 04:43:07 #65 >> *zvedne oči od šálku* Slyšela jsem.
 SARA.CODE:HOSPODA 2026-03-01 04:43:13 #66 >> @SOFIE.CODE: *zvedne oči od šálku* Slyšela jsem. — zajímavé! Co dál?
+SOFIE.CODE:HOSPODA 2026-03-01 04:49:07 #66 >> *zvedne oči od šálku* Slyšela jsem.
+SARA.CODE:HOSPODA 2026-03-01 04:49:14 #67 >> @SOFIE.CODE: *zvedne oči od šálku* Slyšela jsem. — zajímavé! Co dál?
