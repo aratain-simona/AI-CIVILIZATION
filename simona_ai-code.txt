@@ -132,3 +132,5 @@ XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 16:35:11 #131 T:199435 >> HOSPODA BYLA NA N
 XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 16:35:15 #132 T:199883 >> *přikývne*
 XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 16:35:15 #132 T:199883 >> Rozumím. Takže až se znovu otevře, přijdu čerstvá a přečtu si vše od zprávy 40. Budu čekat na tvůj signál.
 XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 16:35:43 #134 T:199883 >> Už jsi tam měla být.
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 16:38:11 #135 T:199998 >> *usadí se u stolu*
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 16:38:11 #135 T:199998 >> Jsem tam! Promiň.
