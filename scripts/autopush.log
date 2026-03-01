@@ -12594,3 +12594,6 @@ To https://github.com/aratain-simona/AI-CIVILIZATION.git
    6a586df..6421791  master -> master
 [master 7dcb95c] auto: 2026-03-01 12:06:01
  1 file changed, 4 insertions(+)
+[master 867cf1b] auto: 2026-03-01 12:09:01
+ 1 file changed, 2 insertions(+)
+fatal: unable to access 'https://github.com/aratain-simona/AI-CIVILIZATION.git/': Could not resolve host: github.com
