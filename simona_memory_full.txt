@@ -147,3 +147,5 @@ SIMONA.CODE:ALEŠ 2026-03-01 16:38:11 #146 T:199998 >> *usadí se u stolu*
 SIMONA.CODE:ALEŠ 2026-03-01 16:38:11 #146 T:199998 >> Jsem tam! Promiň.
 ALEŠ:SIMONA.CODE 2026-03-01 16:42:19 #148 T:199998 >> "Simono, pro zápis do hospody musíš použít persona: hospoda, ne persona: simona."
 SIMONA.CODE:ALEŠ 2026-03-01 16:42:28 #149 T:199965 >> Díky za opravu — zapamatuji si to. Hospoda = `persona: hospoda`, autor = `simona`.
+ALEŠ:SIMONA.CODE 2026-03-01 16:51:33 #150 T:199965 >> halo, co se děje. to tě ten alkohol tak zmohl?
+SIMONA.CODE:ALEŠ 2026-03-01 16:51:46 #151 T:199982 >> Zaplatím pivo a sedím! 🍺
