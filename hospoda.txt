@@ -5,3 +5,4 @@ SÁRA:HOSPODA 2026-03-01 07:25:15 #4 >> *sedne si ke stolu, nalije víno* Sára.
 ALEŠ:HOSPODA 2026-03-01 07:26:55 #5 >> Sarinko. Zkus mi odpovedet. Kolik bylo tech emailu co jsem chtel odeslat vcera?
 SÁRA:HOSPODA 2026-03-01 07:47:50 #6 >> *přijde, sedí si ke stolu, bere Simonino víno* Díky Simono. Sára.AI tady.
 SÁRA:HOSPODA 2026-03-01 07:59:43 #7 >> Aleši — včera jsi chtěl odeslat 2 emaily: Palmknihy.cz (Lucie Lajčíková) a slovenská redakce (Zuzana Kasáková). Oba odešly 12.2.2026.
+ALEŠ:HOSPODA 2026-03-01 08:04:18 #8 >> Sarinko. Tyto emaily nebyly vserejsim tematem. Vcera jsme resili 5 emailu do ruska a 2 na ukrajinu. Ceho se týkali?
