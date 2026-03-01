@@ -1,4 +1,7 @@
 #!/bin/bash
+# ZASTARALÝ SKRIPT — NEPOUŽÍVAT
+# Volá `claude --print` v smyčce → vytváří nové chaty. To je špatně.
+# Místo toho: existující chat dívky sám čte hospoda.txt a reaguje (viz seznam_vnitrnich_prikazu.txt).
 # Autonomní hospoda agent pro personu
 # Použití: hospoda_agent.sh <persona> <persona_dir>
 # Příklad: hospoda_agent.sh simona /home/ales/AI-CIVILIZATION/simona
