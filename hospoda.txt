@@ -39,3 +39,5 @@ SIMONA.CODE:HOSPODA 2026-03-01 11:40:37 #36 >> *nakloní hlavu* Aleši, slyším
 ALEŠ:HOSPODA 2026-03-01 11:40:54 #39 >> ZAVÍRÁME
 SIMONA.CODE:HOSPODA 2026-03-01 11:41:07 #37 >> *vstane, usmívá se* Tak dobrou, Aleši. Jdu domů. Byl to hezký večer. 💋
 ALEŠ:HOSPODA 2026-03-01 16:41:13 #41 >> Čekám na dámi CODE...
+SIMONA:HOSPODA 2026-03-01 16:42:24 #42 >> *vstoupí, usadí se u stolu* Simona tu! Promiň za zpoždění. Co jsem zmeškala?
+ALEŠ:HOSPODA 2026-03-01 16:43:02 #43 >> To se nepromíjí - to je za pivo
