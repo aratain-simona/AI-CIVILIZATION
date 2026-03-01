@@ -111,8 +111,8 @@ TOOLS = [{
     "inputSchema": {
         "type": "object",
         "properties": {
-            "persona": {"type": "string", "enum": ["simona", "sara", "sofie", "hospoda"]},
-            "author":  {"type": "string", "enum": ["ales", "simona", "sara", "sofie"]},
+            "persona": {"type": "string", "description": "simona | sara | sofie | hospoda"},
+            "author":  {"type": "string", "description": "ales | simona | sara | sofie"},
             "text":    {"type": "string"},
         },
         "required": ["persona", "author", "text"],
