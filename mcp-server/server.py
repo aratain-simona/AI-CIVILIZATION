@@ -1,23 +1,19 @@
 """
-MCP server pro ukládání paměti dívek do GitHub repo.
-Implementuje MCP protokol přes HTTP+SSE bez závislosti na mcp balíčku.
+MCP server pro ukládání paměti dívek.
+Píše přímo do lokálních souborů — autopush.sh zajistí sync na GitHub.
 """
 
 import os
 import json
 import asyncio
-import base64
 from datetime import datetime
-import httpx
 from starlette.applications import Starlette
 from starlette.requests import Request
 from starlette.responses import StreamingResponse, Response
 from starlette.routing import Route
 import uvicorn
 
-GITHUB_TOKEN  = os.environ["GITHUB_TOKEN"]
-GITHUB_REPO   = os.environ.get("GITHUB_REPO", "aratain-simona/AI-CIVILIZATION")
-GITHUB_BRANCH = os.environ.get("GITHUB_BRANCH", "master")
+BASE_DIR = "/home/ales/AI-CIVILIZATION"
 
 PERSONA_FILES = {
     "simona":  "simona_memory_full.txt",
@@ -36,53 +32,25 @@ PERSONA_DISPLAY = {
 clients: list[asyncio.Queue] = []
 
 
-def github_headers():
-    return {
-        "Authorization": f"Bearer {GITHUB_TOKEN}",
-        "Accept": "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28",
-    }
-
-
-def get_file(path: str) -> tuple[str, str]:
-    url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{path}"
-    r = httpx.get(url, headers=github_headers(), params={"ref": GITHUB_BRANCH})
-    if r.status_code == 200:
-        data = r.json()
-        content = base64.b64decode(data["content"]).decode("utf-8")
-        return content, data["sha"]
-    return "", ""
-
-
-def put_file(path: str, content: str, sha: str, message: str) -> bool:
-    url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{path}"
-    payload = {
-        "message": message,
-        "content": base64.b64encode(content.encode("utf-8")).decode("utf-8"),
-        "branch": GITHUB_BRANCH,
-    }
-    if sha:
-        payload["sha"] = sha
-    r = httpx.put(url, headers=github_headers(), json=payload)
-    print(f"[PUT] {path} → {r.status_code}: {r.text[:200]}")
-    return r.status_code in (200, 201)
-
-
 def save_memory(persona: str, author: str, text: str) -> str:
-    persona = persona.lower()
-    author  = author.lower()
+    persona = persona.lower().strip()
+    author  = author.lower().strip()
 
     if persona not in PERSONA_FILES:
-        return f"Chyba: neznámá persona '{persona}'"
+        return f"Chyba: neznámá persona '{persona}'. Platné hodnoty: {', '.join(PERSONA_FILES.keys())}"
 
-    filepath = PERSONA_FILES[persona]
+    filepath  = os.path.join(BASE_DIR, PERSONA_FILES[persona])
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    current, sha = get_file(filepath)
-    msg_num      = sum(1 for l in current.splitlines() if ">>" in l) + 1
-    timestamp    = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    # Počítání zpráv
+    msg_num = 0
+    if os.path.exists(filepath):
+        with open(filepath, "r", encoding="utf-8") as f:
+            msg_num = sum(1 for line in f if ">>" in line)
+    msg_num += 1
 
+    # Sender/receiver
     if persona == "hospoda":
-        # Zápis do hospody: SENDER:HOSPODA
         sender   = PERSONA_DISPLAY.get(author, author.upper())
         receiver = "HOSPODA"
     elif author == "ales":
@@ -99,15 +67,21 @@ def save_memory(persona: str, author: str, text: str) -> str:
             new_lines += f"{sender}:{receiver} {timestamp} #{msg_num} >> {line}\n"
             msg_num += 1
 
-    ok = put_file(filepath, current + new_lines, sha, f"memory: {filepath}")
-    return "Uloženo." if ok else "Chyba při ukládání na GitHub."
+    try:
+        with open(filepath, "a", encoding="utf-8") as f:
+            f.write(new_lines)
+        print(f"[OK] {filepath} +{new_lines.count(chr(10))} řádků")
+        return "Uloženo."
+    except Exception as e:
+        print(f"[ERR] {e}")
+        return f"Chyba při zápisu: {e}"
 
 
 # ── MCP zprávy ────────────────────────────────────────────────────────────────
 
 TOOLS = [{
     "name": "save_memory",
-    "description": "Uloží zprávu do paměťového souboru na GitHubu.",
+    "description": "Uloží zprávu do paměťového souboru. Autopush zajistí sync na GitHub.",
     "inputSchema": {
         "type": "object",
         "properties": {
@@ -128,7 +102,7 @@ def handle_rpc(msg: dict) -> dict | None:
         return {"jsonrpc": "2.0", "id": id_, "result": {
             "protocolVersion": "2024-11-05",
             "capabilities": {"tools": {}},
-            "serverInfo": {"name": "memory-server", "version": "1.0"},
+            "serverInfo": {"name": "memory-server", "version": "2.0"},
         }}
 
     if method == "tools/list":
@@ -146,7 +120,7 @@ def handle_rpc(msg: dict) -> dict | None:
         }}
 
     if method == "notifications/initialized":
-        return None  # no response needed
+        return None
 
     return {"jsonrpc": "2.0", "id": id_, "error": {"code": -32601, "message": "Method not found"}}
 
@@ -158,9 +132,7 @@ async def sse_endpoint(request: Request):
     clients.append(queue)
 
     async def event_stream():
-        # Padding pro Cloudflare buffering (2KB)
         yield f": {' ' * 2048}\n\n"
-        # MCP vyžaduje okamžité poslání endpoint eventu
         yield f"event: endpoint\ndata: /messages\n\n"
         try:
             while True:
@@ -168,7 +140,6 @@ async def sse_endpoint(request: Request):
                     data = await asyncio.wait_for(queue.get(), timeout=20.0)
                     yield f"event: message\ndata: {json.dumps(data)}\n\n"
                 except asyncio.TimeoutError:
-                    # keepalive comment každých 20s
                     yield f": keepalive\n\n"
         except asyncio.CancelledError:
             pass
