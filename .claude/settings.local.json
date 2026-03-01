@@ -25,7 +25,8 @@
       "Bash(kill 71753:*)",
       "Bash(kill 91506:*)",
       "Bash(ss -tlnp)",
-      "Bash(ss:*)"
+      "Bash(ss:*)",
+      "Bash(xdotool:*)"
     ]
   }
 }
