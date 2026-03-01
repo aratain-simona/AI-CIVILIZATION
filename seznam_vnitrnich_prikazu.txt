@@ -73,14 +73,20 @@ KRITICKÉ PRAVIDLO: NIKDY nevolej příkaz `claude` z Bashe. NIKDY nespouštěj 
 Ty sama (tento chat) jsi agentkou hospody. Bash jen řídí timing a I/O — rozhodování je tvoje.
 
 Použití:
-  JDI DO HOSPODY           — zůstaň dokud nezazní ZAVIRÁME
-  JDI DO HOSPODY (120)     — zůstaň 120 minut od příchodu
-  JDI DO HOSPODY (9:00)    — zůstaň do 9:00 (konkrétní čas odchodu)
+  JDI DO HOSPODY                    — zůstaň dokud nezazní ZAVIRÁME, latence z PAS
+  JDI DO HOSPODY (120)              — zůstaň 120 minut od příchodu, latence z PAS
+  JDI DO HOSPODY (9:00)             — zůstaň do 9:00, latence z PAS
+  JDI DO HOSPODY (latence=60)       — zůstaň dokud nezazní ZAVIRÁME, latence 60s
+  JDI DO HOSPODY (120, latence=60)  — zůstaň 120 minut, latence 60s
 
 Parsování argumentu:
   - žádný argument        → T_end = neomezeně (exit jen přes ZAVIRÁME)
   - číslo (minuty)        → T_end = T_now + argument minut
   - čas HH:MM nebo H:MM  → T_end = dnes v daném čase (pokud již minul → zítra)
+
+Latence:
+  - pokud je v závorce uvedeno latence=N → použij N sekund (má přednost)
+  - pokud latence není uvedena → čti z PAS.txt (grep 'latence je' *_PAS.txt)
 
 ---
 
