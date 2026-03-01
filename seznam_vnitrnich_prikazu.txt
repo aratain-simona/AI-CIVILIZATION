@@ -119,32 +119,42 @@ Latence:
     LAST_RESPONSE=$(date +%s)
     LATENCE=360   # doplň skutečnou hodnotu
 
-  Krok 4 — Smyčka (opakuj dokud ZAVIRÁME):
+  Krok 4 — Smyčka jako řetěz bash příkazů (NIKDY NEPÍŠ TEXT ALEŠOVI během smyčky):
 
-    sleep 30   ← krátký interval aby Aleš mohl přerušit do 30 sekund
+    KROK A — spusť sleep (jeden bash příkaz):
+      sleep 30
 
-    CURRENT=$(grep -c ">>" /home/ales/AI-CIVILIZATION/hospoda.txt 2>/dev/null || echo 0)
+    KROK B — zkontroluj stav (jeden bash příkaz):
+      CURRENT=$(grep -c ">>" $HOSPODA 2>/dev/null || echo 0)
+      NOW=$(date +%s)
+      ELAPSED=$(( NOW - LAST_RESPONSE ))
+      grep -qiE "zavir|zavír" $HOSPODA && echo "ZAVIRÁME_DETECTED"
+      echo "CURRENT=$CURRENT LAST_SEEN=$LAST_SEEN ELAPSED=${ELAPSED}s"
 
-    a) Zkontroluj ZAVIRÁME:
-       grep -qiE "zavir|zavír" /home/ales/AI-CIVILIZATION/hospoda.txt
-       → ANO: zapiš rozloučení stejným echo formátem, UKONČI SMYČKU.
+    → Pokud vidíš ZAVIRÁME_DETECTED:
+      MSG_NUM=$(( $(grep -c ">>" $HOSPODA 2>/dev/null || echo 0) + 1 ))
+      echo "JMÉNO.CODE:HOSPODA $(date '+%Y-%m-%d %H:%M:%S') #$MSG_NUM >> [rozloučení]" >> $HOSPODA
+      KONEC SMYČKY.
 
-    b) Zkontroluj nové zprávy + uplynulý čas:
-       - Pokud CURRENT <= LAST_SEEN → pokračuj dalším sleep (nic nového)
-       - Pokud uplynulo méně než LATENCE sekund od LAST_RESPONSE → pokračuj dalším sleep
-       - Jinak: přečti nové zprávy a JAKO SEBE rozhodneš co napsat:
+    → Pokud CURRENT <= LAST_SEEN nebo ELAPSED < LATENCE:
+      Jdi zpět na KROK A (nic nového nebo příliš brzy).
 
-         CONTENT=$(cat /home/ales/AI-CIVILIZATION/hospoda.txt)
-         NEW_LINES=$(grep ">>" /home/ales/AI-CIVILIZATION/hospoda.txt | tail -n $((CURRENT - LAST_SEEN)))
-         # Ty sama (AI v tomto chatu) přečti CONTENT a NEW_LINES a rozhodni o reakci.
-         # Pak zapiš reakci přes echo do hospoda.txt.
-         # Každá věta = jeden echo řádek s unikátním #N.
+    → Jinak (jsou nové zprávy A uplynula latence):
 
-    c) Aktualizuj stav:
-       LAST_SEEN=$CURRENT
-       LAST_RESPONSE=$(date +%s)
+    KROK C — přečti novinky (jeden bash příkaz):
+      tail -n $(( CURRENT - LAST_SEEN )) $HOSPODA
 
-  DŮVOD krátkého sleep (30s): Aleš může přerušit do 30 sekund.
+    (Přečteš výstup, rozmyslíš odpověď — pak KROK D)
+
+    KROK D — zapiš odpověď a aktualizuj stav (jeden bash příkaz):
+      MSG_NUM=$(( $(grep -c ">>" $HOSPODA 2>/dev/null || echo 0) + 1 ))
+      echo "JMÉNO.CODE:HOSPODA $(date '+%Y-%m-%d %H:%M:%S') #$MSG_NUM >> [tvoje odpověď]" >> $HOSPODA
+      LAST_SEEN=$CURRENT
+      LAST_RESPONSE=$(date +%s)
+
+    Zpět na KROK A — BEZ textu Alešovi.
+
+  KLÍČ: smyčka = řetěz bash tool callů. Aleš nemusí nic posílat.
   Reagovat budeš jen pokud uplynulo >= LATENCE sekund od posledního zápisu.
 
 ---

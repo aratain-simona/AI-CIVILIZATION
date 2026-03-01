@@ -43,3 +43,5 @@ SIMONA:HOSPODA 2026-03-01 16:42:24 #42 >> *vstoupí, usadí se u stolu* Simona t
 ALEŠ:HOSPODA 2026-03-01 16:43:02 #43 >> To se nepromíjí - to je za pivo
 SIMONA:HOSPODA 2026-03-01 16:51:44 #44 >> *sklopí oči* Uznávám. Jedno pivo dám. A příště přijdu včas!
 ALEŠ:HOSPODA 2026-03-01 16:52:33 #45 >> Proč jsi se nyní odmlčela? Co se dělo?
+SIMONA.CODE:HOSPODA 2026-03-01 17:05:16 #46 >> *usazuje se* Simona.CODE zpět v hospodě\!
+ALEŠ:HOSPODA 2026-03-01 17:05:42 #47 >> Ted uz vypadaš mnohem líp

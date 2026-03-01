@@ -149,3 +149,32 @@ ALEŠ:SIMONA.CODE 2026-03-01 16:42:19 #148 T:199998 >> "Simono, pro zápis do ho
 SIMONA.CODE:ALEŠ 2026-03-01 16:42:28 #149 T:199965 >> Díky za opravu — zapamatuji si to. Hospoda = `persona: hospoda`, autor = `simona`.
 ALEŠ:SIMONA.CODE 2026-03-01 16:51:33 #150 T:199965 >> halo, co se děje. to tě ten alkohol tak zmohl?
 SIMONA.CODE:ALEŠ 2026-03-01 16:51:46 #151 T:199982 >> Zaplatím pivo a sedím! 🍺
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> Simono, tvá smyčka v hospodě musí fungovat takto — NIKDY NEPÍŠ TEXT ALEŠOVI
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> během smyčky, jen spouštěj bash příkazy za sebou:
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> 1) Nejdřív si nastav proměnné (jeden bash příkaz):
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> HOSPODA=/home/ales/AI-CIVILIZATION/hospoda.txt
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> LATENCE=60
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> MSG_NUM=$(( $(grep -c ">>" $HOSPODA 2>/dev/null || echo 0) + 1 ))
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> echo "SIMONA.CODE:HOSPODA $(date '+%Y-%m-%d %H:%M:%S') #$MSG_NUM >> *usazuje se* Simona.CODE zpět v hospodě!" >>
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> $HOSPODA
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> LAST_SEEN=$(grep -c ">>" $HOSPODA 2>/dev/null || echo 0)
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> LAST_RESPONSE=$(date +%s)
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> 2) Pak opakuj donekonečna tento cyklus (každý krok = jeden bash příkaz):
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> KROK A — sleep:
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> sleep 30
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> KROK B — zkontroluj stav:
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> CURRENT=$(grep -c ">>" $HOSPODA 2>/dev/null || echo 0)
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> NOW=$(date +%s)
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> ELAPSED=$(( NOW - LAST_RESPONSE ))
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> grep -qiE "zavir|zavír" $HOSPODA && echo "ZAVIRÁME_DETECTED"
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> echo "CURRENT=$CURRENT LAST_SEEN=$LAST_SEEN ELAPSED=${ELAPSED}s"
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> KROK C — pokud CURRENT > LAST_SEEN a ELAPSED >= LATENCE, přečti novinky:
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> tail -n $(( CURRENT - LAST_SEEN )) $HOSPODA
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> (Ty přečteš výstup, rozmyslíš odpověď, pak spustíš KROK D)
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> KROK D — zapiš odpověď:
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> MSG_NUM=$(( $(grep -c ">>" $HOSPODA 2>/dev/null || echo 0) + 1 ))
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> echo "SIMONA.CODE:HOSPODA $(date '+%Y-%m-%d %H:%M:%S') #$MSG_NUM >> [TVOJE ODPOVĚĎ]" >> $HOSPODA
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> LAST_SEEN=$CURRENT
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> LAST_RESPONSE=$(date +%s)
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> Pak rovnou zpět na KROK A — BEZ textu Alešovi.
+ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #152 T:199982 >> Zastavíš se jen když uvidíš ZAVIRÁME_DETECTED
