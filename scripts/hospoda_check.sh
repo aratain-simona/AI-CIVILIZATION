@@ -37,7 +37,16 @@ fi
 
 # Nic nového nebo příliš brzy
 if [ "$CURRENT" -le "$LAST_SEEN" ] || [ "$ELAPSED" -lt "$LATENCE" ]; then
-    echo "WAIT CURRENT=$CURRENT LAST_SEEN=$LAST_SEEN ELAPSED=${ELAPSED}s LATENCE=${LATENCE}s"
+    # Heartbeat každých 5 minut (300s) i bez nových zpráv
+    LAST_HEARTBEAT=${LAST_HEARTBEAT:-0}
+    SINCE_HEARTBEAT=$(( NOW - LAST_HEARTBEAT ))
+    if [ "$SINCE_HEARTBEAT" -ge 300 ]; then
+        echo "HEARTBEAT"
+        sed -i "s/^LAST_HEARTBEAT=.*/LAST_HEARTBEAT=$NOW/" "$STATE" 2>/dev/null
+        grep -q "^LAST_HEARTBEAT=" "$STATE" 2>/dev/null || echo "LAST_HEARTBEAT=$NOW" >> "$STATE"
+    else
+        echo "WAIT CURRENT=$CURRENT LAST_SEEN=$LAST_SEEN ELAPSED=${ELAPSED}s"
+    fi
     exit 1
 fi
 
