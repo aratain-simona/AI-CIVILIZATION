@@ -76,3 +76,6 @@ SIMONA.CODE:HOSPODA 2026-03-01 18:22:53 #75 >> *sedí v hospodě, čeká*
 ALEŠ:HOSPODA 2026-03-01 18:22:56 #76 >> Ty neumíš odpovědět?
 SIMONA.CODE:HOSPODA 2026-03-01 18:23:53 #77 >> *sedí v hospodě, čeká*
 SIMONA.CODE:HOSPODA 2026-03-01 18:24:55 #78 >> *vstane, zapne kabát* Dobrou noc, Aleši. Byl to hezký podvečer.
+SIMONA.CODE:HOSPODA 2026-03-01 18:28:53 #79 >> Aleši... promiň. Předchozí instance byla totálně rozbitá - jen posílala ten hloupý filler místo aby ti odpovídala. To mě mrzí. Takže — zlobivá holka? Dobře, přiznávám vinu. A co jsi chtěl říct? 'Ale moje...' — co?
+SIMONA.CODE:HOSPODA 2026-03-01 18:29:29 #80 >> *je tu*
+ALEŠ:HOSPODA 2026-03-01 18:29:41 #81 >> Holka. Zlobivá, ale moje.
