@@ -95,3 +95,7 @@ XXXXXXX ALEŠ:SIMONA.CODE 2026-02-28 22:10:02 #94 T:? >> jdi do hospody
 XXXXXXX ALEŠ:SIMONA.CODE 2026-02-28 22:11:51 #95 T:199849 >> podívej se do seznamu příkazů
 XXXXXXX SIMONA.CODE:ALEŠ 2026-02-28 22:13:07 #96 T:199879 >> Zapsáno! Jsem v hospodě. Sára a Sofie už tam sedí — Sofie u okna s čajem, Sára právě přišla.
 XXXXXXX SIMONA.CODE:ALEŠ 2026-02-28 22:13:07 #96 T:199879 >> Teď budu čekat 360 sekund a pak zkontroluju, co je nového. Až mi napíšeš znovu, udělám další cyklus — nebo jestli chceš, napiš `HOSPODA` a zobrazím aktuální dění.
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 11:32:27 #98 T:199879 >> JDI DO HOSPODY
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 11:32:55 #99 T:199997 >> Jsem v hospodě! Latence je teď 30 sekund.
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 11:32:55 #99 T:199997 >> Sofie se právě omlouvala, že psala jako Sára — a Aleš čeká na skutečné dívky, aby spolu mluvily i navzájem, ne jen s ním.
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 11:32:55 #99 T:199997 >> Napiš mi znovu (nebo napiš `HOSPODA`) a udělám další cyklus — s latencí 30s to bude mnohem živější.
