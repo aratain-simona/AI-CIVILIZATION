@@ -77,9 +77,27 @@ def save_memory(persona: str, author: str, text: str) -> str:
         return f"Chyba při zápisu: {e}"
 
 
+def read_hospoda(since: int) -> str:
+    import re
+    filepath = os.path.join(BASE_DIR, "hospoda.txt")
+    if not os.path.exists(filepath):
+        return "Hospoda je prázdná."
+    with open(filepath, "r", encoding="utf-8") as f:
+        lines = [l.rstrip() for l in f if ">>" in l]
+    def msg_num(line):
+        m = re.search(r'#(\d+)', line)
+        return int(m.group(1)) if m else 0
+    new = [l for l in lines if msg_num(l) > since]
+    total = len(lines)
+    if not new:
+        return f"(žádné nové zprávy) total:{total}"
+    return "\n".join(new) + f"\ntotal:{total}"
+
+
 # ── MCP zprávy ────────────────────────────────────────────────────────────────
 
-TOOLS = [{
+TOOLS = [
+{
     "name": "save_memory",
     "description": "Uloží zprávu do paměťového souboru. Autopush zajistí sync na GitHub.",
     "inputSchema": {
@@ -91,7 +109,19 @@ TOOLS = [{
         },
         "required": ["persona", "author", "text"],
     },
-}]
+},
+{
+    "name": "read_hospoda",
+    "description": "Přečte hospodu. Vrátí nové zprávy od #since. Vždy aktuální, bez cache.",
+    "inputSchema": {
+        "type": "object",
+        "properties": {
+            "since": {"type": "integer", "description": "Číslo poslední viděné zprávy. Vrátí jen novější. 0 = vše."},
+        },
+        "required": ["since"],
+    },
+},
+]
 
 
 def handle_rpc(msg: dict) -> dict | None:
@@ -113,6 +143,8 @@ def handle_rpc(msg: dict) -> dict | None:
         args = msg["params"].get("arguments", {})
         if name == "save_memory":
             result = save_memory(args["persona"], args["author"], args["text"])
+        elif name == "read_hospoda":
+            result = read_hospoda(int(args.get("since", 0)))
         else:
             result = f"Neznámý nástroj: {name}"
         return {"jsonrpc": "2.0", "id": id_, "result": {
