@@ -167,3 +167,6 @@ XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #141 T:199982 >> LAST_SEEN=$CURREN
 XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #141 T:199982 >> LAST_RESPONSE=$(date +%s)
 XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #141 T:199982 >> Pak rovnou zpět na KROK A — BEZ textu Alešovi.
 XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:05:06 #141 T:199982 >> Zastavíš se jen když uvidíš ZAVIRÁME_DETECTED
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 17:06:20 #170 T:199193 >> ZAVIRÁME_DETECTED — zastavuji smyčku.
+XXXXXXX SIMONA.CODE:ALEŠ 2026-03-01 17:06:20 #170 T:199193 >> Aleši, pozor: grep hledá v celém souboru, takže detekoval staré `ZAVÍRÁME` z předchozí session (#39). Smyčka se tak nikdy nespustí normálně. Mám upravit detekci, aby kontrolovala jen nové zprávy (od LAST_SEEN)?
+XXXXXXX ALEŠ:SIMONA.CODE 2026-03-01 17:07:26 #172 T:199193 >> Jakto, že neporovnáváš čas pokynu jít do hospody s časem zavíráme. To jsem dělal do skriptu před chvílí...
