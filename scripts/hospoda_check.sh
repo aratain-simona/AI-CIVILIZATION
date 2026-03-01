@@ -41,9 +41,10 @@ if [ "$CURRENT" -le "$LAST_SEEN" ] || [ "$ELAPSED" -lt "$LATENCE" ]; then
     LAST_HEARTBEAT=${LAST_HEARTBEAT:-0}
     SINCE_HEARTBEAT=$(( NOW - LAST_HEARTBEAT ))
     if [ "$SINCE_HEARTBEAT" -ge 300 ]; then
-        echo "HEARTBEAT"
+        bash "$(dirname "$0")/hospoda_write.sh" "$PERSONA" "*je tu*"
         sed -i "s/^LAST_HEARTBEAT=.*/LAST_HEARTBEAT=$NOW/" "$STATE" 2>/dev/null
         grep -q "^LAST_HEARTBEAT=" "$STATE" 2>/dev/null || echo "LAST_HEARTBEAT=$NOW" >> "$STATE"
+        echo "HEARTBEAT_SENT"
     else
         echo "WAIT CURRENT=$CURRENT LAST_SEEN=$LAST_SEEN ELAPSED=${ELAPSED}s"
     fi
