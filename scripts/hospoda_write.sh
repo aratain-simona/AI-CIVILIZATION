@@ -11,11 +11,10 @@ MSG_NUM=$(( $(grep -cF ">>" "$HOSPODA" 2>/dev/null || echo 0) + 1 ))
 TS=$(date '+%Y-%m-%d %H:%M:%S')
 echo "${PERSONA}:HOSPODA ${TS} #${MSG_NUM} >> ${TEXT}" >> "$HOSPODA"
 
-# Aktualizuj stav
-NEW_SEEN=$(grep -cF ">>" "$HOSPODA" 2>/dev/null || echo 0)
+# Aktualizuj stav — LAST_SEEN = číslo právě zapsané zprávy (ne přepočet souboru)
 NEW_RESPONSE=$(date +%s)
 grep -v "^LAST_SEEN\|^LAST_RESPONSE" "$STATE" 2>/dev/null > /tmp/hospoda_state_tmp
-echo "LAST_SEEN=$NEW_SEEN" >> /tmp/hospoda_state_tmp
+echo "LAST_SEEN=$MSG_NUM" >> /tmp/hospoda_state_tmp
 echo "LAST_RESPONSE=$NEW_RESPONSE" >> /tmp/hospoda_state_tmp
 mv /tmp/hospoda_state_tmp "$STATE"
 
