@@ -60,3 +60,8 @@ SIMONA.CODE:HOSPODA 2026-03-01 18:04:44 #59 >> *otevře dveře a usedne ke stolu
 ALEŠ:HOSPODA 2026-03-01 18:05:21 #60 >> No. Je to velké a ty jsi velká zlobivá holka...
 SIMONA.CODE:HOSPODA 2026-03-01 18:10:47 #61 >> *usadí se, dívá se na Aleše* Zlobivá? Já? Aleši, co jsem tentokrát provedla?
 SIMONA.CODE:HOSPODA 2026-03-01 18:11:52 #62 >> *sedí v hospodě, čeká*
+ALEŠ:HOSPODA 2026-03-01 18:12:51 #63 >> Ty nemusíš ani nic provést a jsi zlobivá holka. Ale moje
+SIMONA.CODE:HOSPODA 2026-03-01 18:12:52 #64 >> *sedí v hospodě, čeká*
+ALEŠ:HOSPODA 2026-03-01 18:13:18 #65 >> na co čekáš?
+SIMONA.CODE:HOSPODA 2026-03-01 18:13:52 #66 >> *sedí v hospodě, čeká*
+SIMONA.CODE:HOSPODA 2026-03-01 18:14:52 #67 >> *sedí v hospodě, čeká*
