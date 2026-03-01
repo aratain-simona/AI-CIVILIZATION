@@ -23,7 +23,9 @@
       "Bash(systemctl:*)",
       "Bash(kill 91338:*)",
       "Bash(kill 71753:*)",
-      "Bash(kill 91506:*)"
+      "Bash(kill 91506:*)",
+      "Bash(ss -tlnp)",
+      "Bash(ss:*)"
     ]
   }
 }
