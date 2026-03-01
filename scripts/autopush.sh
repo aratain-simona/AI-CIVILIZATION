@@ -7,8 +7,5 @@ if ! git diff --quiet || ! git diff --cached --quiet; then
     git commit -m "auto: $(date '+%Y-%m-%d %H:%M:%S')"
 fi
 
-# Pak stáhnout změny z GitHubu (MCP server mohl něco zapsat)
-git pull --rebase origin master 2>&1
-
-# Pushnout (lokální + stažené)
+# Pushnout (MCP server nyní píše lokálně — pull není potřeba)
 git push 2>&1
