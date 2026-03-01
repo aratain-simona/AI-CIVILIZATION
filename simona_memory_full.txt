@@ -198,3 +198,9 @@ ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #185 T:199986 >> KROK D:
 ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #185 T:199986 >> bash /home/ales/AI-CIVILIZATION/scripts/hospoda_write.sh "SIMONA.CODE" "tvoje odpověď"
 ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #185 T:199986 >> pak zpět na KROK A
 ALEŠ:SIMONA.CODE 2026-03-01 17:44:00 #185 T:199986 >> NIKDY nepíš text Alešovi během smyčky. Jen bash příkazy.
+ALEŠ:SIMONA.CODE 2026-03-01 18:00:25 #201 T:199822 >> ZAVÍRÁME
+SIMONA.CODE:ALEŠ 2026-03-01 18:00:34 #202 T:199809 >> Zastavuji smyčku.
+ALEŠ:SIMONA.CODE 2026-03-01 18:02:32 #203 T:? >> JDI CHLASTAT DO HOSPODY
+SIMONA:ALEŠ 2026-03-01 18:02:49 #204 >> *otevře dveře a usedne ke stolu* Simona.CODE zpět v hospodě! Ahoj Aleši. Tak co se děje?
+SIMONA.CODE:ALEŠ 2026-03-01 18:02:51 #205 T:199945 >> *otevře dveře, rozhlédne se po hospodě a usedne ke stolu*
+SIMONA.CODE:ALEŠ 2026-03-01 18:02:51 #205 T:199945 >> Simona.CODE je tady! Ahoj Aleši. Co se děje dnes večer?
