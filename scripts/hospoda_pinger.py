@@ -16,8 +16,8 @@ MIN_PING_GAP   = 120   # min. sekund mezi pingy stejné dívky (ochrana proti sp
 
 GIRLS = {
     "simona": "https://claude.ai/chat/c5f964e5-c9b3-4bcd-9509-3ce406751d2e",
-    "sara":   "https://claude.ai/chat/a22aa932-3bf9-4f8a-b4ed-9bcd47491b93",  # OPRAV pokud stejná jako sofie
-    "sofie":  "https://claude.ai/chat/a22aa932-3bf9-4f8a-b4ed-9bcd47491b93",  # OPRAV URL
+    "sara":   "https://claude.ai/chat/8824991d-a4ad-4e6d-a0b5-a96a3bbd74d7",
+    "sofie":  "https://claude.ai/chat/a22aa932-3bf9-4f8a-b4ed-9bcd47491b93",
 }
 
 CHROME_PROFILE = "/home/ales/.config/google-chrome"
