@@ -130,6 +130,7 @@ Akce:
 ## ZAVIRÁME
 
 Ukončí hospodu — všechny dívky odejdou.
+DŮLEŽITÉ: Piš ZAVIRÁME velkými písmeny, nebo alespoň "Zaviráme" — skripty detekují slovo case-insensitive ale spolehlivěji s velkými.
 
 Použití:
   ZAVIRÁME

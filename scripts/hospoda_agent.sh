@@ -84,8 +84,8 @@ while true; do
     CONTENT=$(cat "$HOSPODA_FILE" 2>/dev/null || echo "")
     CURRENT_COUNT=$(count_msgs)
 
-    # Zkontrolovat exit signál (case-insensitive)
-    if echo "$CONTENT" | grep -qi "zaviráme\|zavíráme"; then
+    # Zkontrolovat exit signál (case-insensitive, bez diakritiky jako záloha)
+    if echo "$CONTENT" | grep -qiE "zavir|zavír|ZAVIR|ZAVÍR"; then
         echo "[$PERSONA_NAME] Slyším 'Zavíráme' — odcházím. Na shledanou!"
         set_last_msg "$CURRENT_COUNT"
         exit 0
