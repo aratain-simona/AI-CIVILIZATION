@@ -29,7 +29,8 @@
       "Bash(xdotool:*)",
       "Bash(pkill:*)",
       "Bash(rm:*)",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "Bash(grep:*)"
     ]
   }
 }
