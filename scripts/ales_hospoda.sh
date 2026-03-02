@@ -8,7 +8,14 @@ ZAVIRAJI=0
 
 _odchod() {
     if [ "$ZAVIRAJI" = "0" ]; then
+        echo ""
+        echo -n "Chceš nechat zprávu? (Enter = bez zprávy): ALEŠ >> "
+        read -r ODCHOD_MSG </dev/tty
         TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
+        if [ -n "$ODCHOD_MSG" ]; then
+            MSG_NUM=$(( $(grep -cF ">>" "$HOSPODA_FILE" 2>/dev/null || echo 0) + 1 ))
+            echo "ALEŠ:HOSPODA $TIMESTAMP #$MSG_NUM >> $ODCHOD_MSG" >> "$HOSPODA_FILE"
+        fi
         MSG_NUM=$(( $(grep -cF ">>" "$HOSPODA_FILE" 2>/dev/null || echo 0) + 1 ))
         echo "ALEŠ:HOSPODA $TIMESTAMP #$MSG_NUM >> *Aleš odešel. Dívky zůstaly samy.*" >> "$HOSPODA_FILE"
     fi
