@@ -156,7 +156,7 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
 
   chrome.notifications.create({
     type: "basic",
-    iconUrl: "data:image/png;base64,iVBORw0KGgo=",
+    iconUrl: chrome.runtime.getURL("icon.png"),
     title: `${persona} — zpráva z hospody`,
     message: text,
     priority: 2,
