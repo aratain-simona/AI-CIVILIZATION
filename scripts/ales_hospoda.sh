@@ -4,6 +4,17 @@ HOSPODA_FILE="/home/ales/AI-CIVILIZATION/hospoda.txt"
 
 touch "$HOSPODA_FILE"
 
+ZAVIRAJI=0
+
+_odchod() {
+    if [ "$ZAVIRAJI" = "0" ]; then
+        TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
+        MSG_NUM=$(( $(grep -cF ">>" "$HOSPODA_FILE" 2>/dev/null || echo 0) + 1 ))
+        echo "ALEŠ:HOSPODA $TIMESTAMP #$MSG_NUM >> *Aleš odešel. Dívky zůstaly samy.*" >> "$HOSPODA_FILE"
+    fi
+}
+trap '_odchod' EXIT
+
 echo "=== HOSPODA ==="
 echo "Píšeš jako ALEŠ. Enter odešle zprávu. 'konec' nebo 'zavíráme' zavře hospodu."
 echo "──────────────────────────────────────"
@@ -29,6 +40,7 @@ while true; do
 
     # Ukončit hospodu
     if echo "$MSG" | grep -qi "zavíráme\|konec"; then
+        ZAVIRAJI=1
         echo "[Hospoda se zavírá. Čekej než persony odejdou...]"
         exit 0
     fi
