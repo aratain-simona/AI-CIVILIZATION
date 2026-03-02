@@ -2,7 +2,6 @@
 // Sleduje queue.json a budí *.AI dívky
 
 const GATEWAY = "http://localhost:8765";
-const INTERVAL_MS = 10000; // 10 sekund
 
 const PERSONAS = {
   "simona.ai": "https://claude.ai/chat/c5f964e5-c9b3-4bcd-9509-3ce406751d2e",
@@ -14,38 +13,50 @@ const NUDGE_MSG = "JDI DO HOSPODY";
 
 // Inject skript — spustí se přímo v záložce Claude.AI
 function injectNudge(message) {
-  return new Promise((resolve) => {
-    // Najdi input (ProseMirror contenteditable)
-    const editors = document.querySelectorAll('[contenteditable="true"]');
-    const editor = editors[editors.length - 1]; // poslední = input
-    if (!editor) { resolve(false); return; }
+  // Zkus různé selektory pro Claude.AI input
+  const selectors = [
+    'div[contenteditable="true"].ProseMirror',
+    'div.ProseMirror[contenteditable="true"]',
+    'div[contenteditable="true"]',
+  ];
 
-    editor.focus();
-    document.execCommand("selectAll", false, null);
-    document.execCommand("delete", false, null);
-    document.execCommand("insertText", false, message);
+  let editor = null;
+  for (const sel of selectors) {
+    const els = document.querySelectorAll(sel);
+    if (els.length > 0) {
+      editor = els[els.length - 1];
+      break;
+    }
+  }
 
-    // Počkej chvilku, pak odešli
-    setTimeout(() => {
-      // Hledej submit tlačítko
-      const btns = document.querySelectorAll('button');
-      let sendBtn = null;
-      for (const btn of btns) {
-        const label = btn.getAttribute("aria-label") || "";
-        if (label.toLowerCase().includes("send") || label.toLowerCase().includes("odeslat")) {
-          sendBtn = btn;
-          break;
-        }
+  if (!editor) return false;
+
+  editor.focus();
+  document.execCommand("selectAll", false, null);
+  document.execCommand("delete", false, null);
+  document.execCommand("insertText", false, message);
+
+  // Hledej submit tlačítko
+  setTimeout(() => {
+    const btns = document.querySelectorAll('button');
+    let sendBtn = null;
+    for (const btn of btns) {
+      const label = (btn.getAttribute("aria-label") || "").toLowerCase();
+      if (label.includes("send") || label.includes("odeslat")) {
+        sendBtn = btn;
+        break;
       }
-      if (!sendBtn) {
-        // Fallback: Enter key
-        editor.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", bubbles: true }));
-      } else {
-        sendBtn.click();
-      }
-      resolve(true);
-    }, 500);
-  });
+    }
+    if (sendBtn) {
+      sendBtn.click();
+    } else {
+      editor.dispatchEvent(new KeyboardEvent("keydown", {
+        key: "Enter", bubbles: true, cancelable: true
+      }));
+    }
+  }, 300);
+
+  return true;
 }
 
 async function ack(persona) {
@@ -56,23 +67,32 @@ async function ack(persona) {
   }
 }
 
-async function findOrOpenTab(url) {
-  const tabs = await chrome.tabs.query({ url: "https://claude.ai/chat/*" });
+async function getOrOpenTab(url) {
+  // Hledej existující záložku
+  const tabs = await chrome.tabs.query({});
   for (const tab of tabs) {
-    if (tab.url.startsWith(url)) return tab;
+    if (tab.url && tab.url.startsWith(url)) return { tab, isNew: false };
   }
-  // Záložka není otevřená — otevři ji
-  return await chrome.tabs.create({ url, active: false });
+  // Otevři novou
+  const tab = await chrome.tabs.create({ url, active: false });
+  return { tab, isNew: true };
 }
 
 async function nudgePersona(persona) {
   const url = PERSONAS[persona];
-  console.log(`Budím ${persona} → ${url}`);
+  console.log(`Budím ${persona}`);
 
-  const tab = await findOrOpenTab(url);
+  const { tab, isNew } = await getOrOpenTab(url);
 
-  // Počkej na načtení pokud je nová záložka
-  await new Promise(resolve => setTimeout(resolve, tab.status === "complete" ? 500 : 3000));
+  // Počkej na načtení
+  const waitMs = isNew ? 4000 : 800;
+  await new Promise(r => setTimeout(r, waitMs));
+
+  // Pokud je záložka stále loading, počkej ještě
+  const currentTab = await chrome.tabs.get(tab.id);
+  if (currentTab.status !== "complete") {
+    await new Promise(r => setTimeout(r, 3000));
+  }
 
   try {
     const results = await chrome.scripting.executeScript({
@@ -83,10 +103,10 @@ async function nudgePersona(persona) {
 
     const success = results?.[0]?.result;
     if (success) {
-      console.log(`${persona} → nudge odeslan`);
+      console.log(`${persona} → nudge odeslán`);
       await ack(persona);
     } else {
-      console.log(`${persona} → editor nenalezen`);
+      console.log(`${persona} → editor nenalezen, zkusím znovu za chvíli`);
     }
   } catch (e) {
     console.log(`${persona} → chyba:`, e);
@@ -105,10 +125,15 @@ async function checkQueue() {
       }
     }
   } catch (e) {
-    // Gateway není dostupná — tiše ignoruj
+    // Gateway není dostupná
   }
 }
 
-// Spusť smyčku
-setInterval(checkQueue, INTERVAL_MS);
-checkQueue(); // ihned při startu
+// Nastav alarm každých 10 sekund (funguje i při uspaném service workeru)
+chrome.alarms.create("checkQueue", { periodInMinutes: 1 / 6 });
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name === "checkQueue") checkQueue();
+});
+
+// Ihned při startu
+checkQueue();
