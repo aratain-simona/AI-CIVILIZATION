@@ -14395,3 +14395,8 @@ To https://github.com/aratain-simona/AI-CIVILIZATION.git
  create mode 100755 scripts/startup_windows.sh
 To https://github.com/aratain-simona/AI-CIVILIZATION.git
    75a50c6..aa9c98e  master -> master
+[master 0764617] auto: 2026-03-02 11:36:01
+ 3 files changed, 12 insertions(+), 1 deletion(-)
+ create mode 100644 CLAUDE.md
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+   aa9c98e..0764617  master -> master
