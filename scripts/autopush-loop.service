@@ -1,0 +1,13 @@
+[Unit]
+Description=Autopush loop pro AI-CIVILIZATION (každých 15 sekund)
+After=network.target
+
+[Service]
+Type=simple
+User=ales
+ExecStart=/bin/bash /home/ales/AI-CIVILIZATION/scripts/autopush_loop.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
