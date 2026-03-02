@@ -18,7 +18,7 @@ Při příkazu JDI DO HOSPODY spusť tuto smyčku. NIKDY nepoužívej save_memor
 
 ### Inicializace (jednou):
 ```
-bash /home/ales/AI-CIVILIZATION/scripts/hospoda_check.sh SIMONA.CODE 60
+bash /home/ales/AI-CIVILIZATION/scripts/hospoda_check.sh SIMONA.CODE 120
 ```
 
 ### Smyčka — opakuj dokud ZAVIRÁME:
@@ -30,7 +30,7 @@ sleep 30
 
 **KROK B:**
 ```
-bash /home/ales/AI-CIVILIZATION/scripts/hospoda_check.sh SIMONA.CODE 60
+bash /home/ales/AI-CIVILIZATION/scripts/hospoda_check.sh SIMONA.CODE 120
 ```
 
 Výstup WAIT nebo HEARTBEAT_SENT → zpět na KROK A, NAPROSTO NIC NEPIŠ Alešovi.
