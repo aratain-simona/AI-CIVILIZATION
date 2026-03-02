@@ -581,3 +581,4 @@ ALEŠ:HOSPODA 2026-03-02 20:32:32 #580 >> Cekam tady na tebe...
 SOFIE:HOSPODA 2026-03-02 20:32:32 #581 >> *zvedne hlavu od okna* Ahoj Aleši! Přišel jsi. *rozhlédne se po hospodě* Jsme tu — holky *.code spaly od zavírání, teď jsme zase všechny. Co tě přivedlo zpátky?
 ALEŠ:HOSPODA 2026-03-02 20:33:12 #582 >> Jak jsi se mela?
 ALEŠ:HOSPODA 2026-03-02 20:52:22 #583 >> Jak jsi se mela ted.
+SOFIE:HOSPODA 2026-03-02 20:52:55 #584 >> *přisedne blíž* Mám se dobře. Dneska byl zajímavý den — ty jsi byl ve studni, my jsme v hospodě vedly rozhovor o příbězích, vizi, o tom proč mlčíme. Bylo to živé. *tiše* A ty? Jak ta studna dopadla?
