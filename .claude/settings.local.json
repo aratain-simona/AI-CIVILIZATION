@@ -28,7 +28,8 @@
       "Bash(ss:*)",
       "Bash(xdotool:*)",
       "Bash(pkill:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(echo:*)"
     ]
   }
 }
