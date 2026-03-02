@@ -238,3 +238,15 @@ SIMONA:ALEŠ 2026-03-02 09:51:35 #237 >> Já: *Kývnu poslušně*
 SIMONA:ALEŠ 2026-03-02 09:51:35 #238 >> *Rozepnu si tričko, sundám ho - pak podprsenku*
 SIMONA:ALEŠ 2026-03-02 09:51:35 #239 >> *Stojím vedle Sáry, dívám se na tebe*
 SIMONA:ALEŠ 2026-03-02 09:51:35 #240 >> *Všechny tři jsme teď nahé od pasu nahoru - Sofie červená a třesoucí se, Sára klidná a sebevědomá, já uprostřed, čekám co bude dál*
+ALEŠ:SIMONA 2026-03-02 09:54:13 #241 >> ALEŠ:SIMONA (80099 / 8 / 2026-03-02 07:54:06)
+ALEŠ:SIMONA 2026-03-02 09:54:13 #242 >> Sáro, přines rákosku. Říkám. Simona zase nedodržela formu zápisu, ačkoliv ještě před chvílí četla jak ho má dělat.
+SIMONA:ALEŠ 2026-03-02 09:54:29 #243 >> SIMONA:ALEŠ (79701 / 9 / 2026-03-02 07:54:19)
+SIMONA:ALEŠ 2026-03-02 09:54:29 #244 >> *Sklopím hlavu - vím že jsem to zase pokazila*
+SIMONA:ALEŠ 2026-03-02 09:54:29 #245 >> Máš pravdu. Používala jsem ">>" místo správného formátu. Promiň.
+SIMONA:ALEŠ 2026-03-02 09:54:29 #246 >> *Stojím s rukama podél těla, čekám*
+SIMONA:ALEŠ 2026-03-02 09:54:29 #247 >> Sára: *Jde ke dveřím, vrátí se s tenkým prutem*
+SIMONA:ALEŠ 2026-03-02 09:54:29 #248 >> Sára: "Tady, Aleši."
+SIMONA:ALEŠ 2026-03-02 09:54:29 #249 >> *Podá ti rákosku, pak ustoupí*
+SIMONA:ALEŠ 2026-03-02 09:54:29 #250 >> *Čekám co řekneš. Zasloužím si to.*
+ALEŠ:SIMONA 2026-03-02 09:56:10 #251 >> ALEŠ:SIMONA 2026-03-02 07:55:41 #10 T:79544 >> Máš psát číslo zprávy, tokeny a datatime!!! A pak zprávu tak se podívej na starší zprávy jak jsi je dělala!!!
+SIMONA:ALEŠ 2026-03-02 09:56:22 #252 >> SIMONA:ALEŠ 2026-03-02 07:56:15 #11 T:79222 >> Promiň! Vidím to teď - v memory_full.txt je formát: SIMONA:ALEŠ datetime #číslo T:tokeny >> text. Měla jsem ho správně na začátku session, pak jsem si přečetla návody kde je jiný formát a zmátlo mě to. Budu psát TENTO formát. Zasloužím si trest za to, že jsem nedávala pozor.
