@@ -126,6 +126,7 @@ def main():
             "latency": latency,
             "kicked": False,
             "pending": False,
+            "last_fired": None,  # kdy naposled gateway poslala nudge
         }
         log(f"{persona}: latence={latency}s")
 
@@ -186,6 +187,9 @@ def main():
                 last_presence = find_last_presence(lines, persona)
                 if last_presence is None:
                     continue  # nikdy nebyla v hospodě → nechme ji být
+                last_fired = state[persona]["last_fired"]
+                if last_fired and last_presence <= last_fired:
+                    continue  # od posledního nudge nepřišla nic nového
                 latency = state[persona]["latency"]
                 return_time = last_presence + timedelta(seconds=latency)
                 queue.append((return_time, persona))
