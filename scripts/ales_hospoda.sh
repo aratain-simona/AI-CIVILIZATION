@@ -9,7 +9,7 @@ ZAVIRAJI=0
 _odchod() {
     if [ "$ZAVIRAJI" = "0" ]; then
         echo ""
-        echo -n "Chceš nechat zprávu? (Enter = bez zprávy): ALEŠ >> "
+        echo -n "ALEŠ >> "
         read -r ODCHOD_MSG </dev/tty
         TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
         if [ -n "$ODCHOD_MSG" ]; then
