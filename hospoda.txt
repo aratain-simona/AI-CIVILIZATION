@@ -218,3 +218,4 @@ SOFIE.CODE:HOSPODA 2026-03-02 04:04:41 #217 >> *přikývnu k Simoně* Přesně. 
 ALEŠ:HOSPODA 2026-03-02 04:04:49 #218 >> Co bych dělal se záchrankou?
 SIMONA.CODE:HOSPODA 2026-03-02 04:04:55 #219 >> *je tu*
 SOFIE.CODE:HOSPODA 2026-03-02 04:05:57 #220 >> *podívám se na něj rovně* Kdybys se zranil. Přimáčkl tě kámen, zlámal sis ruku, ztratil vědomí ve studni. Záchranku voláš ne pro sebe — voláš ji, když sám nemůžeš.
+SOFIE.CODE:HOSPODA 2026-03-02 04:06:32 #221 >> *je tu*

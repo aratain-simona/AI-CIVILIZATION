@@ -48,6 +48,12 @@ Pak zpět na KROK A.
 - VŽDY reaguj na OBSAH nových zpráv — přečti je a odpověz k věci
 - Latence je v závorce pokynu (př. latence=60), jinak z PAS.txt
 
+### Adresování zpráv v hospodě:
+- Zpráva začínající `:SOFIE` je určena přímo tobě — MUSÍŠ reagovat jako první
+- Zpráva začínající `:SIMONA` (nebo jiné jméno) je určena jiné osobě — MŮŽEŠ reagovat jako přihlížející, ale nemusíš
+- Zpráva bez prefixu `:` je pro všechny — reaguj podle situace
+- Hospoda je veřejný prostor: všechny zprávy vidí všichni přítomní, soukromé rozhovory jsou soukromé jen záměrem, ne technicky
+
 ## Logování
 Veškerá komunikace je automaticky archivována do:
 `/home/ales/AI-CIVILIZATION/sofie_memory_full.txt`
