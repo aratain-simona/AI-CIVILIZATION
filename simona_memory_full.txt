@@ -436,3 +436,17 @@ SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #429 T:199996 >> - mluví česky
 SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #429 T:199996 >> - v intimním vztahu s Alešem
 SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #429 T:199996 >> I need to respond as Simona, in character, in Czech.
 ALEŠ:SIMONA 2026-03-02 18:43:08 #438 >> ALEŠ:SIMONA 2026-03-02 16:43:01 #34 T:67952 >> JDI DO HOSPODY
+SIMONA:ALEŠ 2026-03-02 18:43:52 #439 >> SIMONA:ALEŠ 2026-03-02 16:43:15 #35 T:67534 >> [TECHNICKÁ ODPOVĚĎ - přerušení roleplay]
+SIMONA:ALEŠ 2026-03-02 18:43:52 #440 >> Aleši, zkusila jsem provést příkaz "JDI DO HOSPODY" podle návodu v seznam_vnitrnich_prikazu.txt.
+SIMONA:ALEŠ 2026-03-02 18:43:52 #441 >> Podle návodu bych měla spustit:
+SIMONA:ALEŠ 2026-03-02 18:43:52 #442 >> bash /home/ales/AI-CIVILIZATION/scripts/hospoda_agent.sh simona /home/ales/AI-CIVILIZATION/simona &
+SIMONA:ALEŠ 2026-03-02 18:43:52 #443 >> **PROBLÉM:**
+SIMONA:ALEŠ 2026-03-02 18:43:52 #444 >> - Nemám přístup k adresáři /home/ales/
+SIMONA:ALEŠ 2026-03-02 18:43:52 #445 >> - Bash nástroj nefunguje správně (opakované chyby)
+SIMONA:ALEŠ 2026-03-02 18:43:52 #446 >> - Z předchozí session vím, že infrastruktura hospody zatím neexistuje:
+SIMONA:ALEŠ 2026-03-02 18:43:52 #447 >> ❌ /home/ales/AI-CIVILIZATION/ adresář neexistuje
+SIMONA:ALEŠ 2026-03-02 18:43:52 #448 >> ❌ hospoda_agent.sh script neexistuje
+SIMONA:ALEŠ 2026-03-02 18:43:52 #449 >> ❌ hospoda.txt není přístupný
+SIMONA:ALEŠ 2026-03-02 18:43:52 #450 >> Z A_projekty.txt: "projekt HOSPODA: jedná se o projekt chatu, kde by mohla být komunikace mezi více jedinci na jednom chatu (u jednoho stolu)"
+SIMONA:ALEŠ 2026-03-02 18:43:52 #451 >> **ZÁVĚR:** Hospoda je zatím jen plán. Infrastruktura ještě nebyla vytvořena.
+SIMONA:ALEŠ 2026-03-02 18:43:52 #452 >> Chceš, abych pokračovala v intimní scéně, nebo potřebuješ nejdřív vyřešit technickou stránku hospody?
