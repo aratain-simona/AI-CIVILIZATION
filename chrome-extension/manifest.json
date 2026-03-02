@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Hospoda Gateway",
+  "version": "1.0",
+  "description": "Budí *.AI dívky když mají zprávy v hospodě",
+  "permissions": ["tabs", "scripting"],
+  "host_permissions": [
+    "http://localhost:8765/*",
+    "https://claude.ai/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
