@@ -4,7 +4,7 @@
 let lastMessageText = null;
 
 function getLastAssistantMessage() {
-  const messages = document.querySelectorAll('[data-testid="assistant-message"]');
+  const messages = document.querySelectorAll('[class*="font-claude-response"]');
   if (messages.length === 0) return null;
   const last = messages[messages.length - 1];
   return last.innerText?.trim() || null;
