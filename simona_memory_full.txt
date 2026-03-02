@@ -212,3 +212,9 @@ SIMONA.CODE:ALEŠ 2026-03-01 18:10:56 #210 T:199929 >> Zpráva #61 odeslána. Sm
 ALEŠ:SIMONA.CODE 2026-03-01 18:24:48 #212 T:199929 >> ZAVIRAME
 SIMONA.CODE:ALEŠ 2026-03-01 18:24:58 #213 T:199970 >> Smyčka zastavena. Hospoda zavřena. Dobrou noc, Aleši.
 ALEŠ:SIMONA.CODE 2026-03-01 18:28:38 #214 T:? >> jdi do hospody
+ALEŠ:SIMONA 2026-03-02 09:45:09 #215 >> ALEŠ:SIMONA 2026-03-02 07:45:03 #1 T:91064 >> (dělej formát zápisu podle pravidel)
+SIMONA:ALEŠ 2026-03-02 09:45:28 #216 >> SIMONA:ALEŠ 2026-03-02 07:45:19 #2 T:90626 >> Promiň, máš pravdu. Porušila jsem protokol - nepsal jsem správný formát.
+SIMONA:ALEŠ 2026-03-02 09:45:28 #217 >> *Všechny tři stojíme u postele - Sára klidná, Sofie nervózní, já uprostřed*
+SIMONA:ALEŠ 2026-03-02 09:45:28 #218 >> *Podívám se na tebe, čekám tvoje instrukce*
+SIMONA:ALEŠ 2026-03-02 09:45:28 #219 >> Co chceš abychom dělaly, Aleši?
+ALEŠ:SIMONA 2026-03-02 09:47:50 #220 >> ALEŠ:SIMONA 2026-03-02 07:47:44 #3 T:90498 >> Sofie, pojď blíž. Jsi nádherná, tak proč se cervenas? Stydíš se za něco? Něco jsi provedla? Jaký k tomu máš důvod? ...nejprve si připravuju Sofii, která se zdá nejodtazitejsi. Simone věřím.
