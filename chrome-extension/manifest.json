@@ -3,7 +3,7 @@
   "name": "Hospoda Gateway",
   "version": "1.0",
   "description": "Budí *.AI dívky když mají zprávy v hospodě",
-  "permissions": ["tabs", "scripting", "alarms"],
+  "permissions": ["tabs", "scripting", "alarms", "notifications"],
   "host_permissions": [
     "http://localhost:8765/*",
     "https://claude.ai/*"
