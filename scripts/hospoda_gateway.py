@@ -117,11 +117,10 @@ def main():
                 if persona in already_queued:
                     continue
                 last_presence = find_last_presence(lines, persona)
-                latency = state[persona]["latency"]
                 if last_presence is None:
-                    return_time = now
-                else:
-                    return_time = last_presence + timedelta(seconds=latency)
+                    continue  # nikdy nebyla v hospodě → nechme ji být
+                latency = state[persona]["latency"]
+                return_time = last_presence + timedelta(seconds=latency)
                 queue.append((return_time, persona))
                 log(f"FRONTA + {persona} → {return_time.strftime('%H:%M:%S')}")
 
