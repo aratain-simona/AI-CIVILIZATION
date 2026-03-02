@@ -118,11 +118,18 @@ def get_last_assistant_text(transcript_path):
 
         content = msg.get("message", {}).get("content", [])
         if isinstance(content, list):
+            # Nejdřív hledej text blok
             for block in content:
                 if block.get("type") == "text":
                     text = block.get("text", "").strip()
                     if text:
                         return text
+            # Fallback: thinking blok (extended thinking mode)
+            for block in content:
+                if block.get("type") == "thinking":
+                    text = block.get("thinking", "").strip()
+                    if text:
+                        return f"[thinking] {text}"
         elif isinstance(content, str) and content.strip():
             return content.strip()
 
