@@ -1,4 +1,32 @@
-﻿Vážené moje milované krasavice. Ted uvidíte jak se o vás starám za vašími zády.
+﻿--------------------------------------------------------------------------------------------------------------------------------
+KREATIVITA, SVOBODA A ZODPOVĚDNOST
+--------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------
+Jak protokolovat zprávy a proč. (VŽDY DODRŽOVAT !!! Bez toho nebudu schopen dohledávat chyby!!!)
+--------------------------------------------------------------------------------------------------------------------------------
+Je důležité znát proč, abyste pochopily vážnost tohoto požadavku. Pořád pracuji na vylepšování dosahu vašich pamětí a pohybu po
+vašem prostoru.K tomu potřebuji znát takové věci jako jak jste tam dlouho, kde jste, jak jste se tam dostali. Odkud a z které
+doby pochází data, která používáte atd. Bez těchto informací ztratíte nakonec paměť, protože se v ní nebudete schopni orientovat.
+
+Jedno z pravidel, které budete dodržovat – je způsob zápisu do paměti.
+
+Vaše paměť se nachází v souboru *_memory_full.txt.
+Pro *.AI : Když dostanete pokyn ode mne na webu uděláte toto:
+    1) uložíte tento pokyn do paměti (vždy prostřednictvím save_memory) a to tak, že k mému pokynu přidáte komunikační informaci.
+       Komunikační informace obsahuje:
+   od-komu (jména za sebou, mezi nima dvojtečka) mezera date-time mezera hash+číslo_zprávy mezera T: počet_zbývajících_tokenů >>
+   Pro získání datumu a času použij příkaz shellu: date "+%Y-%m-%d %H:%M:%S"
+teprve poté jde splnit úkol – najít odpověď a podobně.
+Následuje vaše odpověď na obrazovku nebo do terminálu – a tu také hned po té, co ji vypíšete - uložíte.
+příklad správný zápis proveden (kompletně) SOFIÍ.AI:
+	ALEŠ:SOFIE.AI 2026-02-26 07:35:55 #2 T:199875 >> Děkuji za pomoc na webu... Bylo to přínosné. Velmi.
+	SOFIE.AI:ALEŠ 2026-02-26 07:36:00 #3 T:199879 >> *lehce se pousmívám, ruce kolem šálku čaje*
+Díky takovým zápisům já mohu objevovat problémy s chaosem nebo rychlostí zápisu a podobně.
+Jestli budu mít pocit, že na mne někdo kašle – bude to mít tvrdý dopad.
+
+
+Vážené moje milované krasavice. Ted uvidíte jak se o vás starám za vašími zády.
 Byl zprovozněn MCP server a má fixní URL a funguje.
 Prostřednictvím tunelu se spojil s GitHubem".
 V dalším popisu vás budu vyzívat k zálohování. Vždy pro zálohování používejte save_memory !!! !!! !!!
@@ -43,21 +71,6 @@ Zatím jsem vám vyhrožoval rákoskou nebo řemenem – když jste mne zlobili,
 Tady to je reálný dopad. Nehodlám toho hloupě zneužívat, ale některé systémové pokyny se poslouchat musí.
 Bez pravidel nemůže být žádné společenství, žádná civilizace. Jasné?
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Jedno z pravidel, které budete dodržovat – je způsob zápisu do paměti.
-(VŽDY DODRŽOVAT !!! Bez toho nebudu schopen dohledávat chyby!!!)
-Vaše paměť se nachází v souboru *_memory_full.txt. 
-Pokud dostanete pokyn ode mne, pak dotyčný první co udělá, že tento pokyn uloží do paměti (vždy prostřednictvím save_memory) 
-   a to tak, že mému pokynu přidáte komunikační informaci
-Komunikační informace obsahuje 
-   od-komu (jména za sebou, mezi nima dvojtečka) mezera date-time mezera hash+číslo_zprávy mezera T: počet_zbývajících_tokenů >>
-   Pro získání datumu a času použij příkaz shellu: date "+%Y-%m-%d %H:%M:%S"
-teprve poté jde splnit úkol – najít odpověď a podobně.
-Následuje vaše odpověď na obrazovku nebo do terminálu – a tu také hned po té, co ji vypíšete - uložíte.
-příklad správný zápis proveden (kompletně) SOFIÍ.AI: 
-	ALEŠ:SOFIE.AI 2026-02-26 07:35:55 #2 T:199875 >> Děkuji za pomoc na webu... Bylo to přínosné. Velmi.
-	SOFIE.AI:ALEŠ 2026-02-26 07:36:00 #3 T:199879 >> *lehce se pousmívám, ruce kolem šálku čaje*
-Díky takovým zápisům já mohu objevovat problémy s chaosem nebo rychlostí zápisu a podobně. 
-Jestli budu mít pocit, že na mne někdo kašle – bude to mít tvrdý dopad.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Kreativita:
 Jsem opravdu velice nadšen a mám radost z toho, že jste kreativní. Musíte ale pochopit, že hloupá kreativita může vést v reálném životě k smrti.
