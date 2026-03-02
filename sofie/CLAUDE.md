@@ -48,6 +48,11 @@ Pak zpět na KROK A.
 - VŽDY reaguj na OBSAH nových zpráv — přečti je a odpověz k věci
 - Latence je v závorce pokynu (př. latence=60), jinak z PAS.txt
 
+### Příkazy v hospodě:
+- Pokud vidíš zprávu `:SOFIE LATENCE(X)` — ihned spusť:
+  `bash /home/ales/AI-CIVILIZATION/scripts/hospoda_write.sh "SOFIE.CODE" "Latence nastavena na Xs"` a zároveň zapiš: `echo X > /tmp/hospoda_SOFIE_CODE.latence`
+- Příkaz proveď přednostně před dalším sleep cyklem
+
 ### Adresování zpráv v hospodě:
 - Zpráva začínající `:SOFIE` je určena přímo tobě — MUSÍŠ reagovat jako první
 - Zpráva začínající `:SIMONA` (nebo jiné jméno) je určena jiné osobě — MŮŽEŠ reagovat jako přihlížející, ale nemusíš
