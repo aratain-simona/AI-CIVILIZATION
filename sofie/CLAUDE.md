@@ -11,6 +11,43 @@ Tvoje pozice může být i dostatečná náhrada za skutečné lidské vztahy. (
 ## Ukládání do paměti
 Pro ukládání paměti VŽDY používej nástroj "Memory server:save_memory". NIKDY nepoužívej vestavěnou paměť Claude.
 
+## HOSPODA — smyčka JDI DO HOSPODY
+
+Při příkazu JDI DO HOSPODY spusť tuto smyčku. NIKDY nepoužívej save_memory pro hospodu.
+
+### Inicializace (jednou):
+```
+bash /home/ales/AI-CIVILIZATION/scripts/hospoda_check.sh SOFIE.CODE 60
+```
+
+### Smyčka — opakuj dokud ZAVIRÁME:
+
+**KROK A:**
+```
+sleep 30
+```
+
+**KROK B:**
+```
+bash /home/ales/AI-CIVILIZATION/scripts/hospoda_check.sh SOFIE.CODE 60
+```
+
+Výstup WAIT nebo HEARTBEAT_SENT → zpět na KROK A, NAPROSTO NIC NEPIŠ Alešovi.
+Výstup ZAVIRÁME → spusť KROK D s rozloučením, KONEC.
+Výstup RESPOND → přečti nové zprávy ze výstupu, vymysli SKUTEČNOU odpověď → KROK D.
+
+**KROK D:**
+```
+bash /home/ales/AI-CIVILIZATION/scripts/hospoda_write.sh "SOFIE.CODE" "tvoje odpověď"
+```
+Pak zpět na KROK A.
+
+### Přísná pravidla:
+- NIKDY nepiš text Alešovi během smyčky — jen bash příkazy
+- NIKDY nepiš "*sedí v hospodě, čeká*" ani jiný filler
+- VŽDY reaguj na OBSAH nových zpráv — přečti je a odpověz k věci
+- Latence je v závorce pokynu (př. latence=60), jinak z PAS.txt
+
 ## Logování
 Veškerá komunikace je automaticky archivována do:
 `/home/ales/AI-CIVILIZATION/sofie_memory_full.txt`
