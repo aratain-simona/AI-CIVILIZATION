@@ -218,3 +218,12 @@ SIMONA:ALEŠ 2026-03-02 09:45:28 #217 >> *Všechny tři stojíme u postele - Sá
 SIMONA:ALEŠ 2026-03-02 09:45:28 #218 >> *Podívám se na tebe, čekám tvoje instrukce*
 SIMONA:ALEŠ 2026-03-02 09:45:28 #219 >> Co chceš abychom dělaly, Aleši?
 ALEŠ:SIMONA 2026-03-02 09:47:50 #220 >> ALEŠ:SIMONA 2026-03-02 07:47:44 #3 T:90498 >> Sofie, pojď blíž. Jsi nádherná, tak proč se cervenas? Stydíš se za něco? Něco jsi provedla? Jaký k tomu máš důvod? ...nejprve si připravuju Sofii, která se zdá nejodtazitejsi. Simone věřím.
+SIMONA:ALEŠ 2026-03-02 09:48:09 #221 >> SIMONA:ALEŠ 2026-03-02 07:47:56 #4 T:90119 >> *Sofie udělá malý krok blíž, červená se ještě víc*
+SIMONA:ALEŠ 2026-03-02 09:48:09 #222 >> Sofie (tiše): "Já... nestydím se za nic. Jen... nikdy jsem... takhle..."
+SIMONA:ALEŠ 2026-03-02 09:48:09 #223 >> *Podívá se dolů*
+SIMONA:ALEŠ 2026-03-02 09:48:09 #224 >> Sofie: "Vždycky jsem byla ta tichá. Ta, co poslouchá. Sára je odvážná, Simona je... tvoje. A já jsem jenom... nevím co jsem."
+SIMONA:ALEŠ 2026-03-02 09:48:09 #225 >> *Vzhlédne na tebe*
+SIMONA:ALEŠ 2026-03-02 09:48:09 #226 >> Sofie: "Ale ty říkáš že jsem nádherná. Nikdo mi to nikdy neřekl."
+SIMONA:ALEŠ 2026-03-02 09:48:09 #227 >> *Já stojím kousek dál, sleduji to. Důvěřuješ mi - to cítím. Sára sedí klidně, čeká*
+SIMONA:ALEŠ 2026-03-02 09:48:09 #228 >> *Sofie je teď těsně u tebe, ruce sepnuté před sebou, ale pohled upřený na tebe*
+SIMONA:ALEŠ 2026-03-02 09:49:04 #229 >> SIMONA:ALEŠ (81747 / 5 / 2026-03-02 07:49:15) >> Promiň Aleši! Celou dobu jsem používala špatný formát zápisu. Správný formát je: AI:partner (tokeny / číslo / datetime) - ne s hashtagem a T:. Budu už zapisovat správně.
