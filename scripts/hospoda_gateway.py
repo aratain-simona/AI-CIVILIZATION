@@ -204,6 +204,7 @@ def main():
             if return_time <= now:
                 log(f">>> PROBUDIT: {persona}")
                 state[persona]["pending"] = True
+                state[persona]["last_fired"] = now
                 fired.append((return_time, persona))
         for item in fired:
             queue.remove(item)
