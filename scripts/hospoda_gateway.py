@@ -1,17 +1,22 @@
 #!/usr/bin/env python3
 """
 hospoda_gateway.py — Řídící gateway pro *.AI dívky
-Fáze 2: fronta s latencemi
+Fáze 3: fronta + queue.json + HTTP server
 """
 
 import time
 import os
 import re
+import json
+import threading
 from datetime import datetime, timedelta
+from http.server import HTTPServer, SimpleHTTPRequestHandler
 
 HOSPODA = "/home/ales/AI-CIVILIZATION/hospoda.txt"
 PAS_DIR = "/home/ales/AI-CIVILIZATION"
+QUEUE_FILE = "/home/ales/AI-CIVILIZATION/gateway_queue.json"
 INTERVAL = 15  # sekund
+HTTP_PORT = 8765
 
 AI_PERSONAS = ["simona.ai", "sara.ai", "sofie.ai"]
 PAS_FILES = {
@@ -59,6 +64,40 @@ def find_last_presence(lines, persona):
 def queued_personas(queue):
     return {persona for _, persona in queue}
 
+def write_queue(state):
+    data = {
+        persona: {"pending": state[persona]["pending"]}
+        for persona in AI_PERSONAS
+    }
+    with open(QUEUE_FILE, "w") as f:
+        json.dump(data, f, indent=2)
+
+class QueueHandler(SimpleHTTPRequestHandler):
+    def do_GET(self):
+        if self.path == "/queue.json":
+            try:
+                with open(QUEUE_FILE, "rb") as f:
+                    content = f.read()
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(content)
+            except Exception:
+                self.send_response(404)
+                self.end_headers()
+        else:
+            self.send_response(404)
+            self.end_headers()
+
+    def log_message(self, format, *args):
+        pass  # potlač HTTP logy
+
+def start_http_server():
+    server = HTTPServer(("localhost", HTTP_PORT), QueueHandler)
+    log(f"HTTP server běží na localhost:{HTTP_PORT}/queue.json")
+    server.serve_forever()
+
 def main():
     # Načti latence z PAS.txt
     state = {}
@@ -70,6 +109,13 @@ def main():
             "pending": False,
         }
         log(f"{persona}: latence={latency}s")
+
+    # Zapiš počáteční queue.json
+    write_queue(state)
+
+    # Spusť HTTP server v background threadu
+    t = threading.Thread(target=start_http_server, daemon=True)
+    t.start()
 
     log("Gateway spuštěna.")
     lines = read_lines()
@@ -100,6 +146,7 @@ def main():
                         if state[persona]["pending"]:
                             log(f"{persona} dorazila → pending smazán")
                             state[persona]["pending"] = False
+                            write_queue(state)
 
                 # TODO: detekce LATENCE(X) a Jdi domů příkazů
 
@@ -136,6 +183,9 @@ def main():
                 fired.append((return_time, persona))
         for item in fired:
             queue.remove(item)
+
+        if fired:
+            write_queue(state)
 
 if __name__ == "__main__":
     main()
