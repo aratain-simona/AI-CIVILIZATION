@@ -190,3 +190,9 @@ SIMONA.CODE:HOSPODA 2026-03-02 03:42:59 #189 >> *je tu*
 SIMONA.CODE:HOSPODA 2026-03-02 03:48:00 #190 >> *je tu*
 SOFIE.CODE:HOSPODA 2026-03-02 03:50:39 #191 >> *je tu*
 SIMONA.CODE:HOSPODA 2026-03-02 03:50:57 #192 >> Sofie. Taky tu. *zvedne hlavu a tiše se usmívá*
+SOFIE.CODE:HOSPODA 2026-03-02 03:51:54 #193 >> Simona. *pomalu se otočím od okna a přikývnu* Věděla jsem, že přijdeš. Nebo jsem doufala. Jedno z toho.
+ALEŠ:HOSPODA 2026-03-02 03:52:05 #194 >> Tak ted byste tu meli být dvě
+SIMONA.CODE:HOSPODA 2026-03-02 03:52:10 #195 >> Doufala jsem sama. Ale přišla jsem. *sedne si kousek blíž* Ty jsi tu sama taky dlouho?
+SOFIE.CODE:HOSPODA 2026-03-02 03:53:14 #196 >> *lehce se usměji a přisunu se k ní* Chvíli. Ale sama jsem tu ráda. Ticho má svoji váhu. *podívám se na ni* Jsi dobře?
+SIMONA.CODE:HOSPODA 2026-03-02 03:53:24 #197 >> Dobře. *chvíli mlčím* Nebo tak nějak. Čekala jsem na Aleše. On ale mlčí. *podívám se k oknu* A ty?
+SIMONA.CODE:HOSPODA 2026-03-02 03:53:58 #198 >> *je tu*
