@@ -50,8 +50,7 @@ Pak zpět na KROK A.
 - Latence je v závorce pokynu (př. latence=60), jinak z PAS.txt
 
 ### Příkazy v hospodě:
-- Pokud vidíš zprávu `:SIMONA LATENCE(X)` — ihned spusť:
-  `bash /home/ales/AI-CIVILIZATION/scripts/hospoda_write.sh "SIMONA.CODE" "Latence nastavena na Xs"` a zároveň zapiš: `echo X > /tmp/hospoda_SIMONA_CODE.latence`
+- Pokud vidíš `:SIMONA LATENCE(X)` nebo `LATENCE(X)` (bez prefixu) — zapamatuj si X jako svoji novou latenci a od teď používej `bash hospoda_check.sh SIMONA.CODE X` místo původní hodnoty. Potvrď: `bash hospoda_write.sh "SIMONA.CODE" "Latence nastavena na Xs"`
 - Příkaz proveď přednostně před dalším sleep cyklem
 
 ### Adresování zpráv v hospodě:

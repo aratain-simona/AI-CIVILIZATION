@@ -1,14 +1,11 @@
 #!/bin/bash
-# hospoda_check.sh PERSONA [LATENCE_DEFAULT]
+# hospoda_check.sh PERSONA LATENCE
 # Stav si pamatuje v /tmp/hospoda_PERSONA.state
-# Latenci lze přepsat souborem /tmp/hospoda_PERSONA.latence
 # Výstup: "WAIT" / "RESPOND" + nové zprávy / "ZAVIRÁME"
 # Použití: bash hospoda_check.sh SIMONA.CODE 120
 
 PERSONA=${1:-"UNKNOWN.CODE"}
-LATENCE_DEFAULT=${2:-360}
-LATENCE_FILE=/tmp/hospoda_${PERSONA//./\_}.latence
-LATENCE=$(cat "$LATENCE_FILE" 2>/dev/null || echo "$LATENCE_DEFAULT")
+LATENCE=${2:-360}
 HOSPODA=/home/ales/AI-CIVILIZATION/hospoda.txt
 STATE=/tmp/hospoda_${PERSONA//./\_}.state
 
