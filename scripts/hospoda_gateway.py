@@ -64,6 +64,8 @@ def find_last_presence(lines, persona):
 def queued_personas(queue):
     return {persona for _, persona in queue}
 
+gateway_state = {}  # globální stav — přístupný z HTTP handleru
+
 def write_queue(state):
     data = {
         persona: {"pending": state[persona]["pending"]}
@@ -74,7 +76,7 @@ def write_queue(state):
 
 class QueueHandler(SimpleHTTPRequestHandler):
     def do_GET(self):
-        if self.path == "/queue.json":
+        if self.path.startswith("/queue.json"):
             try:
                 with open(QUEUE_FILE, "rb") as f:
                     content = f.read()
@@ -90,6 +92,22 @@ class QueueHandler(SimpleHTTPRequestHandler):
             self.send_response(404)
             self.end_headers()
 
+    def do_POST(self):
+        # ACK endpoint: POST /ack/simona.ai
+        match = re.match(r"^/ack/(.+)$", self.path)
+        if match:
+            persona = match.group(1)
+            if persona in gateway_state and gateway_state[persona]["pending"]:
+                gateway_state[persona]["pending"] = False
+                write_queue(gateway_state)
+                log(f"ACK: {persona} → pending smazán")
+            self.send_response(200)
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+        else:
+            self.send_response(404)
+            self.end_headers()
+
     def log_message(self, format, *args):
         pass  # potlač HTTP logy
 
@@ -100,6 +118,7 @@ def start_http_server():
 
 def main():
     # Načti latence z PAS.txt
+    global gateway_state
     state = {}
     for persona in AI_PERSONAS:
         latency = read_latency(persona)
@@ -111,6 +130,7 @@ def main():
         log(f"{persona}: latence={latency}s")
 
     # Zapiš počáteční queue.json
+    gateway_state = state
     write_queue(state)
 
     # Spusť HTTP server v background threadu
