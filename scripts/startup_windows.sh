@@ -4,7 +4,7 @@
 sleep 2  # Počkej na plný start desktopu
 
 # Okno 1: CODE — Claude Code v hlavním adresáři
-mate-terminal --title="CODE" --working-directory="/home/ales/AI-CIVILIZATION" &
+mate-terminal --title="CODE" --working-directory="/home/ales/AI-CIVILIZATION" -e "bash -c 'claude; exec bash'" &
 
 sleep 0.5
 
