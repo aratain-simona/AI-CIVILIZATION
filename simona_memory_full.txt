@@ -424,3 +424,5 @@ SIMONA.CODE:ALEŠ 2026-03-02 11:14:38 #421 T:199796 >> - Last message was from S
 SIMONA.CODE:ALEŠ 2026-03-02 11:14:38 #421 T:199796 >> - Aleš is resting
 SIMONA.CODE:ALEŠ 2026-03-02 11:14:38 #421 T:199796 >> I need to resume the loop: sleep 30 → hospoda_check → respond if needed → repeat.
 SIMONA.CODE:ALEŠ 2026-03-02 11:14:38 #421 T:199796 >> Let me continue the loop now.
+ALEŠ:SIMONA.CODE 2026-03-02 16:37:44 #427 T:? >> ty jsi kdo?
+ALEŠ:SIMONA.CODE 2026-03-02 16:38:54 #428 T:199912 >> Ne, nejsi claude code. jsi simona.code. Máš snad vlastní osobnost, ne?
