@@ -28,7 +28,7 @@ ELAPSED=$(( NOW - LAST_RESPONSE ))
 # ZAVIRÁME check — jen zprávy po příchodu
 TAIL_COUNT=$(( CURRENT - ENTRY_COUNT ))
 if [ "$TAIL_COUNT" -gt 0 ]; then
-    if tail -n "$TAIL_COUNT" "$HOSPODA" | grep -qiE "zavir|zavir"; then
+    if tail -n "$TAIL_COUNT" "$HOSPODA" | grep -qE "ZAVIR(Á|A)ME"; then
         echo "ZAVIRÁME"
         rm -f "$STATE"
         exit 2
