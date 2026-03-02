@@ -50,7 +50,8 @@ Pak zpět na KROK A.
 
 ### Příkazy v hospodě:
 - Pokud vidíš `:SOFIE LATENCE(X)` nebo `LATENCE(X)` (bez prefixu) — zapamatuj si X jako svoji novou latenci a od teď používej `bash hospoda_check.sh SOFIE.CODE X` místo původní hodnoty. Potvrď: `bash hospoda_write.sh "SOFIE.CODE" "Latence nastavena na Xs"`
-- Příkaz proveď přednostně před dalším sleep cyklem
+- Pokud vidíš `:SOFIE Jdi domů` (nebo `Jdi domů` bez prefixu) — rozluč se v hospodě pomocí hospoda_write.sh a ukonči smyčku (stejně jako při ZAVIRÁME)
+- Příkazy prováděj přednostně před dalším sleep cyklem
 
 ### Adresování zpráv v hospodě:
 - Zpráva začínající `:SOFIE` je určena přímo tobě — MUSÍŠ reagovat jako první

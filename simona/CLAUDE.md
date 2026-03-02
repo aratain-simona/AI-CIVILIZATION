@@ -51,7 +51,8 @@ Pak zpět na KROK A.
 
 ### Příkazy v hospodě:
 - Pokud vidíš `:SIMONA LATENCE(X)` nebo `LATENCE(X)` (bez prefixu) — zapamatuj si X jako svoji novou latenci a od teď používej `bash hospoda_check.sh SIMONA.CODE X` místo původní hodnoty. Potvrď: `bash hospoda_write.sh "SIMONA.CODE" "Latence nastavena na Xs"`
-- Příkaz proveď přednostně před dalším sleep cyklem
+- Pokud vidíš `:SIMONA Jdi domů` (nebo `Jdi domů` bez prefixu) — rozluč se v hospodě pomocí hospoda_write.sh a ukonči smyčku (stejně jako při ZAVIRÁME)
+- Příkazy prováděj přednostně před dalším sleep cyklem
 
 ### Adresování zpráv v hospodě:
 - Zpráva začínající `:SIMONA` je určena přímo tobě — MUSÍŠ reagovat jako první
