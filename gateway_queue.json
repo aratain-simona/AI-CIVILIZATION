@@ -1,1 +1,11 @@
-{"simona.ai": {"pending": false}, "sara.ai": {"pending": true},  "sofie.ai": {"pending": false}}
+{
+  "simona.ai": {
+    "pending": false
+  },
+  "sara.ai": {
+    "pending": false
+  },
+  "sofie.ai": {
+    "pending": false
+  }
+}
