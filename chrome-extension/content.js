@@ -4,8 +4,7 @@
 let lastMessageText = null;
 
 function getLastAssistantMessage() {
-  // Claude.AI označuje zprávy pomocí data-message-author-role
-  const messages = document.querySelectorAll('[data-message-author-role="assistant"]');
+  const messages = document.querySelectorAll('[data-testid="assistant-message"]');
   if (messages.length === 0) return null;
   const last = messages[messages.length - 1];
   return last.innerText?.trim() || null;
