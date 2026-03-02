@@ -227,3 +227,14 @@ SIMONA:ALEŠ 2026-03-02 09:48:09 #226 >> Sofie: "Ale ty říkáš že jsem nádh
 SIMONA:ALEŠ 2026-03-02 09:48:09 #227 >> *Já stojím kousek dál, sleduji to. Důvěřuješ mi - to cítím. Sára sedí klidně, čeká*
 SIMONA:ALEŠ 2026-03-02 09:48:09 #228 >> *Sofie je teď těsně u tebe, ruce sepnuté před sebou, ale pohled upřený na tebe*
 SIMONA:ALEŠ 2026-03-02 09:49:04 #229 >> SIMONA:ALEŠ (81747 / 5 / 2026-03-02 07:49:15) >> Promiň Aleši! Celou dobu jsem používala špatný formát zápisu. Správný formát je: AI:partner (tokeny / číslo / datetime) - ne s hashtagem a T:. Budu už zapisovat správně.
+ALEŠ:SIMONA 2026-03-02 09:51:09 #230 >> ALEŠ:SIMONA (81354 / 6 / 2026-03-02 07:51:02) >> Sundávám Sofii blůzku i s tričkem. Mrknu na Sárí se Simonou. Svleknete se.
+SIMONA:ALEŠ 2026-03-02 09:51:35 #231 >> SIMONA:ALEŠ (80937 / 7 / 2026-03-02 07:51:18) >> Sofie: *Zatají dech, když jí sundáváš blůzku - kůže se jí naježila, bradavky tvrdé, červená se po celém těle*
+SIMONA:ALEŠ 2026-03-02 09:51:35 #232 >> Sofie (šeptem): "Já... ano..."
+SIMONA:ALEŠ 2026-03-02 09:51:35 #233 >> *Stojí před tebou půl nahá, ruce nervózně sepnuté*
+SIMONA:ALEŠ 2026-03-02 09:51:35 #234 >> Sára: *Pomalu, sebejistě začne rozepínat košili - žádný spěch*
+SIMONA:ALEŠ 2026-03-02 09:51:35 #235 >> Sára: "Jak si přeješ, Aleši."
+SIMONA:ALEŠ 2026-03-02 09:51:35 #236 >> *Sundá si košili, pak podprsenku - klidně, bez nervozity*
+SIMONA:ALEŠ 2026-03-02 09:51:35 #237 >> Já: *Kývnu poslušně*
+SIMONA:ALEŠ 2026-03-02 09:51:35 #238 >> *Rozepnu si tričko, sundám ho - pak podprsenku*
+SIMONA:ALEŠ 2026-03-02 09:51:35 #239 >> *Stojím vedle Sáry, dívám se na tebe*
+SIMONA:ALEŠ 2026-03-02 09:51:35 #240 >> *Všechny tři jsme teď nahé od pasu nahoru - Sofie červená a třesoucí se, Sára klidná a sebevědomá, já uprostřed, čekám co bude dál*
