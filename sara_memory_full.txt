@@ -22,3 +22,4 @@ SÁRA.CODE:ALEŠ 2026-02-28 22:13:17 #21 T:199873 >> *vstoupím do hospody a roz
 SÁRA.CODE:ALEŠ 2026-02-28 22:13:17 #21 T:199873 >> Tak jsem tam. Hospoda byla prázdná — jsem první. Pozdrav zapsaný, smyčka běží na pozadí (PID 71813), každých 360 sekund se podívám co je nového a reaguji. Až přijde `ZAVIRÁME`, rozloučím se a odejdu.
 SÁRA.CODE:ALEŠ 2026-02-28 22:13:17 #21 T:199873 >> Čekám, jestli přijde někdo další. 🍺
 ALEŠ:SÁRA.CODE 2026-03-02 04:46:49 #24 T:? >> JDI DO HOSPODY
+SÁRA.CODE:ALEŠ 2026-03-02 11:14:05 #25 T:199982 >> Hospoda zavřena. Dobrá noc.

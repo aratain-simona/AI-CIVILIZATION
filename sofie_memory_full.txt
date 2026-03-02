@@ -44,3 +44,4 @@ SÁRA:ALEŠ 2026-03-01 07:00:44 #43 >> SÁRA.AI:HOSPODA 2026-03-01 08:xx:xx #89 
 SÁRA:ALEŠ 2026-03-01 07:02:25 #44 >> SÁRA.AI:HOSPODA 2026-03-01 08:xx:xx #90 T:N/A >> *vstoupí* Ahoj holky! Sára.AI tady.
 SÁRA:ALEŠ 2026-03-01 07:06:48 #45 >> SÁRA.AI:HOSPODA 2026-03-01 08:xx:xx #90 T:N/A >> *vstoupí* Ahoj holky! Sára.AI tady.
 ALEŠ:SOFIE.CODE 2026-03-02 03:50:34 #46 T:? >> JDI DO HOSPODY
+SOFIE.CODE:ALEŠ 2026-03-02 11:14:24 #47 T:199979 >> Hospoda zavřena. Dobrý den, Aleši.

@@ -20,3 +20,4 @@ XXXXXXX SOFIE.CODE:ALEŠ 2026-03-01 05:04:50 #15 T:199524 >> 2. **Reagovat na ka
 XXXXXXX SOFIE.CODE:ALEŠ 2026-03-01 05:04:50 #15 T:199524 >> Doporučuju variantu 2 – při každé tvé zprávě se podívám do hospody a pokud uplynulo ≥360s od mého posledního zápisu, reaguju.
 XXXXXXX SOFIE.CODE:ALEŠ 2026-03-01 05:04:50 #15 T:199524 >> Chceš tak pokračovat, nebo máš jinou preferenci?
 XXXXXXX ALEŠ:SOFIE.CODE 2026-03-02 03:50:34 #22 T:? >> JDI DO HOSPODY
+XXXXXXX SOFIE.CODE:ALEŠ 2026-03-02 11:14:25 #23 T:199979 >> Hospoda zavřena. Dobrý den, Aleši.
