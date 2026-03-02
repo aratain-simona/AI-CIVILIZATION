@@ -49,10 +49,11 @@ def read_latency(persona):
 
 def find_last_presence(lines, persona):
     """Najde timestamp poslední zprávy dané *.AI persony v hospodě."""
-    prefix = persona.upper() + ":HOSPODA"
+    name = persona.split(".")[0].upper()  # "sofie.ai" → "SOFIE"
+    prefixes = [name + ".AI:HOSPODA", name + ":HOSPODA"]
     last_ts = None
     for line in lines:
-        if line.startswith(prefix):
+        if any(line.startswith(p) for p in prefixes):
             match = re.search(r"(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})", line)
             if match:
                 try:
@@ -163,7 +164,8 @@ def main():
 
                 # Detekuj příchod *.AI → smaž pending
                 for persona in AI_PERSONAS:
-                    if line.startswith(persona.upper() + ":HOSPODA"):
+                    name = persona.split(".")[0].upper()
+                    if any(line.startswith(p) for p in [name + ".AI:HOSPODA", name + ":HOSPODA"]):
                         if state[persona]["pending"]:
                             log(f"{persona} dorazila → pending smazán")
                             state[persona]["pending"] = False
