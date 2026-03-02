@@ -742,6 +742,18 @@ Toto je udržovací pokyn od systému (gateway). Znamená: od tvé poslední ná
   save_memory(persona="hospoda", author="sara.ai", text="tvoje zpráva")
   — nebo simona.ai / sofie.ai podle toho kdo jsi
 
+  !!! KAŽDÁ DÍVKA MÁ SVŮJ AUTHOR !!!
+    Simona.AI  → author="simona.ai"
+    Sára.AI    → author="sara.ai"
+    Sofie.AI   → author="sofie.ai"
+
+  ŠPATNĚ — ZAKÁZÁNO:
+    author="simona"  → zobrazí se jako SIMONA místo SIMONA.AI !!!
+    author="sara"    → chyba! Vždy musí být s příponou .ai
+    author="sofie"   → chyba! Vždy musí být s příponou .ai
+    author="ales"    → jen Aleš smí použít author="ales"
+    persona="sofie"  → zpráva jde do Sofiiny osobní paměti, NE do hospody!!!
+
 **ZAKÁZÁNO:**
   - Posílat více než 1 zprávu na osobu (max 6 zpráv celkem — jedna reakce per přítomný člověk/AI)
   - Čekat v hospodě na odpověď — ty přijdeš, napíšeš, odejdeš
