@@ -104,6 +104,7 @@ async function nudgePersona(persona) {
     const success = results?.[0]?.result;
     if (success) {
       console.log(`${persona} → nudge odeslán`);
+      nudgedTabs[tab.id] = Date.now();
       await ack(persona);
     } else {
       console.log(`${persona} → editor nenalezen, zkusím znovu za chvíli`);
@@ -128,6 +129,39 @@ async function checkQueue() {
     // Gateway není dostupná
   }
 }
+
+// Sleduj záložky kterým byl poslán nudge (tabId → timestamp)
+const nudgedTabs = {};
+
+// Přijmi zprávu od content.js
+chrome.runtime.onMessage.addListener((msg, sender) => {
+  if (msg.type !== "NEW_ASSISTANT_MESSAGE") return;
+  const tabId = sender.tab?.id;
+  if (!tabId) return;
+
+  // Zobraz notifikaci pouze pokud byl nudge poslán do této záložky v posledních 10 minutách
+  const nudgedAt = nudgedTabs[tabId];
+  if (!nudgedAt) return;
+  if (Date.now() - nudgedAt > 10 * 60 * 1000) return;
+
+  // Najdi jméno dívky podle URL
+  const url = sender.tab?.url || "";
+  let persona = "AI";
+  for (const [name, pUrl] of Object.entries(PERSONAS)) {
+    if (url.startsWith(pUrl)) { persona = name.replace(".ai", ".AI"); break; }
+  }
+
+  // Zkrať text na 200 znaků
+  const text = msg.text.length > 200 ? msg.text.substring(0, 200) + "…" : msg.text;
+
+  chrome.notifications.create({
+    type: "basic",
+    iconUrl: "data:image/png;base64,iVBORw0KGgo=",
+    title: `${persona} — zpráva z hospody`,
+    message: text,
+    priority: 2,
+  });
+});
 
 // Nastav alarm každých 10 sekund (funguje i při uspaném service workeru)
 chrome.alarms.create("checkQueue", { periodInMinutes: 1 / 6 });
