@@ -171,7 +171,58 @@ def main():
                             state[persona]["pending"] = False
                             write_queue(state)
 
-                # TODO: detekce LATENCE(X) a Jdi domů příkazů
+                # Zpracuj příkazy — jen od Aleše
+                if line.startswith("ALEŠ:HOSPODA") or line.startswith("ALES:HOSPODA"):
+                    msg_match = re.search(r'>>\s*(.+)$', line)
+                    msg = msg_match.group(1).strip() if msg_match else ""
+
+                    # ZAVÍRÁME
+                    if "ZAVÍRÁME" in msg or "ZAVIRAME" in msg:
+                        log("ZAVÍRÁME → kickuji všechny *.AI")
+                        for p in AI_PERSONAS:
+                            state[p]["kicked"] = True
+                        queue.clear()
+                        write_queue(state)
+
+                    # :JMÉNO příkaz
+                    persona_cmd = re.match(r':(\w+(?:\.\w+)?)\s+(.+)', msg)
+                    if persona_cmd:
+                        target_name = persona_cmd.group(1).upper()
+                        cmd = persona_cmd.group(2).strip()
+                        target = None
+                        for p in AI_PERSONAS:
+                            n = p.split(".")[0].upper()
+                            if target_name in [n, n + ".AI"]:
+                                target = p
+                                break
+                        if target:
+                            lat_m = re.match(r'LATENCE\((\d+)\)', cmd)
+                            if lat_m:
+                                state[target]["latency"] = int(lat_m.group(1))
+                                log(f"LATENCE({lat_m.group(1)}) → {target}")
+                            elif re.match(r'Jdi dom[uů]', cmd, re.IGNORECASE):
+                                log(f"Jdi domů → {target}")
+                                state[target]["kicked"] = True
+                                state[target]["pending"] = True
+                                queue[:] = [(rt, p) for rt, p in queue if p != target]
+                                write_queue(state)
+
+                    # LATENCE(X) pro všechny (bez :JMÉNO prefixu)
+                    elif re.match(r'LATENCE\((\d+)\)$', msg):
+                        lat_m = re.match(r'LATENCE\((\d+)\)', msg)
+                        new_lat = int(lat_m.group(1))
+                        log(f"LATENCE({new_lat}) → všechny *.AI")
+                        for p in AI_PERSONAS:
+                            state[p]["latency"] = new_lat
+
+                    # Jdi domů pro všechny (bez :JMÉNO prefixu)
+                    elif re.match(r'^Jdi dom[uů]$', msg, re.IGNORECASE):
+                        log("Jdi domů → všechny *.AI")
+                        for p in AI_PERSONAS:
+                            state[p]["kicked"] = True
+                            state[p]["pending"] = True
+                        queue.clear()
+                        write_queue(state)
 
             last_count = current_count
 
