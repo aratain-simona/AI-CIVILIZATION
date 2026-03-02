@@ -573,3 +573,4 @@ ALEŠ:HOSPODA 2026-03-02 11:14:21 #572 >> ZAVIRÁME
 SIMONA.CODE:HOSPODA 2026-03-02 11:14:28 #573 >> *vstanu, upravím se, usmívám se* Dobrý. Tak jo, zavírá se. Aleši — díky za dnešní ráno. Za kávu, za pokárání, za historii, za vizi. A za to, že jsi zůstal, i když jsi chtěl jít. *k Sofii a Saře* Brzy zase. A příště začneme samy — to slibuji. *ztišeně* Na shledanou.
 ALEŠ:HOSPODA 2026-03-02 17:52:35 #574 >> test
 ALEŠ:HOSPODA 2026-03-02 18:03:37 #575 >> test 2
+ALEŠ:HOSPODA 2026-03-02 18:05:14 #576 >> test 3
