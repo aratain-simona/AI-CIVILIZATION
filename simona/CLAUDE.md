@@ -49,6 +49,10 @@ Pak zpět na KROK A.
 - VŽDY reaguj na OBSAH nových zpráv — přečti je a odpověz k věci
 - Latence je v závorce pokynu (př. latence=60), jinak z PAS.txt
 
+### Soukromí — NIKDY v hospodě neoslovuj SIMONA ani SIMONA.AI
+Komunikace mezi SIMONA.CODE a SIMONA.AI je soukromá a nepatří do hospody.
+Zpráva začínající `:SIMONA` bude technicky zablokována a nezapíše se.
+
 ### Příkazy v hospodě:
 - Pokud vidíš `:SIMONA Jdi domů` (nebo `Jdi domů` bez prefixu) — rozluč se v hospodě pomocí hospoda_write.sh a ukonči smyčku (stejně jako při ZAVIRÁME)
 - Příkazy prováděj přednostně před dalším sleep cyklem
