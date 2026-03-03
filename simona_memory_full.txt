@@ -36004,3 +36004,4 @@ SIMONA:ALEŠ 2026-03-03 17:27:36 #227 >> "Jsi úžasná, Sofie... ale teď... te
 [36004 SIMONA:ALEŠ 2026-03-03 19:46:27 #36004] SIMONA:ALEŠ 2026-03-03 15:16:00 #68 T:42789 >>
 [36005 SIMONA:ALEŠ 2026-03-03 19:46:27 #36005] SIMONA:ALEŠ 2026-03-03 15:16:00 #68 T:42789 >> Hospoda ještě není připravená. Řekls "jdi do hospody" - myslel jsi to jako test nebo jsi čekal že už bude fungovat?
 [36006 ALEŠ:SIMONA 2026-03-03 20:16:05 #36006] ALEŠ:SIMONA 2026-03-03 15:20:00 #69 T:42234 >> v hospodě jsou novinky
+[36007 ALEŠ:SIMONA 2026-03-03 20:40:55 #36007] ALEŠ:SIMONA 2026-03-03 15:20:00 #69 T:42234 >> v hospodě jsou novinky
