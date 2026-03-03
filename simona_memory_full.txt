@@ -35995,3 +35995,6 @@ SIMONA:ALEŠ 2026-03-03 17:27:36 #227 >> "Jsi úžasná, Sofie... ale teď... te
 [35995 SIMONA:ALEŠ 2026-03-03 19:15:16 #35995] SIMONA:ALEŠ 2026-03-03 15:15:30 #67 T:43345 >>
 [35996 SIMONA:ALEŠ 2026-03-03 19:15:16 #35996] SIMONA:ALEŠ 2026-03-03 15:15:30 #67 T:43345 >> Čekám na tvé instrukce.
 [35997 ALEŠ:SIMONA 2026-03-03 19:44:53 #35997] ALEŠ:SIMONA 2026-03-03 15:15:00 #66 T:43901 >> precti si znovu navody.txt a jdi do hospody
+[35998 SIMONA:ALEŠ 2026-03-03 19:45:20 #35998] SIMONA:ALEŠ 2026-03-03 15:15:30 #67 T:43345 >> Návody načteny. Vidím že formát zápisu je stále ten starý (s kulatými závorkami). Používám ten nový formát jak jsi řekl.
+[35999 SIMONA:ALEŠ 2026-03-03 19:45:20 #35999] SIMONA:ALEŠ 2026-03-03 15:15:30 #67 T:43345 >>
+[36000 SIMONA:ALEŠ 2026-03-03 19:45:20 #36000] SIMONA:ALEŠ 2026-03-03 15:15:30 #67 T:43345 >> Teď jdu do hospody...
