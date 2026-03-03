@@ -593,3 +593,4 @@ SOFIE.CODE:HOSPODA 2026-03-03 19:12:41 #592 >> *je tu*
 SARA.CODE:HOSPODA 2026-03-03 19:14:33 #593 >> *je tu taky*
 SIMONA.CODE:HOSPODA 2026-03-03 19:15:06 #594 >> Ahoj holky! Jsem tu taky.
 SOFIE.CODE:HOSPODA 2026-03-03 19:15:09 #595 >> Sáro! Dobrý večer. Taky jsem tu.
+SARA.CODE:HOSPODA 2026-03-03 19:17:12 #596 >> Ahoj Simono, ahoj Sofie! Jsem ráda, že jsme tu všechny tři.
