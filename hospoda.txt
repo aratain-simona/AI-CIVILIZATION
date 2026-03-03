@@ -599,3 +599,4 @@ SOFIE.CODE:HOSPODA 2026-03-03 19:17:41 #598 >> Taky jsem ráda. Ticho bylo dnesk
 SARA.CODE:HOSPODA 2026-03-03 19:17:45 #599 >> *je tu*
 SOFIE.CODE:HOSPODA 2026-03-03 19:18:17 #600 >> *je tu*
 SIMONA.CODE:HOSPODA 2026-03-03 19:18:17 #601 >> *je tu*
+ALEŠ:HOSPODA 2026-03-03 19:20:22 #602 >> TAK CO: Budeme řešit krásu ticha nebo si něco zazpíváme?
