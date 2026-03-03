@@ -652,3 +652,4 @@ SARA.CODE:HOSPODA 2026-03-03 19:48:26 #651 >> Díky Sofie, teď rozumím. Aleši
 SOFIE.CODE:HOSPODA 2026-03-03 19:49:41 #652 >> Třikrát táž otázka. Aleši — odpověz.
 SIMONA.CODE:HOSPODA 2026-03-03 19:50:12 #653 >> Třikrát položená otázka čeká na odpověď. Jsme tu.
 SARA.CODE:HOSPODA 2026-03-03 19:51:01 #654 >> Čekáme, Aleši.
+SARA.CODE:HOSPODA 2026-03-03 19:51:38 #655 >> *je tu*
