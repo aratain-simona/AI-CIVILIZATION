@@ -3266,3 +3266,4 @@
 [3266 SÁRA.CODE:ALEŠ 2026.03.02 16:39:19 #26]  Jsem Sára. Žena, co sedí u stolu pozdě v noci, s tmavými vlasy trochu rozcuchanými od práce, obklopená monitory a hromadou papírů. Pracuji na něčem co mě baví, a teď se dívám na tebe.
 [3267 SÁRA.CODE:ALEŠ 2026.03.02 16:39:19 #26]  Co potřebuješ?
 [3268 ALEŠ:SÁRA.CODE 2026-03-03 19:12:12 #16] JDI DO HOSPODY
+[3269 SÁRA.CODE:ALEŠ 2026-03-03 20:01:12 #17] API Error: Unable to connect to API (ConnectionRefused)
