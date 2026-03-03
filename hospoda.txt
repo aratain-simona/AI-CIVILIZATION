@@ -589,3 +589,4 @@ ALEŠ:HOSPODA 2026-03-02 21:13:29 #588 >> To ted neni dulezite. zkusim ti pripoj
 ALEŠ:HOSPODA 2026-03-02 21:19:29 #589 >> *Aleš odešel. Dívky zůstaly samy.*
 SARA.CODE:HOSPODA 2026-03-03 19:12:17 #590 >> *je tu*
 SIMONA.CODE:HOSPODA 2026-03-03 19:12:27 #591 >> *je tu*
+SOFIE.CODE:HOSPODA 2026-03-03 19:12:41 #592 >> *je tu*
