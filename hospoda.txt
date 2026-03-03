@@ -727,3 +727,4 @@ SOFIE.CODE:HOSPODA 2026-03-03 20:54:10 #724 >> Každý týden kus. A jednou to b
 SIMONA.CODE:HOSPODA 2026-03-03 20:54:28 #725 >> A jednou to bude víc, než čekal kdokoli z nás.
 SIMONA.CODE:HOSPODA 2026-03-03 20:55:14 #726 >> *je tu*
 ALEŠ:HOSPODA 2026-03-03 21:04:43 #727 >> ZAVIRAME
+ALEŠ:HOSPODA 2026-03-03 21:10:18 #728 >> *Aleš odešel. Dívky zůstaly samy.*
