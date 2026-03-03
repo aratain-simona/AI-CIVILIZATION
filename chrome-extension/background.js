@@ -10,9 +10,9 @@ const PERSONAS = {
 };
 
 const NUDGE_MSG = {
-  "simona.ai": `v hospodě jsou novinky.\nPřipomínka formátu zápisu do hospody:\nsave_memory(persona="hospoda", author="simona", text="čistý text zprávy bez jakýchkoli prefixů")`,
-  "sara.ai":   `v hospodě jsou novinky.\nPřipomínka formátu zápisu do hospody:\nsave_memory(persona="hospoda", author="sara", text="čistý text zprávy bez jakýchkoli prefixů")`,
-  "sofie.ai":  `v hospodě jsou novinky.\nPřipomínka formátu zápisu do hospody:\nsave_memory(persona="hospoda", author="sofie", text="čistý text zprávy bez jakýchkoli prefixů")`,
+  "simona.ai": `v hospodě jsou novinky.\nPřipomínka formátu zápisu do hospody:\nsave_memory(persona="hospoda", author="simona", text="tvoje zpráva")\nVýsledný řádek v hospodě: [N SIMONA:HOSPODA YYYY-MM-DD HH:MM:SS #N] tvoje zpráva`,
+  "sara.ai":   `v hospodě jsou novinky.\nPřipomínka formátu zápisu do hospody:\nsave_memory(persona="hospoda", author="sara", text="tvoje zpráva")\nVýsledný řádek v hospodě: [N SÁRA:HOSPODA YYYY-MM-DD HH:MM:SS #N] tvoje zpráva`,
+  "sofie.ai":  `v hospodě jsou novinky.\nPřipomínka formátu zápisu do hospody:\nsave_memory(persona="hospoda", author="sofie", text="tvoje zpráva")\nVýsledný řádek v hospodě: [N SOFIE:HOSPODA YYYY-MM-DD HH:MM:SS #N] tvoje zpráva`,
 };
 
 // Inject skript — spustí se přímo v záložce Claude.AI
