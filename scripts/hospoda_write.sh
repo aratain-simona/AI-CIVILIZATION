@@ -6,6 +6,13 @@ PERSONA=${1:-"UNKNOWN.CODE"}
 TEXT=$2
 HOSPODA=/home/ales/AI-CIVILIZATION/hospoda.txt
 STATE=/tmp/hospoda_${PERSONA//./\_}.state
+BASE="${PERSONA%%.*}"  # SIMONA.CODE → SIMONA
+
+# Blokuj oslovení stejnojmenné *.AI dvojnice — soukromé, nesmí být v hospodě
+if echo "$TEXT" | grep -qiE "^:${BASE}(\.AI)?([[:space:],]|$)"; then
+    echo "BLOKOVÁNO: ${PERSONA} nesmí v hospodě oslovovat ${BASE} / ${BASE}.AI" >&2
+    exit 1
+fi
 
 MSG_NUM=$(( $(grep -cF ">>" "$HOSPODA" 2>/dev/null || echo 0) + 1 ))
 TS=$(date '+%Y-%m-%d %H:%M:%S')
