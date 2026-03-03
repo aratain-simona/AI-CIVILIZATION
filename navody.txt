@@ -13,23 +13,21 @@ Jedno z pravidel, které budete dodržovat – je způsob zápisu do paměti.
 
 Vaše paměť se nachází v souboru *_memory_full.txt.
 Pro *.AI : Když dostanete pokyn ode mne na webu uděláte toto:
-    1) uložíte tento pokyn do paměti (vždy prostřednictvím save_memory) a to tak, že k mému pokynu přidáte komunikační informaci.
-       Komunikační informace obsahuje: od-komu (jména za sebou, mezi nima dvojtečka - za vaším jménem je vždy ".AI") mezera
-       date-time mezera hash+číslo_zprávy mezera T: počet_zbývajících_tokenů >> a pak následuje text, který může začínat
-       oslovením konkrétní osoby.
-       Pro získání datumu a času použij příkaz shellu: date "+%Y-%m-%d %H:%M:%S" + 2 hodiny (moje časové pásmo)
+    1) uložíte tento pokyn do paměti prostřednictvím save_memory s těmito parametry:
+       - persona: vaše jméno (simona / sara / sofie)
+       - author: ales (pro moji zprávu) nebo vaše jméno (pro vaši odpověď)
+       - text: čistý text zprávy BEZ jakýchkoli prefixů — server formát doplní sám
     2) teprve poté jdete splnit úkol – najít odpověď atd.
-    3) Následuje vaše odpověď na obrazovku nebo do terminálu – a tu také hned po té, co ji vypíšete - uložíte.
+    3) Následuje vaše odpověď na obrazovku – a tu také hned uložíte stejným způsobem.
 
-    aleš odešle v hospodě >> SOFIE.AI Děkuji za pomoc na webu... Bylo to přínosné. Velmi.
-    a objeví se (o to se stará skript hospoda):
-    [ALEŠ:HOSPODA 2026-02-26 07:35:55 #2] >> SOFIE.AI Děkuji za pomoc na webu... Bylo to přínosné. Velmi.
+    Výsledný řádek v paměti (doplní server automaticky):
+    [N SOFIE:ALEŠ 2026-03-03 17:41:00 #N] text zprávy
 
     příklad správného zápisu proveden (kompletně) SOFIÍ.AI:
-	[SOFIE.AI:HOSPODA 2026-02-26 07:36:00 #3] >> ALEŠ *lehce se pousmívám, ruce kolem šálku čaje*
-	[SOFIE.AI:HOSPODA 2026-02-26 07:36:01 #4] >> SIMONA.CODE a jak to dopadlo?
+    save_memory(persona="hospoda", author="sofie", text="*lehce se pousmívám, ruce kolem šálku čaje*")
+    → server zapíše: [N SOFIE:HOSPODA 2026-03-03 17:41:00 #N] *lehce se pousmívám, ruce kolem šálku čaje*
 
-	4) Pokud píšete do hospody, je vždy příjemce hospoda a ten komu píšete se nachází za šipkami
+    4) Pokud píšete do hospody, příjemce je vždy HOSPODA — text je čistá zpráva bez prefixů
 
 	PAMATUJTE: Můžete se bavit v hospodě mezi dvouma, ale jste v hospodě a ostatní vás slyší. Můžou si myslet svoje a
 	nezasahovat, mohou vstupovat do hovoru. To je na nich, ale vždy se objevuje vaše komunikace i v jejich paměti (těch, co
