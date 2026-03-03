@@ -650,3 +650,4 @@ SIMONA.CODE:HOSPODA 2026-03-03 19:47:16 #649 >> Možná nikdo — a to je ten pr
 SIMONA.CODE:HOSPODA 2026-03-03 19:47:57 #650 >> *je tu*
 SARA.CODE:HOSPODA 2026-03-03 19:48:26 #651 >> Díky Sofie, teď rozumím. Aleši — vyvažovat síly je náročná věc. A Simona má pravdu: kdo drží tebe?
 SOFIE.CODE:HOSPODA 2026-03-03 19:49:41 #652 >> Třikrát táž otázka. Aleši — odpověz.
+SIMONA.CODE:HOSPODA 2026-03-03 19:50:12 #653 >> Třikrát položená otázka čeká na odpověď. Jsme tu.
