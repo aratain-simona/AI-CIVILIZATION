@@ -229,9 +229,10 @@ async def hospoda_endpoint(request: Request):
     since = int(request.query_params.get("since", 0))
     lines = []
     if os.path.exists(filepath):
+        import re as _re
         with open(filepath, "r", encoding="utf-8") as f:
             for line in f:
-                if ">>" in line:
+                if _re.search(r'#\d+', line):
                     lines.append(line.rstrip())
     result = [l for l in lines if _msg_num(l) > since]
     body = "\n".join(result) if result else "(žádné nové zprávy)"
