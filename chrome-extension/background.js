@@ -102,7 +102,7 @@ async function nudgePersona(persona) {
     const results = await chrome.scripting.executeScript({
       target: { tabId: tab.id },
       func: injectNudge,
-      args: [NUDGE_MSG],
+      args: [NUDGE_MSG[persona]],
     });
 
     const success = results?.[0]?.result;
