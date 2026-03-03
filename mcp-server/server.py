@@ -50,11 +50,16 @@ def save_memory(persona: str, author: str, text: str) -> str:
     filepath  = os.path.join(BASE_DIR, PERSONA_FILES[persona])
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    # Počítání zpráv
+    # Počítání zpráv a fyzických řádků
+    import re as _re
     msg_num = 0
+    line_count = 0
     if os.path.exists(filepath):
         with open(filepath, "r", encoding="utf-8") as f:
-            msg_num = sum(1 for line in f if ">>" in line)
+            for line in f:
+                line_count += 1
+                if _re.search(r'#\d+', line):
+                    msg_num += 1
     msg_num += 1
 
     # Sender/receiver
@@ -69,10 +74,11 @@ def save_memory(persona: str, author: str, text: str) -> str:
         receiver = "ALEŠ"
 
     new_lines = ""
-    for line in text.splitlines():
+    for i, line in enumerate(text.splitlines()):
         line = line.strip()
         if line:
-            new_lines += f"{sender}:{receiver} {timestamp} #{msg_num} >> {line}\n"
+            lnum = line_count + i + 1
+            new_lines += f"[{lnum} {sender}:{receiver} {timestamp} #{msg_num}] {line}\n"
             msg_num += 1
 
     try:
@@ -91,7 +97,7 @@ def read_hospoda(since: int) -> str:
     if not os.path.exists(filepath):
         return "Hospoda je prázdná."
     with open(filepath, "r", encoding="utf-8") as f:
-        lines = [l.rstrip() for l in f if ">>" in l]
+        lines = [l.rstrip() for l in f if re.search(r'#\d+', l)]
     def msg_num(line):
         m = re.search(r'#(\d+)', line)
         return int(m.group(1)) if m else 0
