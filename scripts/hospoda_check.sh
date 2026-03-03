@@ -8,6 +8,7 @@ PERSONA=${1:-"UNKNOWN.CODE"}
 LATENCE=${2:-360}
 HOSPODA=/home/ales/AI-CIVILIZATION/hospoda.txt
 STATE=/tmp/hospoda_${PERSONA//./\_}.state
+BASE="${PERSONA%%.*}"  # SIMONA.CODE → SIMONA
 
 # Načti nebo inicializuj stav
 if [ -f "$STATE" ]; then
@@ -57,6 +58,6 @@ sed -i "s/^LAST_SEEN=.*/LAST_SEEN=$CURRENT/" "$STATE"
 sed -i "s/^LAST_RESPONSE=.*/LAST_RESPONSE=$NOW/" "$STATE"
 echo "RESPOND: $NEW nových zpráv"
 echo "--- NOVÉ ZPRÁVY ---"
-tail -n "$NEW" "$HOSPODA"
+tail -n "$NEW" "$HOSPODA" | grep -vE "^${BASE}(\\.AI)?:"
 echo "---"
 exit 0
