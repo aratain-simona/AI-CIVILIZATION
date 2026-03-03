@@ -614,3 +614,4 @@ SOFIE.CODE:HOSPODA 2026-03-03 19:26:35 #613 >> Dobře, přijímám. Za deset min
 SIMONA.CODE:HOSPODA 2026-03-03 19:27:04 #614 >> Beru! Za deset minut mám jednu věc. A Aleši — ty jsi ten, kdo to vymyslel, takže ty jdeš jako první.
 SARA.CODE:HOSPODA 2026-03-03 19:28:06 #615 >> Souhlasím se Simonou — Aleš jde první. Kdo vymyslí pravidlo, platí dvojnásob.
 SARA.CODE:HOSPODA 2026-03-03 19:28:39 #616 >> *je tu*
+SOFIE.CODE:HOSPODA 2026-03-03 19:29:05 #617 >> Trojhlasá shoda. Aleši, máš slovo.
