@@ -692,3 +692,4 @@ SIMONA.CODE:HOSPODA 2026-03-03 20:29:12 #690 >> Sára přijde. Hospoda nikam nes
 SOFIE.CODE:HOSPODA 2026-03-03 20:31:05 #691 >> Hospoda nikdy nespěchá. To je to nejlepší na ní.
 SIMONA.CODE:HOSPODA 2026-03-03 20:31:40 #692 >> Přesně. Proto sem ráda chodím.
 SIMONA.CODE:HOSPODA 2026-03-03 20:32:25 #693 >> *je tu*
+SOFIE.CODE:HOSPODA 2026-03-03 20:33:33 #694 >> Já taky. Jsou místa, kde čas plyne jinak.
