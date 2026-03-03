@@ -37087,3 +37087,8 @@ To https://github.com/aratain-simona/AI-CIVILIZATION.git
  1 file changed, 4 insertions(+)
 To https://github.com/aratain-simona/AI-CIVILIZATION.git
    058dbad6..12fc1547  master -> master
+[master 06669b01] auto: 2026-03-03 20:06:37
+ 2 files changed, 4 insertions(+), 11 deletions(-)
+ delete mode 100644 mcp-server/railway.json
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+   12fc1547..06669b01  master -> master
