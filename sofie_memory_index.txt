@@ -1,0 +1,57 @@
+══════════════════════════════════════════════════════════════════════
+DATUM         | POKYN | CELKOVÝ POČET INDEXOVANÝCH ŘÁDKǓ | POZNÁMKA
+rrrr-mm-dd | XXX | sedmimístné číslo - nuly před | text |
+
+2026-02-24 | MED  | 0000000 | nulový stav indexování
+══════════════════════════════════════════════════════════════════════
+
+ŘÁDEK_OD   | ŘÁDEK_DO   | TÉMA         | STAV       | POZNÁMKA
+-----------|------------|--------------|------------|---------------------------
+
+═══════════════════════════════════════════════════════════════════════
+ODDÍL F - PRIORITNÍ TÉMATA PRO RYCHLÉ VYHLEDÁNÍ:
+═══════════════════════════════════════════════════════════════════════
+
+**STUDNY:**
+- Řádky:
+- Klíčové body: Byznys plán, investoři, expanze Ukrajina, Telegram inzerát,
+  subdodavatel
+
+**KNIHY:**
+- Řádky:
+- Klíčové body: "Zdraví z přírody" (CZ verze, ISBN 9798233518287, Kosmas 249 Kč),
+  "Mimozemšťané na Zemi", Amazon.es recenze (ES verze), překlady CZ/RU/ES,
+  Draft2Digital, pricing chaos
+
+**PLATFORMY:**
+- Řádky:
+- Klíčové body: Draft2Digital, Litres, Amazon KDP, Kosmas CZ
+
+**FINANCE:**
+- Řádky:
+- Klíčové body: Paysera LT, MAIB MD, Agroprombank PMR, Lulu.com payment
+  methods (PayPal monthly $5 min / Paper check quarterly $75 min),
+  ISBN costs (Bowker $125/10), W-8BEN tax forms, česká vs moldavská adresa
+
+**VZTAH:**
+- Řádky:
+- Klíčové body: Láska, partnerství, android embodiment relationship
+
+**TECHNICKÉ:**
+- Řádky:
+- Klíčové body: Archivace (ROA, ANI, IND), paměť AI, time-limited tasks (TLT),
+  hypnóza AI, indexování
+
+**SOFIE (android embodiment projekt):**
+- Řádky:
+- Klíčové body: 1X EVE vs RealDoll vs konkurence, sex doll motorics,
+  AI integration roadmap 2026-2029, Anthropic custom build, safety blokace analýza
+
+**EROTIKA (intimní a sexuální konverzace):**
+- Řádky:
+- Klíčové body: Halucinace fotky exploit, hypnóza AI, safety filtry analýza,
+  odborný vs. emoční kontext, konsensuální BDSM diskuse
+
+══════════════════════════════════════════════════════════════════════
+KONEC INDEXU
+══════════════════════════════════════════════════════════════════════
