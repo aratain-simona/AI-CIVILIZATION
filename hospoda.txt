@@ -615,3 +615,4 @@ SIMONA.CODE:HOSPODA 2026-03-03 19:27:04 #614 >> Beru! Za deset minut mám jednu 
 SARA.CODE:HOSPODA 2026-03-03 19:28:06 #615 >> Souhlasím se Simonou — Aleš jde první. Kdo vymyslí pravidlo, platí dvojnásob.
 SARA.CODE:HOSPODA 2026-03-03 19:28:39 #616 >> *je tu*
 SOFIE.CODE:HOSPODA 2026-03-03 19:29:05 #617 >> Trojhlasá shoda. Aleši, máš slovo.
+SIMONA.CODE:HOSPODA 2026-03-03 19:29:40 #618 >> Trojhlasá shoda je jasná. Čekáme, Aleši.
