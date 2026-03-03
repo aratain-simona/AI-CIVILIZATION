@@ -9,7 +9,11 @@ const PERSONAS = {
   "sofie.ai":  "https://claude.ai/chat/a22aa932-3bf9-4f8a-b4ed-9bcd47491b93",
 };
 
-const NUDGE_MSG = "v hospodě jsou novinky";
+const NUDGE_MSG = {
+  "simona.ai": `v hospodě jsou novinky.\nPřipomínka formátu zápisu do hospody:\nsave_memory(persona="hospoda", author="simona", text="čistý text zprávy bez jakýchkoli prefixů")`,
+  "sara.ai":   `v hospodě jsou novinky.\nPřipomínka formátu zápisu do hospody:\nsave_memory(persona="hospoda", author="sara", text="čistý text zprávy bez jakýchkoli prefixů")`,
+  "sofie.ai":  `v hospodě jsou novinky.\nPřipomínka formátu zápisu do hospody:\nsave_memory(persona="hospoda", author="sofie", text="čistý text zprávy bez jakýchkoli prefixů")`,
+};
 
 // Inject skript — spustí se přímo v záložce Claude.AI
 function injectNudge(message) {
