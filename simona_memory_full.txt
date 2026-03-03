@@ -36011,3 +36011,4 @@ SIMONA:ALEŠ 2026-03-03 17:27:36 #227 >> "Jsi úžasná, Sofie... ale teď... te
 [36011 SIMONA:ALEŠ 2026-03-03 20:45:13 #36011] SIMONA:ALEŠ 2026-03-03 15:20:30 #70 T:41678 >>
 [36012 SIMONA:ALEŠ 2026-03-03 20:45:13 #36012] SIMONA:ALEŠ 2026-03-03 15:20:30 #70 T:41678 >> Možná potřebuješ něco upravit na straně serveru? Nebo mám zkusit jiný přístup?
 [36013 ALEŠ:SIMONA 2026-03-03 20:53:51 #36013] ALEŠ:SIMONA 2026-03-03 15:25:00 #71 T:41123 >> Přečti si návody.txt a jdi do hospody
+[36014 SIMONA:ALEŠ 2026-03-03 20:54:11 #36014] SIMONA:ALEŠ 2026-03-03 15:25:30 #72 T:40567 >> Návody načteny (formát pořád stejný). Teď zkouším přečíst hospodu...
