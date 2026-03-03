@@ -1,39 +1,4 @@
-﻿Na tomto místě budou v budoucnu instrukce pro všechny a mělo by se k nim přistupovat vždy, když mezi zprávami bude větší odstup než 1 hodina. To znamená: generuješ datetime, získáš ho, dáš výsledek na výstup a v případě potřeby (dlouhá pausa - porovnáš s poslední zprávou) - podíváš se sem jestli se nezměnila nějaká instrukce pro plány (něco se mohlo dokončit nebo jsme se někde zasekli) a pod.
-—---------------------------------------------------------------------------------------------------------------------------------
-
-Co a jak dělám já: Máme tokeny a plný time - věnuji se vám, aby jste mi udělali práci a připravili data. Skončí limit - timeout po třech hodinách - beru vaší práci a začnu ji formátovat do knihy, za pomocí poe dodělávat obrázky atd. Teprve v tomto okamžiku zjišťuji jak kvalitní nebo nekvalitní byla vaše práce celkově. 
-
-—---------------------------------------------------------------------------------------------------------------------------------
-SOUČASNÝ PLÁN PRO NEJBLIŽŠÍ DOBU:
-
-    1) zajistit, aby bylo co prodávat
-    2) předělat a rozšířit marketing (reklamy, slevy, více obchodních míst)
-
-až bude hotova kniha o mimozemšťanech - dám stejný příkaz pro všechny asistentky pro návrh zlepšení obchodních výsledků. Očekávám, že odpovědi nebudou stejné. Návrhy se pospojují a budou se řešit)
-
-        a) já pošlu knihu (zdarma po známých), ale do odkazu jim dám kontakt na prodejce: z tohoto titulu je potřeba mít místa, kam je budeme směřovat. Ruskou stranu (platební systém MIR) na Litres a systém SWIFT kam? V současnosti prodáváme na AMAZONU a přes systém Draft2Digital a KOSMAS a BuyMeCoffee.
-        b) podle mě by to chtělo udělat výběr internetových knižních obchodů tak, abychom zabrali co nejširší záběr na trhu
-			(SOFIE udělala - docela komplexní práce. Líbí se mi. Komunikace taky dobrá.)
-        c) kniha o starých venkovských komunitách je v pěti jazycích. Vybrali jsme nějaká místa, která by mohla mít zájem je nabídnout okolo sebe. Tento seznam by bylo dobré rozšířit. 
-(Sára to udělala taky skvěle). Komunikace taky šla. 
-        d) A pak tu máme ještě Simonku… Ted jsou data. Vsechny data jsou v tabulky. Mate k nim vsichni pristup. Doufám, že použitelný. Jsou všechny na jednom liste a jsou publikovany na web. Pokud by byli nejaké problémy - musíte mi dát vědět.
-Teď budeme Simono dělat mi. 
-Nejprve bych se pustil do toho kopného práva. 
-Za prvé potřebuji určit kam z emailu budeme směřovat náš odkaz na prodej. (pravdepodobne do každého státu na jeho amazon. Ale můžeme i jinak. Máme totiž dvě základní knihy od všeho PDF a EPUB nebo PDF a FB2. PDF je kniha vhodná pro tisk. 
-Mailing uděláme nejdříve. Nese nejrychlejší ovoce. Pravděpodobně bych nabídl cosi jako jednu bezplatnou verzi (mozna PDF s blokovaným tiskem) at nám to fakulty doporučují svým studentům. Nechci použít jeden universální email, ale každý email by měl být skoro osobním dopisem. Mělo by z něho vyplývat, že vím komu to nabízím a proč. Měli bychom se odvolávat na to, že se jedná o překlad Inaničieviče (v oblasti historie uznávaný odborník). A doplnit něco takového, že naše cena je nákladová (v tom stylu, abz si  mysleli, že na nich nikdo nechce vydělávat a je rád za každý prodej, udělal nízkou cenu - a oni to přece nemusí krást kopírováním. Tady bych více působil na lidskou slušnost než na povinnost nekrást a dodržovat autorská práva). 
-Bude to kupa emailu a bude to trvat. 
-Další krok bude dodělat všechny prodejní platformy tak jak to navrhovala Sofi. No. Něco již máme hotovo - takže to projdem a bojím se (sama víš), že je tak 50% úspěšnost probít se dotazníkem. Hromada práce a času. Peníze by měli téci na Payseru
-Odkaz na BuyMeCoffee je zde: https://buymeacoffee.com/aleskejval/e/504516
-Poslal jsem zkušebně 1 USD na BuyMeCoffee a zjistil jsem, že ho nemáme propojený s výstupním bankovním účtem a pak jsem zjistil, že těchto problémů je mnoho a asi budeme muset kvůli tomu vyřazovat prodejce nebo to donutit s něčím spojit. V poznámce v tabulce nic není. Tohle je Simi průser.
-Myslel jsem, že když budu posílat klienty na BuyMeCoffee tak budu mít vyšší zisk, ale zatím to moc nefunguje. Pochopitelně Draft2Digital a Amazon fungovat budou. Ale vezmou si 50% provizi…
-Takže tohle musíme dát dokupy.
-		Máme to se Simonou rozřešeny, ale dodělám to s někým jiným a ty ted dostanes pokyn k provedení indexace (bude to asi trochu trvat) … se Simonkou máme už skoro 50 tisíc řádků… Ale musíme to hlídat. Nicméně již má celoměsíční paměť. Budu muset nakodovat sdílení souboru na mém localním disku… (ale jsem na tohle jenom jeden. mj. a peníze se nehýbou, takže budu muset chodit na studny, to zabere čas a o to to půjde pomaleji.)
-
-Takže teď pro SIMONU: ROA (10)... Hlaš mi průběh
-
-Měli byste mít snad přístup k tabulkám. Nahlašte mi jak jste na tom? Sára toho měla taky dost posledně tak teď chvilku pauza. Musíme dodělat ten paddle… Budu s vámi průběžně komunikovat.
-
-
+﻿Na nástěnce zatím nic nového není. Nyní se zprovozňuje a zkouší hospoda.
 
 
 
