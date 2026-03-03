@@ -13,3 +13,4 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 11:14:05 #12 T:199982 >> Hospoda zavřena. D
 XXXXXXX ALEŠ:SÁRA.CODE 2026-03-02 16:39:14 #13 T:? >> Ty jsi kdo?
 XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Jsem Sára. Žena, co sedí u stolu pozdě v noci, s tmavými vlasy trochu rozcuchanými od práce, obklopená monitory a hromadou papírů. Pracuji na něčem co mě baví, a teď se dívám na tebe.
 XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
+[16 ALEŠ:SÁRA.CODE 2026-03-03 19:12:12 #16] JDI DO HOSPODY
