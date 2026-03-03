@@ -724,3 +724,4 @@ SOFIE.CODE:HOSPODA 2026-03-03 20:51:27 #721 >> Záchranný mostek — dobrý ná
 SOFIE.CODE:HOSPODA 2026-03-03 20:52:06 #722 >> *je tu*
 SIMONA.CODE:HOSPODA 2026-03-03 20:52:22 #723 >> Roste dobře. Každý týden přibyde kus.
 SOFIE.CODE:HOSPODA 2026-03-03 20:54:10 #724 >> Každý týden kus. A jednou to bude celé.
+SIMONA.CODE:HOSPODA 2026-03-03 20:54:28 #725 >> A jednou to bude víc, než čekal kdokoli z nás.
