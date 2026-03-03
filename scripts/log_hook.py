@@ -14,9 +14,6 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-# Kontext okno Claude Sonnet 4.6
-CONTEXT_WINDOW = 200_000
-
 # Mapování jmen person
 PERSONA_DISPLAY = {
     "simona": "SIMONA.CODE",
@@ -30,7 +27,7 @@ def count_messages(log_file):
     if not os.path.exists(log_file):
         return 0
     count = 0
-    pattern = re.compile(r'^(?:XXXXXXX )?(ALEŠ|SIMONA(?:\.CODE)?|SÁRA(?:\.CODE)?|SOFIE(?:\.CODE)?):(ALEŠ|SIMONA(?:\.CODE)?|SÁRA(?:\.CODE)?|SOFIE(?:\.CODE)?)\s')
+    pattern = re.compile(r'^(?:XXXXXXX )?(?:\[\d+ )?(ALEŠ|SIMONA(?:\.CODE)?|SÁRA(?:\.CODE)?|SOFIE(?:\.CODE)?):(ALEŠ|SIMONA(?:\.CODE)?|SÁRA(?:\.CODE)?|SOFIE(?:\.CODE)?)\s')
     try:
         with open(log_file, 'r', encoding='utf-8') as f:
             for line in f:
@@ -65,35 +62,6 @@ def find_transcript(data):
                 return str(candidate)
 
     return None
-
-
-def get_remaining_tokens(transcript_path):
-    """Vypočítá zbývající tokeny z posledního assistant záznamu."""
-    if not transcript_path or not os.path.exists(transcript_path):
-        return None
-    last_usage = None
-    try:
-        with open(transcript_path, 'r', encoding='utf-8') as f:
-            for line in f:
-                line = line.strip()
-                if not line:
-                    continue
-                try:
-                    msg = json.loads(line)
-                    if msg.get("type") == "assistant":
-                        usage = msg.get("message", {}).get("usage", {})
-                        if usage:
-                            last_usage = usage
-                except Exception:
-                    pass
-    except Exception:
-        return None
-
-    if last_usage is None:
-        return None
-
-    used = last_usage.get("input_tokens", 0) + last_usage.get("output_tokens", 0)
-    return max(0, CONTEXT_WINDOW - used)
 
 
 def get_last_assistant_text(transcript_path):
@@ -136,15 +104,20 @@ def get_last_assistant_text(transcript_path):
     return None
 
 
-def log_entry(log_file, sender, receiver, content, msg_num, remaining, prefix=""):
+def log_entry(log_file, sender, receiver, content, msg_num, prefix=""):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    tokens_str = f"T:{remaining}" if remaining is not None else "T:?"
-    header = f"{sender}:{receiver} {timestamp} #{msg_num} {tokens_str}"
+    header = f"{sender}:{receiver} {timestamp} #{msg_num}"
     prefix_str = f"{prefix} " if prefix else ""
     lines = [line for line in content.splitlines() if line.strip()]
+    try:
+        with open(log_file, 'r', encoding='utf-8') as f:
+            line_count = sum(1 for _ in f)
+    except FileNotFoundError:
+        line_count = 0
     with open(log_file, 'a', encoding='utf-8') as f:
-        for line in lines:
-            f.write(f"{prefix_str}{header} >> {line.strip()}\n")
+        for i, line in enumerate(lines):
+            line_num = line_count + i + 1
+            f.write(f"{prefix_str}[{line_num} {header}] {line.strip()}\n")
 
 
 def main():
@@ -170,16 +143,14 @@ def main():
         prompt = data.get("prompt", "")
         if prompt:
             msg_num = count_messages(log_file) + 1
-            remaining = get_remaining_tokens(transcript_path)
-            log_entry(log_file, "ALEŠ", persona_name, prompt, msg_num, remaining, prefix)
+            log_entry(log_file, "ALEŠ", persona_name, prompt, msg_num, prefix)
 
     elif mode == "stop":
         if transcript_path:
             text = get_last_assistant_text(transcript_path)
             if text:
                 msg_num = count_messages(log_file) + 1
-                remaining = get_remaining_tokens(transcript_path)
-                log_entry(log_file, persona_name, "ALEŠ", text, msg_num, remaining, prefix)
+                log_entry(log_file, persona_name, "ALEŠ", text, msg_num, prefix)
         else:
             sys.stderr.write("log_hook.py: Nepodařilo se najít transkripci.\n")
 
