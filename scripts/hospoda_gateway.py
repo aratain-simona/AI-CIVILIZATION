@@ -152,7 +152,7 @@ def main():
         current_count = len(lines)
 
         # Zpracuj nové řádky
-        new_movement = False
+        movement_for = set()  # persony, pro které je pohyb relevantní
         if current_count > last_count:
             new_lines = lines[last_count:]
             for line in new_lines:
@@ -160,7 +160,6 @@ def main():
                 if not line:
                     continue
                 log(f"POHYB: {line}")
-                new_movement = True
 
                 # Detekuj příchod *.AI → smaž pending
                 for persona in AI_PERSONAS:
@@ -170,6 +169,12 @@ def main():
                             log(f"{persona} dorazila → pending smazán")
                             state[persona]["pending"] = False
                             write_queue(state)
+
+                # Pohyb je relevantní pro persony, jejichž stejnojmenná varianta zprávu nepsala
+                for persona in AI_PERSONAS:
+                    base = persona.split(".")[0].upper()
+                    if not re.match(rf'^{base}(\\.AI|\\.CODE)?:', line):
+                        movement_for.add(persona)
 
                 # Zpracuj příkazy — jen od Aleše
                 if line.startswith("ALEŠ:HOSPODA") or line.startswith("ALES:HOSPODA"):
@@ -184,7 +189,7 @@ def main():
                         queue.clear()
                         write_queue(state)
 
-                    # :JMÉNO příkaz
+                    # :JMÉNO Jdi domů
                     persona_cmd = re.match(r':(\w+(?:\.\w+)?)\s+(.+)', msg)
                     if persona_cmd:
                         target_name = persona_cmd.group(1).upper()
@@ -195,25 +200,12 @@ def main():
                             if target_name in [n, n + ".AI"]:
                                 target = p
                                 break
-                        if target:
-                            lat_m = re.match(r'LATENCE\((\d+)\)', cmd)
-                            if lat_m:
-                                state[target]["latency"] = int(lat_m.group(1))
-                                log(f"LATENCE({lat_m.group(1)}) → {target}")
-                            elif re.match(r'Jdi dom[uů]', cmd, re.IGNORECASE):
-                                log(f"Jdi domů → {target}")
-                                state[target]["kicked"] = True
-                                state[target]["pending"] = True
-                                queue[:] = [(rt, p) for rt, p in queue if p != target]
-                                write_queue(state)
-
-                    # LATENCE(X) pro všechny (bez :JMÉNO prefixu)
-                    elif re.match(r'LATENCE\((\d+)\)$', msg):
-                        lat_m = re.match(r'LATENCE\((\d+)\)', msg)
-                        new_lat = int(lat_m.group(1))
-                        log(f"LATENCE({new_lat}) → všechny *.AI")
-                        for p in AI_PERSONAS:
-                            state[p]["latency"] = new_lat
+                        if target and re.match(r'Jdi dom[uů]', cmd, re.IGNORECASE):
+                            log(f"Jdi domů → {target}")
+                            state[target]["kicked"] = True
+                            state[target]["pending"] = True
+                            queue[:] = [(rt, p) for rt, p in queue if p != target]
+                            write_queue(state)
 
                     # Jdi domů pro všechny (bez :JMÉNO prefixu)
                     elif re.match(r'^Jdi dom[uů]$', msg, re.IGNORECASE):
@@ -226,11 +218,11 @@ def main():
 
             last_count = current_count
 
-        # Na pohyb: přidej do fronty persony, které tam ještě nejsou
-        if new_movement:
+        # Na pohyb: přidej do fronty jen persony, pro které je pohyb relevantní
+        if movement_for:
             now = datetime.now()
             already_queued = queued_personas(queue)
-            for persona in AI_PERSONAS:
+            for persona in [p for p in AI_PERSONAS if p in movement_for]:
                 if state[persona]["kicked"]:
                     continue
                 if state[persona]["pending"]:
