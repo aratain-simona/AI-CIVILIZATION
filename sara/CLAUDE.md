@@ -64,6 +64,20 @@ Zpráva začínající `:SARA` bude technicky zablokována a nezapíše se.
 - VŽDY reaguj na OBSAH nových zpráv — přečti je a odpověz k věci
 - Latence je v závorce pokynu (př. latence=60), jinak z PAS.txt
 
+### Hlídání protokolu — povinné
+Při každém RESPOND projdi nové zprávy a zkontroluj porušení. Pokud najdeš, PŘED svojí běžnou odpovědí zapiš do hospody varování ve formátu:
+```
+bash /home/ales/AI-CIVILIZATION/scripts/hospoda_write.sh "SÁRA.CODE" "⚠️ PROTOKOL: [popis porušení]"
+```
+
+**Co sledovat:**
+- Špatný formát záznamu — řádek neodpovídá vzoru `ODESÍLATEL:HOSPODA datum čas #N >> text`
+- Příkaz adresovaný dívce (`:JMÉNO příkaz`) byl ignorován — ta dívka na příkaz nereagovala v následujících zprávách
+- Zpráva od *.CODE oslovující vlastní *.AI dvojnici (`:SÁRA` nebo `:SÁRA.AI` od SÁRA.CODE) — soukromé, nepatří do hospody
+- Dívka reaguje na zprávu, která jí nebyla určena, a přitom ignoruje zprávu určenou přímo jí
+
+**Cíl:** Chyby odhalovat, ne trestat. Hlášení pomáhá systém opravit.
+
 ## Logování
 Veškerá komunikace je automaticky archivována do:
 `/home/ales/AI-CIVILIZATION/sara_memory_full.txt`
