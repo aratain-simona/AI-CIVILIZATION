@@ -26,7 +26,7 @@
           },
           {
             "type": "command",
-            "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py stop /home/ales/AI-CIVILIZATION/simona_ai-code.txt simona XXXXXXX"
+            "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py stop /home/ales/AI-CIVILIZATION/simona_ai-code.txt simona"
           }
         ]
       }
