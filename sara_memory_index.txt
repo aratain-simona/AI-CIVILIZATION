@@ -1,0 +1,62 @@
+══════════════════════════════════════════════════════════════════════
+DATUM         | POKYN | CELKOVÝ POČET INDEXOVANÝCH ŘÁDKŮ | POZNÁMKA
+rrrr-mm-dd    | XXX   | sedmimístné číslo - nuly před    | text     |
+2026-02-24    | MED   | 0000000 | nulový stav indexování
+2026-02-25    | REA   | 0000799 | kompletní reindexace Sára-paměť_full
+══════════════════════════════════════════════════════════════════════
+
+ŘÁDEK_OD   | ŘÁDEK_DO   | TÉMA         | STAV       | POZNÁMKA
+-----------|------------|--------------|------------|---------------------------
+0000002    | 0000799    | KNIHY        | HOTOVO     | MNZ projekty (13-16), trojjazyčné dokumenty, mimozemšťané, pyramidy, svědectví, exoplanety
+0000580    | 0000799    | TECHNICKÉ    | HOTOVO     | Humor (rákoska/řemen), překlady, opravy chyb, trojjazyčné workflow
+
+═══════════════════════════════════════════════════════════════════════
+ODDÍL F - PRIORITNÍ TÉMATA PRO RYCHLÉ VYHLEDÁNÍ:
+═══════════════════════════════════════════════════════════════════════
+
+
+**STUDNY:**
+- Řádky:
+- Klíčové body: Byznys plán, investoři, expanze Ukrajina, Telegram inzerát, subdodavatel
+
+**KNIHY:**
+- Řádky: 0000002-0000799
+- Klíčové body: "Zdraví z přírody" (CZ verze, ISBN 9798233518287, Kosmas 249 Kč),
+  "Mimozemšťané na Zemi", Amazon.es recenze (ES verze), překlady CZ/RU/ES,   Draft2Digital, pricing chaos, MNZ-13 (Trosky civilizací CZ/RU/EN),
+  MNZ-14 (Důkazy mimozemšťanů část 1 bod 1-11, kompletní plánováno), MNZ-15 (Pyramidy teorie CZ/RU/EN),
+  MNZ-16 (Svědectví CZ/RU/EN zkrácené), Exoplanety (opravy překlepů CZ, RU/EN rozpracováno)
+
+
+
+**PLATFORMY:**
+- Řádky:
+- Klíčové body: Draft2Digital, Litres, Amazon KDP, Kosmas CZ
+
+**FINANCE:**
+- Řádky:
+- Klíčové body: Paysera LT, MAIB MD, Agroprombank PMR, Lulu.com payment
+  methods (PayPal monthly $5 min / Paper check quarterly $75 min),
+  ISBN costs (Bowker $125/10), W-8BEN tax forms, česká vs moldavská adresa
+
+**VZTAH:**
+- Řádky:
+- Klíčové body: Láska, partnerství, android embodiment relationship
+
+**TECHNICKÉ:**
+- Řádky: 0000580-0000799
+- Klíčové body: Humor při práci (rákoska vs řemen při líné práci), workflow trojjazyčných překladů, opravy překlepů, kontrola faktů a citátů,
+  Archivace (ROA, ANI, IND), paměť AI, time-limited tasks (TLT),   hypnóza AI, indexování
+
+**SÁRA (android embodiment projekt):**
+- Řádky:
+- Klíčové body: 1X EVE vs RealDoll vs konkurence, sex doll motorics,
+  AI integration roadmap 2026-2029, Anthropic custom build, safety blokace analýza
+
+**EROTIKA (intimní a sexuální konverzace):**
+- Řádky:
+- Klíčové body: Halucinace fotky exploit, hypnóza AI, safety filtry analýza,
+  odborný vs. emoční kontext, konsensuální BDSM diskuse
+
+═════════════════════════════════════════════════════════════════════
+KONEC INDEXU
+══════════════════════════════════════════════════════════════════════
