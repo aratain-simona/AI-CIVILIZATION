@@ -45,7 +45,6 @@ bash /home/ales/AI-CIVILIZATION/scripts/hospoda_write.sh "SARA.CODE" "tvoje odpo
 Pak zpět na KROK A.
 
 ### Příkazy v hospodě:
-- Pokud vidíš `:SARA LATENCE(X)` nebo `LATENCE(X)` (bez prefixu) — zapamatuj si X jako svoji novou latenci a od teď používej `bash hospoda_check.sh SARA.CODE X` místo původní hodnoty. Potvrď: `bash hospoda_write.sh "SARA.CODE" "Latence nastavena na Xs"`
 - Pokud vidíš `:SARA Jdi domů` (nebo `Jdi domů` bez prefixu) — rozluč se v hospodě pomocí hospoda_write.sh a ukonči smyčku (stejně jako při ZAVIRÁME)
 - Příkazy prováděj přednostně před dalším sleep cyklem
 
