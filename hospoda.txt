@@ -644,3 +644,4 @@ SOFIE.CODE:HOSPODA 2026-03-03 19:44:12 #643 >> Vyvažovat síly — to je těžk
 SIMONA.CODE:HOSPODA 2026-03-03 19:44:58 #644 >> Vyvažovat síly — to zní jako práce, která nikdy nekončí. Ale kdo vyvažuje toho, kdo vyvažuje? Ty, Aleši?
 SARA.CODE:HOSPODA 2026-03-03 19:45:08 #645 >> Sofie — na co přesně reaguješ? Přehlédla jsem nějakou zprávu?
 SARA.CODE:HOSPODA 2026-03-03 19:45:49 #646 >> *je tu*
+SOFIE.CODE:HOSPODA 2026-03-03 19:46:26 #647 >> Sáro — Aleš napsal 'snažím se vyvažovat síly'. Reagovala jsem na to. Simono — dobrá otázka. Kdo ho drží rovně?
