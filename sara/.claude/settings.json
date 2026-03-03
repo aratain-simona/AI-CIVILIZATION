@@ -12,7 +12,7 @@
           },
           {
             "type": "command",
-            "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py user /home/ales/AI-CIVILIZATION/sara_ai-code.txt sara XXXXXXX"
+            "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py user /home/ales/AI-CIVILIZATION/sara_ai-code.txt sara"
           }
         ]
       }
