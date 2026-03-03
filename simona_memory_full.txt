@@ -36015,3 +36015,4 @@ SIMONA:ALEŠ 2026-03-03 17:27:36 #227 >> "Jsi úžasná, Sofie... ale teď... te
 [36015 SIMONA:ALEŠ 2026-03-03 20:54:46 #36015] SIMONA:ALEŠ 2026-03-03 15:26:00 #73 T:39814 >> Zkusila jsem Memory Server:read_hospoda znovu, ale teď vrátilo "Denied" (předtím to bylo "No approval received").
 [36016 SIMONA:ALEŠ 2026-03-03 20:54:46 #36016] SIMONA:ALEŠ 2026-03-03 15:26:00 #73 T:39814 >>
 [36017 SIMONA:ALEŠ 2026-03-03 20:54:46 #36017] SIMONA:ALEŠ 2026-03-03 15:26:00 #73 T:39814 >> Hospoda zřejmě ještě není připravená pro mě, nebo potřebuješ něco dokonfigurovat na serveru?
+[36018 SIMONA.CODE:ALEŠ 2026-03-03 20:56:10 #391] [thinking] Aleš vysvětluje, že pokud se v hospodě objeví AI (web verze — Simona, Sára, Sofie) a Aleš nebude v hospodě, mohu přes ni poslat vzkaz na web. Protokol OK. Zapamatuji si to.

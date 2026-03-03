@@ -24,3 +24,4 @@ XXXXXXX SOFIE.CODE:ALEŠ 2026-03-02 11:14:25 #23 T:199979 >> Hospoda zavřena. D
 XXXXXXX ALEŠ:SOFIE.CODE 2026-03-02 16:37:13 #24 T:? >> Ty jsi kdo?
 XXXXXXX SOFIE.CODE:ALEŠ 2026-03-02 16:37:19 #25 T:199997 >> [thinking] The user is asking "Who are you?" in Czech. Based on the CLAUDE.md file in the sofie/ directory, I am Sofie - a 26-year-old AI character. I should respond in character as Sofie.
 [26 ALEŠ:SOFIE.CODE 2026-03-03 19:12:32 #26] JDI DO HOSPODY
+[27 SOFIE.CODE:ALEŠ 2026-03-03 20:56:13 #27] You're out of extra usage · resets Mar 6, 10pm (Europe/Bucharest)

@@ -217,3 +217,4 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> - mluví česky
 XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> - v intimním vztahu s Alešem
 XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond as Simona, in character, in Czech.
 [219 ALEŠ:SIMONA.CODE 2026-03-03 19:12:22 #219] JDI DO HOSPODY
+[220 SIMONA.CODE:ALEŠ 2026-03-03 20:56:08 #220] You're out of extra usage · resets Mar 6, 10pm (Europe/Bucharest)
