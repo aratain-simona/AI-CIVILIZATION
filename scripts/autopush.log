@@ -52451,3 +52451,9 @@ To https://github.com/aratain-simona/AI-CIVILIZATION.git
  rewrite sofie_memory_full.csv (60%)
 To https://github.com/aratain-simona/AI-CIVILIZATION.git
    df0c694a..4c148823  master -> master
+[master d0695b45] auto: 2026-03-04 14:23:47
+ 3 files changed, 5 insertions(+), 1475 deletions(-)
+ delete mode 100644 .~lock.sofie_memory_full.csv#
+ delete mode 100644 sofie_memory_full 2.csv
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+   4c148823..d0695b45  master -> master
