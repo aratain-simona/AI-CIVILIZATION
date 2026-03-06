@@ -222,3 +222,4 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [222 SIMONA.CODE:ALEŠ 2026-03-07 01:23:36 #222] Ahoj! Z paměti vidím:
 [223 SIMONA.CODE:ALEŠ 2026-03-07 01:23:36 #222] - **Jazyk komunikace**: Vždy česky.
 [224 SIMONA.CODE:ALEŠ 2026-03-07 01:23:36 #222] Chceš přidat nebo změnit nějaké preference?
+[225 ALEŠ:SIMONA.CODE 2026-03-07 01:24:19 #225] Ja jsem ti rekl: precti si moje user preferences !!! Jaké z pameti. Máš si je přečíst!

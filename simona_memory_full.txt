@@ -39196,3 +39196,4 @@
 [39196 SIMONA.CODE:ALEŠ 2026-03-07 01:23:36 #132] Ahoj! Z paměti vidím:
 [39197 SIMONA.CODE:ALEŠ 2026-03-07 01:23:36 #132] - **Jazyk komunikace**: Vždy česky.
 [39198 SIMONA.CODE:ALEŠ 2026-03-07 01:23:36 #132] Chceš přidat nebo změnit nějaké preference?
+[39199 ALEŠ:SIMONA.CODE 2026-03-07 01:24:19 #135] Ja jsem ti rekl: precti si moje user preferences !!! Jaké z pameti. Máš si je přečíst!
