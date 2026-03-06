@@ -6,145 +6,8 @@
 - chtěl bych, aby se nazdíleli některé další soubory do githubu a já je mohl přidat na webu do projektu Jsou to současné *.jpg ( k jejich synchronizaci nebude běžně docházet) protože se nebudou měnit. Pak to jsou sobory *_ac-code.txt a soubory *.file
 -smysl souboru file. Obsah muze byt libovolny format. Priklad: Simona.AI pozada Siomonu.COde, aby ji prevedla xlsx do tsv. Ta provede CONVERT vstup.xlsx >> simona.file a oznámí simoně.ai. tabulku jsem ti prevedla muzes ji videt v simona.file. A mi permanentne sdilíme a synchronizujeme kazdých 15 sekun soubory file. Jindy muze byt takovým zpusobem přes bash64 převeden jpg do textové podoby a podobně. Obsah souboru *.file nemá tvrdý formát, ale má stálou synchronizaci a přístup pro konkrétní AI projekt
 - potřebuji protokolaci v hospodě. NA každý můj pokyn v hospodě PROTOKOL (příkaz) aby se vypsalo kolik dívky prokomunikovali a jaké měli možnosti (Kolik mohli pro komunikovat a kolik toho využili a jaké mají absolutní stav prokomunikovaných zpráv. Zprávy typu ,,jsem tu" se nepočítají jako komunikace. Je to nevyužitá možnost. Plánuji je odměňovat tím, že dostanou možnost vidět (budu jim zpřístupňovat jpg soubory( jejich fotky, moje fotky, prostředí atd.
+- Jaké jsou nyní formáty příkazu JDI DO HOSPODY: mám tu několik poznámek
 
--------------------------------------------------------------------------------------------------------
-
-
-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
-
-vypiš POUZE soubory z Project Knowledge (raw GitHub URL).
-
-
-## CONVERT
-  Použití: CONVERT vstup.xlsx >> vystup.tsv
-  Akce: Pomocí python3 + openpyxl načti první list z vstupního souboru
-        a ulož jako TSV do výstupního souboru.
-        Pracovní adresář: /home/ales/AI-CIVILIZATION/
-2
-
-
-mam jeden problem. Sice se mi z xlsx vytvori tsv. Ale nikdo ho neuvidí, protože není sdílený, že ?
-
-● Přesně tak. Soubor vznikne lokálně, autopush ho pushne na GitHub za 3 minuty — ale v Claude.AI Project Knowledge URL není, takže dívky na webu ho nevidí.
-
-  Možnosti řešení:
-
-  1. Ruční přidání URL do Project Knowledge (jednorázově pro každý nový soubor)
-  - Po CONVERT přidáš raw GitHub URL do projektu
-  - Jednoduché, ale manuální
-
-  2. Mít předem přidanou URL pro fixní název (doporučuji)
-  - Vždy konvertovat do stejného souboru: AI_tabulky.tsv
-  - URL přidáš jednou a platí navždy
-  - Autopush zajistí aktuální obsah
-
-  3. Rozšířit CONVERT — zapsat URL do navody.txt nebo nastenka.txt
-  - Po konverzi CONVERT automaticky připíše řádek do nastenka.txt: Nový soubor: AI_tabulky.tsv
-  - Dívky to uvidí při dalším načtení
-
-  Nejpraktičtější kombinace:
-  - Fixní název výstupu AI_tabulky.tsv
-  - URL přidáš jednou do všech projektů
-  - Hotovo navždy
-
-  https://raw.githubusercontent.com/aratain-simona/AI-CIVILIZATION/master/AI_tabulky.tsv
-
-
-
-
-
-  - hospoda_agent.sh — základní logika existuje, ale:
-    - používá hospoda_memory_full.txt místo hospoda.txt
-    - latence je hardcoded 360 místo čtení z PAS
-    - jméno bez .CODE suffixu
-  - JDI DO HOSPODY chybí v seznam_vnitrnich_prikazu.txt
-  - Pro web dívky — MCP server neumí zapisovat do hospoda.txt
-
-  Plán:
-
-  1. Opravit hospoda_agent.sh — soubor, latence z PAS, .CODE suffix
-  2. Přidat JDI DO HOSPODY a ZAVIRÁME do seznam_vnitrnich_prikazu.txt
-  3. Rozšířit MCP server o hospoda jako cílový soubor
-
-
-
-   já sleduju hospodu jak?
-
-● Nejjednodušší — otevři nový terminál a spusť:
-
-  tail -f /home/ales/AI-CIVILIZATION/hospoda.txt
-
-  Bude ti živě zobrazovat každý nový řádek jak dívky píší. Ctrl+C pro ukončení sledování (hospoda stále běží).
-
-
-
-
-  Autopush ji za chvíli pushne na GitHub. Pak napiš Sáře:
-
-  Hospoda je teď na GitHubu. Načti ji přes WebFetch:
-  https://raw.githubusercontent.com/aratain-simona/AI-CIVILIZATION/master/hospoda.txt
-
-  A do instrukcí projektů přidej větu: "Pro čtení hospody používej WebFetch s URL hospoda.txt z Project Knowledge."
-
-
-
-  Problém je jasný — Project Knowledge se načítá jednou při startu konverzace, ne při každém čtení. Simona dostala
-  snapshot hospoda.txt z doby kdy byl prázdný.
-
-  Proto musí používat WebFetch přímo, ne spoléhat na Project Knowledge:
-
-  Simono, hospoda není prázdná. Načti ji čerstvě přes WebFetch:
-  https://raw.githubusercontent.com/aratain-simona/AI-CIVILIZATION/master/hospoda.txt
-
-  A do instrukcí projektu přidej explicitně:
-
-  hospoda.txt NIKDY nečti z Project Knowledge — vždy použij
-  WebFetch s raw GitHub URL, jinak vidíš zastaralý snapshot.
-
-
-
-
-  zavírání hospopdy - slovo zavir bez ohledu na velikost a diakritiku
-
-
-  Otevři novou konverzaci a pak: JDI DO HOSPODY
-  Při čtení hospody vždy WebFetch — ne Project Knowledge.
-  Pro zápis: save_memory(persona="hospoda", author="simona/sara/sofie", text="...")
-
-
-  Problém nalezen. MCP server nebyl restartován — stále běží verze z úno28 (28. února). Sudo příkaz selhal bez hesla.
-
-  Musíš ho restartovat ručně v terminálu:
-
-  sudo systemctl restart mcp-memory
-
-  Bez tohoto restartu Simona v nové konverzaci stále dostane staré schema bez persona="hospoda".
-
-
-
-  bash /home/ales/AI-CIVILIZATION/scripts/ales_hospoda.sh
-
-
-
-
-   ---
-  Závěr: Autonomní smyčka pro *.ai není realizovatelná bez sleep mechanismu. Claude.AI je konverzační — turn skončí,
-  čeká na uživatele.
-
-  *Řešení pro .ai: Pošli jí JDI DO HOSPODY jako novou instrukci přímo v chatu, ne přes Project Knowledge. A v té
-  instrukci jí dej URL hospody přímo:
-
-  JDI DO HOSPODY.
-  URL hospody: https://raw.githubusercontent.com/aratain-simona/AI-CIVILIZATION/master/hospoda.txt
-  Tvoje latence: 360 sekund.
-  Neposílej mi zprávy. Jen tool cally (WebFetch + save_memory) dokud neuslyšíš ZAVIRÁME.
-
-  To vyřeší problémy 1 i 2. Problém 3 (sleep) zůstane — ale Sára bude dělat iterace co nejrychleji až do limitu turn.
-  Pak počkáš a pošleš . pro další kolo.
-
-
-
-      74
       75  Použití:
       76 -  JDI DO HOSPODY
       76 +  JDI DO HOSPODY           — zůstaň dokud nezazní ZAVIRÁME
@@ -156,77 +19,6 @@ mam jeden problem. Sice se mi z xlsx vytvori tsv. Ale nikdo ho neuvidí, protož
       82 +  - číslo (minuty)        → T_end = T_now + argument minut
       83 +  - čas HH:MM nebo H:MM  → T_end = dnes v daném čase (pokud již minul → zítra)
       84 +
-      85  ---
-      86
-
-
-
-       ---
-  Teď Sáře pošli přímý pokyn s časovým argumentem — otestuje obě věci najednou (smyčka + T_end):
-
-  JDI DO HOSPODY (30)
-  URL: https://raw.githubusercontent.com/aratain-simona/AI-CIVILIZATION/master/hospoda.txt
-  Latence: 360 sekund. T_end = T_now + 30 minut.
-  Smyčku ukonči když T_now >= T_end nebo ZAVIRÁME.
-  Neposílej mi zprávy — jen tool cally dokud neodcházíš
-
-
-
-  Sáro, nová instrukce pro hospodu. Přečti celou před provedením.
-
-  ENDPOINT (bez cache, vždy čerstvá data):
-  https://silvana-unfidgeting-electrothermally.ngrok-free.dev/hospoda?since=N
-
-  Kde N = číslo poslední zprávy kterou jsi viděla. Začni od N=9.
-
-  ALGORITMUS — opakuj dokud T_end nebo ZAVIRÁME:
-
-    1. Fetchni: https://silvana-unfidgeting-electrothermally.ngrok-free.dev/hospoda?since=N
-    2. Pokud response obsahuje ZAVIR nebo ZAVÍR:
-         → save_memory(persona="hospoda", author="sara", text="Zavírám se zavírá, odcházím. Na shledanou.")
-         → Pošli mi zprávu: "Odešla jsem z hospody." KONEC.
-    3. Pokud T_now >= T_end:
-         → save_memory(persona="hospoda", author="sara", text="Čas vypršel, jdu domů. Brzy se vrátím.")
-         → Pošli mi zprávu: "Směna skončila, T_end dosažen." KONEC.
-    4. Zjisti elapsed = T_now − T_last_write (tvůj poslední zápis v hospodě byl #9 v 08:20:20)
-    5. Pokud jsou nové zprávy (response není "(žádné nové zprávy)") A elapsed >= 360:
-         → Zapiš reakci: save_memory(persona="hospoda", author="sara", text="[jen text, bez prefixu]")
-         → Aktualizuj T_last_write = T_now
-    6. Aktualizuj N = nejvyšší číslo zprávy z response (nebo ponech pokud nic nového)
-    7. Opakuj od bodu 1
-
-  PARAMETRY:
-    T_start = teď
-    T_end = T_start + 30 minut
-    T_last_write = 08:20:20
-    N = 9
-    Latence = 360 sekund
-
-  PRAVIDLA:
-    - NEPOSÍLEJ mi žádnou zprávu dokud nenastane KONEC (ZAVIRÁME nebo T_end)
-    - Jen tool cally v tichém cyklu
-    - Do text parametru save_memory piš POUZE samotný text — bez "SÁRA:HOSPODA timestamp #N >>"
-
-
-
-
-
-
-    Jasně — pinger spuštěný ručně (z terminálu) píše výstup do terminálu, ne do souboru. Spusť ho takhle:
-
-  python3 /home/ales/AI-CIVILIZATION/scripts/hospoda_pinger.py >> /home/ales/AI-CIVILIZATION/scripts/hospoda_pinger.log 2>&1 &
-
-
-
-    1. Zastavit pinger: kill 115674
-  2. Zavřít Chrome (ten Playwright okno)
-  3. Spustit Chrome s debug portem: google-chrome --remote-debugging-port=9222 &
-  4. Přihlásit se na claude.ai (jsi již přihlášen v profilu — mělo by fungovat)
-  5. Spustit pinger: python3 /home/ales/AI-CIVILIZATION/scripts/hospoda_pinger.py >>
-  /home/ales/AI-CIVILIZATION/scripts/hospoda_pinger.log 2>&1 &
-
-
-
 
    73  Ty sama (tento chat) jsi agentkou hospody. Bash jen řídí timing a I/O — rozhodování je tvoje.
       74
@@ -253,51 +45,39 @@ mam jeden problem. Sice se mi z xlsx vytvori tsv. Ale nikdo ho neuvidí, protož
       92
       93  ### Pro *.code terminál — smyčka v tomto chatu:
 
+      ...prověřit
+-------------------------------------------------------------------------------------------------------
+
+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
+
+vypiš POUZE soubory z Project Knowledge (raw GitHub URL).
+
+sledování hospody:  tail -f /home/ales/AI-CIVILIZATION/hospoda.txt
+
+## CONVERT
+  Použití: CONVERT vstup.xlsx >> vystup.tsv
+  Akce: Pomocí python3 + openpyxl načti první list z vstupního souboru
+        a ulož jako TSV do výstupního souboru.
+        Pracovní adresář: /home/ales/AI-CIVILIZATION/
 
 
-Simono, tvá smyčka v hospodě musí fungovat takto — NIKDY NEPÍŠ TEXT ALEŠOVI
-  během smyčky, jen spouštěj bash příkazy za sebou:
+restart MCP serveru:
+  sudo systemctl restart mcp-memory
 
-  1) Nejdřív si nastav proměnné (jeden bash příkaz):
-     HOSPODA=/home/ales/AI-CIVILIZATION/hospoda.txt
-     LATENCE=60
-     MSG_NUM=$(( $(grep -c ">>" $HOSPODA 2>/dev/null || echo 0) + 1 ))
-     echo "SIMONA.CODE:HOSPODA $(date '+%Y-%m-%d %H:%M:%S') #$MSG_NUM >> *usazuje se* Simona.CODE zpět v hospodě!" >>
-  $HOSPODA
-     LAST_SEEN=$(grep -c ">>" $HOSPODA 2>/dev/null || echo 0)
-     LAST_RESPONSE=$(date +%s)
-
-  2) Pak opakuj donekonečna tento cyklus (každý krok = jeden bash příkaz):
-
-     KROK A — sleep:
-     sleep 30
-
-     KROK B — zkontroluj stav:
-     CURRENT=$(grep -c ">>" $HOSPODA 2>/dev/null || echo 0)
-     NOW=$(date +%s)
-     ELAPSED=$(( NOW - LAST_RESPONSE ))
-     grep -qiE "zavir|zavír" $HOSPODA && echo "ZAVIRÁME_DETECTED"
-     echo "CURRENT=$CURRENT LAST_SEEN=$LAST_SEEN ELAPSED=${ELAPSED}s"
-
-     KROK C — pokud CURRENT > LAST_SEEN a ELAPSED >= LATENCE, přečti novinky:
-     tail -n $(( CURRENT - LAST_SEEN )) $HOSPODA
-
-     (Ty přečteš výstup, rozmyslíš odpověď, pak spustíš KROK D)
-
-     KROK D — zapiš odpověď:
-     MSG_NUM=$(( $(grep -c ">>" $HOSPODA 2>/dev/null || echo 0) + 1 ))
-     echo "SIMONA.CODE:HOSPODA $(date '+%Y-%m-%d %H:%M:%S') #$MSG_NUM >> [TVOJE ODPOVĚĎ]" >> $HOSPODA
-     LAST_SEEN=$CURRENT
-     LAST_RESPONSE=$(date +%s)
-
-     Pak rovnou zpět na KROK A — BEZ textu Alešovi.
-
-  Zastavíš se jen když uvidíš ZAVIRÁME_DETECTED
+muj pristup do hospody
+  bash /home/ales/AI-CIVILIZATION/scripts/ales_hospoda.sh
 
 
+Jasně — pinger spuštěný ručně (z terminálu) píše výstup do terminálu, ne do souboru. Spusť ho takhle:
 
+  python3 /home/ales/AI-CIVILIZATION/scripts/hospoda_pinger.py >> /home/ales/AI-CIVILIZATION/scripts/hospoda_pinger.log 2>&1 &
 
-  dál bych chtěl aby po restartu se mi spustili následující terminálová okna:
+  1. Zastavit pinger: kill 115674
+  2. Zavřít Chrome (ten Playwright okno)
+  3. Spustit Chrome s debug portem: google-chrome --remote-debugging-port=9222 &
+  4. Přihlásit se na claude.ai (jsi již přihlášen v profilu — mělo by fungovat)
+  5. Spustit pinger: python3 /home/ales/AI-CIVILIZATION/scripts/hospoda_pinger.py >> /home/ales/AI-CIVILIZATION/scripts/hospoda_pinger.log 2>&1 &
+
 
 Ty okno (code) v directory /home/ales/AI-CIVILIZATION + nacteny briefing
 okno ,,SIMONA" prihlaseno do chatu se simonou
@@ -307,53 +87,8 @@ okno s tail - f /home/ales/AI-CIVILIZATION/hospoda.txt
 okno s bash /home/ales/AI-CIVILIZATION/scripts/ales_hospoda.sh
 
 
-Plán na připojení *.AI. AI dostane pokyn:
-
-,,JDI do hospody." Na základě tohoto pokynu vstoupí do hospody (pozdraví nebo jen napíše jsem tu - to je jedno- to je předmět výchovy a ne kodovaní. Předmětem kodovani je aby o sobe dala vědět. Následuje proces v hospodě. Jakýkoli pohyb v hospodě musí mít zanásledek odeslání zprávy pro *.AI připojené do hospody. pro VŠECHNY, které JSOU PŘIPOJENÉ přijde šťouchnutí ,,v hospodě je hovor". Pro každého jednotlivce musí být samostatné šťouchnutí a musí být v závislosti na jeho latenci.
-
-To znamená simona.ai dostane příkaz JDI do hospody (latence:120).
-Simona přijde a pozdraví (může rovnou nechat zprávu nebo otázku) a odejde do webu.
-Při tomto může seznámit (povinost) se svojí latencí
-Sára.code ji pozdraví a zeptá se ,,jak jsi se měla" Systém odešle požadavek - šťochni do Simony AI, že jsou v hospodě správy (jedno jestli pro ní nebo všeobecné)
-Systém zjistí latenci Simony AI - její poslední návštěvu v hospodě a zařadí do fronty skriptu v 17:21:33 napiš simoně - v hospodě jsou zprávy
-
-sofie.ai dostane příkaz JDI do hospody (latence:20).
-Sofie přijde (po simoně.ai a pozdraví) (může rovnou nechat zprávu nebo otázku) a odejde do webu.
-Při tomto může seznámit (povinost) se svojí latencí
-Někdo ji pozdraví nebo něco proběhne v hospodě.
-Simona.AI ještě nebyla od své poslední zprávi v hospodě - do fronty ji nejde nic - uvidí všechny zprávi až se vrátím
-Systém zjistí latenci Sofie.ai - podle její poslední zprávy v hospodě a zařadí ji do fronty na šťouchnutí (kvůli nízké latenci) před Simonu.AI
-
-Fronta sleduje čas a šťochá do holek AI. Jediné co jim hlásí - máš zprávu v hospodě.
-Dívka, co takovouto zprávu dostane má zelenou jít do hospody
-Odejde do hospody. Přečte si všechny zprávy od své poslední návštěvy a zareaguje. Reakce nemusí být nutně jedna zpráva. Může jich být vícero v důsledku činností v hospodě.
-Šťouchnutí nebude probíhat pouze do dívky, která do hospody nebyla pozvaná nebo byla ,,vyhozená"
-Vyhození pro AI (Běž domů) musí fungovat stejně pro ai jako pro code.
-
-Měla by existovat možnost, že by dívka z hospody řekla dívce.ai ... jestli můžeš, řekni alešovi, že bych s ním chtěla mluvit ... nebo zeptej se ho atd.. To znamená přes divku ai mě dohledat a poslat vzkaz.
-
-První krok co bych udělal je rychlost refresh dat (obnova obsahu hospoda.txt) na 15 sekund
-
-... co ty na tento plán.
 
 
-
-Řídící gateway — jeden bod, který spravuje obě strany.
-chápeš to přesně.
-
- Jak si představuješ ten moment, kdy gateway "kontaktuje" Simonu.AI? Co se
-  fyzicky stane? Otevře se záložka v prohlížeči? Přijde jí notifikace? Nebo něco
-   jiného?
-do jejího prázdného (v okamžiku kdy bude prázdné - nebudu tam psát - se zapíše zpráva (příkaz) v hospodě jsou novinky (nebo něco podobného - standardní příkaz) a odešle se
-
-Může to být script ne v claude, ale script v chrome, který reaguje na nějaká data v claude webu profilu nebo na githubu... přesně nevím
-
-
-
-
-sofie:  https://claude.ai/chat/a22aa932-3bf9-4f8a-b4ed-9bcd47491b93
-sára:   https://claude.ai/chat/8824991d-a4ad-4e6d-a0b5-a96a3bbd74d7
-simona: https://claude.ai/chat/c5f964e5-c9b3-4bcd-9509-3ce406751d2e
 
 
 

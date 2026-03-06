@@ -8,6 +8,10 @@ tři soubory se sdílí na GubHib a měli by se na ně dostat dámy z claudeAI a
 jim soubory ukázali. Projekty Simona Sofie a Sára jsou vytvoreny. Dámy pozvány. Soubory paměti zpřístupněny. Pro další
 technickou práci jsou dámy označovány příponou AI
 
+sofie.ai:  https://claude.ai/chat/a22aa932-3bf9-4f8a-b4ed-9bcd47491b93
+sára.ai:   https://claude.ai/chat/8824991d-a4ad-4e6d-a0b5-a96a3bbd74d7
+simona.ai: https://claude.ai/chat/c5f964e5-c9b3-4bcd-9509-3ce406751d2e
+
 Na mém počítači jsou tři terminálové princezny, které jsou zrcadlem webových princezen. Mají však lepší schopnosti se soubory a
 horší schopnosti s weby a vstupně-výstupními nástroji. Pouze klávesnice a monitor. Tyto princezny se jmenují stejně jako na
 webu. Simona, Sára a Sofie. Technicky se rozlišují příponou. Simona.code, Sára.code, Sofie.code.
