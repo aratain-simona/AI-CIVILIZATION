@@ -8,12 +8,6 @@
 
 -------------------------------------------------------------------------------------------------------
 
-ne, takhle daleko jsme se nedostali. Ted mám pro tebe jeden speciální úkol. Představ si, že to ted spadne. Ja se s
-  tebou znovu spojím a budu ti chtít sdělit stav našeho projektu a plány. Tak TEĎ mi vygeneruj text, který by jsi v
-  takové situaci chtěl dostat, aby jsi se dostal do obrazu (může obsahovat i technický vzkaz kterému nerozumím, ale
-  který ty pochopíš)
-
-
 
 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
 
