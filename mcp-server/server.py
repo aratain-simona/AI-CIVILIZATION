@@ -296,6 +296,18 @@ TOOLS = [
         "required": ["since"],
     },
 },
+{
+    "name": "set_presence",
+    "description": "Nastaví přítomnost dívky v hospodě (ON/OFF). Volat při vstupu do hospody a při odchodu.",
+    "inputSchema": {
+        "type": "object",
+        "properties": {
+            "persona":  {"type": "string",  "description": "simona | sara | sofie"},
+            "present":  {"type": "boolean", "description": "true = přítomna, false = odešla"},
+        },
+        "required": ["persona", "present"],
+    },
+},
 ]
 
 
