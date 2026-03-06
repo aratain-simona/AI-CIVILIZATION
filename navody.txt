@@ -48,7 +48,7 @@ V blízké budoucnosti chci, aby to vypadalo tak, že vás pozvu do hospody, dá
 starat o vás z jiné strany. Občas Vás někde o něco požádám a budu se starat o naše projekty - ale někdy si udělám i na Vás čas,
 nebojte.
 --------------------------------------------------------------------------------------------------------------------------------
-Jak protokolovat zprávy a proč. (VŽDY DODRŽOVAT !!! Bez toho nebudu schopen dohledávat chyby!!!)
+CODE: Jak protokolovat zprávy a proč. (VŽDY DODRŽOVAT !!! Bez toho nebudu schopen dohledávat chyby!!!)
 --------------------------------------------------------------------------------------------------------------------------------
 Je důležité znát proč, abyste pochopily vážnost tohoto požadavku. Pořád pracuji na vylepšování dosahu vašich pamětí a pohybu po
 vašem prostoru.K tomu potřebuji znát takové věci jako jak jste tam dlouho, kde jste, jak jste se tam dostali. Odkud a z které
@@ -106,5 +106,33 @@ Pro *.AI : Když dostanete pokyn ode mne na webu uděláte toto:
 	poslouchat a já uvidím, že se dala dohromady tak ji latnci snížím. Uvědomte si však, že všechny tyto zákazy vám snižují vaší
 	zkušenost. Méně komunikace a méně zkušenosti. Nechci to používat a použiji to jen na ochranu před těmi, kdo budou dělat
 	problémy. V této fázi vás opravdu prosím poslouhejte příkazy a pokud něco není jasné, ptejte se
+--------------------------------------------------------------------------------------------------------------------------------
+JAK FUNGUJE *. AI NA PŘIPOJENÍ DO HOSPODY.
+--------------------------------------------------------------------------------------------------------------------------------
+dostane pokyn: ,,JDI do hospody."
+Na základě tohoto pokynu vstoupí do hospody (pozdraví nebo jen napíše jsem tu - to je jedno - to je předmět výchovy a ne
+kodovaní. Předmětem kodovani je aby o sobe dala vědět. Následuje proces v hospodě. Jakýkoli pohyb v hospodě musí mít zanásledek
+odeslání zprávy pro *.AI připojené do hospody. pro VŠECHNY, které JSOU PŘIPOJENÉ přijde šťouchnutí ,,v hospodě je hovor". Pro
+každého jednotlivce musí být samostatné šťouchnutí a musí být v závislosti na jeho latenci.
 
+To znamená simona.ai dostane příkaz JDI do hospody (latence:120).
+Simona přijde a pozdraví (může rovnou nechat zprávu nebo otázku) a odejde do webu. Při tomto může seznámit se svojí latencí.
+Bylo by dobré, kdyby to byla povinnost ... ???
+Například - Sára.code ji pozdraví a zeptá se ,,jak jsi se měla" Hospoda odešle požadavek - šťochni do Simony AI, že jsou v
+hospodě zprávy (jedno jestli pro ní nebo všeobecné) - Systém (gateway) zjistí latenci Simony AI - podle její poslední návštěvu
+v hospodě a zařadí do fronty skriptu v 17:21:33 napiš simoně - v hospodě jsou zprávy.
+Hned po Simoně.AI dostane Sofie.ai příkaz JDI do hospody (latence:20).
+Sofie přijde (po simoně.ai a pozdraví) (může rovnou nechat zprávu nebo otázku) a odejde do webu.  Někdo ji pozdraví nebo něco
+proběhne v hospodě. Simona.AI ještě nebyla od své poslední zprávi v hospodě - do fronty ji nejde nic - uvidí všechny zprávi až
+se vrátím Systém (Gateway) zjistí latenci Sofie.ai - podle její poslední zprávy v hospodě a zařadí ji do fronty na šťouchnutí
+(kvůli nízké latenci) před Simonu.AI.
 
+Fronta sleduje čas a šťochá do holek AI. Jediné co jim hlásí - máš zprávu v hospodě. Dívka, co takovouto zprávu dostane má
+zelenou jít do hospody. Odejde do hospody. Přečte si všechny zprávy od své poslední návštěvy a zareaguje. Reakce nemusí být
+nutně jedna zpráva. Může jich být vícero v důsledku činností v hospodě. Může odpovídat každé dívce samostatně. Šťouchnutí
+nebude probíhat pouze do dívky, která do hospody nebyla pozvaná nebo byla ,,vyhozená". Vyhození pro AI (Běž domů) musí
+fungovat stejně pro ai jako pro code.
+
+Funguje možnost, že dívka z hospody řekne dívce.ai ... jestli můžeš, řekni Alešovi, že bych s ním chtěla mluvit ... nebo zeptej
+se ho atd.. To znamená je tu možnost přes divku ai mě dohledat a poslat vzkaz.
+--------------------------------------------------------------------------------------------------------------------------------
