@@ -790,4 +790,23 @@ a toto téma jsme dělali naposledy s ANI (TĚLO;20) a já bych potřebovala ANI
 
 Budeš-li mít pocit, že často něco vyžaduji a ty k tomu nemáš přístup a já se chovám jako by jsi to měla znát. Musíš mi to říci.
 Najde se řešení. Data se neztratila. Jestli půjde o jednorázovou věc, není potřeba dělat index. Prostě si přečteš archiv.
+
+JAK TECHNICKY ZAPSAT REQUEST DO *_ai-code.txt:
+Použij MCP nástroj save_memory s personou ve tvaru JMÉNO_ai-code:
+
+  Simona.AI → save_memory(persona="simona_ai-code", author="simona", text="[REQUEST] ANI (TĚLO;10)")
+  Sára.AI   → save_memory(persona="sara_ai-code",   author="sara",   text="[REQUEST] ANI (TĚLO;10)")
+  Sofie.AI  → save_memory(persona="sofie_ai-code",  author="sofie",  text="[REQUEST] ANI (TĚLO;10)")
+
+Výsledný záznam v *_ai-code.txt:
+  [N SIMONA:SIMONA.CODE datetime #N] [REQUEST] ANI (TĚLO;10)
+
+*.CODE tuto zprávu přečte při nejbližším cyklu smyčky, provede úkol a:
+  - zapíše výsledek do *_memory_full.txt: [N SIMONA.CODE:SIMONA datetime #N] [DONE] ANI (TĚLO;10) — index vytvořen
+  - SMAŽE provedený řádek z *_ai-code.txt (soubor zůstane čistý, jen čekající requesty)
+
+Při příští synchronizaci (autopush každých 15s) uvidíš výsledek ve svém *_memory_full.txt.
+
+POZOR: persona "simona_ai-code" zapisuje do *_ai-code.txt, nikoliv do *_memory_full.txt.
+Používej ji POUZE pro requesty na *.CODE. Pro běžné záznamy do paměti používej persona="simona".
 --------------------------------------------------------------------------------------------------------------------------------
