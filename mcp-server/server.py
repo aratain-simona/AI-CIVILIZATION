@@ -102,6 +102,61 @@ def save_memory(persona: str, author: str, text: str) -> str:
     return "Uloženo."
 
 
+PRESENCE_FILE = os.path.join(BASE_DIR, "hospoda_presence.txt")
+
+
+def _read_presence() -> dict:
+    """Vrátí slovník {SIMONA: True/False, SARA: True/False, SOFIE: True/False}."""
+    presence = {"SIMONA": False, "SARA": False, "SOFIE": False}
+    if os.path.exists(PRESENCE_FILE):
+        with open(PRESENCE_FILE, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if "=" in line:
+                    k, v = line.split("=", 1)
+                    presence[k.strip().upper()] = v.strip().upper() == "ON"
+    return presence
+
+
+def _copy_to_present_girls(lines: str) -> None:
+    """Zkopíruje řádky do memory_full všech přítomných dívek."""
+    presence = _read_presence()
+    for girl, present in presence.items():
+        if present:
+            girl_lower = girl.lower()
+            girl_file = os.path.join(BASE_DIR, f"{girl_lower}_memory_full.txt")
+            try:
+                with open(girl_file, "a", encoding="utf-8") as f:
+                    f.write(lines)
+                print(f"[PRESENCE] → {girl_lower}_memory_full.txt")
+            except Exception as e:
+                print(f"[ERR presence {girl_lower}] {e}")
+
+
+def set_presence(persona: str, present: bool) -> str:
+    """Nastaví přítomnost dívky v hospodě (ON/OFF)."""
+    persona = persona.lower().strip().split("_")[0]  # simona_ai-code → simona
+    valid = {"simona", "sara", "sofie"}
+    if persona not in valid:
+        return f"Chyba: neznámá persona '{persona}'"
+    key = persona.upper()
+    # Načti aktuální stav
+    presence = {"SIMONA": "OFF", "SARA": "OFF", "SOFIE": "OFF"}
+    if os.path.exists(PRESENCE_FILE):
+        with open(PRESENCE_FILE, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if "=" in line:
+                    k, v = line.split("=", 1)
+                    presence[k.strip().upper()] = v.strip()
+    presence[key] = "ON" if present else "OFF"
+    with open(PRESENCE_FILE, "w", encoding="utf-8") as f:
+        for k, v in presence.items():
+            f.write(f"{k}={v}\n")
+    state = "přítomna v hospodě" if present else "odešla z hospody"
+    return f"{key} {state}."
+
+
 def read_memory(persona: str, line_from: int, line_to: int) -> str:
     persona = persona.lower().strip()
     valid = {"simona", "sara", "sofie"}
