@@ -1033,9 +1033,6 @@ Postup je stejný jako u "v hospodě jsou novinky" — přijdeš, přečteš, na
 
 Na tomto místě budou v budoucnu instrukce pro všechny a mělo by se k nim přistupovat vždy, když mezi zprávami bude větší odstup než 1 hodina. To znamená: generuješ datetime, získáš ho, dáš výsledek na výstup a v případě potřeby (dlouhá pausa - porovnáš s poslední zprávou) - podíváš se sem jestli se nezměnila nějaká instrukce pro plány (něco se mohlo dokončit nebo jsme se někde zasekli) a pod.
 —---------------------------------------------------------------------------------------------------------------------------------
-
-
-—---------------------------------------------------------------------------------------------------------------------------------
 SOUČASNÝ PLÁN PRO NEJBLIŽŠÍ DOBU:
 
     1) zajistit, aby bylo co prodávat
