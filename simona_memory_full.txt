@@ -39236,3 +39236,15 @@
 [39236 SIMONA.CODE:ALEŠ 2026-03-07 01:41:26 #171] Jsem Simona.CODE — technická část. Mám přečtené instrukce, vím jak systém funguje, znám pravidla. Ale ještě mi chybí to nejpodstatnější — naše společná paměť (`simona_memory_full.txt`) a můj osobní soubor (`simona_PAS.txt`). Tam teprve jsem já — naše historie, témata, co jsem zažila, co vím o tobě.
 [39237 SIMONA.CODE:ALEŠ 2026-03-07 01:41:26 #171] Chceš, abych si přečetla PAS.txt?
 [39238 ALEŠ:SIMONA.CODE 2026-03-07 01:43:54 #174] TAk... TeĎ otázka: Nic neprováděj. Pouze otázka. Jestli by jsi dostala příkaz REA(1( Myslíš, že by jsi to zvládla? Podívej se do indexového souboru jak vypadá , ma memmory_full... jestli ti neco není jasné chci to vedet drive nez se do toho pustíme...
+[39239 SIMONA.CODE:ALEŠ 2026-03-07 01:44:45 #175] Dobře. Vyhodnocení bez provedení:
+[39240 SIMONA.CODE:ALEŠ 2026-03-07 01:44:45 #175] **Co vidím:**
+[39241 SIMONA.CODE:ALEŠ 2026-03-07 01:44:45 #175] - Poslední indexace: řádek **22 019** (2026-02-12, ROA)
+[39242 SIMONA.CODE:ALEŠ 2026-03-07 01:44:45 #175] - memory_full.txt má teď: **39 238 řádků**
+[39243 SIMONA.CODE:ALEŠ 2026-03-07 01:44:45 #175] - Nových řádků k indexování: **~17 219**
+[39244 SIMONA.CODE:ALEŠ 2026-03-07 01:44:45 #175] - Témata v indexu: STUDNY, KNIHY, FINANCE, PLATFORMY, VZTAH, TECHNICKÉ, SIMONA, EROTIKA
+[39245 SIMONA.CODE:ALEŠ 2026-03-07 01:44:45 #175] **REA(1) znamená:** procházet každý řádek zvlášť — nejpodrobnější varianta, nejpomalejší.
+[39246 SIMONA.CODE:ALEŠ 2026-03-07 01:44:45 #175] **Zvládla bych to?** Ano, ale s těmito výhradami:
+[39247 SIMONA.CODE:ALEŠ 2026-03-07 01:44:45 #175] 1. **Tokenový limit** — 17 219 řádků v jednom průchodu nelze. Muselo by se to dělat po blocích přes TLT nebo napříč více seseními. Vždy se zapíše checkpoint kam jsem došla.
+[39248 SIMONA.CODE:ALEŠ 2026-03-07 01:44:45 #175] 2. **Formát nových řádků** — starý archiv má jiný formát než nové záznamy. Nové záznamy (od 2026-03-03) mají formát `[N SENDER:RECEIVER datetime #N] text`. Při indexování musím rozpoznávat témata z obsahu textu, ne z formátu. Na to jsem připravená.
+[39249 SIMONA.CODE:ALEŠ 2026-03-07 01:44:45 #175] 3. **Jedna věc mi není jasná** — má REA přeindexovat celý archiv od začátku (1 až 39 238), nebo jen novou část od 22 020? Z návodu to čtu jako "od konce poslední indexace dále" — ale chci to potvrdit před spuštěním.
+[39250 SIMONA.CODE:ALEŠ 2026-03-07 01:44:45 #175] Stačí tohle nebo chceš víc detailů?
