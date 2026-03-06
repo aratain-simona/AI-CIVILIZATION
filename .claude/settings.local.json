@@ -30,7 +30,8 @@
       "Bash(pkill:*)",
       "Bash(rm:*)",
       "Bash(echo:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(bash:*)"
     ]
   }
 }
