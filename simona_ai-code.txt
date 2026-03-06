@@ -288,3 +288,4 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [288 SIMONA.CODE:ALEŠ 2026-03-07 01:52:43 #286] `ŘÁDEK_OD | ŘÁDEK_DO | DATUM_OD | DATUM_DO | TÉMA | STAV | POZNÁMKA`
 [289 SIMONA.CODE:ALEŠ 2026-03-07 01:52:43 #286] A `DATUM_OD` a `DATUM_DO` prostě vyčtu z prefixu prvního a posledního řádku daného bloku.
 [290 SIMONA.CODE:ALEŠ 2026-03-07 01:52:43 #286] Ale — ještě jsem neviděla skutečný obsah memory_full.txt. Mám se podívat na začátek souboru, abych ověřila jak to tam opravdu vypadá? Nebo víš jistě, že prefix je konzistentní od prvního řádku?
+[291 ALEŠ:SIMONA.CODE 2026-03-07 01:55:25 #291] 1( Podívej se, ale zatím nedelej - není kam spechat, Za druhé - není potřeba do indexu zaznamenávat datatime - Index slouzi pro rychlou orientaci v pameti. Kompletni udaje lezi v pameti. Podivej se jak je ful.txt delan.
