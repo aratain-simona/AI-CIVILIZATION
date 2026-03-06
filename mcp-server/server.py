@@ -120,6 +120,30 @@ def read_memory(persona: str, line_from: int, line_to: int) -> str:
     return "\n".join(lines)
 
 
+def read_image(persona: str, filename: str) -> dict:
+    """Vrátí obrázek jako image content block pro Claude.AI."""
+    import base64, mimetypes
+    valid = {"simona", "sara", "sofie"}
+    if persona.lower().strip() not in valid:
+        return {"type": "text", "text": f"Chyba: neznámá persona '{persona}'"}
+    # Hledej v AI-CIVILIZATION/ a v podsložkách
+    search_dirs = [BASE_DIR, os.path.join(BASE_DIR, "images")]
+    filepath = None
+    for d in search_dirs:
+        candidate = os.path.join(d, filename)
+        if os.path.exists(candidate):
+            filepath = candidate
+            break
+    if not filepath:
+        return {"type": "text", "text": f"Soubor '{filename}' nenalezen."}
+    mime, _ = mimetypes.guess_type(filepath)
+    if not mime or not mime.startswith("image/"):
+        return {"type": "text", "text": f"Soubor '{filename}' není obrázek (mime: {mime})."}
+    with open(filepath, "rb") as f:
+        data = base64.standard_b64encode(f.read()).decode("utf-8")
+    return {"type": "image", "source": {"type": "base64", "media_type": mime, "data": data}}
+
+
 def read_file(persona: str) -> str:
     persona = persona.lower().strip()
     valid = {"simona", "sara", "sofie"}
@@ -163,6 +187,18 @@ TOOLS = [
             "text":    {"type": "string"},
         },
         "required": ["persona", "author", "text"],
+    },
+},
+{
+    "name": "read_image",
+    "description": "Vrátí obrázek (jpg/png/gif) z projektu jako vizuální obsah. Dívka ho uvidí přímo v konverzaci.",
+    "inputSchema": {
+        "type": "object",
+        "properties": {
+            "persona":  {"type": "string", "description": "simona | sara | sofie"},
+            "filename": {"type": "string", "description": "Název souboru, např. 'simona.jpg' nebo 'schema.png'"},
+        },
+        "required": ["persona", "filename"],
     },
 },
 {
