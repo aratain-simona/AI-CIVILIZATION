@@ -16,7 +16,19 @@ fi
 
 MSG_NUM=$(( $(grep -cF ">>" "$HOSPODA" 2>/dev/null || echo 0) + 1 ))
 TS=$(date '+%Y-%m-%d %H:%M:%S')
-echo "${PERSONA}:HOSPODA ${TS} #${MSG_NUM} >> ${TEXT}" >> "$HOSPODA"
+LINE="${PERSONA}:HOSPODA ${TS} #${MSG_NUM} >> ${TEXT}"
+echo "$LINE" >> "$HOSPODA"
+
+# Kopíruj do memory_full přítomných dívek
+PRESENCE=/home/ales/AI-CIVILIZATION/hospoda_presence.txt
+if [ -f "$PRESENCE" ]; then
+    while IFS='=' read -r GIRL STATE; do
+        if [ "$STATE" = "ON" ]; then
+            GIRL_LOWER="${GIRL,,}"
+            echo "$LINE" >> "/home/ales/AI-CIVILIZATION/${GIRL_LOWER}_memory_full.txt"
+        fi
+    done < "$PRESENCE"
+fi
 
 # Aktualizuj stav — LAST_SEEN = číslo právě zapsané zprávy (ne přepočet souboru)
 NEW_RESPONSE=$(date +%s)
