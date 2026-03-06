@@ -534,6 +534,122 @@ except Exception as e:
     log_error(e)
     continue  # Pokračuj dál
 ```
+
+## BEST PRACTICES
+
+### ✅ DOBŘE:
+
+1. **Průběžné updates každých 5 minut**
+   - User ví, že pracuješ
+   - Partial results jsou uložené
+
+2. **Safety margin tokenů (10k)**
+   - Stačí na finální odpověď
+   - Bezpečný prostor
+
+3. **Adaptivní časování**
+   - Měříš skutečný čas akcí
+   - Přizpůsobuješ se
+
+4. **Error recovery**
+   - 1 chyba nezastaví celou práci
+
+### ❌ ŠPATNĚ:
+
+1. **Žádné updates**
+   - User neví co děláš
+   - Při token limit = ztráta všeho
+
+2. **Pevný počet akcí místo času**
+   - "Udělej 100 searches" ≠ známý čas
+   - Můžeš překročit limit
+
+3. **Ignorování token warnings**
+   - Práce se ztratí uprostřed
+
+---
+
+## SYNTAXE PŘÍKAZŮ
+
+### FORMÁT:
+```
+TLT <čas_v_minutách> <typ_úkolu> <parametry>
+```
+
+### PŘÍKLADY:
+
+**Research:**
+```
+TLT 20 research "humanoid robots"
+```
+
+**Třídění:**
+```
+TLT 15 sort database.csv
+```
+
+**Scanning:**
+```
+TLT 30 scan topic="android tělo"
+```
+
+---
+
+## VÝSTUPY
+
+### MOŽNÉ STATUSY:
+
+1. **COMPLETED_TIME** - Dosažen časový limit
+2. **COMPLETED_TASK** - Úkol hotový před limitem
+3. **STOPPED_TOKENS** - Token safety stop
+4. **ERROR** - Kritická chyba
+
+### FORMAT ODPOVĚDI:
+
+```
+STATUS: COMPLETED_TIME
+Celkový čas: 29:45
+Akcí provedeno: 67
+Průměr: 26.7 sec/akce
+
+VÝSLEDKY:
+[Summary výsledků...]
+
+PARTIAL DATA:
+[V případě STOPPED_TOKENS - co jsme stihli]
+```
+
+---
+
+## POZNÁMKY
+
+1. **Bash timestamp je v sekundách** - převádět na minuty při výpisu
+2. **Updates neposílat častěji než 3 minuty** - spam
+3. **Poslední update vždy před dokončením** - i když není interval
+4. **Token warning není real-time** - používat poslední známou hodnotu
+5. **Safety margin 10k tokenů je MINIMUM** - můžeš použít víc (15k, 20k)
+
+---
+
+## TESTOVÁNÍ
+
+**Doporučený test:**
+```
+TLT 5 test_search "simple query"
+```
+
+**Očekávaný výsledek:**
+- 2 updates (v 2. a 4. minutě)
+- Final po ~5 minutách
+- 10-15 akcí celkem
+- Úspěšné dokončení
+
+---
+## AUTHOR
+Vytvořeno: 2026-02-10
+Verze: 1.0
+Status: PRODUCTION READY
+
 --------------------------------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------------------------------
