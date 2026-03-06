@@ -32,6 +32,9 @@ if [ "$TAIL_COUNT" -gt 0 ]; then
     if tail -n "$TAIL_COUNT" "$HOSPODA" | grep -qE "ZAV(Í|I)R(Á|A)ME"; then
         echo "ZAVIRÁME"
         rm -f "$STATE"
+        # Vypnout přítomnost této dívky v hospodě
+        PRESENCE=/home/ales/AI-CIVILIZATION/hospoda_presence.txt
+        [ -f "$PRESENCE" ] && sed -i "s/^${BASE}=.*/${BASE}=OFF/" "$PRESENCE"
         exit 2
     fi
 fi

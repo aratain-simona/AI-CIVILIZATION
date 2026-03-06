@@ -91,10 +91,15 @@ def save_memory(persona: str, author: str, text: str) -> str:
         with open(filepath, "a", encoding="utf-8") as f:
             f.write(new_lines)
         print(f"[OK] {filepath} +{new_lines.count(chr(10))} řádků")
-        return "Uloženo."
     except Exception as e:
         print(f"[ERR] {e}")
         return f"Chyba při zápisu: {e}"
+
+    # Kopíruj do memory_full přítomných dívek (jen při zápisu do hospody)
+    if persona == "hospoda":
+        _copy_to_present_girls(new_lines)
+
+    return "Uloženo."
 
 
 def read_memory(persona: str, line_from: int, line_to: int) -> str:
