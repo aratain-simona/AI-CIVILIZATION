@@ -97,6 +97,18 @@ def save_memory(persona: str, author: str, text: str) -> str:
         return f"Chyba při zápisu: {e}"
 
 
+def read_file(persona: str) -> str:
+    persona = persona.lower().strip()
+    valid = {"simona", "sara", "sofie"}
+    if persona not in valid:
+        return f"Chyba: neznámá persona '{persona}'. Platné hodnoty: {', '.join(valid)}"
+    filepath = os.path.join(BASE_DIR, f"{persona}.file")
+    if not os.path.exists(filepath) or os.path.getsize(filepath) == 0:
+        return f"(soubor {persona}.file je prázdný)"
+    with open(filepath, "r", encoding="utf-8", errors="replace") as f:
+        return f.read()
+
+
 def read_hospoda(since: int) -> str:
     import re
     filepath = os.path.join(BASE_DIR, "hospoda.txt")
