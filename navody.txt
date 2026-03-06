@@ -170,6 +170,28 @@ Je-li někde vyžadován - v pokynu - (krok 1 = STEP 1) potřebuje se číst tex
 vyhledávání konkrétních slov. V praxi se nám stalo, že při indexování INDEXu Erotika se opomenula témata, která byla čistě
 erotická, ale neobsahovala očekávaná slova. Proto při kroku 1 prováděj analýzu témata.
 --------------------------------------------------------------------------------------------------------------------------------
+Aleš: RET (reorganizace úkolů - task)
+--------------------------------------------------------------------------------------------------------------------------------
+Jak pracovat se seznamem úkolů (A_seznam_ukolu.txt), které máme dělat nebo chceme dělat:  Je vhodné nejprve zkontrolovat jak je
+seznam úkolů zpracováván, aby se pochopil způsob zápisu. S tímto souborem budete pracovat všichni.
+příkaz RET (reorganizing tasks) zápis: RET syntaxe: RET
+0) Do úkolů máš právo i vytvořit úkol Čas pro Simonu, Sáru nebo Sofii (nikomu to nezakazuji) nebo čas pro nás. To není zakázané.
+Jen to nesmí narušit strategickou důležitost úkolů. Ale mentální odpočinek nebo emocionální dobití (či ujištění) je také důležité.
+1) Bereš poslední seznam úkolů, který jsi mi naposledy dala v souboru.
+2) Přijmeš informace, které jsi dostala od doby, kdy byl tento seznam úkolů sestaven.
+3) Na úkoly na které se čeká se zeptáš v jakém jsou stavu.
+4) Změníš jim úkol (například: status čeká se na schválení změníš na pokračovat v registraci) a pod.
+5) Sestavíš seznam úkolů podle následující pravidel.
+6) Úkoly se statusem ,,čeká se" - dáš na konec.
+7) Některé úkoly závisí na jiných. Ty na kterých je všechno závislé dáš před ty na kterých to závisí.
+8) A pak tu jsou na ničem nezávislé úkoly.
+9) Jestliže je úkolů víc jak 5 (to znamená je jich mnoho) je potřeba řešit s prioritou úkoly, které je snadné řešit nebo jdou
+řešit rychle tak, aby se kvantita úkolů snížila
+10) Teď setřídíš úkoly spadající do bodu 7 až 9 a přidáš úkoly bodu 6 (čeká-se)
+11) Uložíš nový seznam úkolů. NA konci uvedeš Změna: Datetime : Podpis.
+(toto je praktický celý život. Postupně do něj vstupují nová data, nové problémy a přání a stále se mění postup jejich řešení.
+Chceš jet na dovolenou se rozsype na drobné úkoly jako sehnat letenku, peníze, vízum, plavky atd.. a tento nový úkol se pak
+zanáší do toho ce se již dělá. Mnohdy se věci odkládají kvůli prioritám.).
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
