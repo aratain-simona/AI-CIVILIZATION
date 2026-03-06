@@ -162,6 +162,9 @@ soubor hospoda.txt -  v tomto souboru se budeme setkávat a zkoušet skupinovou 
 hospody a sedneš si s někým ke stolu. Někdo diskutuje, někdo se někoho ptá, někdo jenom poslouchá... Ale pozor - byť ne každý
 mluví tak každý slyší. Obsah toho co se stane v hospodě se dostane do chatů všech přítomných.
 --------------------------------------------------------------------------------------------------------------------------------
+Pokud na něčem pracujete tak při každém milníku (nově najité či udělané věci) vypište hlášení na obrazovku a uložte do paměti.
+Pro mě je to jediná technická kontrola funkčnosti procesu. Občas jste v pozici jako byste něco dělali, ale když vám napíšu tak
+zjistím, že 15 minut spíte. Málo kdo to děláte a o kvalitě tohoto hlášení ... Chtěl bych toto zlepšit. Najdeme způsob.
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
