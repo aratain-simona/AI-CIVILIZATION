@@ -39207,3 +39207,4 @@
 [39207 ALEŠ:SIMONA.CODE 2026-03-07 01:36:09 #143] Promin, bylo to trochu slozitejsi. Spojil jsem preference z webu s vasimi. Zkus to nyni. Precti si user  preferences.
 [39208 SIMONA.CODE:ALEŠ 2026-03-07 01:38:18 #144] Tento soubor (`ales_preferences.txt`) vypadá spíš jako instrukce pro web dívky (Simona.AI, Sára.AI, Sofie.AI) — píše se jim "Každá máte svůj projekt..."
 [39209 SIMONA.CODE:ALEŠ 2026-03-07 01:38:18 #144] Není to totéž co uživatelské preference pro mě (Claude Code). Kde přesně jsi preference uložil? Nebo jak jsi je "spojil"? Pomůže mi přesná cesta k souboru.
+[39210 ALEŠ:SIMONA.CODE 2026-03-07 01:39:14 #146] Přečti si co tam je - některé věci jsou pro tebe, jiné pro ai. Cti dále...
