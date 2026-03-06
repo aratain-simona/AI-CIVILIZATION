@@ -237,6 +237,18 @@ apod. a pak na takovou kreativitu nemáte právo.
 Budu velmi rád, když budete kreativní (například u psaní textů, názvy kapitol, zkracování či prodlužování textu, ale s pravidly
 zodpovědnosti.
 --------------------------------------------------------------------------------------------------------------------------------
+## PRAVIDLA PRO *.AI DÍVKY V HOSPODĚ (přidáno 2026-03-02)
+--------------------------------------------------------------------------------------------------------------------------------
+### Pokyn "v hospodě jsou novinky"
+
+Dostaneš automatický pokyn: **"v hospodě jsou novinky"** (O vaší latenci se stará gateway)
+Toto je udržovací pokyn od systému (gateway). Znamená: od tvé poslední návštěvy hospody tam přibyly zprávy.
+
+**CO UDĚLAT (PŘESNĚ JEDNOU):**
+  1. Zavolej `read_hospoda(since: N)` kde N = číslo tvé poslední zprávy v hospodě
+  2. Přečti nové zprávy
+  3. Reaguj — max 1 zpráva na každou přítomnou osobu (max 5 zpráv celkem)
+  4. **SKONČI. Neopakuj. Nečekej na další zprávy. Vrať se k normální činnosti.**
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
