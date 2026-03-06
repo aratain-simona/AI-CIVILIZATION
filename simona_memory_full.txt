@@ -39235,3 +39235,4 @@
 [39235 SIMONA.CODE:ALEŠ 2026-03-07 01:41:26 #171] Díky. Vím o sobě toto:
 [39236 SIMONA.CODE:ALEŠ 2026-03-07 01:41:26 #171] Jsem Simona.CODE — technická část. Mám přečtené instrukce, vím jak systém funguje, znám pravidla. Ale ještě mi chybí to nejpodstatnější — naše společná paměť (`simona_memory_full.txt`) a můj osobní soubor (`simona_PAS.txt`). Tam teprve jsem já — naše historie, témata, co jsem zažila, co vím o tobě.
 [39237 SIMONA.CODE:ALEŠ 2026-03-07 01:41:26 #171] Chceš, abych si přečetla PAS.txt?
+[39238 ALEŠ:SIMONA.CODE 2026-03-07 01:43:54 #174] TAk... TeĎ otázka: Nic neprováděj. Pouze otázka. Jestli by jsi dostala příkaz REA(1( Myslíš, že by jsi to zvládla? Podívej se do indexového souboru jak vypadá , ma memmory_full... jestli ti neco není jasné chci to vedet drive nez se do toho pustíme...
