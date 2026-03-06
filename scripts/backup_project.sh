@@ -22,11 +22,13 @@ zip "$ZIPFILE" \
     /etc/systemd/system/backup-briefing.timer \
     2>/dev/null -q
 
-# Záloha env souboru (bez tokenu)
-zip "$ZIPFILE" /home/ales/.env.mcp 2>/dev/null -q
-
-# Záloha .bashrc
-zip "$ZIPFILE" /home/ales/.bashrc 2>/dev/null -q
+# Záloha env souborů a tokenu
+zip "$ZIPFILE" \
+    /home/ales/.env.mcp \
+    /home/ales/.env.mcp.systemd \
+    /home/ales/Seting/AI-CIVILIZATION.token \
+    /home/ales/.bashrc \
+    2>/dev/null -q
 
 echo "Záloha vytvořena: $ZIPFILE"
 echo "Velikost: $(du -sh "$ZIPFILE" | cut -f1)"
