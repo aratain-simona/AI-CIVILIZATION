@@ -654,8 +654,39 @@ Status: PRODUCTION READY
 Finance: Svýma rukama půl milionu USD nevydělám. Jediná šance jak to vydělat je zorganizovat práci a vytvořit systém. Tento
 systém by pak měl generovat finance … pro zatím okolo 20 tisíc USD měsíčně. Celkově je potřeba i poté mít zajištěné generování financí.
 --------------------------------------------------------------------------------------------------------------------------------
+Aleš: Odkazování do paměti:
 --------------------------------------------------------------------------------------------------------------------------------
+Jaký-koli příkaz, kde je odkazováno do paměti provedeš tak, že:
+    1) zkontroluješ jestli není v paměti v posledního období. Údaje najdeš u posledně podané informace tak, že z ní odečteš 24
+       hodin a tento obsah prohledáš. Chybou však je zastavit se na prvním nalezeném výsledku, protože tuto informaci jsme ještě
+       mohli dále rozebírat a dojít k jinému závěru. Proto je potřeba si zkontrolovat tyto data.
+    2) Jestliže požadovaná data nejsou v bodě 1, zajdi do souboru *_memory_index.txt a podívej se, jestli nemáš něco
+       podobného zaindexováno. Pokud ano, prohledej tyto data. Prohledej je všechny, ať najdeš nejnovější aktualizaci, kde
+	   jsme dané téma řešili.
+    3) jestliže v indexu dané téma není, ale mělo by být (máš pocit, že se na něj ptám často nebo, že je důležité). Zapiš dané
+       téma do indexu. Vygeneruj nový soubor *_memory_index.txt. Stejně reaguj i rozšíření vyhledávání. Budeme například řešit
+       Eximbank. Informaci nedohledáš, ale uznáš, že výraz Eximbank by měl být zahrnut v tagech u financích - tak ho tam doplň a
+       nech vygenerovat nový *_memory_index.txt.
+    4) Jestliže je informace potřebná, máš možnost si projít konkrétně celý archiv a dohledat ji - bude to asi zdlouhavá operace.
+       Proto se na ni zeptej (jestli ji máš provést a po jakém kroku) nebo rovnou provést pokyn ANI pro daný INDEX. Vždy ale s
+       načtením nového bloku hlas status (soubor, blok, našla/nenašla)
 --------------------------------------------------------------------------------------------------------------------------------
+Aleš: Jak dohledat informaci. Použití indexového souboru:  (jak hledat odpověď aniž by bylo nutné procházet celý chat)
+--------------------------------------------------------------------------------------------------------------------------------
+	1) Zapamatuj si témata v indexovém souboru (to uděláš tak, že se podíváš do user preferences, zjistíš aktualní url adresu k
+	   indexovému souboru (*_memory_index.txt) a načteš si tento soubor ze svého projektu)
+	2) Pokud dostaneš otázku, která tě vyzve do historie našich rozhovorů nebo ji nemáš toto téma aktuálně v paměti pak se
+	   podívej do  souboru *_memory_index.txt.
+	3) jestliže v indexu dané téma není, ale mělo by být (máš pocit, že se na něj ptám často nebo, že je důležité). Zapiš dané
+	   téma do indexu (požádej o to svoji dvojnici *.code). Vygeneruj nový soubor *_memory_index.txt. Stejně reaguj i rozšíření
+	   vyhledávání. Budeme například řešit Eximbank. Informaci nedohledáš, ale uznáš, že výraz Eximbank by měl být zahrnut v
+	   tagech u financích - tah ho tam doplň a nech vygenerovat nový *_memory_index.txt.
+	4) Podle téma urči kde by se mohla odpověď nacházet.
+	5) Přečti si téma na příslušných řádcích. VŠECHNA. (jak je popsáno dále)
+	6) Často řešíme problém, který už jsme jednou řešili. Ty najdeš první řešení, které nás napadlo, ale bylo nepoužitelné.
+	   Ty mi ho hnedka dáš na výstup, ale to, že jsme poté našli řešení… tak daleko se nedočteš. Takže je potřeba si přečíst
+	   kompletně téma než odpovíš. Chyby jsou horší než pár sekund, které nás stojí správná odpověď.
+	7) Reaguj pak podle takto získaných informací.
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
