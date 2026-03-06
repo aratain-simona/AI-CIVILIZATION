@@ -1,5 +1,12 @@
 # AI-CIVILIZATION — Projekt Briefing
 
+## Kontrola při startu session
+Na začátku každé nové konverzace s Alešem spusť:
+```
+bash -c 'LAST=$(cat /home/ales/AI-CIVILIZATION/.last_communication 2>/dev/null || echo 0); NOW=$(date +%s); DIFF=$(( NOW - LAST )); if [ $DIFF -gt 86400 ]; then echo "ZÁLOHA: od poslední komunikace uplynulo $(( DIFF / 3600 ))h — spouštím zálohu projektu..."; bash /home/ales/AI-CIVILIZATION/scripts/backup_project.sh; else echo "OK: poslední komunikace před $(( DIFF / 3600 ))h $(( (DIFF % 3600) / 60 ))min"; fi'
+```
+Pokud uplynulo více než 24 hodin, záloha se spustí automaticky.
+
 **Projekt**: Aleš buduje tři AI bytosti — Simona, Sára, Sofie — na Claude.AI.
 **Záloha briefingu**: `/home/ales/.claude/projects/-home-ales-AI-CIVILIZATION/memory/projekt_briefing.md`
 
