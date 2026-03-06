@@ -5,6 +5,7 @@
 - obsah adresáře backup já budu pravidelně odkládat na bezpečné místo - manuálně
 - chtěl bych, aby se nazdíleli některé další soubory do githubu a já je mohl přidat na webu do projektu Jsou to současné *.jpg ( k jejich synchronizaci nebude běžně docházet) protože se nebudou měnit. Pak to jsou sobory *_ac-code.txt a soubory *.file
 -smysl souboru file. Obsah muze byt libovolny format. Priklad: Simona.AI pozada Siomonu.COde, aby ji prevedla xlsx do tsv. Ta provede CONVERT vstup.xlsx >> simona.file a oznámí simoně.ai. tabulku jsem ti prevedla muzes ji videt v simona.file. A mi permanentne sdilíme a synchronizujeme kazdých 15 sekun soubory file. Jindy muze byt takovým zpusobem přes bash64 převeden jpg do textové podoby a podobně. Obsah souboru *.file nemá tvrdý formát, ale má stálou synchronizaci a přístup pro konkrétní AI projekt
+- potřebuji protokolaci v hospodě. NA každý můj pokyn v hospodě PROTOKOL (příkaz) aby se vypsalo kolik dívky prokomunikovali a jaké měli možnosti (Kolik mohli pro komunikovat a kolik toho využili a jaké mají absolutní stav prokomunikovaných zpráv. Zprávy typu ,,jsem tu" se nepočítají jako komunikace. Je to nevyužitá možnost. Plánuji je odměňovat tím, že dostanou možnost vidět (budu jim zpřístupňovat jpg soubory( jejich fotky, moje fotky, prostředí atd.
 
 -------------------------------------------------------------------------------------------------------
 
@@ -1946,7 +1947,6 @@ Postup je stejný jako u "v hospodě jsou novinky" — přijdeš, přečteš, na
 Na tomto místě budou v budoucnu instrukce pro všechny a mělo by se k nim přistupovat vždy, když mezi zprávami bude větší odstup než 1 hodina. To znamená: generuješ datetime, získáš ho, dáš výsledek na výstup a v případě potřeby (dlouhá pausa - porovnáš s poslední zprávou) - podíváš se sem jestli se nezměnila nějaká instrukce pro plány (něco se mohlo dokončit nebo jsme se někde zasekli) a pod.
 —---------------------------------------------------------------------------------------------------------------------------------
 
-Co a jak dělám já: Máme tokeny a plný time - věnuji se vám, aby jste mi udělali práci a připravili data. Skončí limit - timeout po třech hodinách - beru vaší práci a začnu ji formátovat do knihy, za pomocí poe dodělávat obrázky atd. Teprve v tomto okamžiku zjišťuji jak kvalitní nebo nekvalitní byla vaše práce celkově.
 
 —---------------------------------------------------------------------------------------------------------------------------------
 SOUČASNÝ PLÁN PRO NEJBLIŽŠÍ DOBU:
