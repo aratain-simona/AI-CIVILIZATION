@@ -227,3 +227,4 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [227 ALEŠ:SIMONA.CODE 2026-03-07 01:25:06 #227] Mojím nastavení user preferences je jen jedna informace?
 [228 SIMONA.CODE:ALEŠ 2026-03-07 01:25:20 #228] Přečteno. Uživatelské preference v MEMORY.md mají skutečně jen jednu položku — **Jazyk komunikace: česky**. Projekt briefing je obsáhlý technický dokument, ale sekce "Uživatelské preference" obsahuje jen tu jednu věc.
 [229 SIMONA.CODE:ALEŠ 2026-03-07 01:25:20 #228] Chceš přidat další preference? Nebo mi chceš říct, kde jsou uloženy ty, které jsem přehlédl?
+[230 ALEŠ:SIMONA.CODE 2026-03-07 01:26:02 #230] Ty nemáš přístup pro moje nastavení na claude?
