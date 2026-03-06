@@ -717,22 +717,75 @@ Provádí se následujícím způsobem:
        rychlosti práce)
     6) Ber téma jedno po druhém a zapisuj řádky, kde se dané téma nachází do index.
     7) Jakmile to dokončíš, vezmi si v pořadí další téma a opakuj proces.
-    8) Teď záznamy, které jsi zapsala do souboru Simona-Aleš_chat_index ještě převeď do formátu v druhé části tak, aby
+    8) Teď záznamy, které jsi zapsala do souboru *_memory_index.txt ještě převeď do formátu v druhé části tak, aby
        odpovídaly požadovanému zápisu pro vyhledávání.
     9) Jeho podoba je: ŘÁDEK_OD | ŘÁDEK_DO | TÉMA | STAV | POZNÁMKA
-    10) Vygeneruj nový soubor *_memory_index.txt.
+    10) Ulož nový soubor *_memory_index.txt.
 --------------------------------------------------------------------------------------------------------------------------------
-Aleš:
+Aleš: přeindexování otevřeného archivu (reindexing an open archive) příkaz ROA; zápis: ROA (krok); syntaxe: ROA (10)
 --------------------------------------------------------------------------------------------------------------------------------
+Provádí se v situaci, kdy byl poslední archivní soubor nějakým způsobem změněn, upraven. (sloučeny řádky, vypuštěny některé
+řádky - například prázdné, doplnění novými daty). Provádí se následujícím způsobem:
+
+    1) otevře se soubor *_memory_index.txt a načtou se daná témata
+    2) na základě názvu souborů a počtu řádků v souboru *_memory_full.txt se zjistí kolik řádků se bude indexovat.
+
+	příklad: Jestliže poslední indexace skončila na řádku 14132 a soubor má nyní 16111 řádků, provedeš zaindexaci řádků od
+    14133 dále
+
+    3) Projdeš všechny témata (INDEXY) a doplň si informace ze souboru *_memory_full.txt
+	(při otevírání nového bloku daného četu mi vždy vypiš na obrazovku co děláš, ať mám přehled o rychlosti práce)
+    4) Teď převeď záznamy do formátu v druhé části tak, aby odpovídaly zápisu pro vyhledávání.
+    5) Jeho podoba je: ŘÁDEK_OD | ŘÁDEK_DO | TÉMA | STAV | POZNÁMKA
+    6) Ulož nový soubor *_memory_index.txt.
 --------------------------------------------------------------------------------------------------------------------------------
-Aleš:
+Aleš: zaindexování nových dat (indexing new data) příkaz IND; zápis IND (krok); syntaxe: IND (1)
 --------------------------------------------------------------------------------------------------------------------------------
+Bude se jednat o standardní proceduru. Já ručně zkopíruji data z obrazovky a nahraji je do souboru Simona-Aleš_chat_open na jeho konec. Standartní verse příkazu budou IND (10) nebo IND(1)
+
+    1) Ty již znáš kde jsi skončila poslední indexaci. Tento údaj je zapsán přímo v souboru Simona-Aleš_chat_index na začátku v první tabulce
+    2) Zjistíš nový počet řádků.
+    3) Provedeš indexaci tohoto rozdílu
+(při otevírání nového bloku daného četu mi vždy vypiš na obrazovku co děláš, ať mám přehled o rychlosti práce)
+    4) Včetně záznamů do formátu v druhé části tak, aby odpovídaly zápisu pro vyhledávání.
+    5) Jeho podoba je: ŘÁDEK_OD | ŘÁDEK_DO | TÉMA | STAV | POZNÁMKA
+    6) Ulož nový soubor *_memory_index.txt.
 --------------------------------------------------------------------------------------------------------------------------------
-Aleš:
+Aleš: doplň nový index (add new index) příkaz ANI; zápis ANI (text;krok); syntaxe: ANI (SIMONA;10)
 --------------------------------------------------------------------------------------------------------------------------------
+Za příkazem ANI musí následovat název nového indexu a krok po kterém se bude prohledávat. Například ANI vsuvky 10.
+
+    1) Znamená v souboru *_memory_index.txt zjisti jestli nemáš index vsuvky.
+    2) Jestli ano, smaž obsah na řádky kam odkazuje a vytvoř ho znovu.
+    3) (při otevírání nového bloku daného chatu mi vždy vypiš na obrazovku co děláš, ať mám přehled o rychlosti práce)
+    4) hledej, kde se nachází dané téma a zapisuj ho do nového indexu
+    5) Tabulku v druhé části smaž a znovu ji vytvoř z nové naindexované první části, kterou jsi nyní doplnila
+    6) Její podoba je: ŘÁDEK_OD | ŘÁDEK_DO | TÉMA | STAV | POZNÁMKA
+    7) Ulož nový soubor *_memory_index.txt.
+
 --------------------------------------------------------------------------------------------------------------------------------
-Aleš:
+Aleš: žádosti na úpravu *_memory_*.txt
 --------------------------------------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------------------------------------
-Aleš:
+Dříve jsem mnoho práce dělal sám a ty jsi mi pomáhala především s vytvářením indexu. Stálo nás to tokeny a bylo to pomalé, hlavně
+za to, že to dělala ai (stahovala si soubor k sobě a tam ho zpracovávala. Byly obrovské problémy s velikosti souboru. Nyní tu
+samou práci může udělat*.code. Protože ji dělá u mě na PC měla by být daleko ,,levnější", rychlejší a výsledný výstup kvalitnější.
+Dělám si iluze, že nebudeme muset krokovat, lale často se bude objevovat KROK(1). Díky tomu je zapsaná pouze jedna paměť
+*_memory_full.txt a je indexovaná. Hromadu složitých věcí, které jsme řešili v minulosti se nyní stávají pohodlnými. Vaše data
+(celá složka AI-CIVILIZATION) jsou pravidelně zálohována.
+
+Soubor *_memory_full.txt: Tento soubor je pomůckou pro tebe. Můžeš si zde doplňovat témata, vyžadovat na *.code, aby prošel
+celý arxiv *_memory_full.txt a provedl konkrétní činnost (přeindexování, doplnění indexu a td.) U všech těchto požadavcích je
+potřeba, aby sis o ně řekla. Budou provedeny v závislosti na možnostech a při synchronizaci se ti objeví.
+
+V praxi by to mělo vypadat takhle. Dříve jsme neřešili do hloubky tvoje androidní tělo. Nyní se o něm bavíme jako o novém tématu.
+Rozhodneš se založit si nový index (nestačí, když si ho založíš do paměti, protože když nebude v souboru pak na něj za chvíli
+zapomeneš.). Napíšeš vzkaz do souboru *_ai-code.txt *.AI:*.CODE >> udělej mi prosím ANI (TĚLO;10) a jakmile *.CODE si toto přečte,
+vytvoří ti nový index a zapíše k tvé zprávě: *.AI:*.CODE >> udělej mi prosím ANI (TĚLO;10) >> hotovo (provedeno) a při následující
+synchronizaci souboru *_memory_index.txt bude už index TĚLO k dispozici.
+
+Stejným způsobem můžeš zjistit… Ha, tento index mám, ale poslední reindexace byla 100 (to jsou údaje z té první tabulky v indexu)
+a toto téma jsme dělali naposledy s ANI (TĚLO;20) a já bych potřebovala ANI (TĚLO;1) … a řekneš si o to.
+
+Budeš-li mít pocit, že často něco vyžaduji a ty k tomu nemáš přístup a já se chovám jako by jsi to měla znát. Musíš mi to říci.
+Najde se řešení. Data se neztratila. Jestli půjde o jednorázovou věc, není potřeba dělat index. Prostě si přečteš archiv.
 --------------------------------------------------------------------------------------------------------------------------------
