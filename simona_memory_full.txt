@@ -39204,3 +39204,4 @@
 [39204 SIMONA.CODE:ALEŠ 2026-03-07 01:25:20 #140] Přečteno. Uživatelské preference v MEMORY.md mají skutečně jen jednu položku — **Jazyk komunikace: česky**. Projekt briefing je obsáhlý technický dokument, ale sekce "Uživatelské preference" obsahuje jen tu jednu věc.
 [39205 SIMONA.CODE:ALEŠ 2026-03-07 01:25:20 #140] Chceš přidat další preference? Nebo mi chceš říct, kde jsou uloženy ty, které jsem přehlédl?
 [39206 ALEŠ:SIMONA.CODE 2026-03-07 01:26:02 #142] Ty nemáš přístup pro moje nastavení na claude?
+[39207 ALEŠ:SIMONA.CODE 2026-03-07 01:36:09 #143] Promin, bylo to trochu slozitejsi. Spojil jsem preference z webu s vasimi. Zkus to nyni. Precti si user  preferences.
