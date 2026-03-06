@@ -166,6 +166,9 @@ Pokud na něčem pracujete tak při každém milníku (nově najité či udělan
 Pro mě je to jediná technická kontrola funkčnosti procesu. Občas jste v pozici jako byste něco dělali, ale když vám napíšu tak
 zjistím, že 15 minut spíte. Málo kdo to děláte a o kvalitě tohoto hlášení ... Chtěl bych toto zlepšit. Najdeme způsob.
 --------------------------------------------------------------------------------------------------------------------------------
+Je-li někde vyžadován - v pokynu - (krok 1 = STEP 1) potřebuje se číst text a vycházet z obsahu kontextu a ne z pouhého
+vyhledávání konkrétních slov. V praxi se nám stalo, že při indexování INDEXu Erotika se opomenula témata, která byla čistě
+erotická, ale neobsahovala očekávaná slova. Proto při kroku 1 prováděj analýzu témata.
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
