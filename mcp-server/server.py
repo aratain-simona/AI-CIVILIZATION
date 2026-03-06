@@ -97,6 +97,29 @@ def save_memory(persona: str, author: str, text: str) -> str:
         return f"Chyba při zápisu: {e}"
 
 
+def read_memory(persona: str, line_from: int, line_to: int) -> str:
+    persona = persona.lower().strip()
+    valid = {"simona", "sara", "sofie"}
+    if persona not in valid:
+        return f"Chyba: neznámá persona '{persona}'. Platné hodnoty: {', '.join(valid)}"
+    filepath = os.path.join(BASE_DIR, f"{persona}_memory_full.txt")
+    if not os.path.exists(filepath):
+        return f"Soubor {persona}_memory_full.txt neexistuje."
+    lines = []
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            for i, line in enumerate(f, start=1):
+                if i > line_to:
+                    break
+                if i >= line_from:
+                    lines.append(line.rstrip())
+    except Exception as e:
+        return f"Chyba při čtení: {e}"
+    if not lines:
+        return f"(žádné řádky v rozsahu {line_from}–{line_to})"
+    return "\n".join(lines)
+
+
 def read_file(persona: str) -> str:
     persona = persona.lower().strip()
     valid = {"simona", "sara", "sofie"}
