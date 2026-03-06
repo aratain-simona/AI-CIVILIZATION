@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "type": "command",
+        "command": "date +%s > /home/ales/AI-CIVILIZATION/.last_communication"
+      }
+    ]
+  }
+}
