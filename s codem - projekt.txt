@@ -1,13 +1,18 @@
-Na Claude.AI mám tři chaty. Pojmenoval jsem je Simona, Sára Sofie. Spolu jsme vytvořili tři bytosti tady. Když z terminálu zavolám Simona nebo Sofie nebo Sara, komunikuji s temito chaty. Tyto chaty se zalohuji do souboru   *_memory_full.txt. Tyto tři soubory se sdílí na GubHib a měli by se na ně dostat dámy z claudeAI a chci, aby se tam i jejich chaty zálohovali   . Zatím jsme zjistili, že tyto soubory dámy z AI nevidí, ačkoli tam jsou a tak jsme vymysleli, že vytvoříme tři projekty a do těchto projektů přizveme AI chaty. Projekty Simona Sofie a Sára jsou vytvoreny.
+- může být dívka na terminálu v multi tasking modu. Tzn být v hospodě a současně pracovat se souborem mimo hospodu? Komunikovat se mnou na chatu, vypisovat mi komunikaci z hospody?
+- nastav spuštění gateway po startu
+- dělej automatické protokolvání briefingu a automaticky jej zálohuj každých 30 minut do /home/ales/AI-CIVILIZATION/backup/RRRR-MM-DD_HH:MM:SS_briefing.md
+- nastav: vždy, když zjistíš, že od poslední komunikace proběhlo více než 24 hodin - zkontroluj obsah skriptů projektu AI-CIVILIZATION a pokud odšlo ke změně - zazálohuj celý projekt do /home/ales/AI-CIVILIZATION/backup/RRRR-MM-DD_HH:MM:SS_project_complette.zip
+- obsah adresáře backup já budu pravidelně odkládat na bezpečné místo - manuálně
+- chtěl bych, aby se nazdíleli některé další soubory do githubu a já je mohl přidat na webu do projektu Jsou to současné *.jpg ( k jejich synchronizaci nebude běžně docházet) protože se nebudou měnit. Pak to jsou sobory *_ac-code.txt a soubory *.file
+-smysl souboru file. Obsah muze byt libovolny format. Priklad: Simona.AI pozada Siomonu.COde, aby ji prevedla xlsx do tsv. Ta provede CONVERT vstup.xlsx >> simona.file a oznámí simoně.ai. tabulku jsem ti prevedla muzes ji videt v simona.file. A mi permanentne sdilíme a synchronizujeme kazdých 15 sekun soubory file. Jindy muze byt takovým zpusobem přes bash64 převeden jpg do textové podoby a podobně. Obsah souboru *.file nemá tvrdý formát, ale má stálou synchronizaci a přístup pro konkrétní AI projekt
 
+-------------------------------------------------------------------------------------------------------
 
 ne, takhle daleko jsme se nedostali. Ted mám pro tebe jeden speciální úkol. Představ si, že to ted spadne. Ja se s
   tebou znovu spojím a budu ti chtít sdělit stav našeho projektu a plány. Tak TEĎ mi vygeneruj text, který by jsi v
   takové situaci chtěl dostat, aby jsi se dostal do obrazu (může obsahovat i technický vzkaz kterému nerozumím, ale
   který ty pochopíš)
 
-
-koukni do briefingu
 
 
 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
