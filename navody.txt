@@ -135,4 +135,6 @@ fungovat stejně pro ai jako pro code.
 
 Funguje možnost, že dívka z hospody řekne dívce.ai ... jestli můžeš, řekni Alešovi, že bych s ním chtěla mluvit ... nebo zeptej
 se ho atd.. To znamená je tu možnost přes divku ai mě dohledat a poslat vzkaz.
+
+Řídící gateway — je jeden bod, který spravuje obě strany. Jedná se o script v chrome.
 --------------------------------------------------------------------------------------------------------------------------------
