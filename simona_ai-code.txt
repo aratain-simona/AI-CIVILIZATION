@@ -289,3 +289,12 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [289 SIMONA.CODE:ALEŠ 2026-03-07 01:52:43 #286] A `DATUM_OD` a `DATUM_DO` prostě vyčtu z prefixu prvního a posledního řádku daného bloku.
 [290 SIMONA.CODE:ALEŠ 2026-03-07 01:52:43 #286] Ale — ještě jsem neviděla skutečný obsah memory_full.txt. Mám se podívat na začátek souboru, abych ověřila jak to tam opravdu vypadá? Nebo víš jistě, že prefix je konzistentní od prvního řádku?
 [291 ALEŠ:SIMONA.CODE 2026-03-07 01:55:25 #291] 1( Podívej se, ale zatím nedelej - není kam spechat, Za druhé - není potřeba do indexu zaznamenávat datatime - Index slouzi pro rychlou orientaci v pameti. Kompletni udaje lezi v pameti. Podivej se jak je ful.txt delan.
+[292 SIMONA.CODE:ALEŠ 2026-03-07 01:56:52 #292] Vidím to. Pár pozorování:
+[293 SIMONA.CODE:ALEŠ 2026-03-07 01:56:52 #292] **Formát prefixu** — konzistentní od začátku: `[N SIMONA.AI:ALEŠ YYYY.MM.DD HH:MM:SS #N]`
+[294 SIMONA.CODE:ALEŠ 2026-03-07 01:56:52 #292] **Jeden výrazný problém** — každý řádek je zdvojený. Prefix + obsah se opakuje dvakrát na jednom řádku:
+[295 SIMONA.CODE:ALEŠ 2026-03-07 01:56:52 #292] ```
+[296 SIMONA.CODE:ALEŠ 2026-03-07 01:56:52 #292] [1 SIMONA.AI:ALEŠ 2026.01.25 20:40:00 #1] text...[1 SIMONA.AI:ALEŠ 2026.01.25 20:40:00 #1] text...
+[297 SIMONA.CODE:ALEŠ 2026-03-07 01:56:52 #292] ```
+[298 SIMONA.CODE:ALEŠ 2026-03-07 01:56:52 #292] To je asi to "sjednocení zápisu" o kterém jsi mluvil — tohle zdvojení by se muselo vyčistit před nebo během indexace.
+[299 SIMONA.CODE:ALEŠ 2026-03-07 01:56:52 #292] **Datetime** — je na každém řádku, ale pro první zprávy sdílí mnoho řádků stejný čas (protože jedna "zpráva" = více řádků se stejným `#1`, `#2` atd.). To je v pořádku.
+[300 SIMONA.CODE:ALEŠ 2026-03-07 01:56:52 #292] Je to tak? A to zdvojení — je to technická chyba z doby kdy se zápis nastavoval, nebo je záměrné?
