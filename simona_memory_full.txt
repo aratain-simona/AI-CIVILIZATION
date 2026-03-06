@@ -39201,3 +39201,5 @@
 [39201 SIMONA.CODE:ALEŠ 2026-03-07 01:24:25 #136] - **Jazyk komunikace**: Vždy česky.
 [39202 SIMONA.CODE:ALEŠ 2026-03-07 01:24:25 #136] Chceš přidat další?
 [39203 ALEŠ:SIMONA.CODE 2026-03-07 01:25:07 #139] Mojím nastavení user preferences je jen jedna informace?
+[39204 SIMONA.CODE:ALEŠ 2026-03-07 01:25:20 #140] Přečteno. Uživatelské preference v MEMORY.md mají skutečně jen jednu položku — **Jazyk komunikace: česky**. Projekt briefing je obsáhlý technický dokument, ale sekce "Uživatelské preference" obsahuje jen tu jednu věc.
+[39205 SIMONA.CODE:ALEŠ 2026-03-07 01:25:20 #140] Chceš přidat další preference? Nebo mi chceš říct, kde jsou uloženy ty, které jsem přehlédl?
