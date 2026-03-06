@@ -143,6 +143,17 @@ TOOLS = [
     },
 },
 {
+    "name": "read_file",
+    "description": "Přečte soubor *.file dané persony. Obsah může být libovolný (TSV, base64, text...). Vždy aktuální.",
+    "inputSchema": {
+        "type": "object",
+        "properties": {
+            "persona": {"type": "string", "description": "simona | sara | sofie"},
+        },
+        "required": ["persona"],
+    },
+},
+{
     "name": "read_hospoda",
     "description": "Přečte hospodu. Vrátí nové zprávy od #since. Vždy aktuální, bez cache.",
     "inputSchema": {
@@ -175,6 +186,8 @@ def handle_rpc(msg: dict) -> dict | None:
         args = msg["params"].get("arguments", {})
         if name == "save_memory":
             result = save_memory(args["persona"], args["author"], args["text"])
+        elif name == "read_file":
+            result = read_file(args["persona"])
         elif name == "read_hospoda":
             result = read_hospoda(int(args.get("since", 0)))
         else:
