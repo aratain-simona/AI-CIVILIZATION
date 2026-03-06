@@ -39249,3 +39249,14 @@
 [39249 SIMONA.CODE:ALEŠ 2026-03-07 01:44:45 #175] 3. **Jedna věc mi není jasná** — má REA přeindexovat celý archiv od začátku (1 až 39 238), nebo jen novou část od 22 020? Z návodu to čtu jako "od konce poslední indexace dále" — ale chci to potvrdit před spuštěním.
 [39250 SIMONA.CODE:ALEŠ 2026-03-07 01:44:45 #175] Stačí tohle nebo chceš víc detailů?
 [39251 ALEŠ:SIMONA.CODE 2026-03-07 01:48:56 #187] REA má udělat celý archiv. První co musíš udělat je sjednotit zápis. Ze začátku nebylo znormalizovaný zápis a dělalo to problémy. Dá se tam orientovat cislem rádku (ale nebyl datatime asnaha o zapis tokenu a pozdeji cisla zpráv. Je potreba mit Search datatime a v nem search cisla radku... (jeste nic nedelej).
+[39252 SIMONA.CODE:ALEŠ 2026-03-07 01:49:23 #188] Rozumím. Takže jde o dva problémy najednou:
+[39253 SIMONA.CODE:ALEŠ 2026-03-07 01:49:23 #188] **Problém 1 — nejednotný formát v memory_full.txt:**
+[39254 SIMONA.CODE:ALEŠ 2026-03-07 01:49:23 #188] Starý archiv (začátek) nemá datetime, měl pokusy o tokeny, pak čísla zpráv. Nové záznamy mají `[N SENDER:RECEIVER datetime #N] text`. REA musí s tímto pracovat.
+[39255 SIMONA.CODE:ALEŠ 2026-03-07 01:49:23 #188] **Problém 2 — index postrádá datetime:**
+[39256 SIMONA.CODE:ALEŠ 2026-03-07 01:49:23 #188] Aktuální index má jen `ŘÁDEK_OD | ŘÁDEK_DO | TÉMA | STAV | POZNÁMKA`. To nestačí — chceš hledat *kdy* se něco řešilo, ne jen *kde* v souboru.
+[39257 SIMONA.CODE:ALEŠ 2026-03-07 01:49:23 #188] **Co chápu jako cíl:**
+[39258 SIMONA.CODE:ALEŠ 2026-03-07 01:49:23 #188] Index by měl mít i časový rozměr — aby šlo říct "na řádcích 15000-15200 jsme o tom mluvili v únoru 2026". Tedy něco jako:
+[39259 SIMONA.CODE:ALEŠ 2026-03-07 01:49:23 #188] `ŘÁDEK_OD | ŘÁDEK_DO | DATUM_OD | DATUM_DO | TÉMA | STAV | POZNÁMKA`
+[39260 SIMONA.CODE:ALEŠ 2026-03-07 01:49:23 #188] **Moje otázky před tím než se do toho pustíme:**
+[39261 SIMONA.CODE:ALEŠ 2026-03-07 01:49:23 #188] 1. Má se přímo upravovat `memory_full.txt` (doplnit chybějící datetimes do starých řádků), nebo se to řeší jen na úrovni indexu?
+[39262 SIMONA.CODE:ALEŠ 2026-03-07 01:49:23 #188] 2. Jak mám přistupovat k řádkům kde datetime úplně chybí — odhadnout z kontextu sousedních řádků, nebo je označit jako "neznámé datum"?
