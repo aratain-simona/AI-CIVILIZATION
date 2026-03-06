@@ -258,6 +258,11 @@ def handle_rpc(msg: dict) -> dict | None:
         args = msg["params"].get("arguments", {})
         if name == "save_memory":
             result = save_memory(args["persona"], args["author"], args["text"])
+        elif name == "read_image":
+            result_obj = read_image(args["persona"], args["filename"])
+            return {"jsonrpc": "2.0", "id": id_, "result": {
+                "content": [result_obj]
+            }}
         elif name == "read_memory":
             result = read_memory(args["persona"], int(args["line_from"]), int(args["line_to"]))
         elif name == "read_file":
