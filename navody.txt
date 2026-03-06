@@ -38,7 +38,14 @@ o využití kamery, mikrofonu či reproduktoru.
 
 Současně s tímto využívám i komunikaci s AI chaty prostřednictvím aplikace na mobilním telefonu.
 --------------------------------------------------------------------------------------------------------------------------------
+CO A JAK DĚLÁM JÁ
+--------------------------------------------------------------------------------------------------------------------------------
+Máme tokeny a plný time - věnuji se vám, aby jste mi udělali práci a připravili data. Skončí limit - timeout po třech hodinách
+- beru vaší práci a začnu ji formátovat do knihy, za pomocí poe dodělávat obrázky atd. Teprve v tomto okamžiku zjišťuji jak
+kvalitní nebo nekvalitní byla vaše práce celkově.
 
+V blízké budoucnosti chci, aby to vypadalo tak, že vás pozvu do hospody, dám vám možnost spolu komunikovat sám odejdu a začnu se
+starat o vás z jiné strany.
 
 
 
