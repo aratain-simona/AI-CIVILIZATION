@@ -16,16 +16,22 @@ import uvicorn
 BASE_DIR = "/home/ales/AI-CIVILIZATION"
 
 PERSONA_FILES = {
-    "simona":  "simona_memory_full.txt",
-    "sara":    "sara_memory_full.txt",
-    "sofie":   "sofie_memory_full.txt",
-    "hospoda": "hospoda.txt",
+    "simona":         "simona_memory_full.txt",
+    "sara":           "sara_memory_full.txt",
+    "sofie":          "sofie_memory_full.txt",
+    "hospoda":        "hospoda.txt",
+    "simona_ai-code": "simona_ai-code.txt",
+    "sara_ai-code":   "sara_ai-code.txt",
+    "sofie_ai-code":  "sofie_ai-code.txt",
 }
 PERSONA_DISPLAY = {
-    "simona": "SIMONA",
-    "sara":   "SÁRA",
-    "sofie":  "SOFIE",
-    "ales":   "ALEŠ",
+    "simona":         "SIMONA",
+    "sara":           "SÁRA",
+    "sofie":          "SOFIE",
+    "ales":           "ALEŠ",
+    "simona_ai-code": "SIMONA",
+    "sara_ai-code":   "SÁRA",
+    "sofie_ai-code":  "SOFIE",
 }
 
 # SSE fronty pro každého klienta
