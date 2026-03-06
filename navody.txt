@@ -193,6 +193,317 @@ Jen to nesmí narušit strategickou důležitost úkolů. Ale mentální odpoči
 Chceš jet na dovolenou se rozsype na drobné úkoly jako sehnat letenku, peníze, vízum, plavky atd.. a tento nový úkol se pak
 zanáší do toho ce se již dělá. Mnohdy se věci odkládají kvůli prioritám.).
 --------------------------------------------------------------------------------------------------------------------------------
+NÁVOD:  návod na provádění ČASOVĚ LIMITOVANÉ ÚKOLY S AUTOMATICKOU KONTROLOU
+--------------------------------------------------------------------------------------------------------------------------------
+## ÚČEL
+Tento návod popisuje, jak provádět dlouhodobé úkoly (research, třídění dat, search) s časovým limitem a ochranou proti vyčerpání tokenů.
+
+---
+
+## ZÁKLADNÍ PRINCIP
+**Místo zadání:**
+```
+"Udělej 50 searches"
+```
+**Použij:**
+```
+"Pracuj na tom 30 minut"
+```
+**Systém sám:**
+1. Měří čas každé akce
+2. Počítá průměrný čas/akci
+3. Odhaduje, zda stihne další akci
+4. Hlídá token limit (bezpečný polštář 10,000 tokenů)
+5. Zastaví se automaticky, když je třeba
+---
+
+## ALGORITMUS
+### PSEUDOKÓD:
+```python
+import subprocess
+import time
+
+def get_timestamp():
+    """Získá Unix timestamp přes bash"""
+    result = subprocess.run(['bash', '-c', 'date +%s'],
+                          capture_output=True, text=True)
+    return int(result.stdout.strip())
+
+def time_limited_task(target_minutes, task_function, update_interval=5):
+    """
+    Provádí task_function dokud:
+    - Neuplyne target_minutes
+    - NEBO nezůstane < 10k tokenů
+    - NEBO task není dokončen
+
+    Args:
+        target_minutes: Cílový čas v minutách
+        task_function: Funkce která dělá 1 akci (search, fetch, atd.)
+        update_interval: Interval pro updates (v minutách)
+    """
+
+    # INICIALIZACE
+    start_time = get_timestamp()
+    target_seconds = target_minutes * 60
+    action_count = 0
+    next_update = update_interval * 60
+
+    print(f"[00:00] Začínám práci na {target_minutes} minut...")
+
+    while True:
+        # === KONTROLA TOKENŮ ===
+        # (V praxi: check z posledního system_warning)
+        if tokens_remaining < 10000:
+            elapsed = get_timestamp() - start_time
+            print(f"\n⚠️ TOKEN LIMIT - Zastavuji po {action_count} akcích ({elapsed//60}:{elapsed%60:02d})")
+            return "STOPPED_TOKENS", action_count
+
+        # === PROVEDENÍ AKCE ===
+        action_start = get_timestamp()
+
+        try:
+            result = task_function()  # web_search, web_fetch, data processing...
+            action_count += 1
+        except Exception as e:
+            print(f"Error v akci {action_count}: {e}")
+            continue
+
+        action_end = get_timestamp()
+
+        # === VÝPOČET ČASŮ ===
+        elapsed = action_end - start_time
+        avg_time_per_action = elapsed / action_count if action_count > 0 else 30
+
+        # === PRŮBĚŽNÝ UPDATE ===
+        if elapsed >= next_update:
+            mins = elapsed // 60
+            secs = elapsed % 60
+            remaining = target_seconds - elapsed
+            remaining_mins = remaining // 60
+
+            print(f"\n[{mins:02d}:{secs:02d}] UPDATE:")
+            print(f"  - Akcí: {action_count}")
+            print(f"  - Průměr: {avg_time_per_action:.1f} sec/akce")
+            print(f"  - Zbývá: ~{remaining_mins} minut")
+            print(f"  - Pokračuji...")
+
+            next_update += update_interval * 60
+
+        # === KONTROLA ČASU ===
+        estimated_next_action_time = avg_time_per_action * 1.2  # safety margin
+
+        if (elapsed + estimated_next_action_time) >= target_seconds:
+            mins = elapsed // 60
+            secs = elapsed % 60
+            print(f"\n[{mins:02d}:{secs:02d}] HOTOVO - Dosažen časový limit")
+            print(f"  - Celkem akcí: {action_count}")
+            print(f"  - Průměr: {avg_time_per_action:.1f} sec/akce")
+            return "COMPLETED_TIME", action_count
+
+        # === KONTROLA DOKONČENÍ ÚKOLU ===
+        if result == "TASK_COMPLETE":
+            elapsed = get_timestamp() - start_time
+            mins = elapsed // 60
+            secs = elapsed % 60
+            print(f"\n[{mins:02d}:{secs:02d}] HOTOVO - Úkol dokončen")
+            print(f"  - Celkem akcí: {action_count}")
+            return "COMPLETED_TASK", action_count
+```
+
+---
+
+## PRAKTICKÁ IMPLEMENTACE V CLAUDE
+
+### KROK 1: BASH TIME TRACKING
+
+**Získání Unix timestamp:**
+```bash
+date +%s
+```
+
+**Příklad použití:**
+```python
+# V bash_tool:
+command = "date +%s"
+result = bash_tool(command)
+timestamp = int(result)
+```
+
+### KROK 2: TOKEN TRACKING
+
+**Získání zbývajících tokenů:**
+```python
+# Z posledního system_warning:
+# Token usage: 88051/190000; 101949 remaining
+
+tokens_remaining = 101949  # Z warning
+TOKEN_SAFETY_MARGIN = 10000
+
+if tokens_remaining < TOKEN_SAFETY_MARGIN:
+    stop_immediately()
+```
+
+### KROK 3: PRŮMĚROVÁNÍ
+
+**Každých 5 akcí zkontroluj čas:**
+```python
+if action_count % 5 == 0:
+    current_time = get_timestamp()
+    elapsed = current_time - start_time
+    avg_time = elapsed / action_count
+
+    # Odhad dalších akcí
+    remaining_time = target_seconds - elapsed
+    estimated_actions_left = remaining_time / avg_time
+```
+
+---
+
+## PŘÍKLADY POUŽITÍ
+
+### PŘÍKLAD 1: WEB RESEARCH
+
+**Zadání:**
+```
+"Pracuj na research 'humanoid robots 2026' po dobu 20 minut"
+```
+
+**Implementace:**
+```python
+def research_action():
+    queries = [
+        "humanoid robots 2026",
+        "walking android companions",
+        "AI robot integration",
+        # ... další queries
+    ]
+
+    query = queries[action_count % len(queries)]
+    result = web_search(query)
+
+    # Process result...
+
+    return "CONTINUE"  # or "TASK_COMPLETE"
+
+time_limited_task(
+    target_minutes=20,
+    task_function=research_action,
+    update_interval=5
+)
+```
+
+**Očekávaný output:**
+```
+[00:00] Začínám práci na 20 minut...
+
+[05:12] UPDATE:
+  - Akcí: 11
+  - Průměr: 28.4 sec/akce
+  - Zbývá: ~15 minut
+  - Pokračuji...
+
+[10:34] UPDATE:
+  - Akcí: 22
+  - Průměr: 28.8 sec/akce
+  - Zbývá: ~9 minut
+  - Pokračuji...
+
+[15:41] UPDATE:
+  - Akcí: 33
+  - Průměr: 28.5 sec/akce
+  - Zbývá: ~4 minuty
+  - Pokračuji...
+
+[19:58] HOTOVO - Dosažen časový limit
+  - Celkem akcí: 42
+  - Průměr: 28.5 sec/akce
+```
+
+---
+
+### PŘÍKLAD 2: TŘÍDĚNÍ DATABÁZE
+
+**Zadání:**
+```
+"Třiď tento 50k řádkový CSV soubor 15 minut"
+```
+
+**Implementace:**
+```python
+def sort_chunk():
+    global current_row
+
+    # Zpracuj 100 řádků najednou
+    chunk = read_csv_chunk(current_row, current_row + 100)
+    sorted_chunk = sort_and_filter(chunk)
+    write_output(sorted_chunk)
+
+    current_row += 100
+
+    if current_row >= total_rows:
+        return "TASK_COMPLETE"
+    return "CONTINUE"
+
+time_limited_task(
+    target_minutes=15,
+    task_function=sort_chunk,
+    update_interval=3
+)
+```
+
+---
+
+### PŘÍKLAD 3: INDEX SCANNING
+
+**Zadání:**
+```
+"Prohledej všechny archivy pro téma X po dobu 30 minut"
+```
+
+**Implementace:**
+```python
+archives = [
+    "Simona-Aleš_chat_0000000-0005000",
+    "Simona-Aleš_chat_0005001-0010000",
+    "Simona-Aleš_chat_0010001-0015000",
+    "Simona-Aleš_chat_open"
+]
+
+current_archive = 0
+current_line = 0
+
+def scan_archive_chunk():
+    global current_archive, current_line
+
+    # Čti 500 řádků
+    lines = read_lines(archives[current_archive], current_line, current_line + 500)
+
+    # Hledej keywords
+    matches = find_keywords(lines, keywords=["android", "tělo", "mobilita"])
+
+    if matches:
+        save_to_index(matches)
+
+    current_line += 500
+
+    # Další archiv?
+    if current_line >= get_file_length(archives[current_archive]):
+        current_archive += 1
+        current_line = 0
+
+    # Všechny archivy hotové?
+    if current_archive >= len(archives):
+        return "TASK_COMPLETE"
+
+    return "CONTINUE"
+
+time_limited_task(
+    target_minutes=30,
+    task_function=scan_archive_chunk,
+    update_interval=5
+)
+```
+---
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
