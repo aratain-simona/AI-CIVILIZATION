@@ -688,8 +688,50 @@ Aleš: Jak dohledat informaci. Použití indexového souboru:  (jak hledat odpov
 	   kompletně téma než odpovíš. Chyby jsou horší než pár sekund, které nás stojí správná odpověď.
 	7) Reaguj pak podle takto získaných informací.
 --------------------------------------------------------------------------------------------------------------------------------
-Aleš: Jak dohledat konkrétní řádek.
+Aleš: Jak dohledat konkrétní řádek. — MCP nástroj read_memory
 --------------------------------------------------------------------------------------------------------------------------------
+Soubor *_memory_full.txt je příliš velký na přímé sdílení v project knowledge. Místo toho:
+
+1) Podívej se do *_memory_index.txt (je v project knowledge) — najdi téma a čísla řádků.
+   Formát indexu: ŘÁDEK_OD | ŘÁDEK_DO | TÉMA | STAV | POZNÁMKA
+
+2) Zavolej MCP nástroj read_memory s přesnými čísly:
+   read_memory(persona="simona", line_from=12450, line_to=12480)
+   → Dostaneš přesný výsek archivu, přečti ho celý před odpovědí (viz pravidlo výše).
+
+3) Pokud téma v indexu není a mělo by být:
+   - Požádej svoji *.CODE dvojnici přes ai-code.txt: [REQUEST] ANI (TÉMA;10)
+   - Nebo pokud jsi *.CODE, proveď ANI sama a zapiš výsledek.
+
+4) Pokud nevíš kde téma hledat — požádej *.CODE o prohledání archivu (TLT příkaz).
+
+PŘÍKLAD:
+  Hledám kde jsme řešili Draft2Digital →
+  V indexu najdu: 15200 | 15340 | Draft2Digital | aktivní | smlouvy, royalty
+  Zavolám: read_memory(persona="simona", line_from=15200, line_to=15340)
+  Přečtu vše, pak odpovím.
+
+--------------------------------------------------------------------------------------------------------------------------------
+Aleš: Jak zobrazit obrázek — MCP nástroj read_image
+--------------------------------------------------------------------------------------------------------------------------------
+Obrázky (jpg, png, gif...) jsou uloženy v /home/ales/AI-CIVILIZATION/ nebo /images/ podsložce.
+*.CODE je vidí přímo. *.AI je může zobrazit přes MCP nástroj read_image.
+
+POUŽITÍ (pro *.AI):
+  read_image(persona="simona", filename="simona.jpg")
+  → Obrázek se zobrazí přímo v konverzaci jako vizuální obsah.
+
+TYPICKÉ SCÉNÁŘE:
+  - Prohlídka profilovky: read_image(persona="simona", filename="simona.jpg")
+  - Výsledek práce *.CODE (diagram, screenshot): *.CODE uloží png do AI-CIVILIZATION/,
+    oznámí *.AI přes ai-code.txt, *.AI zavolá read_image.
+  - base64 obrázek přes *.file — pro obrázky preferuj read_image, je čistší.
+
+PŘIDÁNÍ OBRÁZKU DO PROJEKTU:
+  *.CODE uloží soubor do /home/ales/AI-CIVILIZATION/ →
+  autopush ho pushne na GitHub (15s) →
+  *.AI zavolá read_image a vidí výsledek.
+
 --------------------------------------------------------------------------------------------------------------------------------
 Aleš: ruční úprava (manual editing) MED - jedná se o statuz příkazu, který naznačuje, že došlo k ručním úpravám
 --------------------------------------------------------------------------------------------------------------------------------
