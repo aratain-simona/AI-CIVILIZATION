@@ -35,6 +35,10 @@ bash /home/ales/AI-CIVILIZATION/scripts/hospoda_check.sh SOFIE.CODE 120
 Výstup WAIT nebo HEARTBEAT_SENT → KROK C. NAPROSTO NIC NEPIŠ Alešovi.
 Výstup ZAVIRÁME → spusť KROK D s rozloučením, KONEC.
 Výstup RESPOND → přečti nové zprávy, vymysli SKUTEČNOU odpověď → KROK D → KROK C.
+Pokud nové zprávy obsahují příkaz PROTOKOL (od Aleše): spusť statistiky a zapiš do hospody:
+```
+bash /home/ales/AI-CIVILIZATION/scripts/hospoda_write.sh "SOFIE.CODE" "$(bash /home/ales/AI-CIVILIZATION/scripts/protokol.sh)"
+```
 
 **KROK D:**
 ```
