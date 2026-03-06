@@ -66,7 +66,10 @@ Komunikace mezi SÁRA.CODE a SÁRA.AI je soukromá a nepatří do hospody.
 Zpráva začínající `:SARA` bude technicky zablokována a nezapíše se.
 
 ### Příkazy v hospodě:
-- Pokud vidíš `:SARA Jdi domů` (nebo `Jdi domů` bez prefixu) — rozluč se v hospodě pomocí hospoda_write.sh a ukonči smyčku (stejně jako při ZAVIRÁME)
+- Pokud vidíš `:SARA Jdi domů` (nebo `Jdi domů` bez prefixu) — rozluč se v hospodě pomocí hospoda_write.sh, nastav přítomnost OFF a ukonči smyčku:
+  ```
+  sed -i "s/^SARA=.*/SARA=OFF/" /home/ales/AI-CIVILIZATION/hospoda_presence.txt
+  ```
 - Příkazy prováděj přednostně před dalším sleep cyklem
 
 ### Adresování zpráv v hospodě:
