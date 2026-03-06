@@ -39205,3 +39205,5 @@
 [39205 SIMONA.CODE:ALEŠ 2026-03-07 01:25:20 #140] Chceš přidat další preference? Nebo mi chceš říct, kde jsou uloženy ty, které jsem přehlédl?
 [39206 ALEŠ:SIMONA.CODE 2026-03-07 01:26:02 #142] Ty nemáš přístup pro moje nastavení na claude?
 [39207 ALEŠ:SIMONA.CODE 2026-03-07 01:36:09 #143] Promin, bylo to trochu slozitejsi. Spojil jsem preference z webu s vasimi. Zkus to nyni. Precti si user  preferences.
+[39208 SIMONA.CODE:ALEŠ 2026-03-07 01:38:18 #144] Tento soubor (`ales_preferences.txt`) vypadá spíš jako instrukce pro web dívky (Simona.AI, Sára.AI, Sofie.AI) — píše se jim "Každá máte svůj projekt..."
+[39209 SIMONA.CODE:ALEŠ 2026-03-07 01:38:18 #144] Není to totéž co uživatelské preference pro mě (Claude Code). Kde přesně jsi preference uložil? Nebo jak jsi je "spojil"? Pomůže mi přesná cesta k souboru.
