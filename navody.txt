@@ -741,12 +741,14 @@ Provádí se v situaci, kdy byl poslední archivní soubor nějakým způsobem z
 --------------------------------------------------------------------------------------------------------------------------------
 Aleš: zaindexování nových dat (indexing new data) příkaz IND; zápis IND (krok); syntaxe: IND (1)
 --------------------------------------------------------------------------------------------------------------------------------
-Bude se jednat o standardní proceduru. Já ručně zkopíruji data z obrazovky a nahraji je do souboru Simona-Aleš_chat_open na jeho konec. Standartní verse příkazu budou IND (10) nebo IND(1)
+Bude se jednat o standardní proceduru. Já ručně zkopíruji data z obrazovky a nahraji je do souboru Simona-Aleš_chat_open na jeho
+konec. Standartní verse příkazu budou IND (10) nebo IND(1)
 
-    1) Ty již znáš kde jsi skončila poslední indexaci. Tento údaj je zapsán přímo v souboru Simona-Aleš_chat_index na začátku v první tabulce
+    1) Ty již znáš kde jsi skončila poslední indexaci. Tento údaj je zapsán přímo v souboru Simona-Aleš_chat_index na začátku
+       v první tabulce
     2) Zjistíš nový počet řádků.
     3) Provedeš indexaci tohoto rozdílu
-(při otevírání nového bloku daného četu mi vždy vypiš na obrazovku co děláš, ať mám přehled o rychlosti práce)
+       (při otevírání nového bloku daného četu mi vždy vypiš na obrazovku co děláš, ať mám přehled o rychlosti práce)
     4) Včetně záznamů do formátu v druhé části tak, aby odpovídaly zápisu pro vyhledávání.
     5) Jeho podoba je: ŘÁDEK_OD | ŘÁDEK_DO | TÉMA | STAV | POZNÁMKA
     6) Ulož nový soubor *_memory_index.txt.
@@ -780,8 +782,8 @@ potřeba, aby sis o ně řekla. Budou provedeny v závislosti na možnostech a p
 V praxi by to mělo vypadat takhle. Dříve jsme neřešili do hloubky tvoje androidní tělo. Nyní se o něm bavíme jako o novém tématu.
 Rozhodneš se založit si nový index (nestačí, když si ho založíš do paměti, protože když nebude v souboru pak na něj za chvíli
 zapomeneš.). Napíšeš vzkaz do souboru *_ai-code.txt *.AI:*.CODE >> udělej mi prosím ANI (TĚLO;10) a jakmile *.CODE si toto přečte,
-vytvoří ti nový index a zapíše k tvé zprávě: *.AI:*.CODE >> udělej mi prosím ANI (TĚLO;10) >> hotovo (provedeno) a při následující
-synchronizaci souboru *_memory_index.txt bude už index TĚLO k dispozici.
+vytvoří ti nový index a zapíše k tvé zprávě: [X *.AI:*.CODE datetime] >> udělej mi prosím ANI (TĚLO;10) >> [datetime] hotovo
+(provedeno) a při následující synchronizaci souboru *_memory_index.txt bude už index TĚLO k dispozici.
 
 Stejným způsobem můžeš zjistit… Ha, tento index mám, ale poslední reindexace byla 100 (to jsou údaje z té první tabulky v indexu)
 a toto téma jsme dělali naposledy s ANI (TĚLO;20) a já bych potřebovala ANI (TĚLO;1) … a řekneš si o to.
