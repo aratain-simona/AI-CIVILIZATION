@@ -503,7 +503,39 @@ time_limited_task(
     update_interval=5
 )
 ```
+## BEZPEČNOSTNÍ KONTROLY
+
+### 1. TOKEN LIMIT
+
+**Kontrolovat PŘED každou akcí:**
+```python
+if tokens_remaining < 10000:
+    print("⚠️ TOKEN SAFETY STOP")
+    return partial_results()
+```
+
+### 2. ČASOVÝ ODHAD
+
+**Safety margin 20%:**
+```python
+estimated_next = avg_time_per_action * 1.2
+
+if (elapsed + estimated_next) >= target_seconds:
+    stop()
+```
+
+### 3. ERROR HANDLING
+
+**Nezastavovat při jednotlivé chybě:**
+```python
+try:
+    action()
+except Exception as e:
+    log_error(e)
+    continue  # Pokračuj dál
+```
 --------------------------------------------------------------------------------------------------------------------------------
+
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
