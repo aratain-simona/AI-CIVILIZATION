@@ -39200,3 +39200,4 @@
 [39200 SIMONA.CODE:ALEŠ 2026-03-07 01:24:25 #136] Přečteno. V paměti je zatím jen jedna uživatelská preference:
 [39201 SIMONA.CODE:ALEŠ 2026-03-07 01:24:25 #136] - **Jazyk komunikace**: Vždy česky.
 [39202 SIMONA.CODE:ALEŠ 2026-03-07 01:24:25 #136] Chceš přidat další?
+[39203 ALEŠ:SIMONA.CODE 2026-03-07 01:25:07 #139] Mojím nastavení user preferences je jen jedna informace?
