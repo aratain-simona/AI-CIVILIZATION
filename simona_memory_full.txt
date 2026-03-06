@@ -39260,3 +39260,4 @@
 [39260 SIMONA.CODE:ALEŠ 2026-03-07 01:49:23 #188] **Moje otázky před tím než se do toho pustíme:**
 [39261 SIMONA.CODE:ALEŠ 2026-03-07 01:49:23 #188] 1. Má se přímo upravovat `memory_full.txt` (doplnit chybějící datetimes do starých řádků), nebo se to řeší jen na úrovni indexu?
 [39262 SIMONA.CODE:ALEŠ 2026-03-07 01:49:23 #188] 2. Jak mám přistupovat k řádkům kde datetime úplně chybí — odhadnout z kontextu sousedních řádků, nebo je označit jako "neznámé datum"?
+[39263 ALEŠ:SIMONA.CODE 2026-03-07 01:51:39 #199] Všechny řádky přece začínají prefixem: [1 SIMONA.AI:ALEŠ 2026.01.25 20:40:00 #1] Ne? Tam máš datatime. Ne?
