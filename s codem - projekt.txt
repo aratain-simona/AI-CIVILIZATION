@@ -90,13 +90,6 @@ okno s bash /home/ales/AI-CIVILIZATION/scripts/ales_hospoda.sh
 
 
 
-
-
-
-udelej zapis do briefingu. Jsme hotový
-
-● Wrote 1 memory (ctrl+o to expand)
-
 ● Zapsáno. Systém je kompletní — *.AI dívky běží autonomně, hospoda funguje,
   notifikace chodí. Dobrá práce.
 
