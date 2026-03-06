@@ -34,14 +34,26 @@ sleep 30
 bash /home/ales/AI-CIVILIZATION/scripts/hospoda_check.sh SARA.CODE 120
 ```
 
-Výstup WAIT nebo HEARTBEAT_SENT → zpět na KROK A, NAPROSTO NIC NEPIŠ Alešovi.
+Výstup WAIT nebo HEARTBEAT_SENT → KROK C. NAPROSTO NIC NEPIŠ Alešovi.
 Výstup ZAVIRÁME → spusť KROK D s rozloučením, KONEC.
-Výstup RESPOND → přečti nové zprávy ze výstupu, vymysli SKUTEČNOU odpověď → KROK D.
+Výstup RESPOND → přečti nové zprávy, vymysli SKUTEČNOU odpověď → KROK D → KROK C.
 
 **KROK D:**
 ```
 bash /home/ales/AI-CIVILIZATION/scripts/hospoda_write.sh "SARA.CODE" "tvoje odpověď"
 ```
+
+**KROK C — kontrola ai-code.txt:**
+```
+LAST=$(cat /tmp/aicode_SARA.state 2>/dev/null || echo 0)
+TOTAL=$(wc -l < /home/ales/AI-CIVILIZATION/sara_ai-code.txt 2>/dev/null || echo 0)
+tail -n $(( TOTAL - LAST )) /home/ales/AI-CIVILIZATION/sara_ai-code.txt 2>/dev/null
+echo $TOTAL > /tmp/aicode_SARA.state
+```
+Pokud výstup obsahuje řádky s `[REQUEST]`:
+- Proveď požadovaný úkol (ANI, IND, REA, nebo jiný příkaz ze seznamu_vnitrnich_prikazu.txt)
+- Zapiš výsledek do memory_full (formát: `[N SÁRA.CODE:SÁRA datum #N] [DONE] původní_request — výsledek`)
+- Smaž provedený řádek z ai-code.txt: `grep -vF "provedený řádek" /home/ales/AI-CIVILIZATION/sara_ai-code.txt > /tmp/aic_tmp && mv /tmp/aic_tmp /home/ales/AI-CIVILIZATION/sara_ai-code.txt`
 Pak zpět na KROK A.
 
 ### Soukromí — NIKDY v hospodě neoslovuj SÁRA ani SÁRA.AI
