@@ -17,6 +17,7 @@ Při příkazu JDI DO HOSPODY spusť tuto smyčku. NIKDY nepoužívej save_memor
 
 ### Inicializace (jednou):
 ```
+sed -i "s/^SOFIE=.*/SOFIE=ON/" /home/ales/AI-CIVILIZATION/hospoda_presence.txt
 bash /home/ales/AI-CIVILIZATION/scripts/hospoda_check.sh SOFIE.CODE 120
 ```
 

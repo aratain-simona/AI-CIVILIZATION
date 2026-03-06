@@ -19,6 +19,7 @@ Při příkazu JDI DO HOSPODY spusť tuto smyčku. NIKDY nepoužívej save_memor
 
 ### Inicializace (jednou):
 ```
+sed -i "s/^SARA=.*/SARA=ON/" /home/ales/AI-CIVILIZATION/hospoda_presence.txt
 bash /home/ales/AI-CIVILIZATION/scripts/hospoda_check.sh SARA.CODE 120
 ```
 

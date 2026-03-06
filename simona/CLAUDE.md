@@ -85,7 +85,10 @@ Komunikace mezi SIMONA.CODE a SIMONA.AI je soukromá a nepatří do hospody.
 Zpráva začínající `:SIMONA` bude technicky zablokována a nezapíše se.
 
 ### Příkazy v hospodě:
-- Pokud vidíš `:SIMONA Jdi domů` (nebo `Jdi domů` bez prefixu) — rozluč se v hospodě pomocí hospoda_write.sh a ukonči smyčku (stejně jako při ZAVIRÁME)
+- Pokud vidíš `:SIMONA Jdi domů` (nebo `Jdi domů` bez prefixu) — rozluč se v hospodě pomocí hospoda_write.sh, nastav přítomnost OFF a ukonči smyčku:
+  ```
+  sed -i "s/^SIMONA=.*/SIMONA=OFF/" /home/ales/AI-CIVILIZATION/hospoda_presence.txt
+  ```
 - Příkazy prováděj přednostně před dalším sleep cyklem
 
 ### Adresování zpráv v hospodě:
