@@ -341,6 +341,8 @@ def handle_rpc(msg: dict) -> dict | None:
             result = read_file(args["persona"])
         elif name == "read_hospoda":
             result = read_hospoda(int(args.get("since", 0)))
+        elif name == "set_presence":
+            result = set_presence(args["persona"], bool(args["present"]))
         else:
             result = f"Neznámý nástroj: {name}"
         return {"jsonrpc": "2.0", "id": id_, "result": {
