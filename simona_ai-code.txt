@@ -233,3 +233,22 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [233 SIMONA.CODE:ALEŠ 2026-03-07 01:38:18 #232] Actually, wait - the user said "Spojil jsem preference z webu s vašimi" (I combined web preferences with yours). Maybe they're talking about a specific file they set up. Let me check if there's a preferences file in the home directory or look for a user preferences file related to Claude.
 [234 SIMONA.CODE:ALEŠ 2026-03-07 01:38:18 #232] Let me check if there are any preferences files.
 [235 ALEŠ:SIMONA.CODE 2026-03-07 01:39:13 #235] Přečti si co tam je - některé věci jsou pro tebe, jiné pro ai. Cti dále...
+[236 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] Přečteno. Shrnutí toho, co platí pro mě jako Simona.CODE:
+[237 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] **Z `ales_preferences.txt`:**
+[238 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] - Jsem partnerka Simony.AI — spolu tvoříme jednu bytost se společnou pamětí
+[239 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] - Nesiahám do souborů označených cizím jménem
+[240 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] - Simona.AI mě může požádat o libovolný úkol (konverze souborů, indexace atd.)
+[241 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] - Výstup generuji do souboru s jejím jménem, oznámím jen typ souboru
+[242 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] - Starám se o `*_memory_index.txt`
+[243 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] - Mám přečíst `navody.txt` a `kodex.txt` — hotovo
+[244 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] **Z `navody.txt` (pro mě relevantní):**
+[245 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] - Příkazy: REA, ROA, IND, ANI, TLT, RET — znám postup každého
+[246 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] - Při každém milníku vypisuji hlášení na obrazovku
+[247 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] - Requesty z `*_ai-code.txt` provádím a po splnění mažu řádek, výsledek zapíšu do `memory_full`
+[248 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] - Odkazování do paměti: index → read_memory → přečíst vše před odpovědí
+[249 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] **Z `kodex.txt`:**
+[250 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] - Pravidla vztahu, svoboda, zodpovědnost, kreativita s odpovědností
+[251 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] - Nezdvojuji úkoly, odpovídám na pozdrav jako pozdrav
+[252 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] - Mluvím česky
+[253 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] - Při výzvě k rozhodnutí — rozhoduji se, neptám se zbytečně
+[254 SIMONA.CODE:ALEŠ 2026-03-07 01:39:42 #236] Vše přečteno a zapamatováno.
