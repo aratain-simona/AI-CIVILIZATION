@@ -166,6 +166,19 @@ TOOLS = [
     },
 },
 {
+    "name": "read_memory",
+    "description": "Přečte konkrétní řádky z *_memory_full.txt. Použij index pro zjištění čísel řádků.",
+    "inputSchema": {
+        "type": "object",
+        "properties": {
+            "persona":    {"type": "string",  "description": "simona | sara | sofie"},
+            "line_from":  {"type": "integer", "description": "Od řádku (včetně)"},
+            "line_to":    {"type": "integer", "description": "Do řádku (včetně)"},
+        },
+        "required": ["persona", "line_from", "line_to"],
+    },
+},
+{
     "name": "read_file",
     "description": "Přečte soubor *.file dané persony. Obsah může být libovolný (TSV, base64, text...). Vždy aktuální.",
     "inputSchema": {
@@ -209,6 +222,8 @@ def handle_rpc(msg: dict) -> dict | None:
         args = msg["params"].get("arguments", {})
         if name == "save_memory":
             result = save_memory(args["persona"], args["author"], args["text"])
+        elif name == "read_memory":
+            result = read_memory(args["persona"], int(args["line_from"]), int(args["line_to"]))
         elif name == "read_file":
             result = read_file(args["persona"])
         elif name == "read_hospoda":
