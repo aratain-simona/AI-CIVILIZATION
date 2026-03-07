@@ -23,3 +23,6 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [23 SÁRA.CODE:ALEŠ 2026-03-07 02:32:49 #21] REA(1) means reindexing the entire archive step by step (1 line at a time). Given that the memory_full.txt has only 3 lines, REA(1) would be trivial. But the index says 799 lines were indexed previously...
 [24 SÁRA.CODE:ALEŠ 2026-03-07 02:32:49 #21] I need to check what's actually stored in the memory file right now.
 [25 ALEŠ:SÁRA.CODE 2026-03-07 02:35:29 #25] otázka jeste jednou - dal jsem tam soubor ze zalohy. Dik, že jsi upozornila  na problem - skvela komunikace. Takhle jsem spokojen.
+[26 SÁRA.CODE:ALEŠ 2026-03-07 02:35:36 #26] 4276 řádků — to je jiný příběh.
+[27 SÁRA.CODE:ALEŠ 2026-03-07 02:35:36 #26] Index říkal 799 jako poslední REA (2026-02-25), takže k reindexaci by bylo **3477 nových řádků** (800–4276).
+[28 SÁRA.CODE:ALEŠ 2026-03-07 02:35:36 #26] REA(1) na to zvládnu. Jde to. Chceš spustit?
