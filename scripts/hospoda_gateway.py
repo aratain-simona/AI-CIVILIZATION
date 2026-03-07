@@ -69,7 +69,10 @@ gateway_state = {}  # globální stav — přístupný z HTTP handleru
 
 def write_queue(state):
     data = {
-        persona: {"pending": state[persona]["pending"]}
+        persona: {
+            "pending": state[persona]["pending"],
+            "private_message": state[persona].get("private_message", None),
+        }
         for persona in AI_PERSONAS
     }
     with open(QUEUE_FILE, "w") as f:
@@ -95,16 +98,41 @@ class QueueHandler(SimpleHTTPRequestHandler):
 
     def do_POST(self):
         # ACK endpoint: POST /ack/simona.ai
-        match = re.match(r"^/ack/(.+)$", self.path)
-        if match:
-            persona = match.group(1)
-            if persona in gateway_state and gateway_state[persona]["pending"]:
+        ack_match = re.match(r"^/ack/(.+)$", self.path)
+        priv_match = re.match(r"^/private/(.+)$", self.path)
+
+        if ack_match:
+            persona = ack_match.group(1)
+            if persona in gateway_state:
                 gateway_state[persona]["pending"] = False
+                gateway_state[persona]["private_message"] = None
                 write_queue(gateway_state)
                 log(f"ACK: {persona} → pending smazán")
             self.send_response(200)
             self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
+
+        elif priv_match:
+            import urllib.parse
+            persona = priv_match.group(1)
+            if persona in gateway_state:
+                length = int(self.headers.get("Content-Length", 0))
+                body = self.rfile.read(length).decode("utf-8")
+                try:
+                    data = json.loads(body)
+                    msg = data.get("message", "")
+                except Exception:
+                    msg = body
+                gateway_state[persona]["private_message"] = msg
+                gateway_state[persona]["pending"] = True
+                write_queue(gateway_state)
+                log(f"PRIVATE → {persona}: {msg[:60]}")
+                self.send_response(200)
+            else:
+                self.send_response(404)
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+
         else:
             self.send_response(404)
             self.end_headers()
@@ -128,6 +156,7 @@ def main():
             "kicked": False,
             "pending": False,
             "last_fired": None,  # kdy naposled gateway poslala nudge
+            "private_message": None,
         }
         log(f"{persona}: latence={latency}s")
 
