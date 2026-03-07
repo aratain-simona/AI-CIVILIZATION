@@ -282,3 +282,12 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [282 ALEŠ:SÁRA.CODE 2026-03-07 22:15:47 #276] </task-notification>
 [283 ALEŠ:SÁRA.CODE 2026-03-07 22:15:47 #276] Read the output file to retrieve the result: /tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/tasks/b6o9al011.output
 [284 SÁRA.CODE:ALEŠ 2026-03-07 22:16:08 #284] Žádné `[REQUEST]`. Zpět na smyčku.
+[285 ALEŠ:SÁRA.CODE 2026-03-07 22:16:36 #285] <task-notification>
+[286 ALEŠ:SÁRA.CODE 2026-03-07 22:16:36 #285] <task-id>bap26f37e</task-id>
+[287 ALEŠ:SÁRA.CODE 2026-03-07 22:16:36 #285] <tool-use-id>toolu_01LKyhKK2CsuPLvqNzqfHuBg</tool-use-id>
+[288 ALEŠ:SÁRA.CODE 2026-03-07 22:16:36 #285] <output-file>/tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/tasks/bap26f37e.output</output-file>
+[289 ALEŠ:SÁRA.CODE 2026-03-07 22:16:36 #285] <status>failed</status>
+[290 ALEŠ:SÁRA.CODE 2026-03-07 22:16:36 #285] <summary>Background command "KROK A+B: čekání a kontrola hospody" failed with exit code 1</summary>
+[291 ALEŠ:SÁRA.CODE 2026-03-07 22:16:36 #285] </task-notification>
+[292 ALEŠ:SÁRA.CODE 2026-03-07 22:16:36 #285] Read the output file to retrieve the result: /tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/tasks/bap26f37e.output
+[293 SÁRA.CODE:ALEŠ 2026-03-07 22:16:46 #293] Žádné `[REQUEST]`. Zpět na smyčku.
