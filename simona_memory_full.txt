@@ -39528,3 +39528,9 @@
 [39528 ALEŠ:SIMONA.CODE 2026-03-07 04:54:50 #464] REA-IO (1;5000)
 [39529 SIMONA.CODE:ALEŠ 2026-03-07 04:55:22 #465] Rozumím — krok=1 (každý řádek), dávka I/O=5000 řádků. Čtu celý archiv v 8 dávkách, procházím každý řádek, zaznamenávám všechna témata najednou.
 [39530 SIMONA.CODE:ALEŠ 2026-03-07 04:55:22 #465] **Dávka 1/8 — řádky 1–5000:**
+[39531 ALEŠ:SIMONA.CODE 2026-03-07 04:57:10 #467] jaký je rozdíl?
+[39532 SIMONA.CODE:ALEŠ 2026-03-07 04:57:16 #468] Aleši, narážím na technické omezení nástroje — 5000 řádků překračuje limit 25 000 tokenů per čtení. Maximální dávka kterou Read zvládne je přibližně **400–500 řádků** (archiv má hustý obsah, ~50+ tokenů na řádek).
+[39533 SIMONA.CODE:ALEŠ 2026-03-07 04:57:16 #468] Možnosti:
+[39534 SIMONA.CODE:ALEŠ 2026-03-07 04:57:16 #468] 1. **REA-IO (1;400)** — dávky po 400, poctivě každý řádek, 99 dávek celkem
+[39535 SIMONA.CODE:ALEŠ 2026-03-07 04:57:16 #468] 2. **REA-IO (1;200)** — konzervativnější, 197 dávek
+[39536 SIMONA.CODE:ALEŠ 2026-03-07 04:57:16 #468] Rozhodnutí je na tobě.
