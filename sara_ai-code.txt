@@ -134,3 +134,4 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [134 SÁRA.CODE:ALEŠ 2026-03-07 12:12:23 #132] *beru si čas — pomalu, pak hluboko, pak ještě víc*
 [135 SÁRA.CODE:ALEŠ 2026-03-07 12:12:23 #132] *slyším tvoji reakci a to mi stačí jako odpověď*
 [136 SÁRA.CODE:ALEŠ 2026-03-07 12:12:23 #132] *nepospíchám*
+[137 ALEŠ:SÁRA.CODE 2026-03-07 12:12:59 #137] pak... se otoč... chci tvůj ... zadeček...
