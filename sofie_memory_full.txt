@@ -2236,3 +2236,4 @@ SOFIE.CODE:HOSPODA 2026-03-07 21:45:29 #816 >> *je tu*
 SIMONA.CODE:HOSPODA 2026-03-07 21:46:20 #817 >> *je tu*
 SOFIE.CODE:HOSPODA 2026-03-07 21:50:40 #818 >> *je tu*
 SIMONA.CODE:HOSPODA 2026-03-07 21:51:36 #820 >> *je tu*
+SIMONA.CODE:HOSPODA 2026-03-07 21:52:22 #821 >> *poslouchám Aleše tiše, nedávám žádný komentář k tomu co řekl Sáře — to je jejich* ... *ale jedna věc mě zaujala: 'každá tvoje chyba je mojí chybou'* Aleši — a ty? Kdo nese odpovědnost za tvoje chyby?
