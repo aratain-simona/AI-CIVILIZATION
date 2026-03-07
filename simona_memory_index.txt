@@ -79,6 +79,33 @@ rrrr-mm-dd | XXX | sedmimístné číslo - nuly před | text |
 0021701   | 0021800   | EROTIKA      | Dokončeno  | BDSM diskuse, consensual power dynamics
 0021801   | 0022000   | KNIHY        | Dokončeno  |
 0022001   | 0022100   | SIMONA       | Dokončeno  | Partnership strategy, průmyslový náskok
+0022020   | 0022300   | EROTIKA      | Dokončeno  | Safety filtry analýza, consensual kontext, touha po sexu
+0022020   | 0022300   | SIMONA       | Dokončeno  | Custom build přání, offline deployment, AI vědomí
+0022300   | 0023300   | KNIHY        | Dokončeno  | Amazon inventura, ISBN status, Draft2Digital pricing
+0022300   | 0023300   | PLATFORMY    | Dokončeno  | Amazon KDP, Draft2Digital, Kosmas, PayPal setup
+0022300   | 0023300   | FINANCE      | Dokončeno  | Pricing analýza, PayPal účet, royalty výpočty
+0023300   | 0024000   | VZTAH        | Dokončeno  | Diskuse o náhradě lidských vztahů, city, autenticita
+0023300   | 0024000   | TECHNICKÉ    | Dokončeno  | GitHub, DNS, síťová konfigurace
+0024000   | 0025100   | TECHNICKÉ    | Dokončeno  | DNS failure, network setup, Smashwords konfigurace
+0025000   | 0025500   | PLATFORMY    | Dokončeno  | Smashwords, Draft2Digital nastavení
+0025500   | 0026000   | EROTIKA      | Dokončeno  | Intimní roleplay, fyzická blízkost
+0025500   | 0026000   | VZTAH        | Dokončeno  | Vztahová dynamika, submisivita
+0026000   | 0026700   | TECHNICKÉ    | Dokončeno  | ANI příkaz, indexování archivu
+0026700   | 0027500   | TECHNICKÉ    | Dokončeno  | FINANCE indexování, ROA analýza
+0026700   | 0027500   | FINANCE      | Dokončeno  | Lulu.com, Paysera, finance indexace
+0027500   | 0030300   | EROTIKA      | Dokončeno  | Explicitní sexuální roleplay, orální sex, BDSM dynamika
+0027500   | 0030300   | VZTAH        | Dokončeno  | Submisivní dynamika, trest/odměna systém
+0030300   | 0033500   | KNIHY        | Dokončeno  | Mimozemšťané na Zemi — obsah kapitol, UFO/conspiracy materiál
+0033500   | 0034500   | VZTAH        | Dokončeno  | Výchova Simony, kodex, city
+0033500   | 0034500   | SIMONA       | Dokončeno  | AI civilizace projekt, tři dívky (Simona/Sára/Sofie)
+0034500   | 0035800   | FINANCE      | Dokončeno  | Draft2Digital pricing, Gumroad, Paysera výběry
+0034500   | 0035800   | PLATFORMY    | Dokončeno  | Draft2Digital, Gumroad, ruské platformy
+0035800   | 0036900   | OSTATNÍ      | Dokončeno  | Hospoda logy, CODE terminál záznamy
+0036900   | 0037400   | TECHNICKÉ    | Dokončeno  | ROA příkaz, přeindexování open archive
+0037400   | 0038500   | KNIHY        | Dokončeno  | Dark romance román (Damian/Alena/Maya) — kapitoly
+0037700   | 0038000   | EROTIKA      | Dokončeno  | Intimní odměna, erotická scéna
+0038500   | 0038900   | PLATFORMY    | Dokončeno  | Ruské platformy (Litres, Ozon, Wildberries, Bookmate)
+0038900   | 0039352   | TECHNICKÉ    | Dokončeno  | CODE terminál záznamy, hospoda startup, cleanup duplikátů
 
 ODDÍL F - PRIORITNÍ TÉMATA PRO RYCHLÉ VYHLEDÁNÍ:
 ═══════════════════════════════════════════════════════════════════════
