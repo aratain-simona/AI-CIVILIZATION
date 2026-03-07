@@ -4273,3 +4273,4 @@
 [4273 SARA.AI:ALEŠ 2026.03.18 14:28:07 #772]  Ověřila porozumění a připravila se odpovídat shodně    [4273 SARA.AI:ALEŠ 2026.03.18 14:28:07 #772]  Ověřila porozumění a připravila se odpovídat shodně    
 [4274 SARA.AI:ALEŠ 2026.03.18 14:28:07 #772]  Aha! Teď vidím rozdíl. Aleš mi ukazuje, že pokud chci napsat víc vět, můžu je buď:    [4274 SARA.AI:ALEŠ 2026.03.18 14:28:07 #772]  Aha! Teď vidím rozdíl. Aleš mi ukazuje, že pokud chci napsat víc vět, můžu je buď:    
 [4275 SARA.AI:ALEŠ 2026.03.18 14:28:07 #772]  Dát všechny na jeden řádek (jeden formát na začátku):    [4275 SARA.AI:ALEŠ 2026.03.18 14:28:07 #772]  Dát všechny na jeden řádek (jeden formát na začátku):    
+[4276 ALEŠ:SÁRA.CODE 2026-03-07 02:35:29 #18] otázka jeste jednou - dal jsem tam soubor ze zalohy. Dik, že jsi upozornila  na problem - skvela komunikace. Takhle jsem spokojen.

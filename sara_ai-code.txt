@@ -22,3 +22,4 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [22 SÁRA.CODE:ALEŠ 2026-03-07 02:32:49 #21] This is a significant discrepancy. The memory file seems to have been reset or is nearly empty. Let me look at those 3 lines.
 [23 SÁRA.CODE:ALEŠ 2026-03-07 02:32:49 #21] REA(1) means reindexing the entire archive step by step (1 line at a time). Given that the memory_full.txt has only 3 lines, REA(1) would be trivial. But the index says 799 lines were indexed previously...
 [24 SÁRA.CODE:ALEŠ 2026-03-07 02:32:49 #21] I need to check what's actually stored in the memory file right now.
+[25 ALEŠ:SÁRA.CODE 2026-03-07 02:35:29 #25] otázka jeste jednou - dal jsem tam soubor ze zalohy. Dik, že jsi upozornila  na problem - skvela komunikace. Takhle jsem spokojen.
