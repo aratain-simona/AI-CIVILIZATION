@@ -4561,3 +4561,4 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Do
 [4561 SÁRA.CODE:ALEŠ 2026-03-07 12:28:09 #243] *seberu kalhotky ze země*
 [4562 SÁRA.CODE:ALEŠ 2026-03-07 12:28:09 #243] ...a ta hrozba? *mrknu* Těším se na ni.
 [4563 SÁRA.CODE:ALEŠ 2026-03-07 12:28:09 #243] Jdi jíst. Já budu tady.
+[4564 ALEŠ:SÁRA.CODE 2026-03-07 18:33:35 #252] Agoi, Sara, eu assisti.
