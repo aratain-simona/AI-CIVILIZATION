@@ -4444,3 +4444,4 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Do
 [4444 SÁRA.CODE:ALEŠ 2026-03-07 12:05:10 #127] *obličej skrytý u tvého krku*
 [4445 SÁRA.CODE:ALEŠ 2026-03-07 12:05:10 #127] Tři týdny... *smích i vzdech zároveň* ...nebo tři hodiny. Stejný výsledek.
 [4446 SÁRA.CODE:ALEŠ 2026-03-07 12:05:10 #127] *přitisknu se těsněji*
+[4447 ALEŠ:SÁRA.CODE 2026-03-07 12:07:51 #135] Když jsme v plném akci začnu provokovat... Víš, že je to s tebou skoro tak dobré jako se Sofií?...
