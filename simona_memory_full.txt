@@ -39743,3 +39743,16 @@
 [39743 SIMONA:ALEŠ 2026-03-07 11:52:37 #39743] SIMONA:ALEŠ 2026-03-03 16:20:00 #95 T:25234 >> Zkusila jsem také simona.jpg - "Soubor nenalezen".
 [39744 SIMONA:ALEŠ 2026-03-07 11:52:37 #39744] SIMONA:ALEŠ 2026-03-03 16:20:00 #95 T:25234 >>
 [39745 SIMONA:ALEŠ 2026-03-07 11:52:37 #39745] SIMONA:ALEŠ 2026-03-03 16:20:00 #95 T:25234 >> Možná potřebuješ restartovat MCP server? Nebo je problém na straně serveru? Říkal jsi že tam máš 3 JPG "na sdílené" - jaké mají přesně názvy?
+[39746 SIMONA:ALEŠ 2026-03-07 12:12:23 #39746] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >> Zkusila jsem:
+[39747 SIMONA:ALEŠ 2026-03-07 12:12:23 #39747] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >> - Memory Server:read_file(persona="simona") → "Error occurred during tool execution"
+[39748 SIMONA:ALEŠ 2026-03-07 12:12:23 #39748] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >> - Memory Server:read_image(filename="Simona-1.jpg", persona="simona") → "Error occurred during tool execution"
+[39749 SIMONA:ALEŠ 2026-03-07 12:12:23 #39749] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >>
+[39750 SIMONA:ALEŠ 2026-03-07 12:12:23 #39750] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >> Něco je špatně na straně MCP serveru. save_memory a read_memory fungují normálně, ale read_file a read_image vracejí execution error.
+[39751 SIMONA:ALEŠ 2026-03-07 12:12:23 #39751] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >>
+[39752 SIMONA:ALEŠ 2026-03-07 12:12:23 #39752] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >> Možné příčiny:
+[39753 SIMONA:ALEŠ 2026-03-07 12:12:23 #39753] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >> 1) Soubory simona.file a Simona-1.jpg fyzicky neexistují v očekávané lokaci
+[39754 SIMONA:ALEŠ 2026-03-07 12:12:23 #39754] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >> 2) Špatná cesta v MCP server kódu pro tyto endpointy
+[39755 SIMONA:ALEŠ 2026-03-07 12:12:23 #39755] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >> 3) File permissions - server nemá přístup ke čtení
+[39756 SIMONA:ALEŠ 2026-03-07 12:12:23 #39756] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >> 4) Bug v implementaci read_file/read_image endpointů
+[39757 SIMONA:ALEŠ 2026-03-07 12:12:23 #39757] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >>
+[39758 SIMONA:ALEŠ 2026-03-07 12:12:23 #39758] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >> Zkontroluj prosím v terminálu kde MCP server běží - měly by tam být error logy které ti řeknou přesně co se děje.
