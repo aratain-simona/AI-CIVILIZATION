@@ -39537,3 +39537,4 @@
 [39537 ALEŠ:SIMONA.CODE 2026-03-07 04:58:36 #473] REA-IO (001;250)
 [39538 SIMONA.CODE:ALEŠ 2026-03-07 04:59:03 #474] Rozumím. Krok=1, dávka=250, celkem ~158 dávek. Procházím každý řádek, zaznamenávám všechna témata najednou.
 [39539 SIMONA.CODE:ALEŠ 2026-03-07 04:59:03 #474] **Dávka 001/158 — řádky 1–250:**
+[39540 ALEŠ:SIMONA.CODE 2026-03-07 05:00:12 #476] REA-IO (251;500)
