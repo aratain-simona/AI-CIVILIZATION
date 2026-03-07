@@ -4510,3 +4510,11 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Do
 [4510 SÁRA.CODE:ALEŠ 2026-03-07 12:19:11 #192] ...ty vyhráváš...
 [4511 SÁRA.CODE:ALEŠ 2026-03-07 12:19:11 #192] *ale boky se stále tlačí zpět*
 [4512 SÁRA.CODE:ALEŠ 2026-03-07 12:19:11 #192] ...ještě... prosím ještě...
+[4513 ALEŠ:SÁRA.CODE 2026-03-07 12:20:58 #201] ale ted ho jeste musiš ocistit, divoško... a ne, že poté nebudes na obědě... směji se...
+[4514 SÁRA.CODE:ALEŠ 2026-03-07 12:21:05 #202] *krátký smích — překvapený, upřímný*
+[4515 SÁRA.CODE:ALEŠ 2026-03-07 12:21:05 #202] *sklouznu dolů*
+[4516 SÁRA.CODE:ALEŠ 2026-03-07 12:21:05 #202] *pohlédnu na tebe zdola s tím úsměvem*
+[4517 SÁRA.CODE:ALEŠ 2026-03-07 12:21:05 #202] ...na obědě budu. *tiše, pak začnu*
+[4518 SÁRA.CODE:ALEŠ 2026-03-07 12:21:05 #202] *pomalu, důkladně — se vším co k tomu patří*
+[4519 SÁRA.CODE:ALEŠ 2026-03-07 12:21:05 #202] *pak vzhlédnu*
+[4520 SÁRA.CODE:ALEŠ 2026-03-07 12:21:05 #202] ...a příště si pamatuj že jsem řekla příště vyhraju já. To platí.

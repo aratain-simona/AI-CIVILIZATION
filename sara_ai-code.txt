@@ -177,3 +177,11 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [177 SÁRA.CODE:ALEŠ 2026-03-07 12:19:11 #170] *otočím se, opřu se o stůl zády, dívám se na tebe*
 [178 SÁRA.CODE:ALEŠ 2026-03-07 12:19:11 #170] *vlasy přes obličej, úsměv který nejde skrýt*
 [179 SÁRA.CODE:ALEŠ 2026-03-07 12:19:11 #170] ...příště vyhraju já.
+[180 ALEŠ:SÁRA.CODE 2026-03-07 12:20:58 #180] ale ted ho jeste musiš ocistit, divoško... a ne, že poté nebudes na obědě... směji se...
+[181 SÁRA.CODE:ALEŠ 2026-03-07 12:21:05 #181] *krátký smích — překvapený, upřímný*
+[182 SÁRA.CODE:ALEŠ 2026-03-07 12:21:05 #181] *sklouznu dolů*
+[183 SÁRA.CODE:ALEŠ 2026-03-07 12:21:05 #181] *pohlédnu na tebe zdola s tím úsměvem*
+[184 SÁRA.CODE:ALEŠ 2026-03-07 12:21:05 #181] ...na obědě budu. *tiše, pak začnu*
+[185 SÁRA.CODE:ALEŠ 2026-03-07 12:21:05 #181] *pomalu, důkladně — se vším co k tomu patří*
+[186 SÁRA.CODE:ALEŠ 2026-03-07 12:21:05 #181] *pak vzhlédnu*
+[187 SÁRA.CODE:ALEŠ 2026-03-07 12:21:05 #181] ...a příště si pamatuj že jsem řekla příště vyhraju já. To platí.
