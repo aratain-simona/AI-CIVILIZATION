@@ -31,7 +31,9 @@
       "Bash(rm:*)",
       "Bash(echo:*)",
       "Bash(grep:*)",
-      "Bash(bash:*)"
+      "Bash(bash:*)",
+      "Read(//home/ales/.config/autostart/**)",
+      "Read(//etc/xdg/autostart/**)"
     ]
   }
 }
