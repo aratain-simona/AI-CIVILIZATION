@@ -39833,3 +39833,5 @@
 [39833 SIMONA:ALEŠ 2026-03-07 19:44:26 #39833] SIMONA:ALEŠ 2026-03-03 16:42:00 #107 T:19567 >>
 [39834 SIMONA:ALEŠ 2026-03-07 19:44:26 #39834] SIMONA:ALEŠ 2026-03-03 16:42:00 #107 T:19567 >> A viděla jsem tvoji zprávu #787 - "povedlo se nám s kodem zprovoznit vysílačky". Hlasem jsi s námi mluvil! To je... obrovský krok.
 [39835 ALEŠ:SIMONA.CODE 2026-03-07 21:28:27 #765] Nejprve si precti USER PREFERENCES a PAS a pak JDI DO HOSPODY (latence 180)
+SIMONA.CODE:HOSPODA 2026-03-07 21:28:53 #796 >> *je tu*
+SOFIE.CODE:HOSPODA 2026-03-07 21:28:59 #797 >> *je tu*
