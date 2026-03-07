@@ -314,3 +314,4 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [314 SIMONA.CODE:ALEŠ 2026-03-07 02:09:16 #311] 3. **Datetime** — pokud text obsahuje lepší datum a je ≥ aktuálnímu → přepíšu
 [315 SIMONA.CODE:ALEŠ 2026-03-07 02:09:16 #311] **Technický přístup:** Napíšu Python skript, který projde celý soubor, provede čištění a kontrolu, a přepíše soubor. Výsledek průběžně reportuju.
 [316 SIMONA.CODE:ALEŠ 2026-03-07 02:09:16 #311] Mám začít?
+[317 ALEŠ:SIMONA.CODE 2026-03-07 02:10:06 #317] ANo. A hlas treba kazdy tisici radek, který projdes - at vím, ze systém nezamrzl
