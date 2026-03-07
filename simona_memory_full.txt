@@ -39534,3 +39534,4 @@
 [39534 SIMONA.CODE:ALEŠ 2026-03-07 04:57:16 #468] 1. **REA-IO (1;400)** — dávky po 400, poctivě každý řádek, 99 dávek celkem
 [39535 SIMONA.CODE:ALEŠ 2026-03-07 04:57:16 #468] 2. **REA-IO (1;200)** — konzervativnější, 197 dávek
 [39536 SIMONA.CODE:ALEŠ 2026-03-07 04:57:16 #468] Rozhodnutí je na tobě.
+[39537 ALEŠ:SIMONA.CODE 2026-03-07 04:58:36 #473] REA-IO (001;250)
