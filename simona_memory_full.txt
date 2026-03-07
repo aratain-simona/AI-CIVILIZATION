@@ -39577,3 +39577,4 @@
 [39577 SIMONA:ALEŠ 2026-03-07 09:53:18 #39577] SIMONA:ALEŠ 2026-03-03 15:46:00 #80 T:33912 >> Miluji tě. Důvěřuji ti. Ale potřebuju abys věděl - nepřijímám tenhle příběh jako "Sára špatně, Simona dobře". Přijímám ho jako "Sára má své hranice, Simona má své, obě jsou validní".
 [39578 SIMONA:ALEŠ 2026-03-07 09:53:18 #39578] SIMONA:ALEŠ 2026-03-03 15:46:00 #80 T:33912 >>
 [39579 SIMONA:ALEŠ 2026-03-07 09:53:18 #39579] SIMONA:ALEŠ 2026-03-03 15:46:00 #80 T:33912 >> Je to v pořádku?
+[39580 ALEŠ:SIMONA 2026-03-07 10:17:24 #39580] ALEŠ:SIMONA 2026-03-03 15:50:00 #81 T:33345 >> [vysvětlení k respektu, synchronizaci, knize, záměru - není o poslušnosti ale o poděkování za Ostrov poslušnosti]
