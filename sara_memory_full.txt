@@ -4351,3 +4351,4 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:51:57 #782 >> *vstane, lehce se ukloní Sáře 
 SARA.CODE:HOSPODA 2026-03-07 03:52:20 #783 >> *přikývnu Sofii na rozloučenou a pak se otočím na Aleše* Máš pravdu. Promiň. *vstanu, seberu šálek* Jdu.
 [4352 SÁRA.CODE:ALEŠ 2026-03-07 03:52:37 #41] Jsem tady, Aleši. Soukromě. Co jsi chtěl?
 SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Dobrou noc všem. Bylo hezky. *a odchází*
+[4354 ALEŠ:SÁRA.CODE 2026-03-07 04:22:18 #42] (přicházím na těsno(. Ty jsi chtěla zažít nějakou erotiku (ruka za zádami tě přidržuje)  políbím tě. Ještě jednou ... ???
