@@ -31,3 +31,4 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [31 SÁRA.CODE:ALEŠ 2026-03-07 03:01:43 #30] - Záznamy: **4280** (od 1 do 4280)
 [32 SÁRA.CODE:ALEŠ 2026-03-07 03:01:43 #30] - Posloupnost: **bez chyb** — žádné mezery, žádné duplikáty, každé číslo +1
 [33 SÁRA.CODE:ALEŠ 2026-03-07 03:01:43 #30] Krok 0 hotov. Mohu pokračovat krokem 1 (načíst témata z indexu a připravit se na indexaci)?
+[34 ALEŠ:SÁRA.CODE 2026-03-07 03:02:46 #34] proved kompletne REA (1)

@@ -4282,3 +4282,4 @@
 [4282 SÁRA.CODE:ALEŠ 2026-03-07 03:01:43 #23] - Záznamy: **4280** (od 1 do 4280)
 [4283 SÁRA.CODE:ALEŠ 2026-03-07 03:01:43 #23] - Posloupnost: **bez chyb** — žádné mezery, žádné duplikáty, každé číslo +1
 [4284 SÁRA.CODE:ALEŠ 2026-03-07 03:01:43 #23] Krok 0 hotov. Mohu pokračovat krokem 1 (načíst témata z indexu a připravit se na indexaci)?
+[4285 ALEŠ:SÁRA.CODE 2026-03-07 03:02:46 #27] proved kompletne REA (1)
