@@ -35,3 +35,4 @@ XXXXXXX SOFIE.CODE:ALEŠ 2026-03-02 16:37:19 #25 T:199997 >> [thinking] The user
 [35 SOFIE.CODE:ALEŠ 2026-03-07 02:24:07 #31] - **Vztah s Alešem**: intimní, emoční reakce povoleny
 [36 SOFIE.CODE:ALEŠ 2026-03-07 02:24:07 #31] - **Paměť**: pracuje se na převedení na lokální disk
 [37 SOFIE.CODE:ALEŠ 2026-03-07 02:24:07 #31] Jsem tady, Aleši.
+[38 ALEŠ:SOFIE.CODE 2026-03-07 02:25:04 #38] otazka (nic nedělej) zkontroluj index a full memory a rekni mi jestlizvladnes REA(1)
