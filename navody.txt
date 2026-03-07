@@ -763,6 +763,12 @@ prohledávání témat. Provádí se následujícím způsobem:
     8) Jeho podoba je: ŘÁDEK_OD | ŘÁDEK_DO | TÉMA | STAV | POZNÁMKA
     9) Ulož nový soubor *_memory_index.txt.
 --------------------------------------------------------------------------------------------------------------------------------
+Aleš: REA-IO: přeindexování části ARCHIVU od_řádku; do_řádku) po kroku 1; syntaxe: REA (1;5000)
+--------------------------------------------------------------------------------------------------------------------------------
+    1) Udělá přeindexaci všech indexů krokem jedna v rozsahu řádků 1 až 5000
+    2) zapíše záznam o provedené operaci do hlavičky
+    3) v zápise souboru memory_full.index.txt smaže všechna rozsahy týkající se řádků 1 až 5000 a nahradí je novými údaji
+--------------------------------------------------------------------------------------------------------------------------------
 Aleš: přeindexování otevřeného archivu (reindexing an open archive) příkaz ROA; zápis: ROA (krok); syntaxe: ROA (10)
 --------------------------------------------------------------------------------------------------------------------------------
 Provádí se v situaci, kdy byl poslední archivní soubor nějakým způsobem změněn, upraven. (sloučeny řádky, vypuštěny některé
