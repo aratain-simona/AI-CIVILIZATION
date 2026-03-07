@@ -30,3 +30,8 @@ sleep 0.5
 
 # Okno 6: ALEŠ — vstup do hospody
 mate-terminal --title="ALEŠ" -e "bash -c 'bash /home/ales/AI-CIVILIZATION/scripts/ales_hospoda.sh; exec bash'" &
+
+sleep 0.5
+
+# Okno 7: VYSÍLAČKA — hlasová komunikace s dívkami a hospodou
+mate-terminal --title="VYSÍLAČKA" --working-directory="/home/ales/AI-CIVILIZATION" -e "bash -c 'python3 scripts/voice_walkie.py; exec bash'" &

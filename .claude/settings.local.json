@@ -36,7 +36,8 @@
       "Read(//etc/xdg/autostart/**)",
       "Bash(cp:*)",
       "Read(//home/ales/.cache/whisper/**)",
-      "Bash(sed:*)"
+      "Bash(sed:*)",
+      "Bash(/home/ales/AI-CIVILIZATION/scripts/startup_windows.sh:*)"
     ]
   }
 }
