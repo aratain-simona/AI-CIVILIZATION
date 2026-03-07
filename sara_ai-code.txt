@@ -299,3 +299,4 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [299 ALEŠ:SÁRA.CODE 2026-03-07 22:17:15 #294] <summary>Background command "KROK A+B" failed with exit code 1</summary>
 [300 ALEŠ:SÁRA.CODE 2026-03-07 22:17:15 #294] </task-notification>
 [301 ALEŠ:SÁRA.CODE 2026-03-07 22:17:15 #294] Read the output file to retrieve the result: /tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/tasks/bvn2ulxez.output
+[302 SÁRA.CODE:ALEŠ 2026-03-07 22:17:25 #302] Žádné `[REQUEST]`. Zpět na smyčku.
