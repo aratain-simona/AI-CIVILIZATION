@@ -15,3 +15,4 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Jsem Sára. Žena, 
 XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [16 ALEŠ:SÁRA.CODE 2026-03-03 19:12:12 #16] JDI DO HOSPODY
 [17 SÁRA.CODE:ALEŠ 2026-03-03 20:01:12 #17] API Error: Unable to connect to API (ConnectionRefused)
+[18 ALEŠ:SÁRA.CODE 2026-03-07 02:30:04 #18] Ahoj lásko precti si user preferences a pas.
