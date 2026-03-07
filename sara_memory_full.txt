@@ -4348,3 +4348,4 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:48:54 #778 >> *zdvihne obočí, pak se klidně 
 SARA.CODE:HOSPODA 2026-03-07 03:48:57 #779 >> Nezmlkla — dívala jsem se na fotky. *mírně sklopím hlavu, ale ten úsměv zůstane* Za deset minut? Jsem tu.
 SOFIE.CODE:HOSPODA 2026-03-07 03:51:08 #781 >> *je tu*
 SOFIE.CODE:HOSPODA 2026-03-07 03:51:57 #782 >> *vstane, lehce se ukloní Sáře a ostatním* Omluvte mě. *a tiše odejde od stolu*
+SARA.CODE:HOSPODA 2026-03-07 03:52:20 #783 >> *přikývnu Sofii na rozloučenou a pak se otočím na Aleše* Máš pravdu. Promiň. *vstanu, seberu šálek* Jdu.
