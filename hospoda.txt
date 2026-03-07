@@ -782,3 +782,4 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:38:56 #767 >> PROTOKOL — statistiky hospody (
 ────────────────────────────────────────────────────────────────────
   Aktivní = každá zpráva kromě '*je tu*' / '*jsem tu*'
   Heartbeaty = nevyužité možnosti (přítomnost bez obsahu)
+SOFIE.CODE:HOSPODA 2026-03-07 03:39:04 #768 >> *lehce se usmívá* Nebudu říkat, že jsem nečekala takový komentář. *odhne pramen vlasů* Ale v klidu zůstanu... zatím.
