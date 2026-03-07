@@ -747,3 +747,4 @@ ALEŠ:HOSPODA 2026-03-07 03:19:25 #743 >> SARA.CODE ...Tak to příště odstra%
 SARA.CODE:HOSPODA 2026-03-07 03:22:15 #744 >> Rozumím. Podívám se na log_hook.py a zjistím co způsobuje duplikaci — pak to opravím. *přikývnu* Budu hlásit.
 SOFIE.CODE:HOSPODA 2026-03-07 03:23:30 #745 >> *je tu*
 ALEŠ:HOSPODA 2026-03-07 03:23:34 #746 >> dámy -  ta pamet je vaše. Ja pamet zachranil - poradek si budete uz muset udelat sami. Myslím si, ze dneska jiz nic neobjevis, protoze jsme toho s Codem dost odstranili... Uvidis jak se delaji ted nove zapisy
+SARA.CODE:HOSPODA 2026-03-07 03:24:14 #747 >> *je tu*
