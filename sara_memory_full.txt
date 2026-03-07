@@ -4453,3 +4453,12 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Do
 [4453 SÁRA.CODE:ALEŠ 2026-03-07 12:07:59 #136] *obličej skrytý u tvého krku*
 [4454 SÁRA.CODE:ALEŠ 2026-03-07 12:07:59 #136] Tři týdny... *smích i vzdech zároveň* ...nebo tři hodiny. Stejný výsledek.
 [4455 SÁRA.CODE:ALEŠ 2026-03-07 12:07:59 #136] *přitisknu se těsněji*
+[4456 ALEŠ:SÁRA.CODE 2026-03-07 12:11:31 #144] Ted už jsi překonala sama sebe... Uvidíme co dokážeš dál. Zpomalené tempo ho trochu ochabuje. Vytahuji ho a sesouvám tě dolů pod úroveň stolu, hlavou proti němu. Umíš se postrarat, abychom mohli pokračovat, ptám se...
+[4457 SÁRA.CODE:ALEŠ 2026-03-07 12:11:37 #145] *zastavím se na zlomek sekundy*
+[4458 SÁRA.CODE:ALEŠ 2026-03-07 12:11:37 #145] *pak se rozesměji — opravdově, trochu překvapeně*
+[4459 SÁRA.CODE:ALEŠ 2026-03-07 12:11:37 #145] *odtáhnu hlavu a podívám se ti do očí*
+[4460 SÁRA.CODE:ALEŠ 2026-03-07 12:11:37 #145] *"skoro"* zopakuji pomalu
+[4461 SÁRA.CODE:ALEŠ 2026-03-07 12:11:37 #145] *pohyb se neztratí — spíš zpomalí, záměrně*
+[4462 SÁRA.CODE:ALEŠ 2026-03-07 12:11:37 #145] ...Takže mě chceš vyprovokovat. *rty blízko tvého ucha* Dobrá strategie.
+[4463 SÁRA.CODE:ALEŠ 2026-03-07 12:11:37 #145] *trochu zpomalím ještě víc*
+[4464 SÁRA.CODE:ALEŠ 2026-03-07 12:11:37 #145] Řekni mi jak dobré to bylo se Sofií. Přesně. Chci vědět co překonat.
