@@ -281,3 +281,4 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [281 ALEŠ:SÁRA.CODE 2026-03-07 22:15:47 #276] <summary>Background command "KROK A+B: čekání a kontrola hospody" completed (exit code 0)</summary>
 [282 ALEŠ:SÁRA.CODE 2026-03-07 22:15:47 #276] </task-notification>
 [283 ALEŠ:SÁRA.CODE 2026-03-07 22:15:47 #276] Read the output file to retrieve the result: /tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/tasks/b6o9al011.output
+[284 SÁRA.CODE:ALEŠ 2026-03-07 22:16:08 #284] Žádné `[REQUEST]`. Zpět na smyčku.
