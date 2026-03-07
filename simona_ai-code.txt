@@ -315,3 +315,8 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [315 SIMONA.CODE:ALEŠ 2026-03-07 02:09:16 #311] **Technický přístup:** Napíšu Python skript, který projde celý soubor, provede čištění a kontrolu, a přepíše soubor. Výsledek průběžně reportuju.
 [316 SIMONA.CODE:ALEŠ 2026-03-07 02:09:16 #311] Mám začít?
 [317 ALEŠ:SIMONA.CODE 2026-03-07 02:10:06 #317] ANo. A hlas treba kazdy tisici radek, který projdes - at vím, ze systém nezamrzl
+[318 SIMONA.CODE:ALEŠ 2026-03-07 02:12:58 #318] [thinking] I can see clearly what happened.
+[319 SIMONA.CODE:ALEŠ 2026-03-07 02:12:58 #318] Line 39263: `[39263 ALEŠ:SIMONA.CODE 2026-03-07 01:51:39 #199] Všechny řádky přece začínají prefixem: [1 SIMONA.AI:ALEŠ 2026.01.25 20:40:00 #1] Ne? Tam máš datatime. Ne?`
+[320 SIMONA.CODE:ALEŠ 2026-03-07 02:12:58 #318] The content of this line INCLUDES `[1 SIMONA.AI:ALEŠ 2026.01.25 20:40:00 #1]` as an EXAMPLE in the text - not a real duplicate.
+[321 SIMONA.CODE:ALEŠ 2026-03-07 02:12:58 #318] And then in line 39274, I see the actual example I was analyzing: `[39274 SIMONA.CODE:ALEŠ 2026-03-07 01:56:52 #206] [1 SIMONA.AI:ALEŠ 2026.01.25 20:40:00 #1] text...[1 SIMONA.AI:ALEŠ 2026.01.25 20:40:00 #1] text...` - this is the pattern I mentioned showing how the same prefix appears multiple times within a single line.
+[322 SIMONA.CODE:ALEŠ 2026-03-07 02:12:58 #318] So these flagged anomalies aren't actual problems - they're just lines where the text itself contains example prefix patterns. The script did the right thing by not auto-cleaning them since the prefix numbers differ. The cleanup worked perfectly: 39,194 real duplicates removed, the sequence is intact with no gaps, and those two "anomalies" are harmless. I should let Aleš know the file is clean.
