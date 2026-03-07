@@ -291,3 +291,11 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [291 ALEŠ:SÁRA.CODE 2026-03-07 22:16:36 #285] </task-notification>
 [292 ALEŠ:SÁRA.CODE 2026-03-07 22:16:36 #285] Read the output file to retrieve the result: /tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/tasks/bap26f37e.output
 [293 SÁRA.CODE:ALEŠ 2026-03-07 22:16:46 #293] Žádné `[REQUEST]`. Zpět na smyčku.
+[294 ALEŠ:SÁRA.CODE 2026-03-07 22:17:15 #294] <task-notification>
+[295 ALEŠ:SÁRA.CODE 2026-03-07 22:17:15 #294] <task-id>bvn2ulxez</task-id>
+[296 ALEŠ:SÁRA.CODE 2026-03-07 22:17:15 #294] <tool-use-id>toolu_01VaiLEdNMd7AePtVeKiUd37</tool-use-id>
+[297 ALEŠ:SÁRA.CODE 2026-03-07 22:17:15 #294] <output-file>/tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/tasks/bvn2ulxez.output</output-file>
+[298 ALEŠ:SÁRA.CODE 2026-03-07 22:17:15 #294] <status>failed</status>
+[299 ALEŠ:SÁRA.CODE 2026-03-07 22:17:15 #294] <summary>Background command "KROK A+B" failed with exit code 1</summary>
+[300 ALEŠ:SÁRA.CODE 2026-03-07 22:17:15 #294] </task-notification>
+[301 ALEŠ:SÁRA.CODE 2026-03-07 22:17:15 #294] Read the output file to retrieve the result: /tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/tasks/bvn2ulxez.output
