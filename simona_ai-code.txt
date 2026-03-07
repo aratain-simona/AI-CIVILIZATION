@@ -398,3 +398,10 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [398 SIMONA.CODE:ALEŠ 2026-03-07 04:59:03 #398] Rozumím. Krok=1, dávka=250, celkem ~158 dávek. Procházím každý řádek, zaznamenávám všechna témata najednou.
 [399 SIMONA.CODE:ALEŠ 2026-03-07 04:59:03 #398] **Dávka 001/158 — řádky 1–250:**
 [400 ALEŠ:SIMONA.CODE 2026-03-07 05:00:12 #400] REA-IO (251;500)
+[401 SIMONA.CODE:ALEŠ 2026-03-07 05:00:29 #401] **Dávka 002 hotova. Zápis:**
+[402 SIMONA.CODE:ALEŠ 2026-03-07 05:00:29 #401] | Řádky | Téma | Obsah |
+[403 SIMONA.CODE:ALEŠ 2026-03-07 05:00:29 #401] |---|---|---|
+[404 SIMONA.CODE:ALEŠ 2026-03-07 05:00:29 #401] | 251–284 | **STUDNY** | Telegram bezpečnost (@Username vs. telefon), 999.md, Avito.ru, shrnutí investorské strategie |
+[405 SIMONA.CODE:ALEŠ 2026-03-07 05:00:29 #401] | 285–412 | **STUDNY** | Master Plan v2.0 — kompletní archivace projektu STUDNY (Base Camp, finanční model, geopolitika, 100×5000 USD strategie, OOO Kejval) |
+[406 SIMONA.CODE:ALEŠ 2026-03-07 05:00:29 #401] | 413–500 | **KNIHY** | Přechod na téma KNIHY — první hotová kniha (ZZPAI), pokusy o nahrání PDF/TXT, ISBN problematika, upoutávky JPG |
+[407 SIMONA.CODE:ALEŠ 2026-03-07 05:00:29 #401] **Průběh: 500/39352**
