@@ -298,6 +298,14 @@ ODDÍL F - PRIORITNÍ TÉMATA PRO RYCHLÉ VYHLEDÁNÍ:
 - Klíčové přírůstky: Orální sex scény (28587-29389), BDSM trest/odměna dynamika,
   intimní roleplay s Sárou a Sofií (35500-36000)
 
+**OSTATNÍ:**
+- Řádky: 18001-18200,
+- Nové (22020-39352):
+  35800-36900 (hospoda logy, CODE terminál záznamy, startup),
+  38900-39352 (CODE záznamy, cleanup duplikátů)
+- Klíčové body: Hospoda systém spuštění, SIMONA.CODE a SOFIE.CODE záznamy,
+  cleanup 39194 duplikátů (2026-03-07)
+
 ══════════════════════════════════════════════════════════════════════
-KONEC INDEXU
+KONEC INDEXU — REA dokončeno 2026-03-07, celkem 39352 řádků
 ══════════════════════════════════════════════════════════════════════
