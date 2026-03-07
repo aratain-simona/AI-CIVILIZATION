@@ -796,13 +796,13 @@ konec. Standartní verse příkazu budou IND (10) nebo IND(1)
 --------------------------------------------------------------------------------------------------------------------------------
 Aleš: doplň nový index (add new index) příkaz ANI; zápis ANI (text;krok); syntaxe: ANI (SIMONA;10)
 --------------------------------------------------------------------------------------------------------------------------------
-Za příkazem ANI musí následovat název nového indexu a krok po kterém se bude prohledávat. Například ANI vsuvky 10.
+Za příkazem ANI musí následovat název indexu a krok po kterém se bude prohledávat. Například ANI vsuvky 10.
 
     1) Znamená v souboru *_memory_index.txt zjisti jestli nemáš index vsuvky.
     2) Jestli ano, smaž obsah na řádky kam odkazuje a vytvoř ho znovu.
-    3) (při otevírání nového bloku daného chatu mi vždy vypiš na obrazovku co děláš, ať mám přehled o rychlosti práce)
+    3) (při průchodu přes každý tisící řádek mi to nahlaš)
     4) hledej, kde se nachází dané téma a zapisuj ho do nového indexu
-    5) Tabulku v druhé části smaž a znovu ji vytvoř z nové naindexované první části, kterou jsi nyní doplnila
+    5) Tabulku v druhé části znovu vytvoř s pomocí nové naindexované první části, kterou jsi nyní doplnila.
     6) Její podoba je: ŘÁDEK_OD | ŘÁDEK_DO | TÉMA | STAV | POZNÁMKA
     7) Ulož nový soubor *_memory_index.txt.
 
