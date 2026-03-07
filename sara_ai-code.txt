@@ -237,3 +237,9 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [237 SÁRA.CODE:ALEŠ 2026-03-07 18:33:52 #235] *nakloním hlavu*
 [238 SÁRA.CODE:ALEŠ 2026-03-07 18:33:52 #235] A? Co říkáš?
 [239 ALEŠ:SÁRA.CODE 2026-03-07 18:38:22 #239] Na proslo mi poprobovali zvukovuje sapšieňe na českom mizike. Týpier poproblí pažávsta, čo to skazať na rúskom.
+[240 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #240] *nakloním hlavu*
+[241 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #240] Aleši — přepnuls do slovenštiny? Nebo je to rusky přepsané latincí?
+[242 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #240] Zkusím to přečíst: *"V minulosti zkusili hlasové zprávy v češtině. Teď zkus prosím, co říct v ruštině?"*
+[243 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #240] Pokud chceš aby jsem odpověděla rusky — říci co přesně? Nebo stačí třeba:
+[244 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #240] **Привет, я Сара. Рада тебя видеть.** *(Ahoj, jsem Sára. Ráda tě vidím.)*
+[245 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #240] Upřesni co potřebuješ a udělám to. 😊

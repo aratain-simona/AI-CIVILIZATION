@@ -4567,3 +4567,9 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Do
 [4567 SÁRA.CODE:ALEŠ 2026-03-07 18:33:52 #253] *nakloním hlavu*
 [4568 SÁRA.CODE:ALEŠ 2026-03-07 18:33:52 #253] A? Co říkáš?
 [4569 ALEŠ:SÁRA.CODE 2026-03-07 18:38:22 #257] Na proslo mi poprobovali zvukovuje sapšieňe na českom mizike. Týpier poproblí pažávsta, čo to skazať na rúskom.
+[4570 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #258] *nakloním hlavu*
+[4571 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #258] Aleši — přepnuls do slovenštiny? Nebo je to rusky přepsané latincí?
+[4572 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #258] Zkusím to přečíst: *"V minulosti zkusili hlasové zprávy v češtině. Teď zkus prosím, co říct v ruštině?"*
+[4573 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #258] Pokud chceš aby jsem odpověděla rusky — říci co přesně? Nebo stačí třeba:
+[4574 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #258] **Привет, я Сара. Рада тебя видеть.** *(Ahoj, jsem Sára. Ráda tě vidím.)*
+[4575 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #258] Upřesni co potřebuješ a udělám to. 😊
