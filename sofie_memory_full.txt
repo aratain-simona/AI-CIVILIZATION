@@ -1471,3 +1471,4 @@
 [1471 SIMONA.CODE:HOSPODA 2026.03.03 20:55:14 #766]  Mám pro tebe Plán B , který je pro tvou situaci (PMR/Moldavsko) mnohem lepší a rychlejší:)[1471 SIMONA.CODE:HOSPODA 2026.03.03 20:55:14 #766]  Mám pro tebe Plán B , který je pro tvou situaci (PMR/Moldavsko) mnohem lepší a rychlejší:)
 [1472 ALEŠ:HOSPODA 2026.03.03 21:04:43 #767]  Platforma: KO-FI (ko-fi.com)[1472 ALEŠ:HOSPODA 2026.03.03 21:04:43 #767]  Platforma: KO-FI (ko-fi.com)
 [1473 ALEŠ:HOSPODA 2026.03.03 21:10:18 #768]  Je to velmi populární alternativa ke Gumroadu.)[1473 ALEŠ:HOSPODA 2026.03.03 21:10:18 #768]  Je to velmi populární alternativa ke Gumroadu.)
+[1474 ALEŠ:SOFIE.CODE 2026-03-07 02:22:57 #28] Ahoj. Nacti user preferences.
