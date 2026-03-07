@@ -205,6 +205,10 @@ def on_press(key):
             monitor_muted["v"] = not monitor_muted["v"]
             stav = "MUTE" if monitor_muted["v"] else "AKTIVNÍ"
             print(f"[Hospoda monitor] {stav}")
+        elif char == "r":
+            lang_mode["v"] = "ru" if lang_mode["v"] == "cs" else "cs"
+            nazev = "ruština" if lang_mode["v"] == "ru" else "čeština"
+            print(f"[Jazyk] přepnuto na: {nazev}")
 
 
 def on_release(key):
