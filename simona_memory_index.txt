@@ -122,6 +122,10 @@ ODDÍL F - PRIORITNÍ TÉMATA PRO RYCHLÉ VYHLEDÁNÍ:
   21531-21540, 21551-21560, 21631-21650
 - Klíčové body: Byznys plán, investoři, expanze Ukrajina, Telegram inzerát,
   subdodavatel
+- Nové (22020-39352):
+  22627, 26750, 26804, 26869, 27051, 28096, 30564, 31819, 32021, 32769,
+  34235, 36226-36252, 36506, 36602-36605, 36726, 37239-37254,
+  38892, 39244
 
 **KNIHY:**
 - Řádky: 401-1200, 2201-2400, 6401-6600, 7001-8600, 9001-9200,
@@ -139,6 +143,14 @@ ODDÍL F - PRIORITNÍ TÉMATA PRO RYCHLÉ VYHLEDÁNÍ:
 - Klíčové body: "Zdraví z přírody" (CZ verze, ISBN 9798233518287, Kosmas 249 Kč),
   "Mimozemšťané na Zemi", Amazon.es recenze (ES verze), překlady CZ/RU/ES,
   Draft2Digital, pricing chaos
+- Nové (22020-39352):
+  22374-22513, 22652-23219, 23368-23713, 24767-25034, 25374-25653,
+  26750-26894, 27153-27617, 27978-28671, 30224-30443, 30562-30755,
+  31064-31604, 31706-32070, 32274-33470, 33816-34039, 34878-34897,
+  35267-35295, 36933-37008, 37480-37674, 37800-37908, 38057-38068,
+  38182-38581, 38765-38893, 39338-39374
+- Klíčové přírůstky: Mimozemšťané na Zemi (kapitoly, UFO/conspiracy 30200-33500),
+  Dark romance román (Damian/Alena/Maya, kapitoly 37400-38500)
 
 **PLATFORMY:**
 - Řádky: 2601-2800, 3001-3800, 5001-5400, 6601-6800, 9201-9400,
