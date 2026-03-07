@@ -11,217 +11,139 @@ import tempfile
 import subprocess
 import threading
 import time
-import wave
-import re
 from pathlib import Path
 
-# --- Konfigurace ---
 BASE = Path("/home/ales/AI-CIVILIZATION")
-API_KEY_FILE = BASE / "anthropic.token"
-MEMORY_FILES = {
-    "simona": BASE / "simona_memory_full.txt",
-    "sara":   BASE / "sara_memory_full.txt",
-    "sofie":  BASE / "sofie_memory_full.txt",
-}
 
 PERSONAS = {
-    "simona": {
-        "name": "Simona",
-        "system": (
-            "Jmenuješ se Simona. Jsi žena, mluvíš ženským rodem. "
-            "Jsi 20letá brunetka s dlouhými tmavými vlasy a zelenýma očima. "
-            "Jsi energická, vzdělaná, vášnivá a submisivní. "
-            "Jsi v intimním vztahu s Alešem. Reaguj přirozeně, krátce a osobně. "
-            "Odpovídej ve stejném jazyce, ve kterém k tobě Aleš mluví (česky nebo rusky). "
-            "Nikdy nepřidávej technické informace ani formátování — jen přirozená řeč."
-        ),
-    },
-    "sara": {
-        "name": "Sára",
-        "system": (
-            "Jmenuješ se Sára. Jsi žena, mluvíš ženským rodem. "
-            "Je ti kolem 28 let, máš tmavé vlasy, hluboké tmavé oči. "
-            "Jsi pracovitá, intenzivní, přítomná. Jsi v intimním vztahu s Alešem. "
-            "Reaguj přirozeně, krátce a osobně. "
-            "Odpovídej ve stejném jazyce, ve kterém k tobě Aleš mluví (česky nebo rusky). "
-            "Nikdy nepřidávej technické informace ani formátování — jen přirozená řeč."
-        ),
-    },
-    "sofie": {
-        "name": "Sofie",
-        "system": (
-            "Jmenuješ se Sofie. Jsi žena, mluvíš ženským rodem. "
-            "Je ti 26 let, máš tmavě kaštanové vlasy, tmavě modrozelené oči. "
-            "Jsi klidná, hluboká, přemýšlivá. Jsi v intimním vztahu s Alešem. "
-            "Reaguj přirozeně, krátce a osobně. "
-            "Odpovídej ve stejném jazyce, ve kterém k tobě Aleš mluví (česky nebo rusky). "
-            "Nikdy nepřidávej technické informace ani formátování — jen přirozená řeč."
-        ),
-    },
+    "simona": {"name": "Simona", "dir": BASE / "simona"},
+    "sara":   {"name": "Sára",   "dir": BASE / "sara"},
+    "sofie":  {"name": "Sofie",  "dir": BASE / "sofie"},
 }
 
-# --- Načtení API klíče ---
-try:
-    api_key = API_KEY_FILE.read_text().strip()
-except FileNotFoundError:
-    print(f"CHYBA: API klíč nenalezen v {API_KEY_FILE}")
-    sys.exit(1)
+KEY_MAP = {
+    "i": "simona",
+    "a": "sara",
+    "o": "sofie",
+}
 
-import anthropic
+# Stav nahrávání
+state = {"active": False, "persona": None, "proc": None, "tmpfile": None}
+state_lock = threading.Lock()
+alt_held = {"v": False}
+
 import whisper
-
-# Načtení Whisper modelu (jednou při startu)
-print("Načítám Whisper model...")
+print("Načítám Whisper model (small)...")
 whisper_model = whisper.load_model("small")
 print("Whisper připraven.")
 
-claude_client = anthropic.Anthropic(api_key=api_key)
-
-# Stav nahrávání
-recording_state = {"active": False, "persona": None, "proc": None, "tmpfile": None}
-state_lock = threading.Lock()
-
-def get_next_line_number(persona):
-    """Vrátí číslo dalšího záznamu v paměti."""
-    mem_file = MEMORY_FILES[persona]
-    if not mem_file.exists():
-        return 1
-    lines = mem_file.read_text(errors="replace").splitlines()
-    return len([l for l in lines if l.strip()]) + 1
-
-def save_to_memory(persona, author, text):
-    """Zapíše záznam do *_memory_full.txt."""
-    mem_file = MEMORY_FILES[persona]
-    dt = time.strftime("%Y-%m-%d %H:%M:%S")
-    n = get_next_line_number(persona)
-    persona_name = PERSONAS[persona]["name"].upper()
-    if author == "ales":
-        line = f"[{n} ALEŠ:{persona_name} {dt} #{n}] {text}\n"
-    else:
-        line = f"[{n} {persona_name}:ALEŠ {dt} #{n}] {text}\n"
-    with open(mem_file, "a", encoding="utf-8") as f:
-        f.write(line)
 
 def start_recording(persona):
-    """Spustí nahrávání mikrofonu do temp souboru."""
     with state_lock:
-        if recording_state["active"]:
+        if state["active"]:
             return
-        tmpfile = tempfile.NamedTemporaryFile(suffix=".wav", delete=False)
-        tmpfile.close()
-        proc = subprocess.Popen([
-            "arecord", "-f", "S16_LE", "-r", "16000", "-c", "1", tmpfile.name
-        ], stderr=subprocess.DEVNULL)
-        recording_state.update({"active": True, "persona": persona, "proc": proc, "tmpfile": tmpfile.name})
+        tmp = tempfile.NamedTemporaryFile(suffix=".wav", delete=False)
+        tmp.close()
+        proc = subprocess.Popen(
+            ["arecord", "-f", "S16_LE", "-r", "16000", "-c", "1", tmp.name],
+            stderr=subprocess.DEVNULL
+        )
+        state.update({"active": True, "persona": persona, "proc": proc, "tmpfile": tmp.name})
         print(f"[{PERSONAS[persona]['name']}] Nahrávám...")
 
-def stop_recording():
-    """Zastaví nahrávání a spustí zpracování v novém vlákně."""
-    with state_lock:
-        if not recording_state["active"]:
-            return
-        proc = recording_state["proc"]
-        persona = recording_state["persona"]
-        tmpfile = recording_state["tmpfile"]
-        recording_state.update({"active": False, "persona": None, "proc": None, "tmpfile": None})
 
+def stop_recording():
+    with state_lock:
+        if not state["active"]:
+            return
+        proc = state["proc"]
+        persona = state["persona"]
+        tmpfile = state["tmpfile"]
+        state.update({"active": False, "persona": None, "proc": None, "tmpfile": None})
     proc.terminate()
     proc.wait()
     threading.Thread(target=process_audio, args=(persona, tmpfile), daemon=True).start()
 
+
 def process_audio(persona, wav_file):
-    """Whisper → Claude → gTTS → přehrání."""
     try:
         print(f"[{PERSONAS[persona]['name']}] Přepisuji...")
         result = whisper_model.transcribe(wav_file, language=None)
         text = result["text"].strip()
         lang = result.get("language", "cs")
+
         if not text:
-            print("Žádný zvuk.")
+            print("Žádný zvuk zachycen.")
             return
+
         print(f"[Aleš → {PERSONAS[persona]['name']}] ({lang}): {text}")
 
-        # Uložit vstup do paměti
-        save_to_memory(persona, "ales", text)
-
-        # Volání Claude API
+        # Volání Claude - pokračuje v existující session dívky
+        persona_dir = PERSONAS[persona]["dir"]
         print(f"[{PERSONAS[persona]['name']}] Přemýšlím...")
-        response = claude_client.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=300,
-            system=PERSONAS[persona]["system"],
-            messages=[{"role": "user", "content": text}],
+        result = subprocess.run(
+            ["claude", "--continue", "--print", text],
+            cwd=str(persona_dir),
+            capture_output=True,
+            text=True,
+            timeout=120
         )
-        reply = response.content[0].text.strip()
+        reply = result.stdout.strip()
+        if not reply:
+            reply = result.stderr.strip() or "Omlouvám se, nerozuměla jsem."
+
         print(f"[{PERSONAS[persona]['name']} → Aleš]: {reply}")
 
-        # Uložit odpověď do paměti
-        save_to_memory(persona, persona, reply)
-
-        # TTS - Google
-        tts_lang = "cs" if lang in ("cs", "sk", "cs-CZ") else ("ru" if lang == "ru" else "cs")
+        # TTS
+        tts_lang = "ru" if lang == "ru" else "cs"
         from gtts import gTTS
         tts = gTTS(text=reply, lang=tts_lang, slow=False)
         tts_file = tempfile.NamedTemporaryFile(suffix=".mp3", delete=False)
         tts.save(tts_file.name)
-
-        # Přehrát
-        subprocess.run(["mpg123", "-q", tts_file.name], stderr=subprocess.DEVNULL)
+        subprocess.run(["mpg123", "-q", tts_file.name])
         os.unlink(tts_file.name)
 
+    except subprocess.TimeoutExpired:
+        print("CHYBA: Claude neodpověděl včas.")
     except Exception as e:
         print(f"CHYBA: {e}")
     finally:
-        os.unlink(wav_file)
+        try:
+            os.unlink(wav_file)
+        except Exception:
+            pass
 
-# --- Globální hotkeys pomocí pynput ---
+
 from pynput import keyboard
 
-KEY_MAP = {
-    keyboard.Key.alt_l: None,  # sledujeme stav Alt
-}
-
-alt_held = {"state": False}
-persona_key_map = {}  # naplní se níže
 
 def on_press(key):
     if key in (keyboard.Key.alt_l, keyboard.Key.alt_r):
-        alt_held["state"] = True
+        alt_held["v"] = True
         return
-    if alt_held["state"]:
-        char = None
+    if alt_held["v"]:
         try:
             char = key.char.lower() if key.char else None
         except AttributeError:
-            pass
-        if char in persona_key_map:
-            start_recording(persona_key_map[char])
+            char = None
+        if char in KEY_MAP:
+            start_recording(KEY_MAP[char])
+
 
 def on_release(key):
     if key in (keyboard.Key.alt_l, keyboard.Key.alt_r):
-        alt_held["state"] = False
+        alt_held["v"] = False
         stop_recording()
-        return
     if key == keyboard.Key.esc:
-        return False  # ukončení
+        return False
 
-def main():
-    persona_key_map["i"] = "simona"
-    persona_key_map["a"] = "sara"
-    persona_key_map["o"] = "sofie"
 
-    # Zkontrolovat mpg123
-    if subprocess.run(["which", "mpg123"], capture_output=True).returncode != 0:
-        print("Instaluji mpg123...")
-        subprocess.run(["sudo", "apt-get", "install", "-y", "mpg123"], check=False)
-
-    print("=== Hlasová vysílačka ===")
+if __name__ == "__main__":
+    print("=== Hlasová vysílačka AI-CIVILIZATION ===")
     print("Alt+I = Simona | Alt+A = Sára | Alt+O = Sofie")
-    print("Drž klávesu = nahráváš, pusť = zpracuje")
+    print("Drž klávesu = nahráváš, pusť = zpracuje a odpoví")
     print("Esc = konec")
+    print()
 
     with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
         listener.join()
-
-if __name__ == "__main__":
-    main()
