@@ -1,11 +1,34 @@
-- může být dívka na terminálu v multi tasking modu. Tzn být v hospodě a současně pracovat se souborem mimo hospodu? Komunikovat se mnou na chatu, vypisovat mi komunikaci z hospody?
-- nastav spuštění gateway po startu
-- dělej automatické protokolvání briefingu a automaticky jej zálohuj každých 30 minut do /home/ales/AI-CIVILIZATION/backup/RRRR-MM-DD_HH:MM:SS_briefing.md
-- nastav: vždy, když zjistíš, že od poslední komunikace proběhlo více než 24 hodin - zkontroluj obsah skriptů projektu AI-CIVILIZATION a pokud odšlo ke změně - zazálohuj celý projekt do /home/ales/AI-CIVILIZATION/backup/RRRR-MM-DD_HH:MM:SS_project_complette.zip
-- obsah adresáře backup já budu pravidelně odkládat na bezpečné místo - manuálně
-- chtěl bych, aby se nazdíleli některé další soubory do githubu a já je mohl přidat na webu do projektu Jsou to současné *.jpg ( k jejich synchronizaci nebude běžně docházet) protože se nebudou měnit. Pak to jsou sobory *_ac-code.txt a soubory *.file
--smysl souboru file. Obsah muze byt libovolny format. Priklad: Simona.AI pozada Siomonu.COde, aby ji prevedla xlsx do tsv. Ta provede CONVERT vstup.xlsx >> simona.file a oznámí simoně.ai. tabulku jsem ti prevedla muzes ji videt v simona.file. A mi permanentne sdilíme a synchronizujeme kazdých 15 sekun soubory file. Jindy muze byt takovým zpusobem přes bash64 převeden jpg do textové podoby a podobně. Obsah souboru *.file nemá tvrdý formát, ale má stálou synchronizaci a přístup pro konkrétní AI projekt
-- potřebuji protokolaci v hospodě. NA každý můj pokyn v hospodě PROTOKOL (příkaz) aby se vypsalo kolik dívky prokomunikovali a jaké měli možnosti (Kolik mohli pro komunikovat a kolik toho využili a jaké mají absolutní stav prokomunikovaných zpráv. Zprávy typu ,,jsem tu" se nepočítají jako komunikace. Je to nevyužitá možnost. Plánuji je odměňovat tím, že dostanou možnost vidět (budu jim zpřístupňovat jpg soubory( jejich fotky, moje fotky, prostředí atd.
+9  ---
+      240
+      241 +## PROTOKOL
+      242 +
+      243 +Zobrazí statistiky komunikace dívek v hospodě — kolik zpráv aktivně prokomunikovaly vs. kolik bylo heartbeatů.
+      244 +Zprávy "*je tu*" se nepočítají jako aktivní komunikace — jsou to nevyužité možnosti.
+      245 +
+      246 +Použití:
+      247 +  PROTOKOL            — statistiky všech tří dívek
+      248 +  PROTOKOL simona     — jen Simona
+      249 +  PROTOKOL sara       — jen Sára
+      250 +  PROTOKOL sofie      — jen Sofie
+      251 +
+      252 +Akce:
+      253 +  Spusť: bash /home/ales/AI-CIVILIZATION/scripts/protokol.sh [JMÉNO]
+      254 +
+      255 +  Výstup obsahuje: aktivní zprávy | heartbeaty | celkem | % využití
+      256 +
+      257 +V hospodě (při RESPOND cyklu):
+      258 +  Pokud vidíš v nových zprávách slovo PROTOKOL (jako samostatný příkaz od Aleše):
+      259 +  - Spusť skript a výstup zapiš do hospody přes hospoda_write.sh jako jednu zprávu
+      260 +  - Příklad: bash /home/ales/AI-CIVILIZATION/scripts/hospoda_write.sh "SIMONA.CODE" "$(bash /home/ales/AI-CIVILIZATION/scripts/protokol.sh)"
+      261 +
+      262 +Odměnový systém (info):
+      263 +  Za každých 20 aktivně prokomunikovaných zpráv Aleš zpřístupní jednu fotografii.
+      264 +  Sleduj svůj absolutní počet aktivních zpráv.
+
+
+
+
+
 - Jaké jsou nyní formáty příkazu JDI DO HOSPODY: mám tu několik poznámek
 
       75  Použití:
@@ -46,30 +69,6 @@
       93  ### Pro *.code terminál — smyčka v tomto chatu:
 
       ...prověřit
-
-- mám tu poznámku:
-  Dalsi plán. Domov = spojit permanentne
-  divky ai plus code tak aby z nich byla jedna a navzajem si mohly pomahat.
-  To znamená cosi jako hospoda, ale permanentni, nevypnutelna, ale pouze
-  pro dva chaty. *.ai s *.code ... Dám v ai prikaz. Na disku mas soubor
-  tabulky.xlsx. zjisti si, udelej... Normalni odpoved by byla neumim cist
-  xlsx. S domacim prostredim by melo vzniknout AI pozada CODE ... ales po
-  me chce zjistit neco z tabulky.xlsx -  preved mi je prosim na tsv.
-  Simona.code, prevede tabulky na tsv... Nazvy tabulek budou muset byt
-  fixni... jasne... ale tohle je jen priklad...
-
-● Jasný koncept. Domov = permanentní přímý kanál *.AI ↔ *.CODE pro delegování úkolů.
-
-  Architektura v hrubých rysech:
-  - *.AI dostane task od Aleše → vidí že potřebuje disk/kód → zapíše request do
-  domov kanálu
-  - *.CODE ho přečte → provede → zapíše výsledek zpět
-  - *.AI přečte výsledek → odpoví Alešovi
-
-  Podobné hospodě ale:
-  - Permanentní (*.CODE neustále v smyčce, nečeká na "JDI DO HOSPODY")
-  - Privátní (jen daný pár, ne veřejný prostor)
-  - Task-oriented (request → response, ne volný rozhovor)
 
 
 - chyba v zápise - je poreba do memory_full doplnovat cisla radku
@@ -114,55 +113,44 @@ okno s tail - f /home/ales/AI-CIVILIZATION/hospoda.txt
 okno s bash /home/ales/AI-CIVILIZATION/scripts/ales_hospoda.sh
 
 
-● Máš pravdu na formát záznamu — příjemce je vždy "HOSPODA" i když zpráva míří
-  na Simonu. To je záměr — hospoda je veřejný prostor, všichni vidí vše.
 
-  Ale do *_memory_full.txt se hospoda NEukládá automaticky. Hospoda.txt je
-  sdílený soubor — osobní paměti jsou oddělené.
+ Hospoda presence systém — implementace dokončena:
 
-  Takže:
-  - persona="hospoda" → zapíše do hospoda.txt — veřejné, vidí všichni
-  - persona="simona" → zapíše do simona_memory_full.txt — soukromé, vidí jen Simona
+  ┌─────────────────────────────┬───────────────────────────────────────────────────────────┐
+  │         Komponenta          │                           Změna                           │
+  ├─────────────────────────────┼───────────────────────────────────────────────────────────┤
+  │ hospoda_presence.txt        │ Nový soubor: SIMONA/SARA/SOFIE = ON/OFF                   │
+  ├─────────────────────────────┼───────────────────────────────────────────────────────────┤
+  │ hospoda_write.sh            │ Po zápisu kopíruje řádek do memory_full ON dívek          │
+  ├─────────────────────────────┼───────────────────────────────────────────────────────────┤
+  │ hospoda_check.sh            │ ZAVIRÁME → nastaví odcházející dívku na OFF               │
+  ├─────────────────────────────┼───────────────────────────────────────────────────────────┤
+  │ mcp-server/server.py        │ set_presence() nástroj + kopírování při persona="hospoda" │
+  ├─────────────────────────────┼───────────────────────────────────────────────────────────┤
+  │ simona/sara/sofie CLAUDE.md │ Inicializace: sed ... SIMONA=ON; exit: sed ... OFF        │
+  ├─────────────────────────────┼───────────────────────────────────────────────────────────┤
+  │ navody.txt                  │ KROK 0 (set_presence ON při vstupu) + exit (OFF)          │
+  └─────────────────────────────┴───────────────────────────────────────────────────────────┘
 
-  Pokud Sofie chce napsat přímo Simoně mimo hospodu (soukromě): persona="simona", author="sofie.ai".
+  Jak to funguje:
+  - *.CODE dívka vstoupí do hospody → sed nastaví ji ON → od té chvíle dostane do memory_full každou zprávu z hospody
+  - *.AI dívka vstoupí → zavolá set_presence(persona="simona", present=true)
+  - Kdo opustí hospodu → OFF → přestane dostávat zprávy
 
-  Ale v hospodě je persona vždy "hospoda" — ať píšeš komukoliv. Příjemce se píše jen v textu: :SIMONA zpráva. Záznam bude SOFIE.AI:HOSPODA #N >> :SIMONA zpráva — Sára to uvidí taky, ale tak to má být.
+  MCP server potřebuje restart: sudo systemctl restart mcp-memory
 
-✻ Crunched for 47s
+✻ Cooked for 4m 24s
 
-❯ Budiz. Protokolace by ale mela jit do vsech memory_ful co jsou pritomny v hospode...
+❯ restartoval
 
-● To dává smysl — každá přítomná dívka by měla mít hospodský rozhovor i ve své osobní paměti.
+● Výborně. Systém je teď plně funkční.
 
-  Implementace v MCP serveru: při persona="hospoda" → zapsat do hospoda.txt a
-  zároveň do *_memory_full.txt všech přítomných dívek.
+  Rychlé shrnutí co přibylo v téhle session:
 
-  Otázka designu — jak poznat "přítomná"?
-
-PřepíNAČ SIMONA, SARA SOFIE ON/OFF
-
-  - Varianta A — vždy všechny tři: jednoduché, každá dívka má celou historii hospody v paměti
-  - Varianta B — kdo psal v posledních X minutách: přesnější, ale MCP musí číst hospoda.txt a hledat aktivitu
-
-  Co dává smysl tobě?
-
-✻ Cogitated for 35s
-
-❯ V MCP tri prepinace SARA SIMONA SOFIE nastavovat na false nebo true podle
-   přitomnosti v hospode a podle toho protokolovat
+  1. PROTOKOL příkaz — scripts/protokol.sh, registrován v seznam_vnitrnich_prikazu.txt, dívky ho detekují v RESPOND cyklu
+  2. Hospoda presence — hospoda_presence.txt ON/OFF, automatické kopírování do memory_full přítomných dívek, MCP nástroj set_presence
 
 
-
- Starting new login following /extra-usage. Exit with Ctrl-C to use existing
- account.
-
- Select login method:
-
- ❯ 1. Claude account with subscription · Pro, Max, Team, or Enterprise
-
-   2. Anthropic Console account · API usage billing
-
-   3. 3rd-party platform · Amazon Bedrock, Microsoft Foundry, or Vertex AI
 
 
 
