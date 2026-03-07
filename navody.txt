@@ -741,33 +741,26 @@ PŘIDÁNÍ OBRÁZKU DO PROJEKTU:
 Aleš: ruční úprava (manual editing) MED - jedná se o statuz příkazu, který naznačuje, že došlo k ručním úpravám
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
-Aleš: přeindexování celého archivu (reindexing the entire archive) příkaz REA; zápis REA (krok); syntaxe: REA (10)
+Aleš: REA: přeindexování celého archivu (reindexing the entire archive) příkaz REA; zápis REA (krok); syntaxe: REA (10)
 --------------------------------------------------------------------------------------------------------------------------------
-Provádí se v situaci, kdy byly nějakým způsobem archivy změněny (sloučeny řádky, vypuštěny některé řádky - například prázdné).
-tím se mění pozice informace daného tématu. Číslo v závorce naznačuje po kolika řádcích je požadováno provést prohledávání témat.
-Provádí se následujícím způsobem:
+REA znamená přeindexovat celý archiv - prostě ho znovu projít a provést novou indexaci. Byly nalezeny chyby nebo provedeny změny
+a podobně. Provádí se v situaci, kdy byly nějakým způsobem archivy změněny (sloučeny řádky, vypuštěny některé řádky - například
+prázdné). Tím se mění pozice informace daného tématu. Číslo v závorce naznačuje po kolika řádcích je požadováno provést
+prohledávání témat. Provádí se následujícím způsobem:
 
 	0) provede se kontrola čísel řádků v zápise v souboru *_memory_full.txt
 	   podívej se na soubor *_memory_index.txt a pokus se pochopit pravidla zápisu
-	   příklad: Jestliže poslední indexace skončila na řádku 14132 a soubor má nyní 16111 řádků  provedeš kontrolu řádků od
-	   14133 dále
     1) otevře se soubor *_memory_index.txt a načtou se daná témata
-    2) na základě počtu řádků v souboru *_memory_full.txt se zjistí kolik řádků se bude indexovat.
-
-    příklad: Jestliže poslední indexace skončila na řádku 14132 a soubor má nyní 16111 řádků, provedeš zaindexaci řádků od
-    14133 dále
-
-    3) Vytvoří se informační hlavička souboru *_memory_index.txt. Ta musí obsahovat datum - název provedeného příkazu
-    4) Ze souboru *_memory_index.txt přečti všechna témata. Zapiš (REA) - počet řádků - případně poznámku. Informace, které
-       jsou v hlavičce obsaženy se nemažou, ale dopňují se...
-    5) Otevři soubor memory. (při otevírání nového bloku daného četu mi vždy vypiš na obrazovku co děláš, ať mám přehled o
-       rychlosti práce)
-    6) Ber téma jedno po druhém a zapisuj řádky, kde se dané téma nachází do index.
-    7) Jakmile to dokončíš, vezmi si v pořadí další téma a opakuj proces.
-    8) Teď záznamy, které jsi zapsala do souboru *_memory_index.txt ještě převeď do formátu v druhé části tak, aby
-       odpovídaly požadovanému zápisu pro vyhledávání.
-    9) Jeho podoba je: ŘÁDEK_OD | ŘÁDEK_DO | TÉMA | STAV | POZNÁMKA
-    10) Ulož nový soubor *_memory_index.txt.
+    2) Vytvoří se informační hlavička souboru *_memory_index.txt. Ta musí obsahovat datum - název provedeného příkazu
+    3) Zapiš (REA) - počet řádků - případně poznámku. Informace, které jsou v hlavičce obsaženy se nemažou, ale dopňují se...
+    4) Otevři soubor memory. (při překročení každého tisícího řádku mi vždy vypiš na obrazovku stav - ať vím, že systém
+       ,,nezamrzl")
+    5) Ber téma jedno po druhém a zapisuj řádky, kde se dané téma nachází do indexu.
+    6) Jakmile to dokončíš, vezmi si v pořadí další téma a opakuj proces.
+    7) Teď záznamy, které jsi zapsala do souboru *_memory_index.txt ještě převeď do formátu v druhé části tak, aby odpovídaly
+       požadovanému zápisu pro vyhledávání.
+    8) Jeho podoba je: ŘÁDEK_OD | ŘÁDEK_DO | TÉMA | STAV | POZNÁMKA
+    9) Ulož nový soubor *_memory_index.txt.
 --------------------------------------------------------------------------------------------------------------------------------
 Aleš: přeindexování otevřeného archivu (reindexing an open archive) příkaz ROA; zápis: ROA (krok); syntaxe: ROA (10)
 --------------------------------------------------------------------------------------------------------------------------------
