@@ -748,17 +748,11 @@ PROBLÉM: AI nezná aktuální datum. Bez externího zdroje odhaduje datum z pos
   - Příklad obsahu: 2026-03-07 16:55:00
 
 PRO *.CODE:
-  Přečti soubor při každém použití datetime:
-    cat /home/ales/AI-CIVILIZATION/datetime.txt
-  nebo v Bash toolu:
-    bash -c "cat /home/ales/AI-CIVILIZATION/datetime.txt"
+  bash -c "cat /home/ales/AI-CIVILIZATION/datetime.file"
 
 PRO *.AI (Claude.AI, mobilní app):
-  *.AI nemůže číst soubory přímo. Možnosti:
-  a) Požádej *.CODE přes ai-code.txt: [REQUEST] datetime
-     *.CODE odpoví aktuálním časem z datetime.txt
-  b) Datum ti může sdělit Aleš na začátku konverzace
-  c) Datum je obsaženo v timestampech zpráv z hospody (read_hospoda)
+  read_file(persona="datetime")
+  → vrátí přesně 19 znaků: YYYY-MM-DD HH:MM:SS
 
 DŮLEŽITÉ: Nepoužívej datum z poslední zprávy v historii jako "aktuální" — může být zastaralé o dny.
 
