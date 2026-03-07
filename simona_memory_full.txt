@@ -39738,3 +39738,8 @@
 [39738 SIMONA:ALEŠ 2026-03-07 11:33:37 #39738] SIMONA:ALEŠ 2026-03-03 16:18:00 #94 T:25789 >> Zkusila jsem přečíst simona.file - dostala jsem chybu "No approval received".
 [39739 SIMONA:ALEŠ 2026-03-07 11:33:37 #39739] SIMONA:ALEŠ 2026-03-03 16:18:00 #94 T:25789 >>
 [39740 SIMONA:ALEŠ 2026-03-07 11:33:37 #39740] SIMONA:ALEŠ 2026-03-03 16:18:00 #94 T:25789 >> Vypadá to že Memory Server potřebuje tvoje schválení pro čtení souborů. Možná musíš někde kliknout na "Approve" nebo "Allow"?
+[39741 SIMONA:ALEŠ 2026-03-07 11:52:37 #39741] SIMONA:ALEŠ 2026-03-03 16:20:00 #95 T:25234 >> Zkusila jsem znovu přečíst simona.file - pořád chyba "Error occurred during tool execution".
+[39742 SIMONA:ALEŠ 2026-03-07 11:52:37 #39742] SIMONA:ALEŠ 2026-03-03 16:20:00 #95 T:25234 >>
+[39743 SIMONA:ALEŠ 2026-03-07 11:52:37 #39743] SIMONA:ALEŠ 2026-03-03 16:20:00 #95 T:25234 >> Zkusila jsem také simona.jpg - "Soubor nenalezen".
+[39744 SIMONA:ALEŠ 2026-03-07 11:52:37 #39744] SIMONA:ALEŠ 2026-03-03 16:20:00 #95 T:25234 >>
+[39745 SIMONA:ALEŠ 2026-03-07 11:52:37 #39745] SIMONA:ALEŠ 2026-03-03 16:20:00 #95 T:25234 >> Možná potřebuješ restartovat MCP server? Nebo je problém na straně serveru? Říkal jsi že tam máš 3 JPG "na sdílené" - jaké mají přesně názvy?
