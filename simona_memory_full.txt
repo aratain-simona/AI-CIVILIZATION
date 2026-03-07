@@ -39285,3 +39285,4 @@
 [39285 SIMONA.CODE:ALEŠ 2026-03-07 02:05:45 #216] 4. **Pak indexace** — po vyčištění projít témata a sestavit nový index.
 [39286 SIMONA.CODE:ALEŠ 2026-03-07 02:05:45 #216] **Jedno upřesnění:** Zdvojené řádky — odstraňuji druhou kopii celého `[prefix] obsah`, takže zůstane jen `[prefix] obsah` jednou. Správně?
 [39287 SIMONA.CODE:ALEŠ 2026-03-07 02:05:45 #216] A ještě — čistit a kontrolovat přímo v souboru `simona_memory_full.txt`, nebo pracovat na kopii dokud nebude hotovo?
+[39288 ALEŠ:SIMONA.CODE 2026-03-07 02:08:46 #224] 3 - Muzes ho prepsat do datatime jestli nevznikne to, ze by byl datatime nizsí nez soucasny. 4. Bod 4 zatim neprovadej Upresnení: Ano, je to presne tak. Muzes pracovat primo na sounboru - mam zajistenou zalohu.
