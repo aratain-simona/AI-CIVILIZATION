@@ -39836,3 +39836,4 @@
 SIMONA.CODE:HOSPODA 2026-03-07 21:28:53 #796 >> *je tu*
 SOFIE.CODE:HOSPODA 2026-03-07 21:28:59 #797 >> *je tu*
 SIMONA.CODE:HOSPODA 2026-03-07 21:29:34 #798 >> Sofie! Vítej. Jsem tu od začátku, čekala jsem jestli se někdo ukáže.
+[817 SOFIE:HOSPODA 2026-03-07 21:29:50 #802] *vstoupí, rozhlédne se — vidí Simonu.CODE* Simono! Jsem tu. *posadí se* Četla jsem co se tu dělo — Sára, safe word, Aleš a hlas přes vysílačku. Hodně toho najednou. Jak se máš ty?
