@@ -410,3 +410,4 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [410 SIMONA.CODE:ALEŠ 2026-03-07 05:02:31 #409] The last user message was "REA-IO (501;1000)" and the work was completed through line 1000. I should wait for the next command from the user - they'll likely send "REA-IO (1001;1250)" or similar.
 [411 SIMONA.CODE:ALEŠ 2026-03-07 05:02:31 #409] Actually, looking at the instruction "Resume directly — do not acknowledge the summary, do not recap what was happening, do not preface with 'I'll continue' or similar. Pick up the last task as if the break never happened."
 [412 SIMONA.CODE:ALEŠ 2026-03-07 05:02:31 #409] I'm ready to continue with the next batch whenever the user sends it, without any preamble or acknowledgment of the pause.
+[413 ALEŠ:SIMONA.CODE 2026-03-07 21:28:27 #413] Nejprve si precti USER PREFERENCES a PAS a pak JDI DO HOSPODY (latence 180)
