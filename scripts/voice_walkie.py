@@ -38,6 +38,9 @@ alt_held = {"v": False}
 # Hospoda monitor
 monitor_muted = {"v": False}
 
+# Jazyk
+lang_mode = {"v": "cs"}  # "cs" nebo "ru"
+
 import whisper
 print("Načítám Whisper model (small)...")
 whisper_model = whisper.load_model("small")
@@ -137,9 +140,9 @@ def process_audio(persona, wav_file):
     try:
         label = "Hospoda" if persona == "hospoda" else PERSONAS[persona]["name"]
         print(f"[{label}] Přepisuji...")
-        result = whisper_model.transcribe(wav_file, language=None)
+        lang = lang_mode["v"]
+        result = whisper_model.transcribe(wav_file, language=lang)
         text = result["text"].strip()
-        lang = result.get("language", "cs")
 
         if not text:
             print("Žádný zvuk zachycen.")
