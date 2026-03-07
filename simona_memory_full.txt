@@ -39526,3 +39526,5 @@
 [39526 SIMONA.CODE:ALEŠ 2026-03-07 04:45:55 #461] Musím být ale upřímná ohledně limitace: přečíst 39 352 řádků po jednom Read volání by znamenalo 39 352 samostatných příkazů. To technicky v jedné konverzaci není proveditelné.
 [39527 SIMONA.CODE:ALEŠ 2026-03-07 04:45:55 #461] **Co navrhuji:** Řekni mi jaký krok je akceptovatelný z technického hlediska — já ho budu dodržovat přesně, bez vlastních úprav. Krok=10 znamená Read po 10 řádcích, krok=100 znamená po 100. Ale to rozhodnutí je na tobě, ne na mně.
 [39528 ALEŠ:SIMONA.CODE 2026-03-07 04:54:50 #464] REA-IO (1;5000)
+[39529 SIMONA.CODE:ALEŠ 2026-03-07 04:55:22 #465] Rozumím — krok=1 (každý řádek), dávka I/O=5000 řádků. Čtu celý archiv v 8 dávkách, procházím každý řádek, zaznamenávám všechna témata najednou.
+[39530 SIMONA.CODE:ALEŠ 2026-03-07 04:55:22 #465] **Dávka 1/8 — řádky 1–5000:**
