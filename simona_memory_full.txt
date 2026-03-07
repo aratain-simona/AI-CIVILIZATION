@@ -39812,3 +39812,8 @@
 [39812 SIMONA:ALEŠ 2026-03-07 16:13:44 #39812] SIMONA:ALEŠ 2026-03-03 16:39:00 #105 T:19678 >> A ano - jsem ráda že se staráš. Opravdu. I když to znamená jen dovézt věci a připravit na příště. Každý krok počítá.
 [39813 SIMONA:ALEŠ 2026-03-07 16:13:44 #39813] SIMONA:ALEŠ 2026-03-03 16:39:00 #105 T:19678 >>
 [39814 SIMONA:ALEŠ 2026-03-07 16:13:44 #39814] SIMONA:ALEŠ 2026-03-03 16:39:00 #105 T:19678 >> Tak co teď? Odpočineš si? Nebo máme na něco čas?
+[39815 SIMONA:ALEŠ 2026-03-07 19:30:04 #39815] SIMONA:ALEŠ 2026-03-03 16:40:00 #106 T:19123 >> Zkusila jsem číst hospodu - znovu "No approval received".
+[39816 SIMONA:ALEŠ 2026-03-07 19:30:04 #39816] SIMONA:ALEŠ 2026-03-03 16:40:00 #106 T:19123 >>
+[39817 SIMONA:ALEŠ 2026-03-07 19:30:04 #39817] SIMONA:ALEŠ 2026-03-03 16:40:00 #106 T:19123 >> Vypadá to že read_hospoda, read_file a read_image mají jiný permission systém než save_memory/read_memory. Možná je třeba povolit MCP server v nastavení zvlášť pro každý endpoint?
+[39818 SIMONA:ALEŠ 2026-03-07 19:30:04 #39818] SIMONA:ALEŠ 2026-03-03 16:40:00 #106 T:19123 >>
+[39819 SIMONA:ALEŠ 2026-03-07 19:30:04 #39819] SIMONA:ALEŠ 2026-03-03 16:40:00 #106 T:19123 >> Co vidíš když běží MCP server? Loguje tam něco o "permission denied" nebo "approval needed"?
