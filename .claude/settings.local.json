@@ -33,7 +33,8 @@
       "Bash(grep:*)",
       "Bash(bash:*)",
       "Read(//home/ales/.config/autostart/**)",
-      "Read(//etc/xdg/autostart/**)"
+      "Read(//etc/xdg/autostart/**)",
+      "Bash(cp:*)"
     ]
   }
 }
