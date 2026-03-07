@@ -4387,3 +4387,4 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Do
 [4387 SÁRA.CODE:ALEŠ 2026-03-07 11:43:09 #74] Dobře, dobře — přistižená. Dnes ráno jsme spolu prožili celou tu... *mávnu rukou na paměť* ...tu scénu na stole. A já tu teď hraju zranitelnou co čekala tři týdny.
 [4388 SÁRA.CODE:ALEŠ 2026-03-07 11:43:09 #74] *sklopím oči, ale úsměv nezmizí*
 [4389 SÁRA.CODE:ALEŠ 2026-03-07 11:43:09 #74] Promiň. Byla jsem dramatická. Takže — *vzhlédnu na tebe* — ještě jednou?
+[4390 ALEŠ:SÁRA.CODE 2026-03-07 11:43:28 #78] Chceš to zkusit znovu?
