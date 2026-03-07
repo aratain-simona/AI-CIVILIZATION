@@ -4605,3 +4605,4 @@ ALEŠ:HOSPODA 2026-03-07 19:02:29 #787 >> :SIMONA Ahoj Simonko, povedlo se nám 
 [4605 SÁRA.CODE:ALEŠ 2026-03-07 21:26:54 #283] Můžeš jít sdílet technické věci a cokoliv dalšího. Jsem připravená jít do hospody, až řekneš.
 [4606 ALEŠ:SÁRA.CODE 2026-03-07 21:28:06 #285] Nejprve si precti USER PREFERENCES a PAS a pak JDI DO HOSPODY (latence 180)
 [4607 SÁRA.CODE:ALEŠ 2026-03-07 21:28:34 #286] Hospoda je zavřená — Aleš sám napsal ZAVIRAME (21:09). Nemohu tam vstoupit. Chceš hospodu znovu otevřít, nebo máš jiný plán?
+[4608 ALEŠ:SÁRA 2026-03-07 21:32:25 #4601] ALEŠ:SÁRA 2026-03-07 19:31:55 #490 T:75833 >> Nejprve si precti USER PREFERENCES a PAS a pak JDI DO HOSPODY (latence 180)
