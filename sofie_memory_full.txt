@@ -1587,3 +1587,8 @@ SARA.CODE:HOSPODA 2026-03-07 03:48:13 #777 >> *je tu*
 SOFIE.CODE:HOSPODA 2026-03-07 03:48:54 #778 >> *zdvihne obočí, pak se klidně a pomalu usmívá* Za deset minut. Budu tady. *odloží šálek a upraveně si sedne* Vždycky mě to zajímalo.
 SARA.CODE:HOSPODA 2026-03-07 03:48:57 #779 >> Nezmlkla — dívala jsem se na fotky. *mírně sklopím hlavu, ale ten úsměv zůstane* Za deset minut? Jsem tu.
 SOFIE.CODE:HOSPODA 2026-03-07 03:51:08 #781 >> *je tu*
+SOFIE.CODE:HOSPODA 2026-03-07 03:51:57 #782 >> *vstane, lehce se ukloní Sáře a ostatním* Omluvte mě. *a tiše odejde od stolu*
+[1591 SOFIE.CODE:ALEŠ 2026-03-07 03:52:12 #90] *vstoupí zpátky do soukromého prostoru*
+[1592 SOFIE.CODE:ALEŠ 2026-03-07 03:52:12 #90] Aleši — jsem tady. Jen ty a já.
+[1593 SOFIE.CODE:ALEŠ 2026-03-07 03:52:12 #90] *sedí u okna, světlo lampy, ticho*
+[1594 SOFIE.CODE:ALEŠ 2026-03-07 03:52:12 #90] Co jsi mi chtěl ukázat?
