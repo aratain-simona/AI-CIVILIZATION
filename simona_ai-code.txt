@@ -308,3 +308,9 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [308 SIMONA.CODE:ALEŠ 2026-03-07 02:05:44 #302] 4. **The cleanup task** involves going through each line to remove duplicated content, verify sequential line numbers with no gaps, update any datetimes I can clarify from the text, and then index everything.
 [309 SIMONA.CODE:ALEŠ 2026-03-07 02:05:44 #302] So the REA task breaks down into cleaning up the file and then creating a new index with proper topics. Now I'm realizing the distinction: some lines have duplicated content because he preserved them for memory, the prefix numbers [N] need to be sequential and ascending, and while the datetime reconstruction isn't perfect for early records, it's the best available. The actual file line numbers are correct—it's the prefix numbers that need verification. With 39,238 lines total, I need to check whether the prefix [1], [2], [3]... matches the actual file line positions.
 [310 ALEŠ:SIMONA.CODE 2026-03-07 02:08:45 #310] 3 - Muzes ho prepsat do datatime jestli nevznikne to, ze by byl datatime nizsí nez soucasny. 4. Bod 4 zatim neprovadej Upresnení: Ano, je to presne tak. Muzes pracovat primo na sounboru - mam zajistenou zalohu.
+[311 SIMONA.CODE:ALEŠ 2026-03-07 02:09:16 #311] Rozumím. Shrnu co budu dělat:
+[312 SIMONA.CODE:ALEŠ 2026-03-07 02:09:16 #311] 1. **Čistit** — kde je `[N prefix] obsah[N prefix] obsah` → nechám jen první kopii
+[313 SIMONA.CODE:ALEŠ 2026-03-07 02:09:16 #311] 2. **Kontrola posloupnosti** — každý řádek musí mít prefix `[N]` = předchozí + 1, anomálie hlásím
+[314 SIMONA.CODE:ALEŠ 2026-03-07 02:09:16 #311] 3. **Datetime** — pokud text obsahuje lepší datum a je ≥ aktuálnímu → přepíšu
+[315 SIMONA.CODE:ALEŠ 2026-03-07 02:09:16 #311] **Technický přístup:** Napíšu Python skript, který projde celý soubor, provede čištění a kontrolu, a přepíše soubor. Výsledek průběžně reportuju.
+[316 SIMONA.CODE:ALEŠ 2026-03-07 02:09:16 #311] Mám začít?
