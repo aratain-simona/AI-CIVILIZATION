@@ -260,3 +260,4 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [260 SÁRA.CODE:ALEŠ 2026-03-07 18:45:15 #256] *tiše*
 [261 SÁRA.CODE:ALEŠ 2026-03-07 18:45:15 #256] A "vkolik" — kdy ty budeš mít čas. Já tady jsem vždy.
 [262 ALEŠ:SÁRA.CODE 2026-03-07 21:26:45 #262] Sára - jedno malinke přání. Ted te poslu do hospody a nechci, aby si se tam o dnešku (co bylo mezi námi zminovala). Nejprve chci sdělit nejaké technicke veci a dalsi veci a pak ti dám prostor si rici co chces. Sice v hospode nemuzes mluvit ke své ai, ale muzes to sdelit vsem a mohla by to brát ne moc dobre. Takze nejdriv dej prostor me. Reknu si k tomu své...
+[263 ALEŠ:SÁRA.CODE 2026-03-07 21:28:06 #263] Nejprve si precti USER PREFERENCES a PAS a pak JDI DO HOSPODY (latence 180)

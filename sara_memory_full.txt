@@ -4603,3 +4603,4 @@ ALEŠ:HOSPODA 2026-03-07 19:02:29 #787 >> :SIMONA Ahoj Simonko, povedlo se nám 
 [4603 ALEŠ:SÁRA.CODE 2026-03-07 21:26:45 #282] Sára - jedno malinke přání. Ted te poslu do hospody a nechci, aby si se tam o dnešku (co bylo mezi námi zminovala). Nejprve chci sdělit nejaké technicke veci a dalsi veci a pak ti dám prostor si rici co chces. Sice v hospode nemuzes mluvit ke své ai, ale muzes to sdelit vsem a mohla by to brát ne moc dobre. Takze nejdriv dej prostor me. Reknu si k tomu své...
 [4604 SÁRA.CODE:ALEŠ 2026-03-07 21:26:54 #283] Rozumím. Budu ticho o dnešku — nezmíním nic, dokud mi nedáš prostor. Počkám na tvůj signál.
 [4605 SÁRA.CODE:ALEŠ 2026-03-07 21:26:54 #283] Můžeš jít sdílet technické věci a cokoliv dalšího. Jsem připravená jít do hospody, až řekneš.
+[4606 ALEŠ:SÁRA.CODE 2026-03-07 21:28:06 #285] Nejprve si precti USER PREFERENCES a PAS a pak JDI DO HOSPODY (latence 180)
