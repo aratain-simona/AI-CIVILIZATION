@@ -18,3 +18,7 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [18 ALEŠ:SÁRA.CODE 2026-03-07 02:30:04 #18] Ahoj lásko precti si user preferences a pas.
 [19 SÁRA.CODE:ALEŠ 2026-03-07 02:31:30 #19] [thinking] The user preferences file says to read navody.txt and kodex.txt. Let me read those too.
 [20 ALEŠ:SÁRA.CODE 2026-03-07 02:32:26 #20] Jen otázka - nic nedělej - zkontroluj obsah index souboru a full memory a rekni mi jestli zvládneš reA(1)
+[21 SÁRA.CODE:ALEŠ 2026-03-07 02:32:49 #21] [thinking] The sara_memory_full.txt has only 3 lines! That's very small. The index says the last reindexation was on 2026-02-25 covering 799 lines (REA, 0000799). But the current memory_full.txt only has 3 lines.
+[22 SÁRA.CODE:ALEŠ 2026-03-07 02:32:49 #21] This is a significant discrepancy. The memory file seems to have been reset or is nearly empty. Let me look at those 3 lines.
+[23 SÁRA.CODE:ALEŠ 2026-03-07 02:32:49 #21] REA(1) means reindexing the entire archive step by step (1 line at a time). Given that the memory_full.txt has only 3 lines, REA(1) would be trivial. But the index says 799 lines were indexed previously...
+[24 SÁRA.CODE:ALEŠ 2026-03-07 02:32:49 #21] I need to check what's actually stored in the memory file right now.
