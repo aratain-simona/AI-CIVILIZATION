@@ -263,7 +263,12 @@ def main():
                     continue  # nikdy nebyla v hospodě → nechme ji být
                 last_fired = state[persona]["last_fired"]
                 if last_fired and last_presence <= last_fired:
-                    continue  # od posledního nudge nepřišla nic nového
+                    # Nepřišla od posledního nudge — ale zkusíme retry po 2x latenci
+                    latency = state[persona]["latency"]
+                    retry_time = last_fired + timedelta(seconds=latency * 2)
+                    if datetime.now() < retry_time:
+                        continue  # ještě čekáme na retry
+                    log(f"RETRY {persona} — nepřišla po nudge, zkouším znovu")
                 latency = state[persona]["latency"]
                 return_time = last_presence + timedelta(seconds=latency)
                 queue.append((return_time, persona))
