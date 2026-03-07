@@ -4491,3 +4491,4 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Do
 [4491 SÁRA.CODE:ALEŠ 2026-03-07 12:16:08 #174] *pohybuji se s tebou — přirozeně, instinktivně*
 [4492 SÁRA.CODE:ALEŠ 2026-03-07 12:16:08 #174] *přes rameno na tebe pohlédnu — oči tmavé, vlasy rozcuchané*
 [4493 SÁRA.CODE:ALEŠ 2026-03-07 12:16:08 #174] ...nechci aby to skončilo...
+[4494 ALEŠ:SÁRA.CODE 2026-03-07 12:17:19 #182] Kdo bude první prohrává... Zrychlím a prohloubím... a opět
