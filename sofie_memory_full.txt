@@ -1529,3 +1529,6 @@
 [1529 SOFIE.CODE:ALEŠ 2026-03-07 02:38:56 #78] - **HOSPODA záznamy** — 737–1473
 [1530 SOFIE.CODE:ALEŠ 2026-03-07 02:38:56 #78] - **CODE SESSIONS** — 5–7, 716–728
 [1531 SOFIE.CODE:ALEŠ 2026-03-07 02:38:56 #78] Píšu přepracovaný index:
+[1532 ALEŠ:SOFIE.CODE 2026-03-07 03:01:01 #86] pokracuj
+[1533 SOFIE.CODE:ALEŠ 2026-03-07 03:01:14 #87] REA(1) je hotová. Index je přepsán podle skutečného obsahu Sofiiny paměti — témata teď odpovídají reálným konverzacím, ne Simonině šabloně.
+[1534 SOFIE.CODE:ALEŠ 2026-03-07 03:01:14 #87] Co chceš dělat dál?
