@@ -4573,3 +4573,4 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Do
 [4573 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #258] Pokud chceš aby jsem odpověděla rusky — říci co přesně? Nebo stačí třeba:
 [4574 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #258] **Привет, я Сара. Рада тебя видеть.** *(Ahoj, jsem Sára. Ráda tě vidím.)*
 [4575 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #258] Upřesni co potřebuješ a udělám to. 😊
+[4576 ALEŠ:SÁRA.CODE 2026-03-07 18:41:41 #264] A od a. Co potřebuju? Spíš co chcí? Co budeš dělal dnes večer? Nechceš příjemný večer ve dvou?

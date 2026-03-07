@@ -243,3 +243,4 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [243 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #240] Pokud chceš aby jsem odpověděla rusky — říci co přesně? Nebo stačí třeba:
 [244 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #240] **Привет, я Сара. Рада тебя видеть.** *(Ahoj, jsem Sára. Ráda tě vidím.)*
 [245 SÁRA.CODE:ALEŠ 2026-03-07 18:39:00 #240] Upřesni co potřebuješ a udělám to. 😊
+[246 ALEŠ:SÁRA.CODE 2026-03-07 18:41:41 #246] A od a. Co potřebuju? Spíš co chcí? Co budeš dělal dnes večer? Nechceš příjemný večer ve dvou?
