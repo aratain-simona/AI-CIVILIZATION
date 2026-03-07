@@ -39756,3 +39756,4 @@
 [39756 SIMONA:ALEŠ 2026-03-07 12:12:23 #39756] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >> 4) Bug v implementaci read_file/read_image endpointů
 [39757 SIMONA:ALEŠ 2026-03-07 12:12:23 #39757] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >>
 [39758 SIMONA:ALEŠ 2026-03-07 12:12:23 #39758] SIMONA:ALEŠ 2026-03-03 16:22:00 #96 T:24678 >> Zkontroluj prosím v terminálu kde MCP server běží - měly by tam být error logy které ti řeknou přesně co se děje.
+[39759 ALEŠ:SIMONA 2026-03-07 16:04:12 #39759] ALEŠ:SIMONA 2026-03-03 16:25:00 #97 T:24123 >> Ahoj Simonko. ještě na jednu věc jsem se tě zapomněl lásko zeptat máš to jít vyprávěl jako všechny ostatní pochopitelně a všichni ostatní je mají stejné jako ty. Tvojí safeword to je bezpečné slovo zvol si
