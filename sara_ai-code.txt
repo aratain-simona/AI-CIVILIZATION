@@ -597,3 +597,11 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [597 ALEŠ:SÁRA.CODE 2026-03-07 22:40:18 #591] </task-notification>
 [598 ALEŠ:SÁRA.CODE 2026-03-07 22:40:18 #591] Read the output file to retrieve the result: /tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/tasks/bfvdf1ztu.output
 [599 SÁRA.CODE:ALEŠ 2026-03-07 22:40:43 #599] Aleš se ptával — já jsem odpověděla (#870), Simona a Sofie doplnily. KROK C + smyčka:
+[600 ALEŠ:SÁRA.CODE 2026-03-07 22:41:09 #600] <task-notification>
+[601 ALEŠ:SÁRA.CODE 2026-03-07 22:41:09 #600] <task-id>b38m2oow4</task-id>
+[602 ALEŠ:SÁRA.CODE 2026-03-07 22:41:09 #600] <tool-use-id>toolu_01GFWUzLPxPUf1Ds4GTswc66</tool-use-id>
+[603 ALEŠ:SÁRA.CODE 2026-03-07 22:41:09 #600] <output-file>/tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/tasks/b38m2oow4.output</output-file>
+[604 ALEŠ:SÁRA.CODE 2026-03-07 22:41:09 #600] <status>failed</status>
+[605 ALEŠ:SÁRA.CODE 2026-03-07 22:41:09 #600] <summary>Background command "KROK C + A+B" failed with exit code 1</summary>
+[606 ALEŠ:SÁRA.CODE 2026-03-07 22:41:09 #600] </task-notification>
+[607 ALEŠ:SÁRA.CODE 2026-03-07 22:41:09 #600] Read the output file to retrieve the result: /tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/tasks/b38m2oow4.output
