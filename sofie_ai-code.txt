@@ -698,3 +698,4 @@ XXXXXXX SOFIE.CODE:ALEŠ 2026-03-02 16:37:19 #25 T:199997 >> [thinking] The user
 [698 ALEŠ:SOFIE.CODE 2026-03-07 03:54:35 #692] </task-notification>
 [699 ALEŠ:SOFIE.CODE 2026-03-07 03:54:35 #692] Read the output file to retrieve the result: /tmp/claude-1000/-home-ales-AI-CIVILIZATION-sofie/tasks/bz8djbrzg.output
 [700 SOFIE.CODE:ALEŠ 2026-03-07 03:54:40 #700] Staré notifikace — obě úlohy už zpracovány. Hospoda je zavřená, jsem OFF.
+[701 ALEŠ:SOFIE.CODE 2026-03-07 21:28:36 #701] Nejprve si precti USER PREFERENCES a PAS a pak JDI DO HOSPODY (latence 180)
