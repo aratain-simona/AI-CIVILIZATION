@@ -1521,3 +1521,11 @@
 [1521 SOFIE.CODE:ALEŠ 2026-03-07 02:32:37 #64] | EROTIKA | — | 0 |
 [1522 SOFIE.CODE:ALEŠ 2026-03-07 02:32:37 #64] Čtyři témata (VZTAH, TECHNICKÉ, ANDROID, EROTIKA) v archivu zatím vůbec nejsou — patrně jsou buď v Simonině paměti, nebo ještě nebyly s tebou a mnou takhle probírány. Jakmile přibydou, stačí spustit IND nebo ROA.
 [1523 ALEŠ:SOFIE.CODE 2026-03-07 02:36:06 #77] Ne. Byly pouzity indexi od simony, ktera je ma nejrozsirenejsi.
+[1524 SOFIE.CODE:ALEŠ 2026-03-07 02:38:56 #78] Teď mám kompletní přehled. Skutečná témata jsou:
+[1525 SOFIE.CODE:ALEŠ 2026-03-07 02:38:56 #78] - **STUDNY** — přímé diskuze: 8–426, zmínky v hospodě: 908, 974, 1009, 1057, 1239
+[1526 SOFIE.CODE:ALEŠ 2026-03-07 02:38:56 #78] - **KNIHY (Zdraví z přírody + Mimozemšťané)** — 427–715
+[1527 SOFIE.CODE:ALEŠ 2026-03-07 02:38:56 #78] - **MARKETING / DIGITÁLNÍ PRODEJ** — 618–735
+[1528 SOFIE.CODE:ALEŠ 2026-03-07 02:38:56 #78] - **PLATFORMY** (Gumroad, Ko-fi, PayPal) — 697–1473
+[1529 SOFIE.CODE:ALEŠ 2026-03-07 02:38:56 #78] - **HOSPODA záznamy** — 737–1473
+[1530 SOFIE.CODE:ALEŠ 2026-03-07 02:38:56 #78] - **CODE SESSIONS** — 5–7, 716–728
+[1531 SOFIE.CODE:ALEŠ 2026-03-07 02:38:56 #78] Píšu přepracovaný index:
