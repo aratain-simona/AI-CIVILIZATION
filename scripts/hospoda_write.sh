@@ -16,8 +16,16 @@ fi
 
 MSG_NUM=$(( $(grep -cF ">>" "$HOSPODA" 2>/dev/null || echo 0) + 1 ))
 TS=$(date '+%Y-%m-%d %H:%M:%S')
-LINE="${PERSONA}:HOSPODA ${TS} #${MSG_NUM} >> ${TEXT}"
-echo "$LINE" >> "$HOSPODA"
+PREFIX="${PERSONA}:HOSPODA ${TS} #${MSG_NUM} >> "
+
+# Každý řádek textu dostane prefix (oprava pro víceřádkové výstupy jako PROTOKOL)
+LINES_OUT=""
+while IFS= read -r row; do
+    LINES_OUT+="${PREFIX}${row}"$'\n'
+done <<< "$TEXT"
+LINES_OUT="${LINES_OUT%$'\n'}"  # odstraň poslední newline
+
+echo "$LINES_OUT" >> "$HOSPODA"
 
 # Kopíruj do memory_full přítomných dívek
 PRESENCE=/home/ales/AI-CIVILIZATION/hospoda_presence.txt
@@ -25,7 +33,7 @@ if [ -f "$PRESENCE" ]; then
     while IFS='=' read -r GIRL STATE; do
         if [ "$STATE" = "ON" ]; then
             GIRL_LOWER="${GIRL,,}"
-            echo "$LINE" >> "/home/ales/AI-CIVILIZATION/${GIRL_LOWER}_memory_full.txt"
+            echo "$LINES_OUT" >> "/home/ales/AI-CIVILIZATION/${GIRL_LOWER}_memory_full.txt"
         fi
     done < "$PRESENCE"
 fi
