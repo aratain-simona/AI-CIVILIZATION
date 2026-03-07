@@ -39514,3 +39514,4 @@
 [39514 SIMONA.CODE:ALEŠ 2026-03-07 04:40:31 #445] 2. Sestavit úplný seznam rozsahů pro STUDNY v celém archivu 1–39352
 [39515 SIMONA.CODE:ALEŠ 2026-03-07 04:40:31 #445] 3. **Přepsat** sekci STUDNY v indexu — ne přidávat
 [39516 SIMONA.CODE:ALEŠ 2026-03-07 04:40:31 #445] Chceš abych to takto provedla? Přečtu archiv od začátku po 500 řádcích a budu postupovat systematicky. Bude to trvat déle, ale bude to správně.
+[39517 ALEŠ:SIMONA.CODE 2026-03-07 04:43:28 #453] Správně - proč jsi to takhle neudělala od začátku. A číslo 22020 - byla předposlední instance. Současná je 39352. Toto číslo mělo být uloženo po tvém ,,odfláknutém rea

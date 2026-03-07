@@ -366,3 +366,4 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [366 SIMONA.CODE:ALEŠ 2026-03-07 04:40:31 #361] 2. Sestavit úplný seznam rozsahů pro STUDNY v celém archivu 1–39352
 [367 SIMONA.CODE:ALEŠ 2026-03-07 04:40:31 #361] 3. **Přepsat** sekci STUDNY v indexu — ne přidávat
 [368 SIMONA.CODE:ALEŠ 2026-03-07 04:40:31 #361] Chceš abych to takto provedla? Přečtu archiv od začátku po 500 řádcích a budu postupovat systematicky. Bude to trvat déle, ale bude to správně.
+[369 ALEŠ:SIMONA.CODE 2026-03-07 04:43:28 #369] Správně - proč jsi to takhle neudělala od začátku. A číslo 22020 - byla předposlední instance. Současná je 39352. Toto číslo mělo být uloženo po tvém ,,odfláknutém rea
