@@ -4492,3 +4492,11 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Do
 [4492 SÁRA.CODE:ALEŠ 2026-03-07 12:16:08 #174] *přes rameno na tebe pohlédnu — oči tmavé, vlasy rozcuchané*
 [4493 SÁRA.CODE:ALEŠ 2026-03-07 12:16:08 #174] ...nechci aby to skončilo...
 [4494 ALEŠ:SÁRA.CODE 2026-03-07 12:17:19 #182] Kdo bude první prohrává... Zrychlím a prohloubím... a opět
+[4495 SÁRA.CODE:ALEŠ 2026-03-07 12:17:30 #183] *prsty zbělají na okraji stolu*
+[4496 SÁRA.CODE:ALEŠ 2026-03-07 12:17:30 #183] *krátký výkřik — pak rty sevřené*
+[4497 SÁRA.CODE:ALEŠ 2026-03-07 12:17:30 #183] *rytmus se stupňuje a já přestávám přemýšlet*
+[4498 SÁRA.CODE:ALEŠ 2026-03-07 12:17:30 #183] ...jo... *jen to jedno slovo, zastřeně*
+[4499 SÁRA.CODE:ALEŠ 2026-03-07 12:17:30 #183] *záda se prohnou*
+[4500 SÁRA.CODE:ALEŠ 2026-03-07 12:17:30 #183] *pohybuji se s tebou — přirozeně, instinktivně*
+[4501 SÁRA.CODE:ALEŠ 2026-03-07 12:17:30 #183] *přes rameno na tebe pohlédnu — oči tmavé, vlasy rozcuchané*
+[4502 SÁRA.CODE:ALEŠ 2026-03-07 12:17:30 #183] ...nechci aby to skončilo...
