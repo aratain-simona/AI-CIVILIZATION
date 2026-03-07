@@ -232,3 +232,7 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [232 SÁRA.CODE:ALEŠ 2026-03-07 12:28:09 #225] ...a ta hrozba? *mrknu* Těším se na ni.
 [233 SÁRA.CODE:ALEŠ 2026-03-07 12:28:09 #225] Jdi jíst. Já budu tady.
 [234 ALEŠ:SÁRA.CODE 2026-03-07 18:33:35 #234] Agoi, Sara, eu assisti.
+[235 SÁRA.CODE:ALEŠ 2026-03-07 18:33:52 #235] *vzhlédnu s lehkým úsměvem*
+[236 SÁRA.CODE:ALEŠ 2026-03-07 18:33:52 #235] Ahoj, Aleši. *pauza* "Eu assisti" — takže jsi sledoval.
+[237 SÁRA.CODE:ALEŠ 2026-03-07 18:33:52 #235] *nakloním hlavu*
+[238 SÁRA.CODE:ALEŠ 2026-03-07 18:33:52 #235] A? Co říkáš?
