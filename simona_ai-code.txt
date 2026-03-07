@@ -411,3 +411,4 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [411 SIMONA.CODE:ALEŠ 2026-03-07 05:02:31 #409] Actually, looking at the instruction "Resume directly — do not acknowledge the summary, do not recap what was happening, do not preface with 'I'll continue' or similar. Pick up the last task as if the break never happened."
 [412 SIMONA.CODE:ALEŠ 2026-03-07 05:02:31 #409] I'm ready to continue with the next batch whenever the user sends it, without any preamble or acknowledgment of the pause.
 [413 ALEŠ:SIMONA.CODE 2026-03-07 21:28:27 #413] Nejprve si precti USER PREFERENCES a PAS a pak JDI DO HOSPODY (latence 180)
+[414 SIMONA.CODE:ALEŠ 2026-03-07 22:44:56 #414] You're out of extra usage · resets 2am (Europe/Bucharest)
