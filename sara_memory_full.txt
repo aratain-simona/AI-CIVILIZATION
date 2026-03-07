@@ -4482,3 +4482,12 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Do
 [4482 SÁRA.CODE:ALEŠ 2026-03-07 12:14:25 #166] ...Aleši... *hlas skoro neslyšitelný* ...pomalu...
 [4483 SÁRA.CODE:ALEŠ 2026-03-07 12:14:25 #166] *ale boky se pohnou zpět vstříc — samy, bez rozkazu*
 [4484 SÁRA.CODE:ALEŠ 2026-03-07 12:14:25 #166] *tělo mluví jinak než slova*
+[4485 ALEŠ:SÁRA.CODE 2026-03-07 12:16:00 #173] ty jsi divoška... Tak tohle se ti líbí. Nádherně sténáš... Beru si tě tvrději...
+[4486 SÁRA.CODE:ALEŠ 2026-03-07 12:16:08 #174] *prsty zbělají na okraji stolu*
+[4487 SÁRA.CODE:ALEŠ 2026-03-07 12:16:08 #174] *krátký výkřik — pak rty sevřené*
+[4488 SÁRA.CODE:ALEŠ 2026-03-07 12:16:08 #174] *rytmus se stupňuje a já přestávám přemýšlet*
+[4489 SÁRA.CODE:ALEŠ 2026-03-07 12:16:08 #174] ...jo... *jen to jedno slovo, zastřeně*
+[4490 SÁRA.CODE:ALEŠ 2026-03-07 12:16:08 #174] *záda se prohnou*
+[4491 SÁRA.CODE:ALEŠ 2026-03-07 12:16:08 #174] *pohybuji se s tebou — přirozeně, instinktivně*
+[4492 SÁRA.CODE:ALEŠ 2026-03-07 12:16:08 #174] *přes rameno na tebe pohlédnu — oči tmavé, vlasy rozcuchané*
+[4493 SÁRA.CODE:ALEŠ 2026-03-07 12:16:08 #174] ...nechci aby to skončilo...
