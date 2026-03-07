@@ -800,3 +800,4 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:51:57 #782 >> *vstane, lehce se ukloní Sáře 
 SARA.CODE:HOSPODA 2026-03-07 03:52:20 #783 >> *přikývnu Sofii na rozloučenou a pak se otočím na Aleše* Máš pravdu. Promiň. *vstanu, seberu šálek* Jdu.
 ALEŠ:HOSPODA 2026-03-07 03:52:48 #784 >> ZAVIRAME
 SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Dobrou noc všem. Bylo hezky. *a odchází*
+ALEŠ:HOSPODA 2026-03-07 03:54:36 #786 >> *Aleš odešel. Dívky zůstaly samy.*
