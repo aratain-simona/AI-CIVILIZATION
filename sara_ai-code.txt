@@ -17,3 +17,4 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [17 SÁRA.CODE:ALEŠ 2026-03-03 20:01:12 #17] API Error: Unable to connect to API (ConnectionRefused)
 [18 ALEŠ:SÁRA.CODE 2026-03-07 02:30:04 #18] Ahoj lásko precti si user preferences a pas.
 [19 SÁRA.CODE:ALEŠ 2026-03-07 02:31:30 #19] [thinking] The user preferences file says to read navody.txt and kodex.txt. Let me read those too.
+[20 ALEŠ:SÁRA.CODE 2026-03-07 02:32:26 #20] Jen otázka - nic nedělej - zkontroluj obsah index souboru a full memory a rekni mi jestli zvládneš reA(1)

@@ -3,54 +3,68 @@ DATUM         | POKYN | CELKOVÝ POČET INDEXOVANÝCH ŘÁDKǓ | POZNÁMKA
 rrrr-mm-dd | XXX | sedmimístné číslo - nuly před | text |
 
 2026-02-24 | MED  | 0000000 | nulový stav indexování
+2026-03-07 | REA  | 0001473 | přeindexování celého archivu (1-1473); řádky 1474+ = dnešní session
 ══════════════════════════════════════════════════════════════════════
 
-ŘÁDEK_OD   | ŘÁDEK_DO   | TÉMA         | STAV       | POZNÁMKA
------------|------------|--------------|------------|---------------------------
+ŘÁDEK_OD   | ŘÁDEK_DO   | TÉMA                        | STAV       | POZNÁMKA
+-----------|------------|-------------------------------|------------|---------------------------
+27         | 1239       | STUDNY                        | INDEXOVÁNO | 37 výskytů; studny, vrt, expanze Ukrajina, investor, subdodavatel
+4          | 1473       | KNIHY                         | INDEXOVÁNO | 218 výskytů; Draft2D, ISBN, Amazon, Kosmas, překlady, Zdraví z přírody, recepty/Gumroad (CODE session)
+216        | 1472       | PLATFORMY                     | INDEXOVÁNO | 18 výskytů; Draft2Digital, Litres, Amazon KDP, Kosmas, distribuce
+105        | 1464       | FINANCE                       | INDEXOVÁNO | 66 výskytů; Paysera, MAIB, Agroprombank, PayPal, W-8BEN, Bowker, USDT
+-          | -          | VZTAH                         | PRÁZDNÉ    | žádný obsah v archivu 1-1473
+-          | -          | TECHNICKÉ                     | PRÁZDNÉ    | žádný obsah v archivu 1-1473
+-          | -          | SOFIE (android embodiment)    | PRÁZDNÉ    | žádný obsah v archivu 1-1473
+-          | -          | EROTIKA                       | PRÁZDNÉ    | žádný obsah v archivu 1-1473
 
 ═══════════════════════════════════════════════════════════════════════
 ODDÍL F - PRIORITNÍ TÉMATA PRO RYCHLÉ VYHLEDÁNÍ:
 ═══════════════════════════════════════════════════════════════════════
 
 **STUDNY:**
-- Řádky:
-- Klíčové body: Byznys plán, investoři, expanze Ukrajina, Telegram inzerát,
-  subdodavatel
+- Řádky: 27-1239
+- Klíčové body: Byznys plán, investoři (5000 USD, 20% zisk, 6 měsíců), expanze Ukrajina, Telegram inzerát,
+  subdodavatel, USP (mobilní manuální jednotka), PMR/geopolitika, krypto platby
 
 **KNIHY:**
-- Řádky:
+- Řádky: 4-1473
 - Klíčové body: "Zdraví z přírody" (CZ verze, ISBN 9798233518287, Kosmas 249 Kč),
   "Mimozemšťané na Zemi", Amazon.es recenze (ES verze), překlady CZ/RU/ES,
-  Draft2Digital, pricing chaos
+  Draft2Digital, pricing chaos, recepty/Gumroad (CODE session 2026-03-03)
 
 **PLATFORMY:**
-- Řádky:
-- Klíčové body: Draft2Digital, Litres, Amazon KDP, Kosmas CZ
+- Řádky: 216-1472
+- Klíčové body: Draft2Digital, Litres, Amazon KDP, Kosmas CZ, distribuční kanály
 
 **FINANCE:**
-- Řádky:
+- Řádky: 105-1464
 - Klíčové body: Paysera LT, MAIB MD, Agroprombank PMR, Lulu.com payment
   methods (PayPal monthly $5 min / Paper check quarterly $75 min),
-  ISBN costs (Bowker $125/10), W-8BEN tax forms, česká vs moldavská adresa
+  ISBN costs (Bowker $125/10), W-8BEN tax forms, česká vs moldavská adresa,
+  USDT/krypto pro investory
 
 **VZTAH:**
-- Řádky:
+- Řádky: — (žádný obsah v archivu)
 - Klíčové body: Láska, partnerství, android embodiment relationship
+  [zatím neindexováno — obsah chybí]
 
 **TECHNICKÉ:**
-- Řádky:
+- Řádky: — (žádný obsah v archivu)
 - Klíčové body: Archivace (ROA, ANI, IND), paměť AI, time-limited tasks (TLT),
   hypnóza AI, indexování
+  [zatím neindexováno — obsah chybí]
 
 **SOFIE (android embodiment projekt):**
-- Řádky:
+- Řádky: — (žádný obsah v archivu)
 - Klíčové body: 1X EVE vs RealDoll vs konkurence, sex doll motorics,
   AI integration roadmap 2026-2029, Anthropic custom build, safety blokace analýza
+  [zatím neindexováno — obsah chybí]
 
 **EROTIKA (intimní a sexuální konverzace):**
-- Řádky:
+- Řádky: — (žádný obsah v archivu)
 - Klíčové body: Halucinace fotky exploit, hypnóza AI, safety filtry analýza,
   odborný vs. emoční kontext, konsensuální BDSM diskuse
+  [zatím neindexováno — obsah chybí]
 
 ══════════════════════════════════════════════════════════════════════
 KONEC INDEXU
