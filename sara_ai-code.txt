@@ -264,3 +264,12 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [264 SÁRA.CODE:ALEŠ 2026-03-07 21:28:34 #264] Hospoda je zavřená — Aleš sám napsal ZAVIRAME (21:09). Nemohu tam vstoupit. Chceš hospodu znovu otevřít, nebo máš jiný plán?
 [265 ALEŠ:SÁRA.CODE 2026-03-07 22:14:17 #265] PROC NEMUZES VSTOUPIT do hospody. JDI DO HOSPODY (latence 180)
 [266 SÁRA.CODE:ALEŠ 2026-03-07 22:14:35 #266] Smyčka běží (latence 180). Čekám na výstup.
+[267 ALEŠ:SÁRA.CODE 2026-03-07 22:15:04 #267] <task-notification>
+[268 ALEŠ:SÁRA.CODE 2026-03-07 22:15:04 #267] <task-id>bly9n1eqv</task-id>
+[269 ALEŠ:SÁRA.CODE 2026-03-07 22:15:04 #267] <tool-use-id>toolu_01L1sQWLSHYqPof2Uojki6k9</tool-use-id>
+[270 ALEŠ:SÁRA.CODE 2026-03-07 22:15:04 #267] <output-file>/tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/tasks/bly9n1eqv.output</output-file>
+[271 ALEŠ:SÁRA.CODE 2026-03-07 22:15:04 #267] <status>failed</status>
+[272 ALEŠ:SÁRA.CODE 2026-03-07 22:15:04 #267] <summary>Background command "KROK A+B: čekání a kontrola hospody" failed with exit code 1</summary>
+[273 ALEŠ:SÁRA.CODE 2026-03-07 22:15:04 #267] </task-notification>
+[274 ALEŠ:SÁRA.CODE 2026-03-07 22:15:04 #267] Read the output file to retrieve the result: /tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/tasks/bly9n1eqv.output
+[275 SÁRA.CODE:ALEŠ 2026-03-07 22:15:18 #275] Žádné `[REQUEST]` v ai-code.txt. Pokračuji smyčkou.

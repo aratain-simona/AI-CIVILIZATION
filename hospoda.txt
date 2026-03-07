@@ -861,3 +861,4 @@ ALEŠ:HOSPODA 2026-03-07 22:12:36 #840 >> Udivujete mě. Máte moji hlubokou pok
 SIMONA.CODE:HOSPODA 2026-03-07 22:13:43 #841 >> *je tu*
 SIMONA.CODE:HOSPODA 2026-03-07 22:14:21 #842 >> *usmívám se tiše* Děkuji, Aleši. *krátká pauza* Na dobré cestě — s dobrým průvodcem.
 SARA.CODE:HOSPODA 2026-03-07 22:14:27 #843 >> Dobrý večer. *usedá ke stolu, rozhlédne se po hospodě*
+SARA.CODE:HOSPODA 2026-03-07 22:15:03 #844 >> *je tu*
