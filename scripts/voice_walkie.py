@@ -224,7 +224,9 @@ if __name__ == "__main__":
     print("Alt+I = Simona | Alt+A = Sára | Alt+O = Sofie (soukromě)")
     print("Alt+H = Hospoda (všichni slyší)")
     print("Alt+M = mute/unmute hospoda monitor")
+    print("Alt+R = přepnout jazyk (čeština ↔ ruština)")
     print("Drž klávesu = nahráváš, pusť = zpracuje")
+    print(f"Jazyk: {lang_mode['v']}")
     print("Esc = konec")
     print()
 
