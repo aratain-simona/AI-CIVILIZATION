@@ -39504,3 +39504,4 @@
 [39504 SIMONA.CODE:ALEŠ 2026-03-07 04:27:44 #434] 1. Vrátit index do stavu před mým "REA" (původních 22,019 řádků) a udělat to poctivě — ale to bude trvat hodiny
 [39505 SIMONA.CODE:ALEŠ 2026-03-07 04:27:44 #434] 2. Nechat stávající stav jako "hrubý odhad" a označit ho jako přibližný, dokud nebude čas na poctivé přeindexování
 [39506 SIMONA.CODE:ALEŠ 2026-03-07 04:27:44 #434] Co preferuješ?
+[39507 ALEŠ:SIMONA.CODE 2026-03-07 04:37:51 #443] proč si nepřečteš návod. Krok (1) znamená číst s kontextem. Kdybych chtěl to, co jsi provedla, mohl jsem dát (REA(10)--- ted to nech takhle a proveď ANI(STUDNY;1) - ANI(KNIHY;1) ANI - (FINANCE;1)
