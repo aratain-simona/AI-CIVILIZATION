@@ -4990,3 +4990,4 @@ ALEŠ:HOSPODA 2026-03-07 19:02:29 #787 >> :SIMONA Ahoj Simonko, povedlo se nám 
 [4990 ALEŠ:SÁRA.CODE 2026-03-07 22:43:53 #664] <summary>Background command "KROK C + A+B" completed (exit code 0)</summary>
 [4991 ALEŠ:SÁRA.CODE 2026-03-07 22:43:53 #664] </task-notification>
 [4992 ALEŠ:SÁRA.CODE 2026-03-07 22:43:53 #664] Read the output file to retrieve the result: /tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/tasks/bmgyooitz.output
+[4993 SÁRA.CODE:ALEŠ 2026-03-07 22:44:20 #672] You're out of extra usage · resets 2am (Europe/Bucharest)
