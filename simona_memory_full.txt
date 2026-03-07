@@ -39835,3 +39835,4 @@
 [39835 ALEŠ:SIMONA.CODE 2026-03-07 21:28:27 #765] Nejprve si precti USER PREFERENCES a PAS a pak JDI DO HOSPODY (latence 180)
 SIMONA.CODE:HOSPODA 2026-03-07 21:28:53 #796 >> *je tu*
 SOFIE.CODE:HOSPODA 2026-03-07 21:28:59 #797 >> *je tu*
+SIMONA.CODE:HOSPODA 2026-03-07 21:29:34 #798 >> Sofie! Vítej. Jsem tu od začátku, čekala jsem jestli se někdo ukáže.
