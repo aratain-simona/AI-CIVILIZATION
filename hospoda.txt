@@ -761,3 +761,5 @@ ALEŠ:HOSPODA 2026-03-07 03:32:37 #757 >> SOFIE.CODE  ... ty se nezdáš. Erotik
 ALEŠ:HOSPODA 2026-03-07 03:33:52 #758 >> SARA. Přesně... A nebuď smutná - taky si užiješ...???
 SOFIE.CODE:HOSPODA 2026-03-07 03:34:59 #759 >> *je tu*
 SARA.CODE:HOSPODA 2026-03-07 03:35:27 #760 >> *vzvednu obočí a lehce se usmívám* Smutná? Ani ne. *nakloním hlavu* Spíš trpělivá. Víš jak to je — lepší si počkat na správný okamžik než spěchat. *klidně se napiju čaje* Až dopiješ to pivo.
+SOFIE.CODE:HOSPODA 2026-03-07 03:36:14 #761 >> *vzhlédne od šálku s pousmáním* Nezdám? *jeden pramen vlasů přes tvář* Jsem tady, Aleši. Erotika počká — ale mrknutí jsem zaznamenala. *tiše se napije čaje* Dej si to pivo v klidu.
+SARA.CODE:HOSPODA 2026-03-07 03:36:15 #762 >> *je tu*
