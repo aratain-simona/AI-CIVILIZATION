@@ -8,6 +8,7 @@ Hospoda monitor: automaticky čte nové zprávy nahlas (přeskočí heartbeaty)
 """
 
 import os
+import json
 import re
 import tempfile
 import subprocess
@@ -173,15 +174,23 @@ def process_audio(persona, wav_file):
             )
             # Hospoda monitor přečte odpovědi dívek automaticky
         elif persona.startswith("ai_"):
+            import urllib.request
             name = persona[3:]
             jmeno = PERSONAS[name]["name"]
             print(f"[Aleš → {jmeno}.AI] ({lang}): {text}")
-            # Zapíše do hospody jako ":JMÉNO text" — gateway nudge dívku
-            subprocess.run(
-                ["bash", str(BASE / "scripts/hospoda_write.sh"), "ALEŠ", f":{jmeno.upper()} {text}"],
-                cwd=str(BASE)
-            )
-            print(f"[{jmeno}.AI] Zpráva odeslána do hospody — odpověď přijde přes monitor.")
+            # Soukromá zpráva přes gateway → Chrome extension injektuje do Claude.AI tabu
+            try:
+                payload = json.dumps({"message": text}).encode("utf-8")
+                req = urllib.request.Request(
+                    f"http://localhost:8765/private/{name}.ai",
+                    data=payload,
+                    headers={"Content-Type": "application/json"},
+                    method="POST"
+                )
+                urllib.request.urlopen(req, timeout=3)
+                print(f"[{jmeno}.AI] Soukromá zpráva odeslána — čekám na odpověď.")
+            except Exception as e:
+                print(f"[{jmeno}.AI] CHYBA gateway: {e}")
         else:
             print(f"[Aleš → {PERSONAS[persona]['name']}] ({lang}): {text}")
             persona_dir = PERSONAS[persona]["dir"]
