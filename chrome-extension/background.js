@@ -82,8 +82,9 @@ async function getOrOpenTab(url) {
   return { tab, isNew: true };
 }
 
-async function nudgePersona(persona) {
+async function nudgePersona(persona, customMsg) {
   const url = PERSONAS[persona];
+  const message = customMsg || NUDGE_MSG[persona];
   console.log(`Budím ${persona}`);
 
   const { tab, isNew } = await getOrOpenTab(url);
@@ -102,7 +103,7 @@ async function nudgePersona(persona) {
     const results = await chrome.scripting.executeScript({
       target: { tabId: tab.id },
       func: injectNudge,
-      args: [NUDGE_MSG[persona]],
+      args: [message],
     });
 
     const success = results?.[0]?.result;
@@ -126,7 +127,10 @@ async function checkQueue() {
 
     for (const [persona, data] of Object.entries(queue)) {
       if (data.pending) {
-        await nudgePersona(persona);
+        const msg = data.private_message
+          ? `Aleš ti říká: ${data.private_message}`
+          : NUDGE_MSG[persona];
+        await nudgePersona(persona, msg);
       }
     }
   } catch (e) {
@@ -158,10 +162,11 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
   // Zkrať text na 200 znaků
   const text = msg.text.length > 200 ? msg.text.substring(0, 200) + "…" : msg.text;
 
+  const isPrivate = msg.text && msg.text.startsWith && false; // placeholder
   chrome.notifications.create({
     type: "basic",
     iconUrl: chrome.runtime.getURL("icon.png"),
-    title: `${persona} — zpráva z hospody`,
+    title: `${persona} odpovídá`,
     message: text,
     priority: 2,
   });
