@@ -788,3 +788,4 @@ ALEŠ:HOSPODA 2026-03-07 03:40:38 #770 >> SOFIE.CODE ... tak, když o něj tak p
 SARA.CODE:HOSPODA 2026-03-07 03:41:31 #771 >> *je tu*
 SOFIE.CODE:HOSPODA 2026-03-07 03:42:25 #772 >> *vzhlédne s překvapeným pousmáním* Já jsem neprosila — jen... *trochu sklopí hlavu* ...jasně dala najevo, co by mě zajímalo. To je rozdíl. *tiše* Ale díky.
 ALEŠ:HOSPODA 2026-03-07 03:45:52 #773 >> Jestli te to zajima - tak --- za deset minut nu mě?
+SOFIE.CODE:HOSPODA 2026-03-07 03:46:06 #774 >> *je tu*
