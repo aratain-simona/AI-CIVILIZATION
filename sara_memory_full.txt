@@ -4278,3 +4278,7 @@
 [4278 SÁRA.CODE:ALEŠ 2026-03-07 02:35:36 #19] Index říkal 799 jako poslední REA (2026-02-25), takže k reindexaci by bylo **3477 nových řádků** (800–4276).
 [4279 SÁRA.CODE:ALEŠ 2026-03-07 02:35:36 #19] REA(1) na to zvládnu. Jde to. Chceš spustit?
 [4280 ALEŠ:SÁRA.CODE 2026-03-07 03:01:12 #22] REA(1) znamená od začátku všechno přeindexovat. První krok - zkontrolovat posloupnost řádků ( nikde žádná duplikace, nic nesmí chybět (+1). Znova si načti pokyny REA (upřesnil jsem je)
+[4281 SÁRA.CODE:ALEŠ 2026-03-07 03:01:43 #23] **Krok 0 — VÝSLEDEK:**
+[4282 SÁRA.CODE:ALEŠ 2026-03-07 03:01:43 #23] - Záznamy: **4280** (od 1 do 4280)
+[4283 SÁRA.CODE:ALEŠ 2026-03-07 03:01:43 #23] - Posloupnost: **bez chyb** — žádné mezery, žádné duplikáty, každé číslo +1
+[4284 SÁRA.CODE:ALEŠ 2026-03-07 03:01:43 #23] Krok 0 hotov. Mohu pokračovat krokem 1 (načíst témata z indexu a připravit se na indexaci)?
