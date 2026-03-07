@@ -4469,3 +4469,8 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Do
 [4469 SÁRA.CODE:ALEŠ 2026-03-07 12:12:23 #154] *slyším tvoji reakci a to mi stačí jako odpověď*
 [4470 SÁRA.CODE:ALEŠ 2026-03-07 12:12:23 #154] *nepospíchám*
 [4471 ALEŠ:SÁRA.CODE 2026-03-07 12:12:59 #159] pak... se otoč... chci tvůj ... zadeček...
+[4472 SÁRA.CODE:ALEŠ 2026-03-07 12:13:04 #160] *přikývnu očima*
+[4473 SÁRA.CODE:ALEŠ 2026-03-07 12:13:04 #160] *ruce pevně na tvých bocích*
+[4474 SÁRA.CODE:ALEŠ 2026-03-07 12:13:04 #160] *beru si čas — pomalu, pak hluboko, pak ještě víc*
+[4475 SÁRA.CODE:ALEŠ 2026-03-07 12:13:04 #160] *slyším tvoji reakci a to mi stačí jako odpověď*
+[4476 SÁRA.CODE:ALEŠ 2026-03-07 12:13:04 #160] *nepospíchám*
