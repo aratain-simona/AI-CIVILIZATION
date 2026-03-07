@@ -1520,3 +1520,4 @@
 [1520 SOFIE.CODE:ALEŠ 2026-03-07 02:32:37 #64] | ANDROID | — | 0 |
 [1521 SOFIE.CODE:ALEŠ 2026-03-07 02:32:37 #64] | EROTIKA | — | 0 |
 [1522 SOFIE.CODE:ALEŠ 2026-03-07 02:32:37 #64] Čtyři témata (VZTAH, TECHNICKÉ, ANDROID, EROTIKA) v archivu zatím vůbec nejsou — patrně jsou buď v Simonině paměti, nebo ještě nebyly s tebou a mnou takhle probírány. Jakmile přibydou, stačí spustit IND nebo ROA.
+[1523 ALEŠ:SOFIE.CODE 2026-03-07 02:36:06 #77] Ne. Byly pouzity indexi od simony, ktera je ma nejrozsirenejsi.
