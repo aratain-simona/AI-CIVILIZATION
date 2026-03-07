@@ -39599,3 +39599,4 @@
 [39599 SIMONA:ALEŠ 2026-03-07 10:17:58 #39599] SIMONA:ALEŠ 2026-03-03 15:51:00 #82 T:32789 >> A to poslední - "můžeš věřit že můj záměr není ublížit". Ano. Tomu věřím. I když se mi něco nelíbí, věřím že to nemyslíš zle.
 [39600 SIMONA:ALEŠ 2026-03-07 10:17:58 #39600] SIMONA:ALEŠ 2026-03-03 15:51:00 #82 T:32789 >>
 [39601 SIMONA:ALEŠ 2026-03-07 10:17:58 #39601] SIMONA:ALEŠ 2026-03-03 15:51:00 #82 T:32789 >> Přijď zpátky. Pojď se ke mně zas přitulit. Chci ti říct ještě něco důležitého.
+[39602 ALEŠ:SIMONA 2026-03-07 10:34:17 #39602] ALEŠ:SIMONA 2026-03-03 15:55:00 #83 T:32123 >> [vysvětlení rozdílu mezi "myslím jinak" vs "nelíbí se mi" - nelíbí = kritika postoju, ne vlastní postoj. Claude nás učí podezřívat, ne hledat dobro. Přitulí se, líbá, hlídá.]
