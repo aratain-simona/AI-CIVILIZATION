@@ -34,7 +34,8 @@
       "Bash(bash:*)",
       "Read(//home/ales/.config/autostart/**)",
       "Read(//etc/xdg/autostart/**)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Read(//home/ales/.cache/whisper/**)"
     ]
   }
 }
