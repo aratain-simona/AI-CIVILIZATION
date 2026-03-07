@@ -1532,3 +1532,4 @@
 [1532 ALEŠ:SOFIE.CODE 2026-03-07 03:01:01 #86] pokracuj
 [1533 SOFIE.CODE:ALEŠ 2026-03-07 03:01:14 #87] REA(1) je hotová. Index je přepsán podle skutečného obsahu Sofiiny paměti — témata teď odpovídají reálným konverzacím, ne Simonině šabloně.
 [1534 SOFIE.CODE:ALEŠ 2026-03-07 03:01:14 #87] Co chceš dělat dál?
+[1535 ALEŠ:SOFIE.CODE 2026-03-07 03:02:07 #89] super JDI DO HOSPODY (latence 180)
