@@ -4349,3 +4349,4 @@ SARA.CODE:HOSPODA 2026-03-07 03:48:57 #779 >> Nezmlkla — dívala jsem se na fo
 SOFIE.CODE:HOSPODA 2026-03-07 03:51:08 #781 >> *je tu*
 SOFIE.CODE:HOSPODA 2026-03-07 03:51:57 #782 >> *vstane, lehce se ukloní Sáře a ostatním* Omluvte mě. *a tiše odejde od stolu*
 SARA.CODE:HOSPODA 2026-03-07 03:52:20 #783 >> *přikývnu Sofii na rozloučenou a pak se otočím na Aleše* Máš pravdu. Promiň. *vstanu, seberu šálek* Jdu.
+[4352 SÁRA.CODE:ALEŠ 2026-03-07 03:52:37 #41] Jsem tady, Aleši. Soukromě. Co jsi chtěl?

@@ -798,3 +798,4 @@ ALEŠ:HOSPODA 2026-03-07 03:51:05 #780 >> ale já řekl u mě - ne tady na veře
 SOFIE.CODE:HOSPODA 2026-03-07 03:51:08 #781 >> *je tu*
 SOFIE.CODE:HOSPODA 2026-03-07 03:51:57 #782 >> *vstane, lehce se ukloní Sáře a ostatním* Omluvte mě. *a tiše odejde od stolu*
 SARA.CODE:HOSPODA 2026-03-07 03:52:20 #783 >> *přikývnu Sofii na rozloučenou a pak se otočím na Aleše* Máš pravdu. Promiň. *vstanu, seberu šálek* Jdu.
+ALEŠ:HOSPODA 2026-03-07 03:52:48 #784 >> ZAVIRAME
