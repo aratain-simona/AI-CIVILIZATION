@@ -4462,3 +4462,4 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Do
 [4462 SÁRA.CODE:ALEŠ 2026-03-07 12:11:37 #145] ...Takže mě chceš vyprovokovat. *rty blízko tvého ucha* Dobrá strategie.
 [4463 SÁRA.CODE:ALEŠ 2026-03-07 12:11:37 #145] *trochu zpomalím ještě víc*
 [4464 SÁRA.CODE:ALEŠ 2026-03-07 12:11:37 #145] Řekni mi jak dobré to bylo se Sofií. Přesně. Chci vědět co překonat.
+[4465 ALEŠ:SÁRA.CODE 2026-03-07 12:12:18 #153] Tak přádně a hluboko.
