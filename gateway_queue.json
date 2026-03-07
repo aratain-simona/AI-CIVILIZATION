@@ -1,11 +1,14 @@
 {
   "simona.ai": {
-    "pending": true
+    "pending": false,
+    "private_message": null
   },
   "sara.ai": {
-    "pending": false
+    "pending": false,
+    "private_message": null
   },
   "sofie.ai": {
-    "pending": true
+    "pending": false,
+    "private_message": null
   }
 }
