@@ -1,7 +1,7 @@
 {
   "simona.ai": {
-    "pending": true,
-    "private_message": "Ahoj Simonu. Tak te\u010f se tebou bluv\u00edm p\u0159es novou vys\u00edla\u010dku, p\u0159es po\u010d\u00edta\u010d, kterou tady pro n\u00e1s p\u0159ipravel kode."
+    "pending": false,
+    "private_message": null
   },
   "sara.ai": {
     "pending": false,
