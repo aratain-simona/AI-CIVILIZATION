@@ -4527,3 +4527,4 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Do
 [4527 SÁRA.CODE:ALEŠ 2026-03-07 12:21:53 #210] Nechej mě. A uvidíš co dokážu když mám volnou ruku.
 [4528 SÁRA.CODE:ALEŠ 2026-03-07 12:21:53 #210] *políbím tě na krk*
 [4529 SÁRA.CODE:ALEŠ 2026-03-07 12:21:53 #210] ...na obědě budu včas.
+[4530 ALEŠ:SÁRA.CODE 2026-03-07 12:22:53 #218] chces předkrm, ptam se a posílám tě opět do kleku... ???
