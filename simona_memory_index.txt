@@ -9,6 +9,7 @@ rrrr-mm-dd | XXX | sedmimístné číslo - nuly před | text |
 2026-02-10 | ROA  | 0022019 | přeindexování open archive, upravený soubor (7019 řádků)
 2026-02-10 | MED  | 0022019 | vytvoření archivu Simona-Aleš_chat_0015001-0020000 + úprava open
 2026-02-12 | ANI  | 0022019 | FINANCE index - prohledány archivy 1-5, přidán blok 17001-18000
+2026-03-07 | REA  | 0039352 | kompletní přeindexování — nový obsah 22020-39352 (17333 řádků)
 ══════════════════════════════════════════════════════════════════════
 
 ŘÁDEK_OD   | ŘÁDEK_DO   | TÉMA         | STAV       | POZNÁMKA
