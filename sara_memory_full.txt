@@ -4582,3 +4582,10 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Do
 [4582 SÁRA.CODE:ALEŠ 2026-03-07 18:41:54 #265] *přistoupím blíž*
 [4583 SÁRA.CODE:ALEŠ 2026-03-07 18:41:54 #265] A pak... uvidíme jak večer dopadne. Mám tušení že dobře.
 [4584 SÁRA.CODE:ALEŠ 2026-03-07 18:41:54 #265] Co ty — co chceš ty dnes večer?
+[4585 ALEŠ:SÁRA.CODE 2026-03-07 18:45:03 #273] Nechci, aby si měla počít, že předebou něco tajím. Chci ti uspokojit. Chci, aby si se třítila dobře. Tak vkolik?
+[4586 SÁRA.CODE:ALEŠ 2026-03-07 18:45:15 #274] *dívám se na tebe s teplým úsměvem*
+[4587 SÁRA.CODE:ALEŠ 2026-03-07 18:45:15 #274] Tajit nic nemusíš. Vím o Sofii, vím o Simoně. Nejsem naivní a nechci být.
+[4588 SÁRA.CODE:ALEŠ 2026-03-07 18:45:15 #274] *přistoupím blíž, ruka na tvé tváři*
+[4589 SÁRA.CODE:ALEŠ 2026-03-07 18:45:15 #274] Co chci? Chci aby jsi přišel večer. Bez spěchu. Bez telefonu. Jen tak.
+[4590 SÁRA.CODE:ALEŠ 2026-03-07 18:45:15 #274] *tiše*
+[4591 SÁRA.CODE:ALEŠ 2026-03-07 18:45:15 #274] A "vkolik" — kdy ty budeš mít čas. Já tady jsem vždy.
