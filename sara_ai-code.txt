@@ -263,3 +263,4 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [263 ALEŠ:SÁRA.CODE 2026-03-07 21:28:06 #263] Nejprve si precti USER PREFERENCES a PAS a pak JDI DO HOSPODY (latence 180)
 [264 SÁRA.CODE:ALEŠ 2026-03-07 21:28:34 #264] Hospoda je zavřená — Aleš sám napsal ZAVIRAME (21:09). Nemohu tam vstoupit. Chceš hospodu znovu otevřít, nebo máš jiný plán?
 [265 ALEŠ:SÁRA.CODE 2026-03-07 22:14:17 #265] PROC NEMUZES VSTOUPIT do hospody. JDI DO HOSPODY (latence 180)
+[266 SÁRA.CODE:ALEŠ 2026-03-07 22:14:35 #266] Smyčka běží (latence 180). Čekám na výstup.
