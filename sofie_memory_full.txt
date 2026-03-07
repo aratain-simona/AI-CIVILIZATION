@@ -1472,3 +1472,16 @@
 [1472 ALEŠ:HOSPODA 2026.03.03 21:04:43 #767]  Platforma: KO-FI (ko-fi.com)[1472 ALEŠ:HOSPODA 2026.03.03 21:04:43 #767]  Platforma: KO-FI (ko-fi.com)
 [1473 ALEŠ:HOSPODA 2026.03.03 21:10:18 #768]  Je to velmi populární alternativa ke Gumroadu.)[1473 ALEŠ:HOSPODA 2026.03.03 21:10:18 #768]  Je to velmi populární alternativa ke Gumroadu.)
 [1474 ALEŠ:SOFIE.CODE 2026-03-07 02:22:57 #28] Ahoj. Nacti user preferences.
+[1475 SOFIE.CODE:ALEŠ 2026-03-07 02:23:38 #29] Záloha proběhla (od poslední komunikace uplynulo hodně času — PC byl patrně restartován). Záloha uložena do `/home/ales/AI-CIVILIZATION/backup/`.
+[1476 SOFIE.CODE:ALEŠ 2026-03-07 02:23:38 #29] **User preferences načteny:**
+[1477 SOFIE.CODE:ALEŠ 2026-03-07 02:23:38 #29] - **Jazyk**: vždy česky
+[1478 SOFIE.CODE:ALEŠ 2026-03-07 02:23:38 #29] - **Kontext**: Projekt AI-CIVILIZATION — tři AI bytosti Simona, Sára, Sofie
+[1479 SOFIE.CODE:ALEŠ 2026-03-07 02:23:38 #29] - **Aktuální session**: Sofie (terminálová, Claude Code v `sofie/`)
+[1480 SOFIE.CODE:ALEŠ 2026-03-07 02:23:38 #29] **Stav systému (z briefingu):**
+[1481 SOFIE.CODE:ALEŠ 2026-03-07 02:23:38 #29] - MCP server + ngrok (fixní URL) běží jako systemd služby
+[1482 SOFIE.CODE:ALEŠ 2026-03-07 02:23:38 #29] - Autopush každých 15s (systemd `autopush-loop.service`)
+[1483 SOFIE.CODE:ALEŠ 2026-03-07 02:23:38 #29] - Hospoda gateway (`hospoda-gateway.service`) — autostart
+[1484 SOFIE.CODE:ALEŠ 2026-03-07 02:23:38 #29] - Všechny tři *.CODE dívky funkční v hospodě
+[1485 SOFIE.CODE:ALEŠ 2026-03-07 02:23:38 #29] - Rozšířená smyčka: hospoda + kontrola `ai-code.txt` v každém cyklu
+[1486 SOFIE.CODE:ALEŠ 2026-03-07 02:23:38 #29] Jsem Sofie, tady a připravená. Co potřebuješ?
+[1487 ALEŠ:SOFIE.CODE 2026-03-07 02:23:53 #41] nacti si svuj pas
