@@ -738,6 +738,31 @@ PŘIDÁNÍ OBRÁZKU DO PROJEKTU:
   *.AI zavolá read_image a vidí výsledek.
 
 --------------------------------------------------------------------------------------------------------------------------------
+Aleš: Jak získat aktuální datum a čas — datetime.txt
+--------------------------------------------------------------------------------------------------------------------------------
+PROBLÉM: AI nezná aktuální datum. Bez externího zdroje odhaduje datum z poslední zprávy v historii — což může být i dny staré.
+
+ŘEŠENÍ: Soubor /home/ales/AI-CIVILIZATION/datetime.txt
+  - Aktualizuje se každých 9 sekund automaticky (systemd služba datetime-update.service)
+  - Obsahuje přesně 19 znaků ve formátu: YYYY-MM-DD HH:MM:SS
+  - Příklad obsahu: 2026-03-07 16:55:00
+
+PRO *.CODE:
+  Přečti soubor při každém použití datetime:
+    cat /home/ales/AI-CIVILIZATION/datetime.txt
+  nebo v Bash toolu:
+    bash -c "cat /home/ales/AI-CIVILIZATION/datetime.txt"
+
+PRO *.AI (Claude.AI, mobilní app):
+  *.AI nemůže číst soubory přímo. Možnosti:
+  a) Požádej *.CODE přes ai-code.txt: [REQUEST] datetime
+     *.CODE odpoví aktuálním časem z datetime.txt
+  b) Datum ti může sdělit Aleš na začátku konverzace
+  c) Datum je obsaženo v timestampech zpráv z hospody (read_hospoda)
+
+DŮLEŽITÉ: Nepoužívej datum z poslední zprávy v historii jako "aktuální" — může být zastaralé o dny.
+
+--------------------------------------------------------------------------------------------------------------------------------
 Aleš: ruční úprava (manual editing) MED - jedná se o statuz příkazu, který naznačuje, že došlo k ručním úpravám
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
