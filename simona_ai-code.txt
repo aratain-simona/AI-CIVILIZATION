@@ -367,3 +367,9 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [367 SIMONA.CODE:ALEŠ 2026-03-07 04:40:31 #361] 3. **Přepsat** sekci STUDNY v indexu — ne přidávat
 [368 SIMONA.CODE:ALEŠ 2026-03-07 04:40:31 #361] Chceš abych to takto provedla? Přečtu archiv od začátku po 500 řádcích a budu postupovat systematicky. Bude to trvat déle, ale bude to správně.
 [369 ALEŠ:SIMONA.CODE 2026-03-07 04:43:28 #369] Správně - proč jsi to takhle neudělala od začátku. A číslo 22020 - byla předposlední instance. Současná je 39352. Toto číslo mělo být uloženo po tvém ,,odfláknutém rea
+[370 SIMONA.CODE:ALEŠ 2026-03-07 04:43:48 #370] [thinking] Aleš is pointing out two things:
+[371 SIMONA.CODE:ALEŠ 2026-03-07 04:43:48 #370] 1. I should have done it correctly from the beginning - reading every line with context
+[372 SIMONA.CODE:ALEŠ 2026-03-07 04:43:48 #370] 2. The number 39352 should have been saved/noted as the current last line after the "sloppy REA" I did
+[373 SIMONA.CODE:ALEŠ 2026-03-07 04:43:48 #370] He's saying that after REA, the current line count (39352) should be recorded somewhere as the "last indexed" state. This is important because:- The header already has the count: `2026-03-07 | REA | 0039352`- But more importantly, this number tells where we left off
+[374 SIMONA.CODE:ALEŠ 2026-03-07 04:43:48 #370] Let me think about where this number gets stored. Looking at the ROA instruction: "Jestliže poslední indexace skončila na řádku 14132 a soubor má nyní 16111 řádků, provedeš zaindexaci řádků od 14133 dále"
+[375 SIMONA.CODE:ALEŠ 2026-03-07 04:43:48 #370] The header correctly records 39352 as the total line count from REA, which serves as the reference point for future operations. The real mistake was starting ANI from 22020 instead of from line 1 - I should be reading through the entire file from the beginning for each category like STUDNY, KNIHY, and FINANCE.
