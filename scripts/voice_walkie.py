@@ -30,6 +30,13 @@ KEY_MAP = {
     "o": "sofie",
 }
 
+# Alt+M/R/F = *.AI (zpráva jde do hospody jako :JMÉNO text, odpověď přijde přes monitor)
+AI_KEY_MAP = {
+    "m": "simona",
+    "r": "sara",
+    "f": "sofie",
+}
+
 # Stav nahrávání
 state = {"active": False, "persona": None, "proc": None, "tmpfile": None}
 state_lock = threading.Lock()
@@ -119,7 +126,12 @@ def start_recording(persona):
             stderr=subprocess.DEVNULL
         )
         state.update({"active": True, "persona": persona, "proc": proc, "tmpfile": tmp.name})
-        label = "Hospoda" if persona == "hospoda" else PERSONAS[persona]["name"]
+        if persona == "hospoda":
+            label = "Hospoda"
+        elif persona.startswith("ai_"):
+            label = PERSONAS[persona[3:]]["name"] + ".AI"
+        else:
+            label = PERSONAS[persona]["name"] + ".CODE"
         print(f"[{label}] Nahrávám...")
 
 
@@ -138,7 +150,12 @@ def stop_recording():
 
 def process_audio(persona, wav_file):
     try:
-        label = "Hospoda" if persona == "hospoda" else PERSONAS[persona]["name"]
+        if persona == "hospoda":
+            label = "Hospoda"
+        elif persona.startswith("ai_"):
+            label = PERSONAS[persona[3:]]["name"] + ".AI"
+        else:
+            label = PERSONAS[persona]["name"] + ".CODE"
         print(f"[{label}] Přepisuji...")
         lang = lang_mode["v"]
         result = whisper_model.transcribe(wav_file, language=lang)
@@ -155,6 +172,16 @@ def process_audio(persona, wav_file):
                 cwd=str(BASE)
             )
             # Hospoda monitor přečte odpovědi dívek automaticky
+        elif persona.startswith("ai_"):
+            name = persona[3:]
+            jmeno = PERSONAS[name]["name"]
+            print(f"[Aleš → {jmeno}.AI] ({lang}): {text}")
+            # Zapíše do hospody jako ":JMÉNO text" — gateway nudge dívku
+            subprocess.run(
+                ["bash", str(BASE / "scripts/hospoda_write.sh"), "ALEŠ", f":{jmeno.upper()} {text}"],
+                cwd=str(BASE)
+            )
+            print(f"[{jmeno}.AI] Zpráva odeslána do hospody — odpověď přijde přes monitor.")
         else:
             print(f"[Aleš → {PERSONAS[persona]['name']}] ({lang}): {text}")
             persona_dir = PERSONAS[persona]["dir"]
@@ -199,13 +226,15 @@ def on_press(key):
             char = None
         if char in KEY_MAP:
             start_recording(KEY_MAP[char])
+        elif char in AI_KEY_MAP:
+            start_recording("ai_" + AI_KEY_MAP[char])
         elif char == "h":
             start_recording("hospoda")
-        elif char == "m":
+        elif char == "x":
             monitor_muted["v"] = not monitor_muted["v"]
             stav = "MUTE" if monitor_muted["v"] else "AKTIVNÍ"
             print(f"[Hospoda monitor] {stav}")
-        elif char == "r":
+        elif char == "l":
             lang_mode["v"] = "ru" if lang_mode["v"] == "cs" else "cs"
             nazev = "ruština" if lang_mode["v"] == "ru" else "čeština"
             print(f"[Jazyk] přepnuto na: {nazev}")
@@ -221,13 +250,16 @@ def on_release(key):
 
 if __name__ == "__main__":
     print("=== Hlasová vysílačka AI-CIVILIZATION ===")
-    print("Alt+I = Simona | Alt+A = Sára | Alt+O = Sofie (soukromě)")
-    print("Alt+H = Hospoda (všichni slyší)")
-    print("Alt+M = mute/unmute hospoda monitor")
-    print("Alt+R = přepnout jazyk (čeština ↔ ruština)")
-    print("Drž klávesu = nahráváš, pusť = zpracuje")
-    print(f"Jazyk: {lang_mode['v']}")
-    print("Esc = konec")
+    print("--- .CODE (okamžitá odpověď) ---")
+    print("  Alt+I = Simona.CODE | Alt+A = Sára.CODE | Alt+O = Sofie.CODE")
+    print("--- .AI (odpověď přes hospodu, s latencí) ---")
+    print("  Alt+M = Simona.AI  | Alt+R = Sára.AI   | Alt+F = Sofie.AI")
+    print("--- Hospoda ---")
+    print("  Alt+H = mluv do hospody (všichni slyší)")
+    print("--- Ovládání ---")
+    print("  Alt+X = mute/unmute monitor | Alt+L = jazyk čeština↔ruština")
+    print(f"  Jazyk: {lang_mode['v']} | Monitor: {'MUTE' if monitor_muted['v'] else 'aktivní'}")
+    print("  Esc = konec")
     print()
 
     # Spusť hospoda monitor v pozadí
