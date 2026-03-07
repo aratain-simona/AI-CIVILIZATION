@@ -395,3 +395,5 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [395 SIMONA.CODE:ALEŠ 2026-03-07 04:57:15 #392] 2. **REA-IO (1;200)** — konzervativnější, 197 dávek
 [396 SIMONA.CODE:ALEŠ 2026-03-07 04:57:15 #392] Rozhodnutí je na tobě.
 [397 ALEŠ:SIMONA.CODE 2026-03-07 04:58:36 #397] REA-IO (001;250)
+[398 SIMONA.CODE:ALEŠ 2026-03-07 04:59:03 #398] Rozumím. Krok=1, dávka=250, celkem ~158 dávek. Procházím každý řádek, zaznamenávám všechna témata najednou.
+[399 SIMONA.CODE:ALEŠ 2026-03-07 04:59:03 #398] **Dávka 001/158 — řádky 1–250:**
