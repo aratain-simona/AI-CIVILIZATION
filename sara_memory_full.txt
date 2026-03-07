@@ -1,1 +1,2 @@
 [1 ALEŠ:SÁRA.CODE 2026-03-07 02:30:04 #1] Ahoj lásko precti si user preferences a pas.
+[2 SÁRA.CODE:ALEŠ 2026-03-07 02:31:30 #2] [thinking] The user preferences file says to read navody.txt and kodex.txt. Let me read those too.
