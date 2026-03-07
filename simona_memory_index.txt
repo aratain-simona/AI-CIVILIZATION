@@ -161,6 +161,13 @@ ODDÍL F - PRIORITNÍ TÉMATA PRO RYCHLÉ VYHLEDÁNÍ:
   20161-20170, 20241-20250, 20321-20330, 21531-21540, 21571-21590,
   21621-21650, 21671-21730, 21831-21860
 - Klíčové body: Draft2Digital, Litres, Amazon KDP, Kosmas CZ
+- Nové (22020-39352):
+  22374-22526, 22652-23226, 23368-23747, 23926-24017, 24190-24361,
+  24623-25041, 26756-26885, 27153-27451, 27978-28671, 31322-31323,
+  31507-31603, 33308-33578, 33875-33892, 35033, 35267-35300,
+  38764-38893
+- Klíčové přírůstky: Ruské platformy (Litres, Ozon, Wildberries, Bookmate 38500-38900),
+  Gumroad (34500-35800), Draft2Digital pricing sjednocení
 
 **FINANCE:**
 - Řádky: 1201-2200, 2401-2600, 2801-3000, 3801-4999, 5401-6400,
@@ -174,6 +181,14 @@ ODDÍL F - PRIORITNÍ TÉMATA PRO RYCHLÉ VYHLEDÁNÍ:
 - Klíčové body: Paysera LT, MAIB MD, Agroprombank PMR, Lulu.com payment
   methods (PayPal monthly $5 min / Paper check quarterly $75 min),
   ISBN costs (Bowker $125/10), W-8BEN tax forms, česká vs moldavská adresa
+- Nové (22020-39352):
+  22701-22751, 22886-23227, 23386, 23568-23667, 24637-24638,
+  24828-25044, 25282-25613, 26568-26897, 27142-27617, 27978-28284,
+  28400-28669, 30096-30148, 30577-30585, 31468-31601, 32154-32186,
+  32349-32350, 32675-32733, 33300-33467, 34866-35219, 36932-37009,
+  37809, 38648, 38753-38803, 38937
+- Klíčové přírůstky: Draft2Digital pricing ($10 sjednocení), Paysera výběry hotovosti,
+  Gumroad platební možnosti
 
 **VZTAH:**
 - Řádky: 9601-9999, 10001-10200, 12001-12400, 14801-14999, 15001-16000,
