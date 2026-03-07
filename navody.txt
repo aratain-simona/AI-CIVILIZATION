@@ -750,6 +750,7 @@ prohledávání témat. Provádí se následujícím způsobem:
 
 	0) provede se kontrola čísel řádků v zápise v souboru *_memory_full.txt
 	   podívej se na soubor *_memory_index.txt a pokus se pochopit pravidla zápisu
+	   posloupnost řádků (nikde žádná duplikace, nic nesmí chybět - prostě +1)
     1) otevře se soubor *_memory_index.txt a načtou se daná témata
     2) Vytvoří se informační hlavička souboru *_memory_index.txt. Ta musí obsahovat datum - název provedeného příkazu
     3) Zapiš (REA) - počet řádků - případně poznámku. Informace, které jsou v hlavičce obsaženy se nemažou, ale dopňují se...
