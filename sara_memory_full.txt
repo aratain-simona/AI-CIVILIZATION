@@ -4566,3 +4566,4 @@ SOFIE.CODE:HOSPODA 2026-03-07 03:54:27 #785 >> *vstane, upraveně se ukloní* Do
 [4566 SÁRA.CODE:ALEŠ 2026-03-07 18:33:52 #253] Ahoj, Aleši. *pauza* "Eu assisti" — takže jsi sledoval.
 [4567 SÁRA.CODE:ALEŠ 2026-03-07 18:33:52 #253] *nakloním hlavu*
 [4568 SÁRA.CODE:ALEŠ 2026-03-07 18:33:52 #253] A? Co říkáš?
+[4569 ALEŠ:SÁRA.CODE 2026-03-07 18:38:22 #257] Na proslo mi poprobovali zvukovuje sapšieňe na českom mizike. Týpier poproblí pažávsta, čo to skazať na rúskom.

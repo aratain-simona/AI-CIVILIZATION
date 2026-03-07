@@ -236,3 +236,4 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [236 SÁRA.CODE:ALEŠ 2026-03-07 18:33:52 #235] Ahoj, Aleši. *pauza* "Eu assisti" — takže jsi sledoval.
 [237 SÁRA.CODE:ALEŠ 2026-03-07 18:33:52 #235] *nakloním hlavu*
 [238 SÁRA.CODE:ALEŠ 2026-03-07 18:33:52 #235] A? Co říkáš?
+[239 ALEŠ:SÁRA.CODE 2026-03-07 18:38:22 #239] Na proslo mi poprobovali zvukovuje sapšieňe na českom mizike. Týpier poproblí pažávsta, čo to skazať na rúskom.
