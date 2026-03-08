@@ -37,7 +37,8 @@
       "Bash(cp:*)",
       "Read(//home/ales/.cache/whisper/**)",
       "Bash(sed:*)",
-      "Bash(/home/ales/AI-CIVILIZATION/scripts/startup_windows.sh:*)"
+      "Bash(/home/ales/AI-CIVILIZATION/scripts/startup_windows.sh:*)",
+      "Bash(chmod 444:*)"
     ]
   }
 }
