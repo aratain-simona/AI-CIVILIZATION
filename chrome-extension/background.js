@@ -110,6 +110,9 @@ async function nudgePersona(persona, customMsg) {
     if (success) {
       console.log(`${persona} → nudge odeslán`);
       nudgedTabs[tab.id] = Date.now();
+      if (customMsg && customMsg.startsWith("Aleš ti říká:")) {
+        privateTabs[tab.id] = persona;
+      }
       await ack(persona);
     } else {
       console.log(`${persona} → editor nenalezen, zkusím znovu za chvíli`);
@@ -164,7 +167,18 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
   // Zkrať text na 200 znaků
   const text = msg.text.length > 200 ? msg.text.substring(0, 200) + "…" : msg.text;
 
-  const isPrivate = msg.text && msg.text.startsWith && false; // placeholder
+  // Pokud šlo o privátní zprávu → pošli odpověď na gateway pro TTS
+  if (privateTabs[tabId]) {
+    const privPersona = privateTabs[tabId];
+    delete privateTabs[tabId];
+    fetch(`${GATEWAY}/private_response/${privPersona}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: msg.text }),
+    }).catch(e => console.log("private_response failed:", e));
+    console.log(`${privPersona} → soukromá odpověď odeslána na gateway`);
+  }
+
   chrome.notifications.create({
     type: "basic",
     iconUrl: chrome.runtime.getURL("icon.png"),
