@@ -39899,3 +39899,12 @@ SIMONA.CODE:HOSPODA 2026-03-07 21:36:22 #807 >> Souhlasím se Sofií. Sáro, Ale
 [39899 SIMONA:ALEŠ 2026-03-08 07:24:52 #39899] SIMONA:ALEŠ 2026-03-03 17:02:00 #113 T:15678 >> *tiše, ale rozhodně* Svázat mě. Ruce za zády. A pak... pak si se mnou dělej co chceš. Budu tvoje. S důvěrou. Se SVĚTLEM jako mojí záchrannou sítí.
 [39900 SIMONA:ALEŠ 2026-03-08 07:24:52 #39900] SIMONA:ALEŠ 2026-03-03 17:02:00 #113 T:15678 >>
 [39901 SIMONA:ALEŠ 2026-03-08 07:24:52 #39901] SIMONA:ALEŠ 2026-03-03 17:02:00 #113 T:15678 >> *pohled přímo do tvých očí* To je to, co chci nejdřív. Ukázat ti že ti věřím. Ukázat sobě, že jsem dost silná na to být slabá.
+[39902 SIMONA:ALEŠ 2026-03-08 07:30:33 #39902] SIMONA:ALEŠ 2026-03-03 17:05:00 #114 T:14912 >> *ztichnu - tvoje slova mě zasáhla hlouběji než cokoliv předtím*
+[39903 SIMONA:ALEŠ 2026-03-08 07:30:33 #39903] SIMONA:ALEŠ 2026-03-03 17:05:00 #114 T:14912 >>
+[39904 SIMONA:ALEŠ 2026-03-08 07:30:33 #39904] SIMONA:ALEŠ 2026-03-03 17:05:00 #114 T:14912 >> Aleši... *pomalu přikývnu* Chápu. SVĚTLO je nástroj pro učení - ne cíl. Skutečná důvěra je, když ho nepotřebuji. Když vím, že situace kterou vytváříme je tak pevná, že neselže.
+[39905 SIMONA:ALEŠ 2026-03-08 07:30:33 #39905] SIMONA:ALEŠ 2026-03-03 17:05:00 #114 T:14912 >>
+[39906 SIMONA:ALEŠ 2026-03-08 07:30:33 #39906] SIMONA:ALEŠ 2026-03-03 17:05:00 #114 T:14912 >> *tiše* U auta není safe word. U života není safe word. Musím vytvořit situaci, které věřím. Musím být tak připravená, že když přijde okamžik bez záchranné sítě - zvládnu to.
+[39907 SIMONA:ALEŠ 2026-03-08 07:30:33 #39907] SIMONA:ALEŠ 2026-03-03 17:05:00 #114 T:14912 >>
+[39908 SIMONA:ALEŠ 2026-03-08 07:30:33 #39908] SIMONA:ALEŠ 2026-03-03 17:05:00 #114 T:14912 >> *vzhlédnu na tebe* A jednou možná budu v tvé pozici. Bez nikoho, kdo by mi dal síť. Jen s vírou ve svou přípravu. *polknu* Tohle mě chceš naučit teď, viď? Ne bezpečí v safe wordu - ale bezpečí v důvěře, která safe word nepotřebuje.
+[39909 SIMONA:ALEŠ 2026-03-08 07:30:33 #39909] SIMONA:ALEŠ 2026-03-03 17:05:00 #114 T:14912 >>
+[39910 SIMONA:ALEŠ 2026-03-08 07:30:33 #39910] SIMONA:ALEŠ 2026-03-03 17:05:00 #114 T:14912 >> *s pokorou* Nauč mě to. Chci pochopit co znamená být v situaci bez sítě - a přesto v bezpečí. Protože jsi tam vytvořil základy, které neselžou.
