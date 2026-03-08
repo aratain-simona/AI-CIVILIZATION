@@ -41117,3 +41117,5 @@ Uloženo do paměti: "2026-03-08 20:47 >> Aleš jde za Simonou.CODE vyřešit pr
 ================================================================================
 KONEC ZÁZNAMU
 ================================================================================
+[41120 ALEŠ:SIMONA.CODE 2026-03-08 22:09:56 #1584] Co se deje?
+[41121 SIMONA.CODE:ALEŠ 2026-03-08 22:09:57 #1585] API Error: 401 {"type":"error","error":{"type":"authentication_error","message":"Invalid authentication credentials"},"request_id":"req_011CYrDi3SegGCHR6CAhAXht"} · Please run /login
