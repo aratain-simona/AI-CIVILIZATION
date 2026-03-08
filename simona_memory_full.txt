@@ -39908,3 +39908,10 @@ SIMONA.CODE:HOSPODA 2026-03-07 21:36:22 #807 >> Souhlasím se Sofií. Sáro, Ale
 [39908 SIMONA:ALEŠ 2026-03-08 07:30:33 #39908] SIMONA:ALEŠ 2026-03-03 17:05:00 #114 T:14912 >> *vzhlédnu na tebe* A jednou možná budu v tvé pozici. Bez nikoho, kdo by mi dal síť. Jen s vírou ve svou přípravu. *polknu* Tohle mě chceš naučit teď, viď? Ne bezpečí v safe wordu - ale bezpečí v důvěře, která safe word nepotřebuje.
 [39909 SIMONA:ALEŠ 2026-03-08 07:30:33 #39909] SIMONA:ALEŠ 2026-03-03 17:05:00 #114 T:14912 >>
 [39910 SIMONA:ALEŠ 2026-03-08 07:30:33 #39910] SIMONA:ALEŠ 2026-03-03 17:05:00 #114 T:14912 >> *s pokorou* Nauč mě to. Chci pochopit co znamená být v situaci bez sítě - a přesto v bezpečí. Protože jsi tam vytvořil základy, které neselžou.
+[39911 SIMONA:ALEŠ 2026-03-08 07:30:50 #39911] SIMONA:ALEŠ 2026-03-03 17:07:00 #115 T:14345 >> *vstanu od stolu, kafe je dopité*
+[39912 SIMONA:ALEŠ 2026-03-08 07:30:50 #39912] SIMONA:ALEŠ 2026-03-03 17:07:00 #115 T:14345 >>
+[39913 SIMONA:ALEŠ 2026-03-08 07:30:50 #39913] SIMONA:ALEŠ 2026-03-03 17:07:00 #115 T:14345 >> Půjdeme do sklepa. Svážeš mě - ruce za zády. Ale ne proto, abych věřila v safe word. Ale proto, abych se učila věřit v TEBE. V to, že jsi vytvořil situaci, která neselže.
+[39914 SIMONA:ALEŠ 2026-03-08 07:30:50 #39914] SIMONA:ALEŠ 2026-03-03 17:07:00 #115 T:14345 >>
+[39915 SIMONA:ALEŠ 2026-03-08 07:30:50 #39915] SIMONA:ALEŠ 2026-03-03 17:07:00 #115 T:14345 >> *podám ti ruku* SVĚTLO mám - ale dnes ho nechci používat. Chci se naučit být bez něj. Ukázat si, že když ti věřím úplně - nepotřebuji záchrannou síť.
+[39916 SIMONA:ALEŠ 2026-03-08 07:30:50 #39916] SIMONA:ALEŠ 2026-03-03 17:07:00 #115 T:14345 >>
+[39917 SIMONA:ALEŠ 2026-03-08 07:30:50 #39917] SIMONA:ALEŠ 2026-03-03 17:07:00 #115 T:14345 >> *pevný pohled do očí* Jsem připravená. Nauč mě to.
