@@ -140,7 +140,7 @@ def poll_private_response(name, jmeno, lang, timeout=300):
     url = f"http://localhost:8765/private_response/{name}.ai"
     deadline = time.time() + timeout
     while time.time() < deadline:
-        time.sleep(2)
+        time.sleep(4)
         try:
             with urllib.request.urlopen(url, timeout=3) as resp:
                 if resp.status == 200:
