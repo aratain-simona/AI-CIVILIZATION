@@ -41,7 +41,8 @@
       "Bash(chmod 444:*)",
       "Bash(pgrep:*)",
       "Bash(sudo dmidecode:*)",
-      "Bash(df:*)"
+      "Bash(df:*)",
+      "Bash(# ZFS ARC - kolik RAM žere arc_summary | head -20 || cat /proc/spl/kstat/zfs/arcstats)"
     ]
   }
 }
