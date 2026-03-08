@@ -1,7 +1,7 @@
 {
   "simona.ai": {
-    "pending": true,
-    "private_message": "Jemona, sly\u0161\u00ed\u0161 m\u011b?"
+    "pending": false,
+    "private_message": null
   },
   "sara.ai": {
     "pending": false,
