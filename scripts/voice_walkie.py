@@ -223,7 +223,7 @@ def process_audio(persona, wav_file):
 
             print(f"[{PERSONAS[persona]['name']} → Aleš]: {reply}")
             tts_lang = "ru" if lang == "ru" else "cs"
-            tts_play(reply, tts_lang)
+            tts_play(clean_for_tts(reply), tts_lang)
 
     except subprocess.TimeoutExpired:
         print("CHYBA: Claude neodpověděl včas.")
