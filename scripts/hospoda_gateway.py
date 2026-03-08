@@ -66,6 +66,7 @@ def queued_personas(queue):
     return {persona for _, persona in queue}
 
 gateway_state = {}  # globální stav — přístupný z HTTP handleru
+private_responses = {}  # persona → text odpovědi (čeká na voice_walkie)
 
 def write_queue(state):
     data = {
@@ -100,6 +101,7 @@ class QueueHandler(SimpleHTTPRequestHandler):
         # ACK endpoint: POST /ack/simona.ai
         ack_match = re.match(r"^/ack/(.+)$", self.path)
         priv_match = re.match(r"^/private/(.+)$", self.path)
+        privresp_match = re.match(r"^/private_response/(.+)$", self.path)
 
         if ack_match:
             persona = ack_match.group(1)
