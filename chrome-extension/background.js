@@ -140,6 +140,8 @@ async function checkQueue() {
 
 // Sleduj záložky kterým byl poslán nudge (tabId → timestamp)
 const nudgedTabs = {};
+// Sleduj záložky s PRIVÁTNÍM nudgem (tabId → persona)
+const privateTabs = {};
 
 // Přijmi zprávu od content.js
 chrome.runtime.onMessage.addListener((msg, sender) => {

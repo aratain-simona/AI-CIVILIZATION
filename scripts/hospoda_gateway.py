@@ -80,23 +80,6 @@ def write_queue(state):
         json.dump(data, f, indent=2)
 
 class QueueHandler(SimpleHTTPRequestHandler):
-    def do_GET(self):
-        if self.path.startswith("/queue.json"):
-            try:
-                with open(QUEUE_FILE, "rb") as f:
-                    content = f.read()
-                self.send_response(200)
-                self.send_header("Content-Type", "application/json")
-                self.send_header("Access-Control-Allow-Origin", "*")
-                self.end_headers()
-                self.wfile.write(content)
-            except Exception:
-                self.send_response(404)
-                self.end_headers()
-        else:
-            self.send_response(404)
-            self.end_headers()
-
     def do_POST(self):
         # ACK endpoint: POST /ack/simona.ai
         ack_match = re.match(r"^/ack/(.+)$", self.path)
@@ -135,6 +118,53 @@ class QueueHandler(SimpleHTTPRequestHandler):
             self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
 
+        elif privresp_match:
+            # Chrome extension sem posílá odpověď dívky na soukromou zprávu
+            persona = privresp_match.group(1)
+            length = int(self.headers.get("Content-Length", 0))
+            body = self.rfile.read(length).decode("utf-8")
+            try:
+                data = json.loads(body)
+                text = data.get("text", "")
+            except Exception:
+                text = body
+            private_responses[persona] = text
+            log(f"PRIVATE_RESPONSE ← {persona}: {text[:60]}")
+            self.send_response(200)
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+
+        else:
+            self.send_response(404)
+            self.end_headers()
+
+    def do_GET(self):
+        if self.path.startswith("/queue.json"):
+            try:
+                with open(QUEUE_FILE, "rb") as f:
+                    content = f.read()
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(content)
+            except Exception:
+                self.send_response(404)
+                self.end_headers()
+        elif re.match(r"^/private_response/(.+)$", self.path):
+            # voice_walkie sem polluje — vrátí odpověď a smaže ji
+            persona = re.match(r"^/private_response/(.+)$", self.path).group(1)
+            if persona in private_responses and private_responses[persona]:
+                text = private_responses.pop(persona)
+                body = json.dumps({"text": text}).encode("utf-8")
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(body)
+            else:
+                self.send_response(204)  # No Content — ještě nic
+                self.end_headers()
         else:
             self.send_response(404)
             self.end_headers()
