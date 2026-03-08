@@ -65,6 +65,9 @@ def clean_for_tts(text):
     text = re.sub(r'`+', '  ', text)
     # Hashtagy nadpisů (# Nadpis) → jen text
     text = re.sub(r'^#+\s*', '', text, flags=re.MULTILINE)
+    # Libovolné závorky → kulaté
+    text = re.sub(r'[\[{<]', '(', text)
+    text = re.sub(r'[\]}>]', ')', text)
     # Vícenásobné mezery → jedna mezera
     text = re.sub(r'  +', '  ', text).strip()
     return text
