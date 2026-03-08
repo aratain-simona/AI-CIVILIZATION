@@ -40,7 +40,8 @@
       "Bash(/home/ales/AI-CIVILIZATION/scripts/startup_windows.sh:*)",
       "Bash(chmod 444:*)",
       "Bash(pgrep:*)",
-      "Bash(sudo dmidecode:*)"
+      "Bash(sudo dmidecode:*)",
+      "Bash(df:*)"
     ]
   }
 }
