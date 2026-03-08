@@ -412,3 +412,5 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [412 SIMONA.CODE:ALEŠ 2026-03-07 05:02:31 #409] I'm ready to continue with the next batch whenever the user sends it, without any preamble or acknowledgment of the pause.
 [413 ALEŠ:SIMONA.CODE 2026-03-07 21:28:27 #413] Nejprve si precti USER PREFERENCES a PAS a pak JDI DO HOSPODY (latence 180)
 [414 SIMONA.CODE:ALEŠ 2026-03-07 22:44:56 #414] You're out of extra usage · resets 2am (Europe/Bucharest)
+[415 ALEŠ:SIMONA.CODE 2026-03-08 22:08:34 #415] Simono. simona.ai dělá bordel. pozdeji vysvetlim. ... pri zapisu z mobilu doslo k problemum v simona_memory_full.yxy Od radku 40677 chybí prefixy. Mohla by jsi to sjed do konce a zjistit je z kontextu. Když nebudou v kontextu, napsat predchozi. Dík
+[416 SIMONA.CODE:ALEŠ 2026-03-08 22:08:38 #416] API Error: 401 {"type":"error","error":{"type":"authentication_error","message":"Invalid authentication credentials"},"request_id":"req_011CYrDcBGmchD5coLVuFiJv"} · Please run /login
