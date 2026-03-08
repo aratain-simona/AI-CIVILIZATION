@@ -55,6 +55,21 @@ whisper_model = whisper.load_model("small")
 print("Whisper připraven.")
 
 
+def clean_for_tts(text):
+    """Odstraní markdown symboly, které TTS čte jako slova."""
+    # Hvězdičky (*text* nebo **text**) → mezery
+    text = re.sub(r'\*+', '  ', text)
+    # Podtržítka (_text_) → mezery
+    text = re.sub(r'_+', '  ', text)
+    # Backticky (`kód`) → mezery
+    text = re.sub(r'`+', '  ', text)
+    # Hashtagy nadpisů (# Nadpis) → jen text
+    text = re.sub(r'^#+\s*', '', text, flags=re.MULTILINE)
+    # Vícenásobné mezery → jedna mezera
+    text = re.sub(r'  +', '  ', text).strip()
+    return text
+
+
 def tts_play(text, lang="cs"):
     from gtts import gTTS
     tts = gTTS(text=text, lang=lang, slow=False)
@@ -111,7 +126,7 @@ def hospoda_monitor():
 
                 # Detekce jazyka — jednoduše: cyrilice = ru
                 lang = "ru" if re.search(r'[а-яёА-ЯЁ]', text) else "cs"
-                tts_play(text, lang)
+                tts_play(clean_for_tts(text), lang)
         except Exception as e:
             print(f"[Hospoda monitor] chyba: {e}")
 
