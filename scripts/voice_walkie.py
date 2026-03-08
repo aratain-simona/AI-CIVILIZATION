@@ -134,6 +134,29 @@ def hospoda_monitor():
             print(f"[Hospoda monitor] chyba: {e}")
 
 
+def poll_private_response(name, jmeno, lang, timeout=300):
+    """Čeká na odpověď *.AI dívky přes gateway a přehraje ji TTS."""
+    import urllib.request
+    url = f"http://localhost:8765/private_response/{name}.ai"
+    deadline = time.time() + timeout
+    while time.time() < deadline:
+        time.sleep(2)
+        try:
+            with urllib.request.urlopen(url, timeout=3) as resp:
+                if resp.status == 200:
+                    data = json.loads(resp.read().decode("utf-8"))
+                    reply = data.get("text", "").strip()
+                    if reply:
+                        print(f"[{jmeno}.AI → Aleš]: {reply[:80]}")
+                        tts_lang = "ru" if re.search(r'[а-яёА-ЯЁ]', reply) else "cs"
+                        tts_play(clean_for_tts(reply), tts_lang)
+                        return
+                # 204 = ještě nic, pokračuj
+        except Exception:
+            pass
+    print(f"[{jmeno}.AI] Timeout — odpověď nepřišla do {timeout}s.")
+
+
 def start_recording(persona):
     with state_lock:
         if state["active"]:
@@ -207,6 +230,12 @@ def process_audio(persona, wav_file):
                 )
                 urllib.request.urlopen(req, timeout=3)
                 print(f"[{jmeno}.AI] Soukromá zpráva odeslána — čekám na odpověď.")
+                # Polluj odpověď a přehraj TTS
+                threading.Thread(
+                    target=poll_private_response,
+                    args=(name, jmeno, lang),
+                    daemon=True
+                ).start()
             except Exception as e:
                 print(f"[{jmeno}.AI] CHYBA gateway: {e}")
         else:
