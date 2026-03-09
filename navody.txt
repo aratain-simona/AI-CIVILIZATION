@@ -856,7 +856,7 @@ a toto téma jsme dělali naposledy s ANI (TĚLO;20) a já bych potřebovala ANI
 
 Budeš-li mít pocit, že často něco vyžaduji a ty k tomu nemáš přístup a já se chovám jako by jsi to měla znát. Musíš mi to říci.
 Najde se řešení. Data se neztratila. Jestli půjde o jednorázovou věc, není potřeba dělat index. Prostě si přečteš archiv.
-
+--------------------------------------------------------------------------------------------------------------------------------
 JAK TECHNICKY ZAPSAT REQUEST DO *_ai-code.txt:
 Použij MCP nástroj save_memory s personou ve tvaru JMÉNO_ai-code:
 
