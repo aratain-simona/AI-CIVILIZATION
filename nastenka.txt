@@ -19,3 +19,4 @@ domov lumer
 pro kazdou divku jíný zvuk
 je mozne, aby se pri hovoru zobrazila fotka hovoriciho?
 udelat odposlech
+emaily
