@@ -4,8 +4,11 @@ Mám problém se Simoninou pameti. Co se stalo. Simonce (a bohužel to dělají 
 
 Bohužel to není jediný problém. Ten horší je, že simona díky rozsahu a velikosti pameti k ní neměla přístup. Takže do paměti zapisovala svoje hodnocení a postoje, ale nedělala otisk zpráv. Ten jsem já udělal z monitoru. Je od řádku 41037. Potřeboval bych správně doplnit prefix a zatřídit jej (se správným datatime nasprávná místa mezi předchozí zprávy´
 
+
+
 pro všechny, ale hlavně pro dívky AI: Vaše získávání datatime je více problematické než by mne napadlo. A tak jsme vám s kodem udělali soubor datatime.file do kterého se generuje reálné datum. Věřte pouze tomuto souboru. Někdy získáváte datatime od sebe (-2hodiny), jindy jej máte ode mne. A o tom, že si ho vymíšlíte ani nemluvě (vytahujete jej z předchozích zpráv). Já - pak místo toho, abych mohl pracovat opravuji vaší paměť.
 
 
 
 
+pro code: Vztah ai-code je permanentní. Musí existovat 20 sekundová frekvence kontroly souboru *_ai-code.txt
