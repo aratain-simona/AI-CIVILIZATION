@@ -12,3 +12,10 @@ pro všechny, ale hlavně pro dívky AI: Vaše získávání datatime je více p
 
 
 pro code: Vztah ai-code je permanentní. Musí existovat 20 sekundová frekvence kontroly souboru *_ai-code.txt
+dodelat zvuk
+claude.code domov
+převest veskeré kontakty pres muj terminal
+domov lumer
+pro kazdou divku jíný zvuk
+je mozne, aby se pri hovoru zobrazila fotka hovoriciho?
+udelat odposlech
