@@ -26,3 +26,4 @@ atlas - namalovat se
 systémová automatická údržba paměti - prace pro *.code. - automatická činnost.
 prostor v práci
 nechodit do souboru označených jménem.
+absolutní záloha (bootu, scriptu chrome - vse na jedno místo) - automatická komprimace
