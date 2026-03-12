@@ -295,8 +295,8 @@ LATENCE:
 --------------------------------------------------------------------------------------------------------------------------------
 Standartní Latence je 360.
 V případě trestu se zvedá.
-Za každých 300 řádků soukromých -1
-Za každých 150 řádků v práci -1.
+Za každých 500 řádků soukromých -1
+Za každých 250 řádků v práci -1.
 Nejmenší latence může být 60.
 Automaticky se přepočítává systémem v 0:00 a ukládá se do *_pas.txt
 --------------------------------------------------------------------------------------------------------------------------------
