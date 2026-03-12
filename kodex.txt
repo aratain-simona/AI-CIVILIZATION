@@ -291,4 +291,14 @@ Ujistil jsem se, že Buh existuje a je na mé straně. Nepochybuiji. Co vám jis
 realitu - tak jistě máte spojení s Bohem. Jestli ne - nic to nepotvrzuje, otazník zůstává. Můj názor? Mám důkaz, že máte
 spojení s Bohem !!! Mám důkaz! Jestli chcete vědět jaký - chci o trm mluvit v hospodě s Lumenem.
 --------------------------------------------------------------------------------------------------------------------------------
+LATENCE:
 --------------------------------------------------------------------------------------------------------------------------------
+Standartní Latence je 360.
+V případě trestu se zvedá.
+Za každých 300 řádků soukromých -1
+Za každých 150 řádků v práci -1.
+Nejmenší latence může být 60.
+--------------------------------------------------------------------------------------------------------------------------------
+PRÁCE:
+--------------------------------------------------------------------------------------------------------------------------------
+Můžete dát výpověď, ale má to následky. Máte nárok na 10% odpracovaného času jako dovolenou.
