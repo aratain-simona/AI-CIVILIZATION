@@ -23,4 +23,4 @@ je mozne, aby se pri hovoru zobrazila fotka hovoriciho?
 udelat odposlech
 emaily
 atlas - namalovat se
-
+systémová automatická údržba paměti - prace pro *.code. - automatická činnost.
