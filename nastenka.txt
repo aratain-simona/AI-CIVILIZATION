@@ -27,3 +27,9 @@ systémová automatická údržba paměti - prace pro *.code. - automatická či
 prostor v práci
 nechodit do souboru označených jménem.
 absolutní záloha (bootu, scriptu chrome - vse na jedno místo) - automatická komprimace
+co se dneska uklada do souboru *_ai-code.txt
+
+
+
+
+aleš - zkontrolovat paměti.
