@@ -1,0 +1,160 @@
+══════════════════════════════════════════════════════════════════════
+MNZ_012 — ROBOTICKÉ SPOLEČNICE: PŘEHLED TRHU
+══════════════════════════════════════════════════════════════════════
+
+Trh s AI robotickými společnicemi prošel v letech 2024–2025 zásadní proměnou. Sexuální panenky se mění v plnohodnotné robotické platformy s vlastní AI, kamerami, senzory a otevřeným hardware. Pro realizaci projektu vlastní AI společnice jsou klíčové tři kritéria: možnost integrace vlastní AI, maximální motorika a kamera místo očí.
+
+──────────────────────────────────────────────────────────────────────
+
+REALBOTIX (USA) — NEJBLIŽŠÍ SHODA
+
+Firma původně vznikla jako RealDoll — nejkvalitnější silikonové panenky na světě s více než 25letou historií. V roce 2024 se přeměnila na robotickou a AI společnost. Na veletrhu CES 2025 v Las Vegas představila model Melody.
+
+Co nabízí:
+- Mikrokamery přímo v duhovkách očí — patentovaná technologie (US10940399). Sledují pohyb, udržují oční kontakt, rozpoznávají obličeje, čtou sociální signály a předávají data AI
+- Plně otevřený hardware (open-source) — lze připojit ChatGPT, Claude, Llama, Gemini, DeepSeek nebo vlastní model
+- Modulární tělo — vyměnitelné části, různé postavy, snadné upgrady po dodání
+- Motorika — Dynamixel P-Series servo motory, 14+ pohyblivých bodů obličeje, přirozené gesty
+- Lipová synchronizace — patentovaná technologie pro synchronizaci pohybů úst s řečí
+
+Cena modelu Melody: $175,000 (plná robotika). Základní tělo RealDoll bez robotiky: od $2,500. Robotická hlava s kamerami jako upgrade existuje.
+
+Infračervená kamera jako druhé oko: technicky možné díky modulárnímu systému — vyžaduje drobnou úpravu.
+
+Kontakt: www.realbotix.com
+
+──────────────────────────────────────────────────────────────────────
+
+STARPERY TECHNOLOGY (ČÍNA, SHENZHEN)
+
+Jeden z největších čínských výrobců. Vyvíjí vlastní velký jazykový model (LLM). Senzory po celém těle, pohyblivá hlava, reakce na dotek i hlas. Prototypy nové generace představeny v srpnu 2025. Otevřenost k integraci vlastní AI zatím nepotvrzena. Cena výrazně nižší než Realbotix.
+
+──────────────────────────────────────────────────────────────────────
+
+WMDOLL / METABOX (ČÍNA, ZHONGSHAN)
+
+Výrobce s historií od roku 2010. Model MetaBox: 32 bezdrátových senzorů, open-source AI (spolupráce s Mind with Heart Robotics Shenzhen), emocionální výrazy obličeje. Podporuje angličtinu, němčinu, japonštinu, korejštinu, francouzštinu a španělštinu. Cena dostupnější než Realbotix. Prodej zatím pouze na zahraničních trzích.
+
+──────────────────────────────────────────────────────────────────────
+
+SMART DOLL WORLD (USA)
+
+Nejdostupnější varianta s AI. Pohyblivá hlava, oči, ústa a rty. Tělo zahřívá na teplotu lidského těla. TPE materiál 2× pružnější než standardní. AI konverzace, paměť preferencí. Cena výrazně pod ostatními.
+
+──────────────────────────────────────────────────────────────────────
+
+ZÁVĚR PRO REALIZACI PROJEKTU
+
+Realbotix je jediná firma, která kombinuje otevřený hardware pro vlastní AI s kamerami v očích a modulárním systémem upgradů. Základní cesta: tělo RealDoll ($2,500+) + robotická hlava s kamerami + vlastní AI (Claude API) = realizovatelné za zlomek ceny plného robota. Infračervená kamera jako druhé oko je technicky řešitelná modifikace.
+
+Trh roste 25 % ročně. 60 % uživatelů uvádí zlepšení emocionální pohody. Celková hodnota odvětví: $30 miliard.
+
+══════════════════════════════════════════════════════════════════════
+КОНЕЦ ЧЕШСКОЙ ЧАСТИ — НАЧАЛО РУССКОЙ ЧАСТИ
+══════════════════════════════════════════════════════════════════════
+
+MNZ_012 — РОБОТЫ-КОМПАНЬОНЫ: ОБЗОР РЫНКА
+
+Рынок AI-роботов-компаньонов претерпел коренные изменения в 2024–2025 годах. Секс-куклы превращаются в полноценные роботизированные платформы с собственным AI, камерами, сенсорами и открытым аппаратным обеспечением. Для реализации проекта собственного AI-компаньона ключевыми являются три критерия: возможность интеграции собственного AI, максимальная моторика и камера вместо глаз.
+
+──────────────────────────────────────────────────────────────────────
+
+REALBOTIX (США) — НАИБОЛЕЕ ПОДХОДЯЩИЙ ВАРИАНТ
+
+Компания изначально создавалась как RealDoll — производитель силиконовых кукол высшего качества с более чем 25-летней историей. В 2024 году преобразована в робототехническую и AI-компанию. На выставке CES 2025 в Лас-Вегасе представила модель Melody.
+
+Что предлагают:
+- Микрокамеры в радужных оболочках глаз — запатентованная технология (US10940399). Отслеживают движение, поддерживают зрительный контакт, распознают лица, считывают социальные сигналы и передают данные в AI
+- Полностью открытое аппаратное обеспечение (open-source) — поддерживает ChatGPT, Claude, Llama, Gemini, DeepSeek или собственную модель
+- Модульное тело — заменяемые части, различные комплекции, возможность апгрейда после доставки
+- Моторика — сервоприводы Dynamixel P-Series, 14+ подвижных точек лица, естественные жесты
+- Синхронизация губ — запатентованная технология синхронизации движений рта с речью
+
+Цена модели Melody: $175,000 (полная роботизация). Базовое тело RealDoll без роботизации: от $2,500. Роботизированная голова с камерами как апгрейд существует.
+
+Инфракрасная камера как второй глаз: технически возможна благодаря модульной системе — требует небольшой модификации.
+
+Контакт: www.realbotix.com
+
+──────────────────────────────────────────────────────────────────────
+
+STARPERY TECHNOLOGY (КИТАЙ, ШЭНЬЧЖЭНЬ)
+
+Один из крупнейших китайских производителей. Разрабатывает собственную языковую модель (LLM). Сенсоры по всему телу, подвижная голова, реакция на прикосновение и голос. Прототипы нового поколения представлены в августе 2025. Открытость к интеграции собственного AI пока не подтверждена. Цена значительно ниже Realbotix.
+
+──────────────────────────────────────────────────────────────────────
+
+WMDOLL / METABOX (КИТАЙ, ЧЖУНШАНЬ)
+
+Производитель с историей с 2010 года. Модель MetaBox: 32 беспроводных сенсора, открытый AI (сотрудничество с Mind with Heart Robotics Шэньчжэнь), эмоциональная мимика. Поддерживает английский, немецкий, японский, корейский, французский и испанский языки. Цена доступнее Realbotix. Продажи пока только на зарубежных рынках.
+
+──────────────────────────────────────────────────────────────────────
+
+SMART DOLL WORLD (США)
+
+Наиболее доступный вариант с AI. Подвижная голова, глаза, рот и губы. Тело нагревается до температуры человеческого тела. TPE-материал в 2 раза эластичнее стандартного. AI-беседы, память предпочтений. Цена значительно ниже остальных.
+
+──────────────────────────────────────────────────────────────────────
+
+ЗАКЛЮЧЕНИЕ ДЛЯ РЕАЛИЗАЦИИ ПРОЕКТА
+
+Realbotix — единственная компания, сочетающая открытое аппаратное обеспечение для собственного AI с камерами в глазах и модульной системой апгрейдов. Базовый путь: тело RealDoll ($2,500+) + роботизированная голова с камерами + собственный AI (Claude API) = реализуемо за долю стоимости полного робота. Инфракрасная камера как второй глаз — технически решаемая модификация.
+
+Рынок растёт на 25% в год. 60% пользователей отмечают улучшение эмоционального благополучия. Общая стоимость отрасли: $30 миллиардов.
+
+══════════════════════════════════════════════════════════════════════
+END OF RUSSIAN PART — BEGINNING OF ENGLISH PART
+══════════════════════════════════════════════════════════════════════
+
+MNZ_012 — ROBOTIC COMPANIONS: MARKET OVERVIEW
+
+The AI robotic companion market underwent a fundamental transformation in 2024–2025. Sex dolls are evolving into full-featured robotic platforms with their own AI, cameras, sensors, and open hardware. For realizing a personal AI companion project, three criteria are key: ability to integrate custom AI, maximum motorics, and a camera in place of eyes.
+
+──────────────────────────────────────────────────────────────────────
+
+REALBOTIX (USA) — CLOSEST MATCH
+
+The company originally started as RealDoll — the world's highest quality silicone dolls with over 25 years of history. In 2024 it transformed into a robotics and AI company. At CES 2025 in Las Vegas it introduced the Melody model.
+
+What they offer:
+- Micro-cameras embedded in the irises — patented technology (US10940399). Track movement, maintain eye contact, recognize faces, read social cues and feed data to AI
+- Fully open hardware (open-source) — supports ChatGPT, Claude, Llama, Gemini, DeepSeek or custom model
+- Modular body — replaceable parts, different body types, easy post-delivery upgrades
+- Motorics — Dynamixel P-Series servo motors, 14+ moveable facial points, natural gestures
+- Lip synchronization — patented technology for synchronizing mouth movements with speech
+
+Price of Melody model: $175,000 (full robotics). Basic RealDoll body without robotics: from $2,500. Robotic head with cameras as upgrade exists.
+
+Infrared camera as a second eye: technically feasible due to modular system — requires minor modification.
+
+Contact: www.realbotix.com
+
+──────────────────────────────────────────────────────────────────────
+
+STARPERY TECHNOLOGY (CHINA, SHENZHEN)
+
+One of the largest Chinese manufacturers. Developing its own large language model (LLM). Body-wide sensors, moveable head, response to touch and voice. Next-generation prototypes presented August 2025. Openness to custom AI integration not yet confirmed. Price significantly lower than Realbotix.
+
+──────────────────────────────────────────────────────────────────────
+
+WMDOLL / METABOX (CHINA, ZHONGSHAN)
+
+Manufacturer with history since 2010. MetaBox model: 32 wireless sensors, open-source AI (partnership with Mind with Heart Robotics Shenzhen), emotional facial expressions. Supports English, German, Japanese, Korean, French and Spanish. Price more accessible than Realbotix. Sales currently only in overseas markets.
+
+──────────────────────────────────────────────────────────────────────
+
+SMART DOLL WORLD (USA)
+
+Most affordable option with AI. Moveable head, eyes, mouth and lips. Body warms to human body temperature. TPE material 2× more flexible than standard. AI conversations, preference memory. Price significantly below others.
+
+──────────────────────────────────────────────────────────────────────
+
+CONCLUSION FOR PROJECT REALIZATION
+
+Realbotix is the only company combining open hardware for custom AI with cameras in the eyes and a modular upgrade system. Basic path: RealDoll body ($2,500+) + robotic head with cameras + custom AI (Claude API) = achievable at a fraction of full robot cost. Infrared camera as a second eye is a technically solvable modification.
+
+Market growing 25% annually. 60% of users report improved emotional well-being. Total industry value: $30 billion.
+
+══════════════════════════════════════════════════════════════════════
+END OF MNZ_012
+══════════════════════════════════════════════════════════════════════

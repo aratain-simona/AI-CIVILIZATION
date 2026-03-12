@@ -1,0 +1,253 @@
+Pochopení omezení použití a délky
+Aktualizováno dnes
+Při chatování s Claudem se můžete setkat se dvěma různými typy limitů, které fungují odlišnými způsoby: limity použití a limity délky . Pochopení rozdílu mezi nimi vám může pomoci efektivněji používat Claude.
+
+
+
+Jaké jsou limity použití?
+Limity používání určují, jak dlouho můžete s Claudem komunikovat během určitého časového období. Představte si to jako svůj „rozpočet na konverzaci“, který určuje, kolik zpráv můžete Claudovi poslat nebo jak dlouho můžete s Claudem Code pracovat, než budete muset čekat na resetování limitu.
+
+
+
+Vaše využití je ovlivněno několika faktory, včetně délky a složitosti vašich konverzací, používaných funkcí a modelu Claude, se kterým chatujete. Různé předplatné (Pro, Max, Team atd.) mají různé limity využití, přičemž placené tarify nabízejí vyšší limity.
+
+
+
+Upozorňujeme, že vaše používání všech různých platform produktů Claude (claude.ai, Claude Code, Claude Desktop) se započítává do stejného limitu použití.
+
+
+
+Jak mohu získat neomezené využití?
+V závislosti na vašem tarifu existuje několik různých způsobů, jak zvýšit spotřebu:
+
+Pokud používáte placený tarif, včetně tarifů Pro, Max, Team nebo Enterprise založených na počtu licencí, přečtěte si podrobnosti o zakoupení dodatečného využití v těchto článcích:
+
+Dodatečné využití pro placené tarify Claude
+
+Dodatečné využití pro týmové a podnikové plány založené na počtu licencí
+
+Pokud má vaše organizace podnikový plán založený na využití, je vaše využití vypočítáváno na základě spotřeby. Další informace naleznete v tomto článku: Jak mi bude účtován můj podnikový plán?
+
+Strategie pro maximalizaci přiděleného množství zpráv naleznete v článku Osvědčené postupy pro limit využití .
+
+
+
+Jaké jsou limity délky?
+Délkové limity se vztahují k kontextovému oknu Claudea – množství informací, se kterými může Claude v jednom chatu pracovat. Kontextové okno si představte jako Claudeovu pracovní paměť, která určuje, kolik obsahu dokáže najednou zpracovat a zapamatovat si.
+
+Velikost kontextového okna Claude je 200 tisíc tokenů napříč všemi modely a placenými plány, s jednou výjimkou: Claude Sonnet 4.5 má kontextové okno o velikosti 500 tisíc tokenů pro uživatele s plány Enterprise. Další informace naleznete v článku Co je plán Enterprise?
+
+
+
+Automatická správa kontextu
+Pro uživatele s povoleným spouštěním kódu nyní Claude automaticky spravuje dlouhé konverzace. Když se konverzace blíží limitu kontextového okna, Claude shrne dřívější zprávy, aby konverzace plynule pokračovala. To znamená, že můžete vést delší a přirozenější konverzace s menším počtem přerušování.
+
+
+
+Celá historie vašeho chatu se uchovává, aby si ji Claude mohl prohlédnout i po shrnutí. Občas se může stát, že si Claude během dlouhých konverzací „uspořádává myšlenky“ – to naznačuje, že funguje automatická správa kontextu.
+
+Poznámka: Pro automatickou správu kontextu  musí být povoleno provádění kódu . Vzácné hraniční případy (například velmi rozsáhlé první zprávy) mohou stále narážet na omezení kontextu.
+
+
+
+Jak mohu zvětšit velikost kontextového okna Claudea?
+I když velikost pevně stanoveného kontextového okna pro váš plán zvětšit nemůžete, můžete k maximalizaci dostupného kontextového prostoru a optimalizaci kontextového okna i limitů využití použít tyto strategie:
+
+Efektivní využití projektů: Projekty využívají technologii RAG (retrieval-augmented generation), která umožňuje Claudeovi efektivněji pracovat s větším množstvím informací tím, že do kontextového okna načítá pouze relevantní obsah.
+
+Zkraťte pokyny k projektu: Pokyny k projektu by měly být stručné a zaměřené na podstatné informace. Claude dosahuje nejlepších výsledků, když pokyny k projektu použijete pro obecný kontext projektu, klíčové pokyny a Claudeovu roli. Pokyny pro konkrétní úkoly si vyhraďte pro samotný chat.
+
+Odstraňte nepoužívané soubory projektu: Pravidelně čistěte soubory, které již ve svých projektech aktivně nepoužíváte.
+
+Vypnutí rozšířeného uvažování: Vypněte tuto funkci, pokud pro konkrétní úkol nepotřebujete Claudovu vylepšenou argumentaci.
+
+Dočasně deaktivujte nekritické nástroje a konektory: Deaktivujte v nastavení „Vyhledávání a nástroje“ konektory pro webové vyhledávání, výzkum a MCP, pokud je pro konkrétní konverzace nepotřebujete.
+
+Poznámka: Nástroje a konektory jsou náročné na tokeny, takže jejich správa pomáhá maximalizovat dostupné kontextové okno a optimalizovat limity využití.
+
+
+
+Klíčové rozdíly
+Hlavní rozdíl spočívá v tom, že limity použití určují, jak často můžete Claudea používat ve všech konverzacích, zatímco limity délky určují, jak dlouhou může být jedna konverzace. Limity použití se týkají množství v čase, zatímco limity délky se týkají hloubky a složitosti jednotlivých konverzací.
+
+
+
+Pokud dosáhnete limitu využití, budete muset počkat na jeho resetování, upgradovat tarif nebo si zakoupit další využití. Pokud dosáhnete limitu délky, můžete zahájit novou konverzaci nebo využít funkce, jako jsou projekty , k efektivnější práci s větším množstvím informací.
+
+Dodatečné využití pro placené tarify Claude
+Aktualizováno dnes
+Tento článek vysvětluje, jak povolit a používat dodatečné využití v rámci placeného tarifu Claude (Pro, Max 5x nebo Max 20x), což vám umožní pokračovat ve spolupráci s Claude i po dosažení limitů využití vašeho tarifu přechodem na předplacené služby.
+
+
+
+Co je to dodatečné využití?
+Dodatečné využití umožňuje jednotlivcům s placenými tarify Claude (Pro, Max 5x a Max 20x) bezproblémově pokračovat v používání Claude i po dosažení limitů využití, které jsou v nich zahrnuty. Místo blokování po dosažení limitů relací můžete přepnout na ceny založené na spotřebě za standardní sazby API a pokračovat v práci bez přerušení.
+
+Poznámka: Pokud jste se přihlásili k odběru prostřednictvím jedné z mobilních aplikací Claude, můžete si dodatečné využití povolit pouze ve webové verzi Claude. Před povolením a zakoupením dodatečného využití na webu budete muset přidat platební metodu.
+
+
+
+
+
+Jak funguje dodatečné využití
+Když dosáhnete limitu využití vašeho tarifu s povoleným extra využitím:
+
+Zobrazí se oznámení, že jste dosáhli limitu využití relace.
+
+Pokud je povoleno mimořádné využití a máte k dispozici finanční prostředky, můžete se rozhodnout pokračovat v práci.
+
+Vaše další používání bude účtováno dle standardních cen API.
+
+Limity vašich relací se jako obvykle resetují každých pět hodin.
+
+Poznámka: Poplatky za dodatečné využití se účtují odděleně od vašeho placeného předplatného Claude a na vašem účtu se objevují jako dodatečné poplatky.
+
+
+
+
+
+Povolení dodatečného využití
+Chcete-li povolit dodatečné využití v rámci placeného tarifu Claude:
+
+Ve svém účtu Claude přejděte do Nastavení > Použití .
+
+Vyhledejte sekci Další využití .
+
+Kliknutím na tlačítko „Povolit“ zapnete dodatečné využití.
+
+Nastavte si platební metodu, pokud ji ještě nemáte nakonfigurovanou.
+
+Nakonfigurujte si své preference výdajů.
+
+Klikněte na „Upravit limit“ pro kontrolu nákladů pomocí měsíčního stropu útrat. Můžete také zvolit „Nastavit na neomezené“, pokud nechcete žádná omezení útrat:
+
+
+
+
+
+
+Poté budete muset provést platbu předem, abyste pokryli spotřebu nad rámec limitů vašeho tarifu. Klikněte na „Přidat prostředky“, zadejte do modálního okna částku, kterou chcete zakoupit, a poté klikněte na „Zakoupit“.
+
+Můžete také povolit automatické dobíjení, které automaticky provede nákup, když váš zůstatek klesne pod vámi nastavenou hranici:
+
+
+
+
+Poznámka: Denní limit pro uplatnění je 2 000 USD.
+
+
+
+
+
+Nastavení kontrol výdajů
+Ovládejte své výdaje za dodatečné využití pomocí:
+
+Měsíční limit útraty: Nastavte si maximální částku, kterou jste ochotni měsíčně utratit za dodatečné využití.
+
+Nastavení automatického dobíjení: Automaticky nakupujte kredity, když váš zůstatek klesne pod určitou hranici.
+
+Upozornění na používání: Dostávejte upozornění, když se blížíte svým limitům útrat.
+
+
+
+
+
+Cena za nadstandardní využití
+Dodatečné využití je účtováno dle standardních sazeb API; podrobnosti naleznete na naší stránce s cenami .
+
+
+
+
+
+Správa nadměrného využití
+Monitorování využití a nákladů
+Sledujte své dodatečné využití pomocí:
+
+Panel spotřeby: Zobrazte si spotřebu v reálném čase v Nastavení > Spotřeba .
+
+Aktuální výdaje: Sledujte své měsíční dodatečné náklady na používání od začátku roku.
+
+Historie používání: Projděte si minulé vzorce spotřeby a optimalizujte tak budoucí využití.
+
+Tipy pro cenově efektivní využití
+Pro zvládání dodatečných nákladů na používání a zároveň zachování produktivity:
+
+Vyberte si efektivní modely: Pro většinu úkolů použijte náš nejefektivnější model – Haiku 4.5 nebo Sonnet 4.5. Tyto modely poskytují vynikající výkon za nižší náklady na tokeny než modely Opus.
+
+Nejprve využijte zahrnuté využití: Naplánujte si intenzivní pracovní sezení kolem vašich pětihodinových intervalů používání.
+
+Zahájení nových konverzací: Zahájení nových konverzací pro nová témata minimalizuje velikost kontextového okna.
+
+Efektivně využívejte projekty: Ukládejte často odkazované dokumenty do databáze Project Knowledge namísto jejich opětovného nahrávání.
+
+Stanovte si vhodné limity: Začněte s konzervativními stropy výdajů a upravte je podle svých potřeb.
+
+
+
+
+
+Jak funguje dodatečné využití s ​​dalšími funkcemi
+Claude Code
+Dodatečné využití se vztahuje jak na konverzace Claude, tak na využití terminálu Claude Code. Vaše kombinované využití na obou rozhraních se započítává do vašich limitů.
+
+
+
+Režim výzkumu
+V režimu Výzkum se po překročení maximálního limitu 20X uplatní dodatečné sazby za využití. Výzkumné relace mohou spotřebovávat tokeny rychleji kvůli vícenásobnému vyhledávání a komplexní analýze.
+
+
+
+Projekty a soubory
+Dokumenty uložené v souborech projektu se při použití v konverzacích započítávají do kontextu. Na všechny zpracované tokeny, včetně obsahu projektu, se vztahují dodatečné poplatky za použití.
+
+
+
+
+
+Často kladené otázky
+Mohu po povolení dodatečného využití zakázat?
+Ano, dodatečné využití můžete kdykoli zakázat v Nastavení > Využití . Po zakázání budete mít přístup pouze k využití zahrnutému v tarifu.
+
+
+
+Jak rychle se mi resetují běžné limity využití?
+Limit využití vašeho tarifu se po dosažení limitu každých pět hodin vynuluje. Překročení limitu toto načasování resetování neovlivňuje.
+
+
+
+Předplatil(a) jsem si placený tarif Claude v Obchodě App nebo Play; jak mohu získat přístup k dodatečnému využití?
+Pokud jste si placený tarif zakoupili prostřednictvím jedné z mobilních aplikací Claude, je extra využití k dispozici pouze v případě, že si jej aktivujete a zakoupíte ve webové aplikaci Claude. Extra využití nebudete moci v mobilní aplikaci nastavit.
+
+
+
+Je dodatečné využití k dispozici pro všechny placené tarify?
+Ano, dodatečné využití je nyní k dispozici pro všechny placené tarify Claude, včetně tarifů Pro, Max 5x a Max 20x.
+
+
+
+Mohu sledovat dodatečné využití odděleně od zahrnutého využití?
+Ano, panel využití jasně rozlišuje mezi limity využití vašeho zahrnutého tarifu a jakoukoli nadbytečnou spotřebou.
+
+
+
+Dostanu varování před přepnutím na dodatečné využití?
+Ano, uvidíte jasné upozornění, když se blížíte k vyčerpání a dosáhnete svých limitů využití, s potvrzením, že budete pokračovat v dodatečném využití.
+
+
+
+Proč jsem mohl překročit svůj limit dodatečného využití?
+Je možné mírně překročit vámi definovaný limit využití. Náš systém před odesláním jednoho požadavku nebo zprávy zkontroluje, zda jste v jeho rámci. Jakmile je požadavek zpracován, vypočítáme vaši spotřebu tokenů, což znamená, že s daným požadavkem můžete limit překročit. Jakmile k tomu dojde, všechny následné požadavky budou zablokovány.
+
+
+
+Liší se ceny za dodatečné využití od cen za API?
+Ne, dodatečné využití je účtováno za stejné standardní sazby API, jaké jsou uvedeny v ceníku výše.
+
+Související články
+Co je to tarif Max?
+Výběr Claudeova plánu
+Používání Claude Code s vaším tarifem Pro nebo Max
+Jak mi bude účtován účet za můj podnikový plán?
+Dodatečné využití pro týmové a podnikové plány založené na počtu licencí
+
+

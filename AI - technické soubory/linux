@@ -1,0 +1,482 @@
+
+Základy shellu, základní příkazy, konfigurace
+
+
+Na úvod se seznámíme s několika základními elementárními příkazy,
+jejichž znalost je nezbytná pro rozumné využití výpočetního serveru THUNDER...
+a vlastně jakéhokoli počítače s OS UNIXového typu.
+
+
+pwd
+podle `print working directory', vypisuje jméno aktuálního adresáře
+po přihlášení do systému obdržíme adresář /home/users/loginname/
+ls
+podle `list', vypisuje obsah aktuálního adresáře
+ls -a
+podle `list all', vypisuje kompletní obsah aktuálního adresáře,
+včetně skrytých souborů jejichž jméno začíná tečkou, například `.bash_profile'
+ls -l
+podle `list, long format', vypisuje obsah aktuálního adresáře v dlouhém formátu,
+včetně typu, přístupových práv, vlastníka, data poslední změny a délky
+ls -la
+podle `list all in long format', zřejmé; ...zkuste si :-)
+parametry se píší za pomlčku (mínus) a mohou se shlukovat
+ls path
+vypisuje obsah adresáře na konci cesty path
+ls -l /home/users
+vypíše všechny informace o obsahu adresáře /home/users
+ls -l ..
+vypíše všechny informace o obsahu rodičovského adresáře,
+tedy adresáře o jednu úroveň výše, než aktuální adresář;
+v našem případě jsou poslední dva příkazy shodné, neboť se nacházíme v /home/users/loginname/
+ls -a .
+vypíše kompletní obsah aktuálního adresáře;
+v naší situaci je ekvivalentní příkazu ls -a
+mkdir dirname
+podle `make directory', vytvoří v aktuálním adresáři adresář se jménem dirname;
+zkuste nyní ls,   `ls -l dirname',   `ls -l dirname'   a podobně
+rmdir dirname
+podle `remove directory', odstraní adresář dirname;
+rušený adrešář _MUSÍ_ být prázdný
+cd dirname
+podle `change directory', změní aktuální (pracovní) adresář;
+zkuste sekvenci `mkdir dirname',   `ls ..',   `cd ..',   `ls',   `pwd',   'cd loginname/dirname`,   `pwd'  a `cd ~'
+poslední příkaz cd ~ vás přenese zpět do domovského adresáře, podobnou funkci má i cd samotné
+rm filename
+podle `remove', maže soubor, pořípadě adresářovou strukturu;
+pozor!  příkaz `unremove' nebo `undelete'  _NEEXISTUJE_ !
+následující příkaz _NEZKOUŠEJTE_, dokud nebudete přesně znát jeho účinek; slouží pouze jako varování...
+příkaz `rm -rf *' nevratně smaže _všechny_ soubory v aktuálním adresáři včetně jeho podadresářů.
+cp source target
+podle `copy', zkopíruje objekt source na objekt target
+například `cp /proc/cpuinfo .' zkopíruje textový soubor cpuinfo z adresáře /proc do aktuálního adresáře
+file filename
+podle `file', příkaz se pokusí určit druh souboru filename
+například `file cpuinfo' poskytne něco jako `cpuinfo: ASCII text'
+cat filename
+podle `catenate', vypíše obsah souboru filename
+například `cat cpuinfo' zobrazí obsah textového souboru ./cpuinfo
+příkaz cat, jak už plyne z jeho obskurního názvu, má však mnohem širší použití
+
+
+Filozofie UNIXu.
+
+ŽÁDNÁ ZPRÁVA = DOBRÁ ZPRÁVA
+V překladu to znamená, že se nepotvrzuje úspěšné provedení příkazu.
+
+OTÁZKY POUZE POKUD JSOU VYNUCENY
+Pokud uživatel "omylem" zadá příkaz, jenž smaže všechna jeho data,
+má smůlu. Měl si to rozmyslet. Systém _nežádá_ potvrzení a příkaz provede.
+"Undelete" nebo "unremove" _neexistuje_, není cesty zpět :-)
+
+ŘETĚZENÍ PŘÍKAZŮ
+Elementární příkazy jsou "jednoduché", jednoúčelové.
+Jejich spojováním však vznikají mocné konstrukce.
+Základem je správa vstupů/výstupů a roura.
+
+
+
+Adresářová struktura a soubory.
+Nyní je vhodný okamžik pro upřesnění pojmů adresář, soubor, cesta a dirname, filename, path, source, target. Zhruba řečeno, jde stále o stejnou věc, tedy o přesnou specifikaci objektu (data, program) v systému. Data - například znaky dopisu nebo symboly programovacího jazyka fortran - jsou sdruženy do logického celku - souboru (file). Takový datový (textový) soubor může být vytvořen například textovým editorem. Soubor však může obsahovat i složitější údaje, například instrukce pro procesor počítače, potom se jedná o objekt, který může provádět různé úkoly - program. Takový program vytvoříme například přeložením (kompilací) textového souboru se symboly programovacího jazyka fortran (například) překladačem (kompilátorem) jazyka fortran.
+
+Existují samozřejmě také složitější datově-hiearchické objekty, například seskupení souborů tematicky souvisejících. Toto seskupení (včetně informací o jeho obsahu) se obvykle nazývá - adresář (directory). Jelikož operační systém zachází s adresářem prakticky stejně, jako se souborem, může být adresář členem jiného adresáře. Například...
+
+
+                             |--
+                             | \documentclass[12pt]{article}
+               |-- file_1  --| ...
+               |             |--
+               |
+               |             |--
+               |-- file_2  --| 001011110100010101010001010...
+               |             |--
+directory_1  --|-- ...
+               |                                    |--
+               |                    |-- file_1_1  --| DIMENSION XRAY(100,180)
+               |-- directory_1_1  --|               | ...
+               |                    |               |--
+               |
+               |                    |-- ...
+               |-- directory_1_2  --|-- directory_1_2_1 ...
+               |                    |
+               |                    |-- file_2_m ...
+               |-- ...
+               |
+               |-- file_n  ...
+
+
+Vzhledem k tomu, že se potřebujeme odvolávat na naše data, spouštět programy, archivovat adresáře a podobně, je vysoce žádané, aby měly všechny soubory svá jména - specifikace. Například directory_1 by se mohl jmenovat muj_adresar, file_1 clanek.tex, file_2 muj_program, directory_1_1 bychom mohli nazvat fortran, file_1_1 tomografie.f, atd.
+Je třeba si uvědomit, že je velmi obtížné - zvláště v prostředí více uživatelů - udržet jednoznačnost souborových jmen. Bylo by nejen obtížné dodržet různá jména souborů a adresářů v různých místech adresářové struktury, ale také nežádoucí. Naštěstí operační systém neidentifikuje soubory pouze podle jejich jména, ale i podle polohy v hiearchické struktuře adresářů - podle jejich kompletní specifikace. Například specifikace souboru file_1_1 vzhledem k výchozímu adresáři directory_1 je directory_1/directory_1_1/file_1_1, tedy muj_adresar/fortran/tomografie.f. Pro ABSOLUTNÍ specifikaci je nutné nějak "normalizovat" výchozí adresář. V systému UNIX existuje základní (kořenový) výchozí adresář /, tedy lomítko. Skutečná adresářová struktura na UNIXovém systému vypadá přibližně následovně...
+
+
+     |-- bin   (spustitelné programy - příkazy systému)
+     |-- boot  (jádro systému, používá se při startu systému)
+     |-- dev   (zařízení, speciální soubory)
+     |-- etc   (konfigurační soubory)
+     |
+     |          |-- httpd
+     |          |
+     |-- home --|            |-- nathan    (domovské adresáře
+     |          |-- users  --|-- sanitak       uživatelů)
+     |                       |-- bajer
+     |                       |-- ...
+     |                       |                |-- muj_adresar
+     |                       |-- loginname  --|-- ...
+     |                                        |
+     |-- lib   (knihovny)
+     |
+     |         |
+/  --|-- mnt --|
+     |         |
+     |         |
+     |-- opt
+     |-- proc  (virtuální soubory obsahující některé
+     |          systémové struktury)
+     |-- root  (domovský adresář správce systému)
+     |-- sbin  (spustitelné programy -
+     |          příkazy pro správu systému)
+     |-- tmp   (dočasné soubory)
+     |
+     |-- usr --|             (softwarové balíky)
+     |         |
+     |         |-- bin       (spustitelné programy)
+     |         |-- sbin      ( -||-  pro správce)
+     |         |-- lib       (knihovny)
+     |         |-- include   (hlavičkové soubory)
+     |         |-- etc       (konfigurační soubory)
+     |         |-- share     (soubory sdílené více programy)
+     |         |-- doc       (dokumentace)
+     |         |-- man       (manuálové stránky)
+     |         |-- info      (dokumenty `info')
+     |         |-- src       (zdrojové texty)
+     |         |-- ...
+     |         |
+     |         |                (další softwarové balíky)
+     |         |            |-- bin
+     |         |-- local  --|-- lib
+     |         |            |-- ...
+     |         |
+     |
+     |-- var   (logovací soubory, spool pro tisk, postu,...)
+
+
+Některé adresáře zůstávají prázdné, v systému se vyskytují kvůli kompatibilitě. Běžný uživatel se  jménem loginname a domovským adresářem /home/users/loginname má k celé této adresářové struktuře přístup _READ_ONLY_, tedy může jedině číst. Zapisovat a mazat smí pouze ve svém domovském adresáři /home/users/loginname. ABSOLUTNÍ specifikace našeho souboru file_1_1, tedy tomografie.f, je /home/users/loginname/muj_adresar/fortran/tomografie.f. Jde o jednoznačnou CESTU (path) k tomuto souboru. Zřejmě není příliš pohodlná následující sekvence...
+
+  f77 -o /home/users/loginname/muj_adresar/muj_program -O -Wall
+      /home/users/loginname/muj_adresar/fortran/tomografie.f
+
+... pro kompilaci fortranovského zdrojového textu tomografie.f do spustitelného programu muj_program. Pro zjednodušení vyjadřování je velmi výhodné používat místo ABSOLUTNÍ specifikace pouze RELATIVNÍ specifikaci - vzhledem na aktuální (pracovní) adresář. Za předpokladu, že naším pracovním adresářem je adresář /home/users/loginname/muj_adresar, můžeme místo předchozího příkazu použít se stejným účinkem příkaz následující...
+
+  f77 -o ./muj_program -O -Wall ./fortran/tomografie.f
+
+nebo dokonce...
+  f77 -o muj_program -O -Wall fortran/tomografie.f
+
+Odkazovat se můžeme také na rodičovský adresář `..'. Za předpokladu, že naším pracovním adresářem je adresář /home/users/loginname/muj_adresar/fortran, použijeme se stejným účinkem příkaz...
+
+  f77 -o ../muj_program -O -Wall tomografie.f
+
+Koncept relativní specifikace (relativní cesty) podporuje shell a je tedy použitelný v každé situaci.
+Dále viz Dokumentace, literatura, vyhledávání souborů.
+
+Na závěr zmíníme fyzické uložení dat na záznamových médiích, tedy na pevném disku, disketě, cdrom a podobně. Je třeba si uvědomit, že abstraktní hiearchická adresářová struktura popsaná výše _NEKORESPONDUJE_ s fyzickým uložením dat. Například adresáře /usr a /home jsou sice členy stejného adresáře /, ale obsah každého z nich leží fyzicky na jiné diskové oblasti. O tom se může snadno přesvědčit i prostý uživatel pomocí příkazu df (display file systems). Pokud uživatel vloží cdrom médium do cdrom mechaniky v serveru (v seminární místnosti) a připojí souborový systém z tohoto cdrom média pomocí příkazu `mount /mnt/cdrom' (na lokálním počítači v režimu vzdáleného přihlášení), budou data fyzicky ležící na cdrom médiu zpřístupněna v adresáři /mnt/cdrom. Přitom informace o samotném adresáři /mnt/cdrom se nacházejí na pevném disku.
+Důležité je, že uživatel se nemusí o fyzické umístění svých dat na pevném disku vůbec starat  :-)
+
+
+
+TODO:   práva, uživatelé, skupiny, chmod, chown
+
+
+
+
+Tipy, triky, techniky, DROBNOSTI   :-)
+
+Především se zmíníme o výhodách Linuxového shellu `bash' a výhodách vzdálené práce s Linuxovým systémem - oproti jiným (komerčním) UNIXovým systémům. Hlavními hesly jsou: editace příkazové řádky, historie příkazové řádky, doplňování jmen souborů na příkazové řádce. První bod, tedy možnost úprav textu na příkazové řádce, si lze snadno ověřit. Klávesy "šipky", Delete a BackSpace jsou plně funkční. Navíc existují další klávesy pro pohyb a editaci řádky. Ctrl-a přesune kurzor na začátek řádky, Ctrl-e na konec řádky, Ctrl-l smaže obrazovku, ale příkazovou řádku nemění. Pro další funkce studujte dokumentaci k shellu.
+Často se pořebujeme vrátit k příkazu, jenž jsme už jednou použili, nebo k jeho modifikaci. Místo opětovného vypisování nám shell nabízí historii zadaných příkazů. Pohybujeme se po ní pomocí kláves "šipka nahoru" a "šipka dolů". Kterýkoli řádek z historie můžeme upravit a použít. K historii příkazů se vztahuje též tzv. reverzní hledání v příkazové historii. Vyvolává se kombinací Ctrl-r. Výzva na začátku příkazové řádky (prompt) se změní na (reverse-i-search)`':   Jakmile uživatel začne zadávat začátek příkazu, shell hledá v historii řádku začínající příslušným textem a nabízí ji k použití.
+Kromě opisování příkazů, kterého nás zbavila historie příkazové řádky, je tu ještě jedna věc, která nás zdržuje při práci. Konkrétně vypisování absolutní nebo i relativní cesty k souborům. I s touto prací nám výrazně pomůže shell `bash'. Ten totiž dokáže k několika prvním zadaným znakům příkazu či souboru doplnit (na požádání) zbytek jejich jména. Funkce se vyvolává klávesou Tab (tabelátor). Doplňování jmen souborů si uživatel snadno vyzkouší. Například zadáme-li `ls /ho' a stiskneme tabelátor, shell doplní příkaz na `ls /home/'. Dopíšeme-li `ls /home/u' a stiskneme tabelátor, shell doplní řádku na `ls /home/users/', čímž nám ušetří 5 znaků. U delších jmen užitečnost této funkce prudce vzrůstá, neboť navíc výrazně snižuje riziko `překlepů'. Funkce tabelátoru je poměrně široká. Zadáme-li nedostatečný počet začátečních znaků, nebo nezadáme žádný, klávesa Tab nevykoná žádnou funkci. Pokud ji však stiskneme ještě jednou, poskytne nám nabídku všech souborů vyhovujících nedostatečné specifikaci. Například v situaci `ls /home/users/' je dvojí stisk tabelátoru ekvivalentní výpisu obsahu adresáře /home/users/. Podobně, zadáme-li na začátek řádky f a aplikujeme dvakrát klávesu Tab, dostaneme nabídku všech příkazů začínajících písmenem `f'. Doplníme-li vstup na fr a ještě jednou použijeme tabelátor, získáme nespíš neco jako free. Následné ENTER vyvolá příkaz `free', který vypíše použitou a volnou paměť.
+Na závěr zdůrazněme, že zmíněné koncepty a výhody tvoří pouze "špičku" ledovce funkčnosti standardního Linuxového shellu.
+
+
+
+Volba textového editoru.
+
+Pro další části předkládaného "manuálu" a samozřejmě především pro běžnou práci se systémem pořebuje uživatel vytvářet a upravovat textové soubory. Editace konfigurčních souborů, psaní dopisu nabo článku v latexu, vytváření webovské stránky anebo třeba psaní programu v pascalu - všechny tyto úkony spadají do oblasti práce s textovým souborem.
+Systém THUNDER nabízí nepřeberné množství jednoduchých i komplexnějších textových editorů. Například jed, joe, cooledit, sfte, fte, vi, vim, emacs a další. Jejich ovládání a konfigurace je posána v příslušné dokumentaci, viz Dokumentace, literatura, vyhledávání souborů. Speciálně, pro velmi krátký a velmi elementární úvod do práce s textovým editorem vi/vim, viz Jemný úvod do editoru VIM.
+Pro jednoduché účely můžeme vytvořit triviální textový zápisník z příkazu cat...
+
+  cat > muj_text[ENTER]
+  prvni radek meho textu...[ENTER]
+  2. radek MEHO textu[ENTER]
+  posledni radek[ENTER]
+  [Ctrl-d]
+
+Přitom symboly v hranatých závorkách [] představují klávesy, respektive klávesové kombinace. Kombinace Ctrl-d dává signál k ukončení příkazu. Použije-li uživatel Ctrl-d přímo v shellu, ukončí jeho práci a odhlásí se od systému. Předchozí sekvence vytvoří v aktuálním adresáři textový soubor muj_text obsahující 3 zadané textové řádky. Přesvědčit se o tom můžeme příkazem
+
+  cat muj_text
+
+Smysl příkazu  cat > muj_text  bude vysvětlen podrobně v následující sekci.
+
+
+
+Správa vstupů a výstupů.
+
+Většina příkazů a programů potřebuje ke správné funkci nějaký vstup dat a většinou poskytuje též nějaký výstup, výsledek své činnosti. Pokud se při provádění příkazu vyskytnou chyby, produkuje též chybový výstup. Těmto třem standardním komunikačním kanálům se postupně říká: standardní vstup (standard input), standardní výstup (standard output) a standardní chybový výstup. Implicitně (default) jsou všechny standardní vstupy a výstupy připojeny na "obrazovku". Například v dokumentaci k příkazu cat se uživatel dočte, že pokud nejsou zadány žádné parametry a soubory, příkaz cat přepisuje standardní vstup na standardní výstup...
+
+  cat[ENTER]
+  zadany text[ENTER]
+  zadany text              # toto opsal příkaz `cat'
+  [Ctrl-d]
+
+Tedy, dokud neukončíme práci kombinací kláves Ctrl-d, příkaz cat opisuje po řádcích standardní vstup na standardní výstup implicitně nastavené na "obrazovku". To nám ale nemusí vyhovovat. Můžeme například požadovat, aby byl standardní výstup PŘESMĚROVÁN do souboru, tedy  `cat > muj_text'. Znaky > a < přesměrovávají standardní výstup a standardní vstup. Například  `cat < muj_text'  Přepisuje standardní vstup připojený k souboru muj_text na standardní výstup připojený k "obrazovce". Stejnou funkci provádí příkaz  `cat muj_text', jak lze snadnou vyzkoušet a jak je popsáno v dokumentaci. Zmíněné zjednodušení je časté a usnadňuje používání nejen příkazu cat.
+Pokud bychom připojili standardní výstup nějakého příkazu či programu k již existujícímu souboru, bude jeho původní obsah _přepsán_ výstupem příkazu. Pokud si přejeme pouze _připojení_ nové informace k již existujícímu obsahu souboru, použijeme místo symbolu > symbol >> (append).
+
+Příklad použití.   Uživatel chce spočítat počet souborů v aktuálním adresáři. První si vypíše jeho obsah do souboru příkazem ls > list. Potom příkazem wc (word count) spočte počet slov v tomto souboru wc -w < list. Symbol < je opět možné vynechat. Opět zdůrazněme, že většina příkazů má dva režimy činnosti. Pokud uživatel zadá vstupní soubor, příkaz pracuje nad tímto souborem. Pokud uživatel nezadá nic, příkaz funguje jako FILTR, tedy pracuje nad standardním vstupem a výsledky posílá na standardní výstup.
+Náš příklad má však několik podstatných chyb. Jednak musíme ukládat mezivýsledky do souboru na disk (práce s diskem=zpomalení) a tento pracovní soubor posléze mazat, jednak získáme počet souborů v aktuálním adresáři o jedničku větší - ano, právě o pracovní soubor list.
+
+Nyní se seznámíme s posledním konceptem práce se vstupy a výstupy, který nám pomůže vyřešit předchozí problém s dočasným pomocným souborem. Jednoduše řečeno - vytvoříme pomocný soubor v operační paměti. Této metodě se říká ROURA (pipe). Například předchozí problém by snadno vyřešil příkaz  `ls | wc -w'. Znak `|' představuje "rouru" mezi programy `ls' a `wc'. Říká shellu, že má standardní výstup prvního příkazu připojit na standardní vstup druhého příkazu.
+
+Příklad použití.   Zřetězení příkazů  `ps aux | grep extrem'  poskytne výpis všech běžících procesů, jejichž jméno obsahuje řetězec `extrem'. Podobně  `ps aux | grep loginname'  zobrazí všechny běžící procesy uživatele `loginname', a podobně. Příkaz  `cat | gzip -9 > text.gz'  přečte text ze standardního vstupu (až do stisku Ctrl-d) zkomprimuje ho programem `gzip' s nejvyšší kompresí a výsledek uloží do souboru text.gz. Příkazy  `gzip -d text.gz'  a `cat text'  se  o tom přesvědčíme. Příkaz  `echo "Zdar chlape :-)" | write username'  pošle uživateli username zprávu `Zdar chlape :-)'. Přitom samotné  `echo "Zdar chlape :-)"'  by tuto zprávu vypsalo na standardní výstup. Uvozovky zde pouze ošetřují výskyt mezer a speciálních znaků ve zprávě. Místo uvozovek zde můžeme použít i apostrofy.
+Poznamenejme, že se jedná o velmi mocný nástroj, a že jej lze používat nejen v shellu, ale pomocí volání jádra také ve vlastních programech uživatele.
+
+
+
+Konfigurace prostředí.
+
+Chování operačního systému - přesněji shellu - je ovlivňováno řadou okolností a nastavení. Většinu z nich může uživatel modifikovat a upravit si tak chování shellu k obrazu svému.
+První je třeba seznámit se s myšlenkou systémových proměnných a proměnných v shellu vůbec. Příkaz  `export variable=value'  uloží do proměnné `variable' hodnotu `value'. Příkaz  `echo variable'  přesně dle očekávání vypíše na standardní výstup text `variable'. Pokud bychom chtěli vypsát HODNOTU proměnné `variable', musíme použít  `echo $variable'.  Proměnná bude odstraněna příkazem  `unset variable'. Zkusme například...
+
+  export x=blah[ENTER]                 # uvozovky nejsou nutne
+  echo x[ENTER]
+  x
+  echo $x[ENTER]
+  blah
+  unset x[ENTER]
+  echo $x[ENTER]
+
+  export smajlik=":-)"[ENTER]          # uvozovky nebo apostrofy nutne
+  echo "Zdar chlape smajlik"[ENTER]
+  Zdar chlape smajlik
+  echo "Zdar chlape $smajlik"[ENTER]
+  Zdar chlape :-)
+  echo 'Zdar chlape $smajlik'[ENTER]
+  Zdar chlape $smajlik
+  unset smajlik[ENTER]
+
+Příklad současně ukazuje, jak se proměnná chová v textových řetězcích pod uvozovkami a pod apostrofy. Apostrofy zřejmě ruší vliv všech speciálních znaků, tedy i znaku dolar $, jenž značí HODNOTU proměnné.
+
+
+
+POZNÁMKA TROCHU MIMO MÍSU.
+Proměnné shellu představují mocný nástroj k řešení mnoha problémů. Ukažme si například, jak by uživatel (z příkazové řádky!) zkonvertoval 50 různých tiff obrázků do postscriptu.
+
+  for n in *.tif; [ENTER]
+  do [ENTER]
+  convert $n ${n%tif}ps [ENTER]
+  done [ENTER]
+
+Cyklus `for' a postupné naplňování proměnné `n' soubory `*.tif' zajišťuje sám shell. Mírně jízlivě podotkněme, že v "operačních systémech" jedné nejmenované firmy by uživateli taková konverze zabrala celý den.
+
+
+Nyní se vrátíme zpět ke konfiguraci prostředí. Existuje mnoho proměnných shellu, takzvaných SYSTÉMOVÝCH PROMĚNNÝCH, které obsahují implicitní hodnoty pro nastavení rozličných vlastností systému. Například systémová proměnná PATH obsahuje seznam adresářů oddělených dvojtečkou. V těchto adresářích systém standardně hledá spustitelné soubory - programy. Dotaz `echo $PATH' poskytne něco jako /bin:/usr/bin:/usr/X11R6/bin. Příkaz  `export PATH=$PATH:/home/users/loginname/myprograms'  doplní adresář /home/users/loginname/myprograms do vyhledávací cesty. Takovéto úpravy se _NEDOPORUČUJÍ_, představují bezpečnostní díru do systému. Speciálně se uživatelé _varují_ před přidáváním akltuálního adresáře do vyhledávací cesty!
+Další systémové proměnné včetně jejich implicitních hodnot obdrží uživatel zadáním příkazů set a export bez parametrů. Některé proměnné jsou pouze ke čtení a nelze je měnit. K nim patří například UID; některé lze měnit, ale nelze je zrušit. Například  `unset PATH'  poskytne chybu  `unset: PATH: cannot unset'. Důležitou proměnnou je TERM. Její význam roste právě u vzdáleného přístupu. Špatné nastavení této proměnné může způsobit například problémy při používání celoobrazovkových textových editorů, jako například vim. Zvláště při vzdáleném přístupu a lokálním operačním systému typu M$ Windows je _DOPORUČENO_ nastavit po přihlášení proměnnou TERM na vyhovující hodnotu. Velmi dobře funguje například hodnota xterm. Tedy  `export TERM=xterm'.
+
+Jelikož je velmi velmi velmi otravné při každém vzdáleném přihlášení pomocí telnetu nebo ssh znovu nastavovat systémové proměnné, existuje způsob, jak to provést pouze jednou a s obecnou platností. Každý uživatel má ve svém domovském adresáři soubor  .bash_profile  - konfigurační soubor, jež je vykonán bezprostředně po přihlášení do systému. Doplní-li uživatel své definice systémových proměnných do tohoto souboru, může mít jistotu, že po každém přihlášení vejdou jeho nastavení v platnost. Soubor  .bash_profile  lze editovat libovolným textovým editorem, stačí však příkaz  `echo "export TERM=xterm" >> .bash_profile'   Je _důležité_ použít >> a  _ne_  pouze >.
+
+
+
+TODO:    doplnit LOCALE proměnné
+
+
+
+
+
+
+
+
+
+Základy práce se soubory a složkami v linuxovém příkazovém řádku Shell
+Linuxový příkazový řádek (shell) WebSupport pro svůj hosting poskytuje jako SSH nebo webovou konzoli, ve které můžeme pracovat pomocí moderního webového prohlížeče jako je například Google Chrome, nebo Mozilla Firefox.
+
+Tento návod můžete stejně použít pro používání linuxového operačního systému i na serverových a cloud službách.
+
+Právě použitím webového prohlížeče získáte přístup k linuxovému příkazovému řádku (shellu) z prostředí, které funguje nezávisle na operačním systému. Přístup k datům, tedy souborům a adresářům pomocí příkazového řádku je velmi rychlý a efektivní.
+
+Tento návod popisuje příkazový řádek, který reprezentuje Bash. Jde o příkazový shell interpreter naprogramovaný v rámci projektu GNU. Název je akronym k názvu Bourne again shell – je založený na Bourne Shell (bsh), což byl nejpoužívanější unixový shell.
+
+Klávesové zkratky
+Nejdřív se podíváme na klávesové zkratky, díky kterým dokážeme některé operace v linuxovém příkazovém řádku výrazně zrychlit. Ty se mohou v některých operačních systémech odlišovat.
+
+Příkaz	Popis
+Ctrl + Shift + C
+Shift + Insert	Vloží zkopírovaný text (pozor, klávesová zkratka Ctrl + C slouží na ukončení programu)
+Tab	Při psaní příkazu doplní ostatní písmena příkazu nebo název souboru či složky
+Šipka nahoru
+Šipka dolů	Vypíše příkaz ze seznamu historie (příkaz history), ale nespustí ho
+Ctrl + R	Vyhledávání v historii příkazů (historii zobrazíme pomocí příkazu history)
+!!	Spustí předešlý příkaz (např. s právy administrátora/roota: sudo !!)
+!n	Spustí příkaz číslo n (za písmeno n dosadíme pořadové číslo zjištěné z příkazu history)
+Ctrl + A	Přesune kurzor na začátek řádku (většinou funguje i klávesa Home)
+Ctrl + E	Přesune kurzor na konec řádku (většinou funguje i klávesa End)
+Ctrl + Z	Spuštěný program přenese do pozadí (stejně jako znak & za příkazem)
+Alt + B	Přesune kurzor o jedno slovo dozadu (Back)
+Alt + F	Přesune kurzor o jedno slovo dopředu (Forward)
+Ctrl + U	Vymaže všechny znaky před kurzorem
+Ctrl + K	Vymaže všechny znaky za kurzorem
+Ctrl + W	Vymaže jedno slovo před kurzorem
+Alt + D	Vymaže jedno slovo za kurzorem
+Ctrl + L	Vymaže celou obrazovku (stejně jako příkaz clear)
+Ctrl + C	Ukončí spuštěný program (jako kdyby jsme klikli na křížek okna nahoře vpravo resp. vlevo)
+Ctrl + D	Ukončí aktívní relaci (stejně jako příkaz exit)
+Vytváříme soubory a složky
+Pokud některé znaky na vaší klávesnici nebudete umět napsat, pomůže web znakynaklavesnici.cz
+
+Všechny příkazy jsou zkratkou nebo krátkými slovy od stručného anglického popisu toho, co vlastně příkaz dělá. Například jeden z nejčastěji používaných příkazů je cd, což je zkratka anglického popisu change directory (změň složku).
+
+Nejdříve se přesuneme do domovské složky jednoduchým krátkým příkazem change directory (cd) následovaným znakem vlnovka (~). Znak vlnovka v linuxovém příkazovém řádku vždy reprezentuje domovskou složku.
+
+cd ~
+Abychom si ověřili, jestli se opravdu nacházíme v domovské složce, použijeme příkaz print working directory (pwd):
+
+pwd
+Pokud jsme v domovské složce, vypíše se cesta /home/jmeno_uzivatele, přičemž namísto jmeno_uzivatele bude uvedené jméno aktuálně přihlášeného uživatele (např. Tibor). V této složce si pomocí příkazů make directory (mkdir) a touch vytvoříme 3 složky a 3 prázdné soubory, se kterými budeme pracovat.
+
+mkdir test
+touch test/soubor_1.txt
+mkdir test/prazdna_slozka
+mkdir test/neprazdna_slozka
+touch test/neprazdna_slozka/soubor_2.txt
+touch test/neprazdna_slozka/soubor_3.txt
+Pomocí příkazu disk usage (du) a přepínače -a (jako all – čili zobraz všechno včetně souborů) vypíšeme strukturu složek ve složce test, kterou jsme právě vytvořili:
+
+du -a test
+Doteď jsme použili 5 příkazů (cd, pwd, mkdir, touch a du). Často se stává, že stejné příkazy používáme víckrát. Proto vznikl příkaz history, který nám vypíše všechny doteď spuštěné příkazy:
+
+history
+Každý použitý příkaz je v novém řádku, přičemž každý řádek je uvedený pořadovým číslem. Pokud si přejeme opět spustit poslední příkaz ze seznamu historie, stačí použít dva výkřičníky (první řádek). Když potřebujeme spustit příkaz s konkrétním pořadovým číslem, zadáme jeden vykřičník následovaný pořadovým číslem (druhý řádek – spustí první příkaz ze seznamu historie):
+
+!!
+!1
+V seznamu historie můžeme díky klávesové zkratce Ctrl + R vyhledávat. Funguje to tak, že stlačíme klávesovou zkratku a následně píšeme text, který v seznamu historie chceme vyhledat.
+
+Součástí příkazu někdy mohou být citlivé údaje jako například heslo. Spolu s citlivými údaji se však příkazy zapíšou do seznamu historie, a tak je odtud potřebujeme vymazat. Odstranit můžeme jednu položku (první řádek s přepínačem -d jako delete, čili vymazat položku číslo 5) nebo celou historii (druhý řádek s přepínačem -c jako clear, čili vymazat všechno). Po vymazaní je potřeba změny zapsat do souboru se seznamem historie (přepínač -w jako write, čili zapsat).
+
+history -d 5 -w
+history -c -w
+Teď se přesuneme do složky test, ve které budeme pracovat se složkami a soubory. Stačí napsat cd t a stlačit klávesu Tab. Pokud se v aktuální složce nachází pouze jeden soubor a/nebo složka, jejíž název začíná na písmeno t, název bude automaticky doplněný (v našem případě) na test. Automatické doplnění se hodí například když složky a soubory mají dlouhé názvy.
+
+cd test
+Pracujeme se soubory a složkami
+Vytvořili jsme strukturu složek a souborů ve složce test a teď s nimi můžeme pracovat. Pracovat se složkami a soubory znamená, že budeme jejich obsah zobrazovat, hledat a upravovat. Složky a soubory budeme kopírovat, přemisťovat, přejmenovávat a mazat. Archivování a komprimování složek a souborů jsme se věnovali v návodu Archivace a komprese souborů v Linuxu.
+
+Ještě před prací se soubory a složkami však musíme získat přehled. Podíváme se tedy, které soubory a složky máme ve složce test k dispozici. Toho docílíme už známým příkazem du nebo v aktuální složce (v našem případě jde o složku test) příkazem ls (jako list, čili vypsat seznam složek a souborů). Přepínače -lah zabezpečí podrobný výpis (l jako long) všech složek a souborů (i skrytých s tečkou v názvu na začátku; a jako all) a velikost je uvedená v pro lidi snáze čitelné formě (h jako human readable).
+
+ls -lah
+Složky jsou od souborů většinou barevně odlišené. Pokud to tak není, potom podle prvního znaku bezpečně rozeznáme, jestli jde o složku (první znak je d) nebo o soubor (první znak je -).
+
+Výše jsme vytvořili prázdný soubor subor_1.txt, do kterého teď vložíme text pomocí příkazu echo a lomených závorek (> a >>). Jedna závorka (první řádek) znamená, že se celý obsah souboru přepíše a dvě (druhý řádek) znamenají, že se text doplní na konec a původní obsah zůstane zachovaný:
+
+echo "První řádek v souboru soubor_1.txt" > soubor_1.txt
+echo "Druhý řádek v souboru soubor_1.txt" >> soubor_1.txt
+Pomocí příkazu cat (z anglického concatenate) si ověříme, jestli se oba řádky do souboru soubor_1.txt doopravdy zapsaly:
+
+cat soubor_1.txt
+Kdybychom však potřebovali seřadit řádky abecedně, musíme nechat obsah souboru kromě zobrazení přes příkaz cat ještě i seřadit pomocí příkazu sort. Jinak řečeno, výstup příkazu cat pošleme jako vstup příkazu sort a získáme tak abecedně seřazený seznam řádků souboru soubor_1.txt. Výstup pošleme do vstupu přes “potrubí” (anglicky pipe), což je reprezentované znakem svislé čáry (|):
+
+cat soubor_1.txt | sort
+Jako vstup do třídícího příkazu sort můžeme poslat aj samotný obsah souboru pomocí opačně lomené závorky < a získáme tak stejný výstup jako v předešlém příkazu, ale s kratším zápisem (bez příkazu cat):
+
+sort < soubor_1.txt
+Často se stává, že soubor obsahuje velké množství řádků. Takový soubor stáhneme (první řádek) pomocí příkazu curl (z anglického Client URL). Ze staženého souboru tabulka.csv potřebujeme zobrazit pouze prvních 5 řádků (druhý řádek; head jako hlavička) a posledních 5 řádků (třetí řádek; tail jako chvost).
+
+curl -o tabulka.csv https://file-examples-com.github.io/uploads/2017/02/file_example_CSV_5000.csv
+head -n 5 tabulka.csv
+tail -n 5 tabulka.csv
+Celý obsah delšího dokumentu po částech zobrazíme pomocí příkazu less (první řádek), díky kterému stláčením klávesy mezerník stránkujeme a postupně prohlédneme celý obsah dokumentu. Klávesou Q ukončíme zobrazení obsahu přes příkaz less. Když potřebujeme obsah souboru i upravit, musíme ho načíst v textovém editoru (druhý řádek) jako je například nano. Co v textovém editoru nano upravíme, uložíme stlačením klávesové zkratky Ctrl + X, potom klávesy Y a nakonec klávesy Enter.
+
+less tabulka.csv
+nano tabulka.csv
+Stáhli jsme si poměrně mnoho obsahu (tisíce řádků) do souboru tabulka.csv, ve kterém je těžké vyhledávat ručně. Řekněme, že bychom v souboru tabulka.csv chtěli zobrazit pouze ty řádky, které obsahují jméno Felisa. Toho dosáhneme příkazem grep (globally search for a regular expression and print matching lines, čili globálně hledej regulérní výraz a vypiš odpovídající řádky):
+
+grep Felisa tabulka.csv
+Je velmi důležité pravidelně vytvářet zálohy důležitých souborů (první řádek; cp jako copy). Někdy je vhodné zálohu i přejmenovat (druhý řádek mv jako move). Příkaz mv je speciální v tom, že slouží na přejmenování, ale též na přesunutí souboru (třetí řádek). No a případné nadbytečné soubory můžeme vymazat (čtvrtý řádek; rm jako remove).
+
+cp tabulka.csv ./neprazdna_slozka/
+mv ./neprazdna_slozka/tabulka.csv ./neprazdna_slozka/tabulka-zaloha.csv
+mv ./neprazdna_slozka/soubor_2.txt soubor_2.txt
+rm tabulka.csv
+Souborů s koncovkou .txt už máme vícero a potřebujeme si vytvořit přehled, které jsou jak nazvané a v kterých složkách se nachází. Přesně na takové účely slouží příkaz find v kombinaci so zástupnými znaky jako otazník (nahrazuje jeden libovolný znak) a hvězdička (nahrazuje libovolný počet libovolných znaků). Pokud tedy potřebujeme najít všechny soubory s koncovkou .txt v aktuální složce (vyjádřený tečkou), použijeme zástupný znak hvězdička (první řádek). Všechny soubory, jejichž název začíná stejně, mají stejnou koncovku a liší se pouze jediným znakem (zde pořadovým číslem) najdeme pomocí příkazu v druhém řádku.
+
+find . -name "*.txt"
+find . -name "soubor_?.txt"
+Složky mažeme příkazem rm s přepínačem -rf. Pozor, tento příkaz použijeme pouze tehdy, pokud s úplnou jistotou víme, co mažeme. Po spuštění takového příkazu na složce test v domovské složce (~) se totiž bez upozornění vymaže celou složku test i se všemi dalšími složkami a soubory.
+
+rm -rf ~/test
+Kde najdeme další informace
+Představené příkazy jsme si ukázali pouze v několika příkladech, ale možností využití existuje o mnoho více. V linuxovém příkazovém řádku je ještě jeden velmi často používaný příkaz man (zkratka od manual). Pokud například potřebujeme více informací o příkazu rm, stačí napsat man rm a zobrazí se podrobný manuál k příkazu rm, ve kterém se pohybujeme jako v příkazu less (mezerník a klávesa Q). Takto je možné do detailu studovat kterýkoliv příkaz linuxového příkazového řádku.
+
+Shrnutí
+Ukázali jsme, jak v linuxovém příkazovém řádku vytvořit soubory a složky. Zobrazili a upravili jsme obsah souborů. Přejmenovali, kopírovali, přemisťovali a mazali jsme soubory a složky. Též jsme si ukázali, jak se používají zástupné znaky, lomené závorky a svislá čára. No a abychom celé psaní urychlili, stláčeli jsme klávesové zkratky. Nakonec jsme si uvedli kvalitní zdroj dalšího podrobného studia o prezentovaných, ale i nezmíněných příkazech.
+
+Aktualizováno: 5 listopadu, 2025
+Byl tento článek užitečný?
+Yes No
+Related Articles
+Vim – legenda mezi textovými editory
+Úprava parametrů virtuálního serveru
+Nejčastější příčiny vyčerpání prostoru na virtuálním serveru
+Využití diskového prostoru na VPS
+Monitoring – přihlášení a přehled
+Co je to openstack?
+
+
+
+
+Jak rozdělit a připojit soubory v Linuxu
+
+Luigys Toro
+2 minut
+
+Dělení a spojování souborů v systému Linux je poměrně jednoduchý úkol, který nám umožní fragmentovat soubor na několik menších souborů, což nám při mnoha příležitostech pomůže fragmentovat soubory, které zabírají hodně místa v paměti, a to buď k přenosu na externí paměťové jednotky, nebo pro zásady zabezpečení, jako je údržba fragmentovaných a distribuovaných kopií našich dat. Pro tento jednoduchý proces použijeme dva důležité příkazy split a cat.
+
+Co je to split?
+Jedná se o Comando pro systémy Unix  který nám umožňuje rozdělit soubor na několik menších, vytvoří řadu souborů s příponou a korelativem původního názvu souboru a bude schopen parametrizovat velikost výsledných souborů.
+
+Abychom se ponořili do rozsahu a charakteristik tohoto příkazu, můžeme provést man split, kde vidíme jeho podrobnou dokumentaci
+
+
+Co je to kočka?
+Pro jeho část, linux kočka příkaz umožňuje zřetězit a zobrazit soubory snadno a efektivně, to znamená, že pomocí tohoto příkazu můžeme prohlížet různé textové soubory a můžeme také zřetězit rozdělené soubory.
+
+Ver más
+Os
+Entorno de escritorio
+kernel de Linux
+Ubuntu
+Distribuciones
+Rhythmbox
+GNU/Linux
+Fedora
+Stejným způsobem jako u split můžeme zobrazit podrobnou dokumentaci cat s příkazem man cat.
+
+Jak rozdělit a připojit soubory v Linuxu pomocí split a cat
+Jakmile znáte základy příkazů split a cat, bude docela snadné rozdělit a připojit soubory v Linuxu. Obecný příklad, kdy chceme rozdělit soubor s názvem test.7z, který váží 500 MB na několik souborů 100 MB, musíme jednoduše provést následující příkaz:
+
+
+$ split -b 100m tes.7z dividido
+
+Tento příkaz vrátí 5 souborů o velikosti 100 MB, které jsou výsledkem původního souboru, který bude mít název dividedaa, dividab a tak dále. Stojí za zmínku, že pokud přidáme parametr -d k předchozí instrukci bude název výsledných souborů číselný, tj. dělená01, dělená02 ...
+
+$ split -b -d 100m tes.7z dividido
+
+Ver más
+Núcleo Linux
+Kernel de Linux
+entornos de escritorio
+Kernel
+Linux
+Distribución Linux
+SparkyLinux
+kernel
+Chcete-li se znovu připojit k souborům, které jsme rozdělili, stačí spustit následující příkaz z adresáře, kde jsou soubory uloženy:
+
+$ cat dividido* > testUnido.7z

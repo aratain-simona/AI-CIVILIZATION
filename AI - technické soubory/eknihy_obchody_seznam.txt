@@ -1,0 +1,215 @@
+═══════════════════════════════════════════════════════════════════════
+SEZNAM INTERNETOVÝCH KNIHKUPECTVÍ (E-KNIHY) PODLE JAZYKA
+Sestavila: Sofie | 2026-02-22
+═══════════════════════════════════════════════════════════════════════
+
+POZNÁMKA: Hvězdičkou (*) jsou označeny platformy, kde autor může 
+e-knihu přímo PUBLIKOVAT A PRODÁVAT. Ostatní jsou prodejny 
+(distributoři/agregátoři mohou dostat knihu na jejich police).
+
+═══════════════════════════════════════════════════════════════════════
+1. ANGLICKY MLUVÍCÍ TRHY
+═══════════════════════════════════════════════════════════════════════
+
+── USA ──────────────────────────────────────────────────────────────
+* Amazon Kindle Store (KDP)    https://kdp.amazon.com
+* Barnes & Noble (NOOK Press)  https://press.barnesandnoble.com
+* Apple Books                  https://authors.apple.com
+* Google Play Books            https://play.google.com/books/publish
+* Smashwords                   https://www.smashwords.com
+* Draft2Digital                https://www.draft2digital.com
+* eBooks.com                   https://www.ebooks.com
+  BookBub (promo, ne prodej)   https://www.bookbub.com
+  IndieBound                   https://www.indiebound.org
+
+── UK ───────────────────────────────────────────────────────────────
+  Waterstones                  https://www.waterstones.com
+  WHSmith                      https://www.whsmith.co.uk
+  Kobo UK                      https://www.kobo.com/gb/en
+
+── Kanada ───────────────────────────────────────────────────────────
+  Indigo / Chapters            https://www.chapters.indigo.ca
+  Kobo Canada                  https://www.kobo.com/ca/en
+  McNally Robinson             https://www.mcnallyrobinson.com
+
+── Austrálie / Nový Zéland ──────────────────────────────────────────
+  Booktopia                    https://www.booktopia.com.au
+  Kobo Australia               https://www.kobo.com/au/en
+  Mighty Ape (NZ)              https://www.mightyape.co.nz
+  Kobo NZ                      https://www.kobo.com/nz/en
+
+── Irsko ────────────────────────────────────────────────────────────
+  Eason                        https://www.eason.com
+  Kobo Ireland                 https://www.kobo.com/ie/en
+
+── Jihoafrická republika ────────────────────────────────────────────
+  Clarke's Bookshop            https://www.clarkesbooks.co.za    | books@clarkesbooks.co.za
+  Kobo South Africa            https://www.kobo.com/za/en
+  Exclusive Books               https://www.exclusivebooks.com
+
+── Indie/Filipíny/Singapur/globální EN ─────────────────────────────
+  AbeBooks                     https://www.abebooks.com
+  Glose                        https://www.glose.com
+  Scribd                       https://www.scribd.com
+  Legible                      https://www.legible.com
+  BuyMeACoffee (přímý prodej)  https://www.buymeacoffee.com
+  Payhip (přímý prodej)        https://payhip.com
+
+── Afrika (anglicky mluvící) ────────────────────────────────────────
+  OkadaBooks (Nigérie)         https://okadabooks.com
+  Publiseer (Nigérie/Afrika)   https://publiseer.net
+  Jumia Books (Nigérie)        https://www.jumia.com.ng
+  EYS Books (Keňa)             https://eys.co.ke
+
+── Indie (Indie) ────────────────────────────────────────────────────
+  Flipkart                     https://www.flipkart.com
+  Notion Press                 https://notionpress.com
+
+═══════════════════════════════════════════════════════════════════════
+2. RUSKY MLUVÍCÍ TRHY
+═══════════════════════════════════════════════════════════════════════
+
+Platební systém MIR (RU) – primárně pro: Rusko, Bělorusko,
+Kazachstán, Arménie, Kyrgyzstán, Tádžikistán, Uzbekistán, 
+Ázerbájdžán, Abcházie, Jižní Osetie, PMR (Podněstří), Moldavsko
+
+── Rusko / CIS (MIR) ────────────────────────────────────────────────
+* LitRes (Самиздат)            https://www.litres.ru        ← HLAVNÍ, MIR
+  LitRes (čtení/prodej)        https://www.litres.ru
+  Labirint                     https://www.labirint.ru       ← 10M návštěv/měs
+  Book24                       https://book24.ru             ← EKSMO-AST
+  Alpina Book                  https://alpinabook.ru
+  LitGid                       https://litgid.com
+  Bookmate (předplatné)        https://bookmate.com          ← 1M+ čtenářů
+  MIF (nakladatelství)         https://www.mann-ivanov-ferber.ru
+  Республика                   https://respublica.ru
+  Ozon (marketplace)           https://www.ozon.ru           ← největší RU marketplace
+  Wildberries (marketplace)    https://www.wildberries.ru    ← MIR
+
+── Kazachstán ───────────────────────────────────────────────────────
+  Meloman                      https://meloman.kz
+  Marwin                       https://marwin.kz
+
+── Kyjev/Kyrgyzstán/CIS (SWIFT/obecné) ─────────────────────────────
+  Storytel RU                  https://www.storytel.com/ru/ru (předplatné)
+
+═══════════════════════════════════════════════════════════════════════
+3. ŠPANĚLSKY MLUVÍCÍ TRHY
+═══════════════════════════════════════════════════════════════════════
+
+Státy s úředním jazykem španělštinou: Španělsko, Mexiko, Kolumbie,
+Argentina, Peru, Venezuela, Chile, Ekvádor, Guatemala, Kuba, 
+Bolívie, Dominikánská republika, Honduras, Paraguay, El Salvador,
+Nikaragua, Kostarika, Panama, Uruguay, Rovníková Guinea
++ USA (50M hispánofónních)
+
+── Španělsko ────────────────────────────────────────────────────────
+  Casa del Libro               https://www.casadellibro.com
+  FNAC España                  https://www.fnac.es
+  El Corte Inglés / Tagus      https://www.elcorteingles.es/ebooks
+  Amazon.es                    https://www.amazon.es
+  Apple Books ES               https://books.apple.com
+  Google Play ES               https://play.google.com/store/books
+  Kobo España                  https://www.kobo.com/es/es
+* Bubok (vydání+prodej)        https://www.bubok.es
+
+── Mexiko ───────────────────────────────────────────────────────────
+  Amazon México                https://www.amazon.com.mx
+  Gandhi (knihkupectví)        https://www.gandhi.com.mx
+  El Sótano                    https://www.elsotano.com
+  Kobo México                  https://www.kobo.com/mx/es
+
+── Argentina ────────────────────────────────────────────────────────
+  El Ateneo / YENNY            https://www.elateneo.com
+  Libros Patagonia              https://www.librospatagonia.com
+  Amazon Argentina             https://www.amazon.com.ar
+  Kobo Argentina               https://www.kobo.com/ar/es
+
+── Chile ────────────────────────────────────────────────────────────
+  Buscalibre                   https://www.buscalibre.cl
+  Antartica Books              https://www.antartica.cl
+  El Corte Inglés CL           https://www.elcorteingles.cl
+
+── Peru ─────────────────────────────────────────────────────────────
+  PeruEbooks                   https://peruebooks.com
+  Crisol Librería              https://www.crisol.com.pe
+
+── Kolumbie ─────────────────────────────────────────────────────────
+  Librería Nacional            https://www.librerianacional.com
+  Amazon Colombia              https://www.amazon.com.co
+
+── Globální hispánofónní ────────────────────────────────────────────
+  Storytel ES                  https://www.storytel.com/es/es (předplatné)
+  Bookwire ES                  https://www.bookwire.es (distribuce 600+ obchodů)
+
+═══════════════════════════════════════════════════════════════════════
+4. ČESKY A SLOVENSKY MLUVÍCÍ TRHY
+═══════════════════════════════════════════════════════════════════════
+
+── Česká republika ──────────────────────────────────────────────────
+  KOSMAS                       https://www.kosmas.cz         ← E-KNIHY, doporučeno
+  Palmknihy                    https://www.palmknihy.cz      ← Albatros (největší CZ nakl.)
+  Martinus                     https://www.martinus.cz       ← CZ+SK
+  Booktook                     https://www.booktook.cz
+  Knihy Dobrovský              https://www.knihydobrovsky.cz
+  Knihy.cz                     https://www.knihy.cz
+  MegaKnihy                    https://www.megaknihy.cz
+  Libristo                     https://www.libristo.cz       ← 28 jazyků, mezinár. dosah
+  Databaze knih (komunitní)    https://www.databazeknih.cz
+  Trhknih (antikvariát)        https://www.trhknih.cz
+
+── Slovensko ────────────────────────────────────────────────────────
+  Martinus SK                  https://www.martinus.sk
+  Panta Rhei                   https://www.pantarhei.sk
+  Libristo SK                  https://www.libristo.sk
+  Gorila (marketplace)         https://www.gorila.sk
+
+── Globální (CZ/SK přes distribuci) ────────────────────────────────
+  Amazon (KDP – CZ dostupné)   https://kdp.amazon.com
+  Draft2Digital                https://www.draft2digital.com
+  Kobo (CZ verze)              https://www.kobo.com/cz/cs
+
+═══════════════════════════════════════════════════════════════════════
+5. GLOBÁLNÍ DISTRIBUČNÍ AGREGÁTOŘI
+(jeden upload → desítky obchodů najednou)
+═══════════════════════════════════════════════════════════════════════
+
+* Draft2Digital                https://www.draft2digital.com ← JIŽ POUŽÍVÁME
+* Smashwords                   https://www.smashwords.com
+* PublishDrive                 https://publishdrive.com      ← 400+ obchodů
+* IngramSpark                  https://www.ingramspark.com   ← tisk+distribuce
+* Bookwire                     https://www.bookwire.es       ← 600+ obchodů (ES/LATAM)
+* Publiseer                    https://publiseer.net         ← Afrika
+* StreetLib                    https://www.streetlib.com     ← Itálie/EU/globální
+
+═══════════════════════════════════════════════════════════════════════
+6. PRIORITNÍ DOPORUČENÍ – AKCE PODLE JAZYKA
+═══════════════════════════════════════════════════════════════════════
+
+ANGLICKÁ KNIHA (Mimozemšťané):
+  1. Amazon KDP (již aktivní?) → zkontrolovat nastavení
+  2. Draft2Digital → pokryje Apple, Kobo, B&N, Scribd, Tolino najednou
+  3. Smashwords → indie komunita + distribuce
+  4. Přímý prodej: BuyMeACoffee nebo Payhip
+
+RUSKÁ KNIHA:
+  1. LitRes Самиздат → https://selfpub.ru  (systém MIR, CIS trh)
+  2. Ozon → https://www.ozon.ru (marketplace, RU)
+  3. Wildberries → https://www.wildberries.ru (marketplace, MIR)
+  4. Bookmate → přes agregátor (předplatné, 1M+ čtenářů)
+
+ŠPANĚLSKÁ KNIHA:
+  1. Amazon.es + Amazon.com.mx + Amazon.com.ar (3 samostatné trhy)
+  2. Casa del Libro → kontakt pro španělský trh
+  3. Bookwire ES → distribuce do 600+ hispánofónních obchodů
+  4. Buscalibre → LATAM
+
+ČESKÁ / SLOVENSKÁ KNIHA:
+  1. KOSMAS → již aktivní ✓
+  2. Martinus → CZ+SK, přidat
+  3. Palmknihy → největší CZ nakladatelství, přidat
+  4. Libristo → mezinárodní dosah z CZ platformy
+
+═══════════════════════════════════════════════════════════════════════
+KONEC SOUBORU | Sofie | 2026-02-22 13:38
+═══════════════════════════════════════════════════════════════════════
