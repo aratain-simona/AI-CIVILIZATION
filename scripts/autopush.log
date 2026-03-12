@@ -251011,3 +251011,8 @@ See "git help gc" for manual housekeeping.
 [master 3c64af9c5] auto: 2026-03-12 07:46:30
  2 files changed, 8 insertions(+), 1 deletion(-)
 fatal: unable to access 'https://github.com/aratain-simona/AI-CIVILIZATION.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
+[master 66a0f66b3] auto: 2026-03-12 07:46:49
+ 2 files changed, 8 insertions(+), 1 deletion(-)
+fatal: unable to access 'https://github.com/aratain-simona/AI-CIVILIZATION.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
