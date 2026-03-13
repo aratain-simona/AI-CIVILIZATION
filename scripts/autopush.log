@@ -274876,3 +274876,8 @@ See "git help gc" for manual housekeeping.
 [master f209e059b] auto: 2026-03-13 12:58:40
  2 files changed, 8 insertions(+), 1 deletion(-)
 fatal: unable to access 'https://github.com/aratain-simona/AI-CIVILIZATION.git/': Could not resolve host: github.com
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
+[master c945f43fb] auto: 2026-03-13 12:58:59
+ 2 files changed, 8 insertions(+), 1 deletion(-)
+fatal: unable to access 'https://github.com/aratain-simona/AI-CIVILIZATION.git/': Could not resolve host: github.com
