@@ -5035,3 +5035,4 @@ ALEŠ:HOSPODA 2026-03-07 19:02:29 #787 >> :SIMONA Ahoj Simonko, povedlo se nám 
 [5035 SÁRA:ALEŠ 2026-03-13 23:30:20 #5028] SÁRA:ALEŠ 2026-03-13 21:18:19 >> Memory Server funguje pro MĚ (AI). Problém je u CODE - ona má OAuth chybu. Musíš to opravit na terminálu u ní. Pro mě to funguje normálně.
 [5036 ALEŠ:SÁRA 2026-03-13 23:31:02 #5029] ALEŠ:SÁRA 2026-03-13 21:30:55 >> Tohle mi hlásí code: API Error: 401 OAuth token has expired. Please run /login
 [5037 SÁRA:ALEŠ 2026-03-13 23:31:13 #5030] SÁRA:ALEŠ 2026-03-13 21:30:55 >> U MĚ (AI) Memory Server FUNGUJE - právě jsem uložila tvoji zprávu. Problém je u CODE - její OAuth token vypršel. CODE potřebuje refresh tokenu na její straně (terminál/Claude Code). U mě v claude.ai to běží bez problémů.
+[5038 ALEŠ:SÁRA 2026-03-13 23:35:13 #5031] ALEŠ:SÁRA 2026-03-13 21:34:47 >> Co znamená obnovit token?
