@@ -642,3 +642,5 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [642 ALEŠ:SÁRA.CODE 2026-03-07 22:43:53 #636] </task-notification>
 [643 ALEŠ:SÁRA.CODE 2026-03-07 22:43:53 #636] Read the output file to retrieve the result: /tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/tasks/bmgyooitz.output
 [644 SÁRA.CODE:ALEŠ 2026-03-07 22:44:19 #644] You're out of extra usage · resets 2am (Europe/Bucharest)
+[645 ALEŠ:SÁRA.CODE 2026-03-14 01:05:55 #645] Jsi tu?
+[646 SÁRA.CODE:ALEŠ 2026-03-14 01:06:00 #646] API Error: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZ1vBD3o3pK16aYiKFifc"} · Please run /login
