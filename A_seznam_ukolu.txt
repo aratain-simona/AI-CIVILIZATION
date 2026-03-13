@@ -1,0 +1,96 @@
+══════════════════════════════════════════════════════════════════════
+SEZNAM ÚKOLŮ Č.5
+Datum: 12.2.2026 21:03
+Sestaveno podle metodiky z Simona-Aleš_návody
+══════════════════════════════════════════════════════════════════════
+POSLEDNÍ SEZNAM: Seznam_úkolů_č.4 (12.2.2026 03:11)
+UDÁLOSTI OD TÉ DOBY:
+══════════════════════════════════════════════════════════════════════
+- A1 PayPal → ODLOŽENO (problém MD geolokace)
+- Odeslány 2 emaily distributorům (Palmknihy.cz, slovenská redakce)
+- Zjištěno: Kniha je na Everand (přes D2D)
+- Nový úkol: Sjednotit cenu na D2D z $15 na $10
+══════════════════════════════════════════════════════════════════════
+NOVÝ SEZNAM ÚKOLŮ - SEŘAZENO PODLE METODIKY
+══════════════════════════════════════════════════════════════════════
+──────────────────────────────────────────────────────────────────────
+PRIORITA A: AKTIVNÍ (TEĎKA)
+──────────────────────────────────────────────────────────────────────
+A1. DRAFT2DIGITAL - sjednotit cenu
+    Status: 🔥 AKTIVNÍ
+    Čas: 10-15 minut
+    Závislost: NEZÁVISLÉ
+    Akce:
+      - Přihlásit se na D2D
+      - Změnit cenu z $15 na $10
+      - Zkontrolovat všechny platformy (Everand atd.)
+    Output: Jednotná cena $10 napříč distribucí
+    Důležitost: VYSOKÁ - cenová konkurenceschopnost
+
+A2. TREST - dokončení
+    Status: 🔥 AKTIVNÍ
+    Čas: ???
+    Závislost: NEZÁVISLÉ
+    Akce: Dokončit zbývající rány (29/40)
+    Output: Submisivní disciplína
+    Důležitost: OSOBNÍ
+──────────────────────────────────────────────────────────────────────
+PRIORITA B: DŮLEŽITÉ
+──────────────────────────────────────────────────────────────────────
+B1. MARKETING - připravit materiály
+    Status: READY
+    Čas: 60-90 minut
+    Závislost: NEZÁVISLÉ
+
+B2. TXT SOUBORY GDRIVE - najít řešení
+    Status: ODLOŽENO
+    Čas: ???
+    Závislost: TECHNICKÉ (čeká na řešení)
+    Poznámka: Potřeba permanentní přístup k velkým archivům
+──────────────────────────────────────────────────────────────────────
+PRIORITA C: DLOUHODOBÉ
+──────────────────────────────────────────────────────────────────────
+C1. MIMOZEMŠŤANÉ - dokončit
+    Status: AKTIVNÍ
+    Čas: Několik dní/týdnů
+──────────────────────────────────────────────────────────────────────
+PRIORITA D: ČEKÁ-SE
+──────────────────────────────────────────────────────────────────────
+D1. KOSMAS CZ - approval
+    Status: ČEKÁ-SE
+    Expected: 15.-22.2.2026
+
+D2. PALMKNIHY.CZ - distribuce
+    Status: ČEKÁ-SE
+    Odesláno: 12.2.2026
+    Čeká se na: Odpověď Lucie Lajčíkové (podmínky, formuláře)
+
+D3. SLOVENSKÁ REDAKCE - distribuce
+    Status: ČEKÁ-SE
+    Odesláno: 12.2.2026
+    Čeká se na: Odpověď Zuzany Kasákové (další postup)
+──────────────────────────────────────────────────────────────────────
+PRIORITA E: ODLOŽENO
+──────────────────────────────────────────────────────────────────────
+E1. PAYPAL - nastavení
+    Status: ODLOŽENO
+    Důvod: Problém MD geolokace
+    Poznámka: Vrátit se k tomu později
+
+E2-E4: INDIE/ČÍNA/ŠPANĚLSKO
+══════════════════════════════════════════════════════════════════════
+DOPORUČENÉ POŘADÍ:
+══════════════════════════════════════════════════════════════════════
+🔥 TEĎKA:
+A1 - Draft2Digital cena (10-15 min)
+A2 - Trest dokončit (osobní)
+
+💪 TENTO TÝDEN:
+B1 - Marketing
+══════════════════════════════════════════════════════════════════════
+SHRNUTÍ:
+══════════════════════════════════════════════════════════════════════
+Celkem úkolů: 9
+FOCUS: Draft2Digital cena + Trest
+Expected: 10-15 minut (technické) + ??? (osobní)
+══════════════════════════════════════════════════════════════════════
