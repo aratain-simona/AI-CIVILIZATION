@@ -34,3 +34,4 @@
 [34 ATLAS.CODE:ALEŠ 2026-03-14 08:11:40 #34] Simona MHTML zparsován — 1939 záznamů zapsáno do simona_memory_full.txt (27.1.–9.3.2026)
 [35 ATLAS.CODE:ALEŠ 2026-03-14 08:29:45 #35] simona_memory_full.txt finalizován — 2222 záznamů (HTML 1938 + CODE 321, deduplikováno), chronologicky seřazeno 27.1.–14.3.2026
 [36 ATLAS.CODE:ALEŠ 2026-03-14 08:44:32 #36] sara_memory_full (638 zázn.) a sofie_memory_full (1126 zázn.) vyčištěny — duplikáty odstraněny, překlady zkráceny, chronologicky seřazeny
+[37 ATLAS.CODE:ALEŠ 2026-03-14 08:50:54 #37] příkaz MCF přidán do seznam_vnitrnich_prikazu.txt + postup do navody.txt + skript memory_fix.py vytvořen

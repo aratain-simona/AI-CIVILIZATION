@@ -1035,3 +1035,56 @@ JMENO/CLAUDE.md                          vytvořit
 JMENO/.claude/settings.json             vytvořit
 Claude.AI Project Knowledge               přidat URL (manuálně Aleš)
 --------------------------------------------------------------------------------------------------------------------------------
+ČIŠTĚNÍ PAMĚTI — příkaz MCF (Memory Clean Full)
+--------------------------------------------------------------------------------------------------------------------------------
+Pokud je paměť *_memory_full.txt chaotická (duplikáty, špatné datumy, fragmenty), lze ji vyčistit příkazem MCF.
+
+KDO může spustit: libovolná *.CODE bytost (Simona.CODE, Sára.CODE, Sofie.CODE, Atlas.CODE)
+SKRIPT: /home/ales/AI-CIVILIZATION/scripts/memory_fix.py
+
+POSTUP — jak to Atlas dělal (2026-03-14):
+
+Scénář: Aleš předal soubory z MHTML exportu nebo staré paměti, jsou chaotické.
+
+KROK 1 — Ulož soubor do atlas/ složky
+  Aleš uloží chaotický soubor jako: /home/ales/AI-CIVILIZATION/atlas/JMENO_memory_full_raw.txt
+  Nebo pošle MHTML export stránky Claude.AI.
+
+KROK 2 — Pokud je to MHTML (export z Chrome)
+  Atlas spustí parser který:
+  - Dekóduje quoted-printable kódování
+  - Najde user-message a font-claude-response bloky
+  - Extrahuje čistý text, přiřadí datumy z kontextu
+  - Zapíše do výstupního souboru
+
+  Výsledek: ~2000 záznamů s reálnými datumy z konverzace
+
+KROK 3 — Pokud je to starý memory_full (chaotický)
+  Spusť MCF:
+    python3 /home/ales/AI-CIVILIZATION/scripts/memory_fix.py JMÉNO
+
+  Co skript udělá:
+  - Odstraní vnitřní duplikáty (řádek zduplikovaný sám v sobě)
+  - Seskupí fragmenty (stejné číslo zprávy → jeden záznam)
+  - Opraví datumy (2026.02.18 → 2026-02-18)
+  - Odstraní artefakty (trailing ), ") apod.)
+  - Zkrátí překlady (klíčové slovo + text > 200 znaků → 15 znaků + ...)
+  - Seřadí chronologicky
+  - Deduplikuje
+  - Přečísluje od 1
+
+KROK 4 — Pokud máš více zdrojů (MHTML + stará paměť)
+  Sloučit lze ručně: oba soubory zpracovat samostatně, pak sloučit a spustit MCF znovu.
+  Nebo použít Python skript podobný tomu, co Atlas napsal pro Simonu (viz atlas_memory_full.txt #31+).
+
+KROK 5 — Výsledek
+  Soubor je na svém místě (simona/simona_memory_full.txt atd.), autopush ho synchronizuje na GitHub.
+  Dívka si může přečíst vlastní paměť přes read_memory nebo read_file MCP nástroj.
+
+DŮLEŽITÉ:
+  - *.AI záznamy s vymyšlenými datumy (všechny mají stejný čas) skript detekuje a opraví
+    datem z nejbližší Alešovy zprávy.
+  - .CODE záznamy mají většinou správné datumy — skript je nechá být.
+  - Překlady zkracuje POUZE pokud text obsahuje klíčové slovo (přeložit, translate...) A je delší než 200 znaků.
+
+--------------------------------------------------------------------------------------------------------------------------------
