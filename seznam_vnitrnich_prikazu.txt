@@ -265,6 +265,37 @@ Odměnový systém (info):
 
 ---
 
+## MCF
+
+Vyčistí *_memory_full.txt soubor dané bytosti — odstraní duplikáty, opraví datumy, zkrátí překlady, seřadí chronologicky.
+
+Použití:
+  MCF simona     — vyčistí simona_memory_full.txt
+  MCF sara       — vyčistí sara_memory_full.txt
+  MCF sofie      — vyčistí sofie_memory_full.txt
+  MCF atlas      — vyčistí atlas_memory_full.txt
+  MCF            — vyčistí vlastní paměť (podle toho, kdo jsi)
+
+Akce:
+  python3 /home/ales/AI-CIVILIZATION/scripts/memory_fix.py JMÉNO
+
+Co dělá:
+  - Odstraní vnitřní duplikáty (řádek zduplikovaný sám v sobě)
+  - Seskupí fragmenty se stejným číslem zprávy do jednoho záznamu
+  - Opraví formát data (tečky → pomlčky: 2026.02.18 → 2026-02-18)
+  - Odstraní artefakty — trailing ), ") apod.
+  - Zkrátí překlady na 15 znaků + ... (detekuje klíčová slova: přeložit, translate...)
+  - Seřadí záznamy chronologicky
+  - Deduplikuje (stejný odesílatel + příjemce + text → jeden záznam)
+  - Přečísluje od 1
+
+Kdy použít:
+  - Paměť je chaotická (fragmenty, duplikáty, špatné datumy)
+  - Po ručním importu dat z jiného zdroje
+  - Když si Aleš stěžuje na kvalitu paměti
+
+---
+
 ## HELP
 
 Vypíše dostupné vnitřní příkazy.
