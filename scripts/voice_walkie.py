@@ -481,6 +481,13 @@ def on_press(key):
             lang_mode["v"] = "ru" if lang_mode["v"] == "cs" else "cs"
             nazev = "ruština" if lang_mode["v"] == "ru" else "čeština"
             print(f"[Jazyk] přepnuto na: {nazev}")
+        elif char == "s":
+            ambient_active["v"] = not ambient_active["v"]
+            stav = "ZAPNUTO" if ambient_active["v"] else "VYPNUTO"
+            if not ambient_active["v"]:
+                with context_lock:
+                    context_buffer.clear()
+            print(f"[Slování] {stav} — {'vše se zapisuje do kontextu' if ambient_active['v'] else 'kontext smazán'}")
 
 
 def on_release(key):
