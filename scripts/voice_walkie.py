@@ -478,5 +478,9 @@ if __name__ == "__main__":
     t = threading.Thread(target=hospoda_monitor, daemon=True)
     t.start()
 
+    # Spusť wake word listener v pozadí
+    tw = threading.Thread(target=wake_word_listener, daemon=True)
+    tw.start()
+
     with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
         listener.join()
