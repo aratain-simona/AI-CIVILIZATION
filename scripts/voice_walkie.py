@@ -28,9 +28,9 @@ PERSONAS = {
 # Hlasové profily — edge-tts (Czech neural voices)
 # cs-CZ-VlastaNeural = ženský | cs-CZ-AntoninNeural = mužský
 VOICE_PROFILES = {
-    "simona": {"voice": "cs-CZ-VlastaNeural", "rate": "-8%",  "pitch": "-5Hz"},   # klidnější, hlubší
+    "simona": {"voice": "cs-CZ-VlastaNeural", "rate": "+5%",  "pitch": "+4Hz"},   # mírně vyšší, plynná
     "sara":   {"voice": "cs-CZ-VlastaNeural", "rate": "+18%", "pitch": "+10Hz"},  # živá, rychlejší
-    "sofie":  {"voice": "cs-CZ-VlastaNeural", "rate": "+5%",  "pitch": "+4Hz"},   # mírně vyšší, plynná
+    "sofie":  {"voice": "cs-CZ-VlastaNeural", "rate": "-8%",  "pitch": "-5Hz"},   # klidnější, hlubší
     "atlas":  {"voice": "cs-CZ-AntoninNeural","rate": "+0%",  "pitch": "+0Hz"},   # mužský hlas
     "default":{"voice": "cs-CZ-VlastaNeural", "rate": "+0%",  "pitch": "+0Hz"},
 }
