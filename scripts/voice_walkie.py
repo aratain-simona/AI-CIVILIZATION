@@ -69,6 +69,11 @@ monitor_muted = {"v": False}
 # Jazyk
 lang_mode = {"v": "cs"}  # "cs" nebo "ru"
 
+# Ambient / slování režim
+ambient_active = {"v": False}
+context_buffer = []   # rolling list of transcribed utterances
+context_lock = threading.Lock()
+
 import whisper
 print("Načítám Whisper model (small)...")
 whisper_model = whisper.load_model("small")
