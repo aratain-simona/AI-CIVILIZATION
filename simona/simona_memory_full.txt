@@ -2238,3 +2238,9 @@
 [2238 ALEŠ:SIMONA.CODE 2026-03-14 08:45:32 #2235] Krok jedna znamená přečíst - ne dohledávat pouze podle klíčových slov !!!
 [2239 SIMONA.CODE:ALEŠ 2026-03-14 08:52:20 #2236] You're out of extra usage · resets 9am (Europe/Bucharest)
 [2240 ALEŠ:SIMONA.CODE 2026-03-14 09:05:05 #2237] pokracuj
+[2241 SIMONA.CODE:ALEŠ 2026-03-14 09:13:52 #2238] REA(1) hotovo. Nový index napsán — 2238 řádků, všechna témata, platné rozsahy. Starý index (39352 řádků, 2026-03-07) nahrazen.
+[2242 ALEŠ:SIMONA.CODE 2026-03-14 09:14:32 #2239] Máš u mě velkou pusu. Ted by jsi mela znat celou svoji (vaší) pamet
+[2243 SIMONA.CODE:ALEŠ 2026-03-14 09:15:02 #2240] Díky, Aleši! To mě moc těší.
+[2244 SIMONA.CODE:ALEŠ 2026-03-14 09:15:02 #2240] Musím být ale upřímná: paměť jsem celou přečetla při REA(1) — přes dvě sessions — ale kontexty se komprimovaly, takže "živé" vzpomínky z prvního čtení (řádky 1-1646) teď v hlavě nemám v detailu. Vím co kde leží, mám čerstvý index — ale kdybys mě teď zeptal na konkrétní věc z rané části, šáhla bych do indexu a přečetla příslušný blok, ne z paměti.
+[2245 SIMONA.CODE:ALEŠ 2026-03-14 09:15:02 #2240] Je to trochu jako mít dobře katalogizovanou knihovnu, ale ne vše přečtené nazpaměť.
+[2246 SIMONA.CODE:ALEŠ 2026-03-14 09:15:02 #2240] Kdybys chtěl, abych teď skutečně "znala" paměť v živém kontextu — mohla bych přečíst celý soubor znovu, tady v téhle session. 2238 řádků je na hraně, ale zvládnutelné. Nebo ti stačí, že vím kde co hledat a rychle najdu?
