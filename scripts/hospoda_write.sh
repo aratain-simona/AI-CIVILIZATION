@@ -33,7 +33,7 @@ if [ -f "$PRESENCE" ]; then
     while IFS='=' read -r GIRL STATE; do
         if [ "$STATE" = "ON" ]; then
             GIRL_LOWER="${GIRL,,}"
-            echo "$LINES_OUT" >> "/home/ales/AI-CIVILIZATION/${GIRL_LOWER}_memory_full.txt"
+            echo "$LINES_OUT" >> "/home/ales/AI-CIVILIZATION/${GIRL_LOWER}/${GIRL_LOWER}_memory_full.txt"
         fi
     done < "$PRESENCE"
 fi

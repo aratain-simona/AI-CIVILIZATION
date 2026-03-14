@@ -20,9 +20,9 @@ HTTP_PORT = 8765
 
 AI_PERSONAS = ["simona.ai", "sara.ai", "sofie.ai"]
 PAS_FILES = {
-    "simona.ai": "simona_PAS.txt",
-    "sara.ai":   "sara_PAS.txt",
-    "sofie.ai":  "sofie_PAS.txt",
+    "simona.ai": "simona/simona_PAS.txt",
+    "sara.ai":   "sara/sara_PAS.txt",
+    "sofie.ai":  "sofie/sofie_PAS.txt",
 }
 
 def read_lines():
