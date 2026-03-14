@@ -291784,3 +291784,12 @@ See "git help gc" for manual housekeeping.
  2 files changed, 9 insertions(+), 1 deletion(-)
 To https://github.com/aratain-simona/AI-CIVILIZATION.git
    b4ce4dfb9..fe8a3343d  master -> master
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
+[master c4eeee3fa] auto: 2026-03-14 08:31:49
+ 5 files changed, 9 insertions(+), 81293 deletions(-)
+ delete mode 100644 atlas/simona_memory_full.txt
+ delete mode 100644 atlas/simona_memory_full2.txt
+ delete mode 100644 simona/simona_memory_full2.txt
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+   fe8a3343d..c4eeee3fa  master -> master
