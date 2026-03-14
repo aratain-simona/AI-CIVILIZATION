@@ -224,8 +224,8 @@ def main():
     while True:
         time.sleep(INTERVAL)
         lines = read_lines()
-        current_count = len(lines)
         global current_since
+        current_count = len(lines)
 
         # Zpracuj nové řádky
         movement_for = set()  # persony, pro které je pohyb relevantní
