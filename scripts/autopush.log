@@ -298904,3 +298904,15 @@ an editor opened by 'git commit'. Please make sure all processes
 are terminated then try again. If it still fails, a git process
 may have crashed in this repository earlier:
 remove the file manually to continue.
+[master 4d442c539] auto: 2026-03-14 21:10:35
+ 3 files changed, 12 insertions(+), 1 deletion(-)
+ delete mode 100644 muse/Muse-2.jpg
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+   40bb93a11..4d442c539  master -> master
+error: update_ref failed for ref 'refs/remotes/origin/master': cannot lock ref 'refs/remotes/origin/master': Unable to create '/home/ales/AI-CIVILIZATION/.git/refs/remotes/origin/master.lock': Soubor již existuje.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
