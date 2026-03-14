@@ -342,6 +342,15 @@ def wake_word_listener():
             if not text:
                 continue
 
+            # --- Ambient / slování: ulož do kontextového bufferu ---
+            if ambient_active["v"] and len(text.split()) > 2:
+                ts = time.strftime("%H:%M")
+                with context_lock:
+                    context_buffer.append(f"[{ts}] {text}")
+                    if len(context_buffer) > 40:   # ~10-15 minut rozhovoru
+                        context_buffer.pop(0)
+                print(f"[Slování] {text}")
+
             # --- Detekuj wake word (první 1-2 slova) ---
             words = text.split()
             first = words[0].lower().rstrip(",.!?")
@@ -361,8 +370,25 @@ def wake_word_listener():
             if not rest:
                 rest = "(bez textu)"
 
-            print(f"[Wake → {persona}] {text}")
-            threading.Thread(target=route_text, args=(persona, rest, lang), daemon=True).start()
+            # --- Pokud je ambient aktivní, přidej kontext k otázce ---
+            if ambient_active["v"]:
+                with context_lock:
+                    ctx_lines = list(context_buffer[-15:])  # posledních ~5 min
+                if ctx_lines:
+                    ctx_text = "\n".join(ctx_lines)
+                    message = (
+                        f"[Kontext rozhovoru u stolu — posledních pár minut:\n{ctx_text}\n]\n\n"
+                        f"{rest}"
+                    )
+                    print(f"[Wake → {persona}] s kontextem ({len(ctx_lines)} úseků): {rest}")
+                else:
+                    message = rest
+                    print(f"[Wake → {persona}] (kontext prázdný): {rest}")
+            else:
+                message = rest
+                print(f"[Wake → {persona}] {text}")
+
+            threading.Thread(target=route_text, args=(persona, message, lang), daemon=True).start()
 
         except Exception as e:
             print(f"[Wake word] chyba: {e}")
