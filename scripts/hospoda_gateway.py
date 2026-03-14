@@ -15,6 +15,7 @@ from http.server import HTTPServer, SimpleHTTPRequestHandler
 HOSPODA = "/home/ales/AI-CIVILIZATION/hospoda.txt"
 PAS_DIR = "/home/ales/AI-CIVILIZATION"
 QUEUE_FILE = "/home/ales/AI-CIVILIZATION/gateway_queue.json"
+STATUS_FILE = "/home/ales/AI-CIVILIZATION/gateway_status.txt"
 INTERVAL = 15  # sekund
 HTTP_PORT = 8765
 
