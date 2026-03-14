@@ -28,6 +28,11 @@ mate-terminal --title="HOSPODA" -e "bash -c 'tail -f /home/ales/AI-CIVILIZATION/
 
 sleep 0.5
 
+# Okno 5b: GATEWAY STATUS — kdo je online/pending
+mate-terminal --title="GATEWAY" -e "bash -c 'watch -n 3 cat /home/ales/AI-CIVILIZATION/gateway_status.txt; exec bash'" &
+
+sleep 0.5
+
 # Okno 6: ALEŠ — vstup do hospody
 mate-terminal --title="ALEŠ" -e "bash -c 'bash /home/ales/AI-CIVILIZATION/scripts/ales_hospoda.sh; exec bash'" &
 
