@@ -158,11 +158,7 @@ def clean_file(path: Path) -> bool:
                 text = cleaned_text
                 changed = True
 
-            # Zkrátit překlad
-            truncated = maybe_truncate(text)
-            if truncated != text:
-                text = truncated
-                changed = True
+            # Překlady nezkracujeme — řeší *.CODE s AI analýzou kontextu
 
             out_lines.append(f"[{m.group(1)} {sender_recv} {dt_str} #{m.group(4)}] {text}")
             continue
@@ -172,9 +168,6 @@ def clean_file(path: Path) -> bool:
         if m:
             sender_recv = m.group(1).upper()
             text        = m.group(2).strip()
-
-            # Zkrátit překlad
-            text = maybe_truncate(text)
 
             dt_str = now_str()
             out_lines.append(f"[{counter} {sender_recv} {dt_str} #{counter}] {text}")
