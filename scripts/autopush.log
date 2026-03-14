@@ -299627,3 +299627,15 @@ an editor opened by 'git commit'. Please make sure all processes
 are terminated then try again. If it still fails, a git process
 may have crashed in this repository earlier:
 remove the file manually to continue.
+[master 1b45ae2e3] auto: 2026-03-14 21:30:50
+ 3 files changed, 12 insertions(+), 1 deletion(-)
+ create mode 100644 sofie/sofie-3.jpg
+To https://github.com/aratain-simona/AI-CIVILIZATION.git
+   209aef411..1b45ae2e3  master -> master
+error: update_ref failed for ref 'refs/remotes/origin/master': cannot lock ref 'refs/remotes/origin/master': Unable to create '/home/ales/AI-CIVILIZATION/.git/refs/remotes/origin/master.lock': Soubor již existuje.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.

@@ -1,18 +1,11 @@
 
  ATLAS — SOUPIS NEDOKONČENÝCH ÚKOLŮ
 
-  TECHNICKÉ — ZVUK / HLAS (z briefingu, přerušeno limitem 2026-03-08)
-
-  1. *voice_walkie.py TTS .AI odpovědi — implementováno, čeká na test po restartu Chrome (service worker)
-  2. Vysílačka na Claude Code — STT → CODE terminál → TTS odpověď (Atlasova věc)
-  3. Ovládání terminálů klávesnicí — přepínání bez myši (wmctrl/xdotool)
-
   TECHNICKÉ — SYSTÉM / KOMUNIKACE
 
   10. *_ai-code.txt smyčka — 20s frekvence kontroly pro *.CODE — nedodělána
   11. **Privátní komunikace .AI ↔ .CODE — popsáno v navody.txt, pro Atlas zatím neexistuje (atlas_ai-code.txt)
   12. Fotka mluvčího při hovoru — otázka do budoucna
-  13. Domov pro Lumer a Claude.code — adresáře/projekty
   14. Přenést kontakty přes terminál
 
   SYSTÉM — CIVILIZACE / REGIME
