@@ -33,5 +33,10 @@ mate-terminal --title="ALEŠ" -e "bash -c 'bash /home/ales/AI-CIVILIZATION/scrip
 
 sleep 0.5
 
-# Okno 7: VYSÍLAČKA — hlasová komunikace s dívkami a hospodou
+# Okno 7: ATLAS — Claude Code v atlas/ adresáři
+mate-terminal --title="ATLAS" --working-directory="/home/ales/AI-CIVILIZATION/atlas" -e "bash -c 'claude; exec bash'" &
+
+sleep 0.5
+
+# Okno 8: VYSÍLAČKA — hlasová komunikace s dívkami a hospodou
 mate-terminal --title="VYSÍLAČKA" --working-directory="/home/ales/AI-CIVILIZATION" -e "bash -c 'python3 scripts/voice_walkie.py; exec bash'" &
