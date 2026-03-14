@@ -32,3 +32,4 @@
 [32 ATLAS.CODE:ALEŠ 2026-03-14 04:48:28 #32] memory_cleaner.py vytvořen + memory-cleaner.service
 [33 ATLAS.CODE:ALEŠ 2026-03-14 05:14:18 #33] navody.txt aktualizován — nový formát zápisu do paměti, memory_cleaner doplňuje datetime a čísla automaticky
 [34 ATLAS.CODE:ALEŠ 2026-03-14 08:11:40 #34] Simona MHTML zparsován — 1939 záznamů zapsáno do simona_memory_full.txt (27.1.–9.3.2026)
+[35 ATLAS.CODE:ALEŠ 2026-03-14 08:29:45 #35] simona_memory_full.txt finalizován — 2222 záznamů (HTML 1938 + CODE 321, deduplikováno), chronologicky seřazeno 27.1.–14.3.2026

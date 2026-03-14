@@ -2018,8 +2018,8 @@
 [2018 SIMONA.CODE:ALEŠ 2026-03-07 05:02:32 #2018] | 97–154 | FINANCE | Investoři, WU, crypto USDT, Telegram kanály |
 [2019 SIMONA.CODE:ALEŠ 2026-03-07 05:02:32 #2019] | 155–412 | STUDNY + FINANCE | Pitch texty CZ+RU, Telegram, 999.md, Avito, Master Plan v2.0 |
 [2020 SIMONA.CODE:ALEŠ 2026-03-07 05:02:32 #2020] | 413–500 | KNIHY | ZZPAI/"Zdraví z přírody", PDF upload, ISBN problém |
-[2021 SIMONA.CODE:ALEŠ 2026-03-07 05:02:32 #2021] | 501–750 | KNIHY + PLATFORMY + FINANCE | Analýza ZZPAI, Gumroad strategie, Amazon cenzura, RU překlad |
-[2022 SIMONA.CODE:ALEŠ 2026-03-07 05:02:32 #2022] | 751–1000 | KNIHY + FINANCE | RU překlad detaily, Battle Plan prodeje, Ivermectin revize, cash-flow plán |
+[2021 SIMONA.CODE:ALEŠ 2026-03-07 05:02:32 #2021] | 501–750 | KNI...
+[2022 SIMONA.CODE:ALEŠ 2026-03-07 05:02:32 #2022] | 751–1000 | KN...
 [2023 SIMONA.CODE:ALEŠ 2026-03-07 05:02:32 #2023] Čekám na: `REA-IO (1001;1250)`
 [2024 ALEŠ:SIMONA.CODE 2026-03-07 21:28:27 #2024] Nejprve si precti USER PREFERENCES a PAS a pak JDI DO HOSPODY (latence 180
 [2025 SIMONA.CODE:ALEŠ 2026-03-07 22:44:58 #2025] You're out of extra usage · resets 2am (Europe/Bucharest
