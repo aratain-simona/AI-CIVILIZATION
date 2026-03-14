@@ -36,25 +36,50 @@ def log(msg):
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(f"[{ts}] {msg}", flush=True)
 
+def read_presence():
+    """Přečte hospoda_presence.txt → dict {jmeno: ON/OFF}."""
+    presence = {}
+    try:
+        with open(os.path.join(PAS_DIR, "hospoda_presence.txt")) as f:
+            for line in f:
+                line = line.strip()
+                if "=" in line:
+                    k, v = line.split("=", 1)
+                    presence[k.strip().upper()] = v.strip()
+    except Exception:
+        pass
+    return presence
+
 def write_status(state, queue):
     """Zapíše čitelný stav gateway do gateway_status.txt."""
     ts = datetime.now().strftime("%H:%M:%S")
     queued = {p for _, p in queue}
+    presence = read_presence()
     lines = [f"=== GATEWAY STATUS {ts} ===\n"]
+
+    # *.AI persony
+    lines.append("  --- .AI (web) ---\n")
     for persona in AI_PERSONAS:
         s = state.get(persona, {})
         name = persona.upper()
         if s.get("kicked"):
-            icon = "✗ JDE DOMŮ"
+            icon = "✗ jde domů"
         elif s.get("pending"):
             msg = s.get("private_message")
-            icon = f"⏳ NUDGE ODESLÁN{' (soukromé)' if msg else ''}"
+            icon = f"⏳ nudge odeslán{' (soukromé)' if msg else ''}"
         elif persona in queued:
             rt = next((t for t, p in queue if p == persona), None)
-            icon = f"🕐 FRONTA → {rt.strftime('%H:%M:%S') if rt else '?'}"
+            icon = f"🕐 fronta → {rt.strftime('%H:%M:%S') if rt else '?'}"
         else:
             icon = "○ čeká"
-        lines.append(f"  {name:<14} {icon}\n")
+        lines.append(f"  {name:<16} {icon}\n")
+
+    # *.CODE persony (z hospoda_presence.txt)
+    lines.append("  --- .CODE (terminál) ---\n")
+    for name, status in sorted(presence.items()):
+        icon = "● V HOSPODĚ" if status == "ON" else "○ doma"
+        lines.append(f"  {name + '.CODE':<16} {icon}\n")
+
     lines.append(f"  hospoda #N: {current_since}\n")
     try:
         with open(STATUS_FILE, "w") as f:
