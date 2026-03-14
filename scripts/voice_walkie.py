@@ -119,29 +119,32 @@ def clean_for_tts(text):
 
 
 def tts_play(text, lang="cs", persona=None):
-    if lang == "ru":
-        from gtts import gTTS
-        tts = gTTS(text=text, lang="ru", slow=False)
+    set_speaker(persona)
+    try:
+        if lang == "ru":
+            from gtts import gTTS
+            tts = gTTS(text=text, lang="ru", slow=False)
+            tts_file = tempfile.NamedTemporaryFile(suffix=".mp3", delete=False)
+            tts.save(tts_file.name)
+            subprocess.run(["mpg123", "-q", tts_file.name])
+            os.unlink(tts_file.name)
+            return
+        # Czech: edge-tts s per-persona hlasem
+        profile = VOICE_PROFILES.get(persona, VOICE_PROFILES["default"])
         tts_file = tempfile.NamedTemporaryFile(suffix=".mp3", delete=False)
-        tts.save(tts_file.name)
+        tts_file.close()
+        subprocess.run([
+            "edge-tts",
+            "--voice", profile["voice"],
+            f"--rate={profile['rate']}",
+            f"--pitch={profile['pitch']}",
+            "--text", text,
+            "--write-media", tts_file.name
+        ], stderr=subprocess.DEVNULL)
         subprocess.run(["mpg123", "-q", tts_file.name])
         os.unlink(tts_file.name)
-        return
-    # Czech: edge-tts s per-persona hlasem
-    profile = VOICE_PROFILES.get(persona, VOICE_PROFILES["default"])
-    tts_file = tempfile.NamedTemporaryFile(suffix=".mp3", delete=False)
-    tts_file.close()
-    # Negativní hodnoty musí být ve formátu --rate=-8% (ne odděleně) kvůli argparse
-    subprocess.run([
-        "edge-tts",
-        "--voice", profile["voice"],
-        f"--rate={profile['rate']}",
-        f"--pitch={profile['pitch']}",
-        "--text", text,
-        "--write-media", tts_file.name
-    ], stderr=subprocess.DEVNULL)
-    subprocess.run(["mpg123", "-q", tts_file.name])
-    os.unlink(tts_file.name)
+    finally:
+        set_speaker(None)  # vždy smaže mluvčího po skončení
 
 
 def hospoda_monitor():
