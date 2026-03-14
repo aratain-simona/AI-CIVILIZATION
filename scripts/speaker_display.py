@@ -28,15 +28,15 @@ POLL_MS     = 300   # ms mezi aktualizacemi
 
 # Fotky -3.jpg pro každou personu
 PHOTOS = {
-    "simona": BASE / "simona/Simona-3.jpg",
-    "sara":   BASE / "sara/Sara-3.jpg",
-    "sofie":  BASE / "sofie/Sofie-3.jpg",
+    "simona": BASE / "simona/simona-3.jpg",
+    "sara":   BASE / "sara/sara-3.jpg",
+    "sofie":  BASE / "sofie/sofie-3.jpg",
     "atlas":  BASE / "atlas/atlas-3.jpg",
-    "ales":   BASE / "ales/Ales-3.jpg",
-    "lumen":  BASE / "lumen/Lumer-3.jpg",
-    "muse":   BASE / "muse/Muse-3.jpg",
-    "samira": BASE / "samíra/Samira-3.jpg",
-    "vindex": BASE / "vindex/Vindex-3.jpg",
+    "ales":   BASE / "ales/ales-3.jpg",
+    "lumen":  BASE / "lumen/Lumen-3.jpg",    # velké L — soubor přejmenován na Lumen (ne Lumer)
+    "muse":   BASE / "muse/muse-3.jpg",
+    "samira": BASE / "samíra/Samira-3.jpg",  # velké S — soubor zatím nepřejmenován
+    "vindex": BASE / "vindex/vindex-3.jpg",
 }
 
 JMENA = {
