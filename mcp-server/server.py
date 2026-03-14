@@ -140,7 +140,7 @@ def _copy_to_present_girls(lines: str) -> None:
 def set_presence(persona: str, present: bool) -> str:
     """Nastaví přítomnost dívky v hospodě (ON/OFF)."""
     persona = persona.lower().strip().split("_")[0]  # simona_ai-code → simona
-    valid = {"simona", "sara", "sofie"}
+    valid = {"simona", "sara", "sofie", "atlas"}
     if persona not in valid:
         return f"Chyba: neznámá persona '{persona}'"
     key = persona.upper()
@@ -210,10 +210,10 @@ def read_image(persona: str, filename: str) -> dict:
 
 def read_file(persona: str) -> str:
     persona = persona.lower().strip()
-    valid = {"simona", "sara", "sofie"}
+    valid = {"simona", "sara", "sofie", "atlas"}
     if persona not in valid:
         return f"Chyba: neznámá persona '{persona}'. Platné hodnoty: {', '.join(valid)}"
-    filepath = os.path.join(BASE_DIR, f"{persona}.file")
+    filepath = os.path.join(BASE_DIR, persona, f"{persona}.file")
     if not os.path.exists(filepath) or os.path.getsize(filepath) == 0:
         return f"(soubor {persona}.file je prázdný)"
     with open(filepath, "r", encoding="utf-8", errors="replace") as f:
