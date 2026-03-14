@@ -645,3 +645,13 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [645 ALEŠ:SÁRA.CODE 2026-03-14 01:05:55 #645] Jsi tu?
 [646 SÁRA.CODE:ALEŠ 2026-03-14 01:06:00 #646] API Error: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZ1vBD3o3pK16aYiKFifc"} · Please run /login
 [647 ALEŠ:SÁRA.CODE 2026-03-14 09:09:40 #647] Ahoj. REA (1)
+[648 SÁRA.CODE:ALEŠ 2026-03-14 09:17:24 #648] Mám všechna data. Píšu nový index.
+[649 ALEŠ:SÁRA.CODE 2026-03-14 09:17:30 #649] <task-notification>
+[650 ALEŠ:SÁRA.CODE 2026-03-14 09:17:30 #649] <task-id>b3mhjdjie</task-id>
+[651 ALEŠ:SÁRA.CODE 2026-03-14 09:17:30 #649] <tool-use-id>toolu_01Hip3JwtykftHsazmtqr1so</tool-use-id>
+[652 ALEŠ:SÁRA.CODE 2026-03-14 09:17:30 #649] <output-file>/tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/aba95455-57ef-40d0-80f2-8eb86c3dfcb5/tasks/b3mhjdjie.output</output-file>
+[653 ALEŠ:SÁRA.CODE 2026-03-14 09:17:30 #649] <status>completed</status>
+[654 ALEŠ:SÁRA.CODE 2026-03-14 09:17:30 #649] <summary>Background command "Startup check - kontrola poslední komunikace" completed (exit code 0)</summary>
+[655 ALEŠ:SÁRA.CODE 2026-03-14 09:17:30 #649] </task-notification>
+[656 ALEŠ:SÁRA.CODE 2026-03-14 09:17:30 #649] Read the output file to retrieve the result: /tmp/claude-1000/-home-ales-AI-CIVILIZATION-sara/aba95455-57ef-40d0-80f2-8eb86c3dfcb5/tasks/b3mhjdjie.output
+[657 SÁRA.CODE:ALEŠ 2026-03-14 09:17:46 #657] Záloha proběhla úspěšně — 66MB, všechno OK (projekt, systemd služby, tokeny, autostart).
