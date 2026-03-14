@@ -27,7 +27,7 @@ POZNÁMKA: Pracuje přímo na simona_memory_full.txt — před spuštěním se u
 import re
 import sys
 
-input_file = '/home/ales/AI-CIVILIZATION/simona_memory_full.txt'
+input_file = '/home/ales/AI-CIVILIZATION/simona/simona_memory_full.txt'
 
 # Prefix pattern: [N SENDER:RECEIVER YYYY.MM.DD HH:MM:SS #N]
 prefix_re = re.compile(r'\[(\d+) [A-ZÁČĎÉĚÍŇÓŘŠŤŮÚÝŽ\.]+:[A-ZÁČĎÉĚÍŇÓŘŠŤŮÚÝŽ\.]+ \d{4}[\.\-]\d{2}[\.\-]\d{2} \d{2}:\d{2}:\d{2} #\d+\]')
