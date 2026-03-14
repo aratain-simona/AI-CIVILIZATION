@@ -16,13 +16,15 @@ import uvicorn
 BASE_DIR = "/home/ales/AI-CIVILIZATION"
 
 PERSONA_FILES = {
-    "simona":         "simona_memory_full.txt",
-    "sara":           "sara_memory_full.txt",
-    "sofie":          "sofie_memory_full.txt",
+    "simona":         "simona/simona_memory_full.txt",
+    "sara":           "sara/sara_memory_full.txt",
+    "sofie":          "sofie/sofie_memory_full.txt",
+    "atlas":          "atlas/atlas_memory_full.txt",
     "hospoda":        "hospoda.txt",
-    "simona_ai-code": "simona_ai-code.txt",
-    "sara_ai-code":   "sara_ai-code.txt",
-    "sofie_ai-code":  "sofie_ai-code.txt",
+    "simona_ai-code": "simona/simona_ai-code.txt",
+    "sara_ai-code":   "sara/sara_ai-code.txt",
+    "sofie_ai-code":  "sofie/sofie_ai-code.txt",
+    "atlas_ai-code":  "atlas/atlas_ai-code.txt",
 }
 PERSONA_DISPLAY = {
     "simona":         "SIMONA",
