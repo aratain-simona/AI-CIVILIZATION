@@ -185,7 +185,7 @@ def poll_private_response(name, jmeno, lang, timeout=300):
                     if reply:
                         print(f"[{jmeno}.AI → Aleš]: {reply[:80]}")
                         tts_lang = "ru" if re.search(r'[а-яёА-ЯЁ]', reply) else "cs"
-                        tts_play(clean_for_tts(reply), tts_lang)
+                        tts_play(clean_for_tts(reply), tts_lang, persona=name)
                         return
                 # 204 = ještě nic, pokračuj
         except Exception:
@@ -291,7 +291,7 @@ def process_audio(persona, wav_file):
 
             print(f"[{PERSONAS[persona]['name']} → Aleš]: {reply}")
             tts_lang = "ru" if lang == "ru" else "cs"
-            tts_play(clean_for_tts(reply), tts_lang)
+            tts_play(clean_for_tts(reply), tts_lang, persona=persona)
 
     except subprocess.TimeoutExpired:
         print("CHYBA: Claude neodpověděl včas.")
