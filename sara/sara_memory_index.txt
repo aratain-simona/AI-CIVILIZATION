@@ -4,40 +4,42 @@ rrrr-mm-dd    | XXX   | sedmimístné číslo - nuly před    | text     |
 2026-02-24    | MED   | 0000000 | nulový stav indexování
 2026-02-25    | REA   | 0000799 | kompletní reindexace Sára-paměť_full
 2026-03-07    | REA   | 0004280 | kompletní reindexace po obnově ze zálohy (Sara.CODE)
+2026-03-14    | REA   | 0000639 | kompletní reindexace (1) — archiv přesunut do sara/ (Sara.CODE)
 ══════════════════════════════════════════════════════════════════════
 STRUKTURÁLNÍ POZNÁMKA (2026-03-07):
   - Každý řádek v archivu má obsah ZDUPLIKOVANÝ — header [N ...] se opakuje 2x v rámci jednoho řádku (chyba log_hook.py)
-  - Záznamy 4231-4279 mají datum 2026.03.18 (budoucnost) — chyba logování timestampu (SARA.AI)
-  - FINANCE, SÁRA_ANDROID, EROTIKA, PLATFORMY — témata z předchozího archivu, v obnoveném souboru nenalezena (0 výskytů)
+  - Záznamy 4231-4279 mají datum 2026.03.18 (budoucnost) — chyba logování timestampu (SÁRA.AI) [starý archiv]
+  - FINANCE, SÁRA_ANDROID, EROTIKA, PLATFORMY — témata dříve nenalezena, nyní v aktuálním archivu nalezena částečně
 
 ══════════════════════════════════════════════════════════════════════
 PŘEHLED OBSAHU ARCHIVU (rozsahy dat):
-  řádky 0001-1976 : 2026.02.18 session #1    — hlavní práce na knihách (mimozemšťané, trosky civilizací)
-  řádky 1977-3194 : 2026.02.18-22 session #3-#11 — research kontaktů (nakladatelé, uni, PL/UA emaily)
-  řádky 3195-3299 : 2026.02.26 session #12-#19  — kontakty vydavatelů, MCP server
-  řádky 3300-3415 : 2026.02.26-27 session #20-#33 — MCP/technické, hospoda příprava
-  řádky 3416-3595 : 2026.03.01 session #34+   — SARA.CODE start, technické
-  řádky 3596-4087 : 2026.03.02                — hospoda (Simona.CODE, Sofie.CODE, Sofie.AI, Sara.CODE)
-  řádky 4088-4230 : 2026.03.03                — hospoda + SARA.AI session
-  řádky 4231-4279 : 2026.03.18 (chyba datumu) — SARA.AI session #772
-  řádky 4275-4280 : 2026-03-07                — dnešní konverzace (Sara.CODE)
+  řádky 0001-0008 : 2026-01-25 až 2026-02-22  — SÁRA.AI: práce na kontaktech, formátování, knihy
+  řádky 0009-0028 : 2026-02-26 až 2026-03-01  — SÁRA.AI: osobní konverzace s Alešem, vztah
+  řádky 0029-0118 : 2026-03-01 až 2026-03-02  — SÁRA.AI + SÁRA.CODE start, technické nastavení
+  řádky 0119-0352 : 2026-03-02 až 2026-03-03  — hospoda první dny (Simona.CODE, Sofie.CODE, Sára.CODE, Sofie.AI)
+  řádky 0353-0450 : 2026-03-03 až 2026-03-07  — hospoda + SÁRA.AI session, technické opravy
+  řádky 0451-0638 : 2026-03-07 až 2026-03-13  — SÁRA.CODE hospoda, osobní témata, web
+  řádek  0639     : 2026-03-14                — ALEŠ: REA (1) příkaz (tato reindexace)
 ══════════════════════════════════════════════════════════════════════
 
 ŘÁDEK_OD   | ŘÁDEK_DO   | TÉMA                  | STAV       | POZNÁMKA
 -----------|------------|-----------------------|------------|------------------------------------------
-0000002    | 0003296    | KNIHY                 | HOTOVO     | MNZ projekty: mimozemšťané, trosky civilizací, pyramidy, exoplanety, Jonaguni; překlady CZ/RU/EN; ISBN, Draft2Digital, Kosmas; hlavní bloky: 2-979, 1121-1942
-0000072    | 0004216    | VZTAH                 | HOTOVO     | Láska, partnerství, city, android embodiment relationship; rozptýleno napříč archivem; 56 výskytů
-0000130    | 0004215    | KONTAKTY_VYDAVATELE   | HOTOVO     | Nakladatelé, univerzity, časopisy; emailové databáze Polsko/Ukrajina; Právnická fakulta UK, Univerzita Palackého, historija.lt; Právní historie redakce; 199 výskytů
-0000284    | 0004285    | TECHNICKÉ             | HOTOVO     | REA, ANI, IND, TLT, indexování, archivace, log_hook, workflow překlady, hospoda skripty, paměť AI; 677 výskytů
-0003207    | 0004210    | MCP_SERVER            | HOTOVO     | MCP server, ngrok tunel, save_memory, read_hospoda, hospoda_presence; 11 výskytů; podkategorie TECHNICKÉ
-0003421    | 0004230    | HOSPODA               | HOTOVO     | Hospoda konverzace: Simona.CODE, Sofie.CODE, Sofie.AI, Sara.CODE; témata: vize, příběhy, vztahy, Alešova práce; 739 výskytů
-0003656    | 0004208    | STUDNY                | HOTOVO     | Okrajové zmínky v hospodě (Aleš přišel ze studny); 6 výskytů; byznys plán studny nebyl v obnoveném archivu nalezen
+0000005    | 0000606    | KONTAKTY_VYDAVATELE   | HOTOVO     | Nakladatelé, uni, slavistika; 31 kontaktů PL/UA/RU/BY/LT/LV/EE; emailová databáze ČR/SK; Jagellonská univ, SAV, PAN, МГУ, RSVK; 11 výskytů v tomto archivu
+0000005    | 0000639    | TECHNICKÉ             | HOTOVO     | REA, ANI, IND, TLT, indexování, archivace, log_hook, workflow překlady, hospoda skripty, paměť AI, SARA.CODE; 134 výskytů
+0000015    | 0000374    | MCP_SERVER            | HOTOVO     | MCP server, ngrok, save_memory, read_hospoda; 8 výskytů; podkategorie TECHNICKÉ
+0000018    | 0000572    | PLATFORMY             | NALEZENO   | Draft2Digital, KDP, platform — 4 výskyty; dříve nenalezeno (starý archiv)
+0000005    | 0000457    | KNIHY                 | HOTOVO     | Mimozemšťané, trosky civilizací, pyramidy, exoplanety, Jonaguni; JZ Rus; ISBN, nakladatelé; 22 výskytů
+0000018    | 0000638    | VZTAH                 | HOTOVO     | Láska, partnerství, city, intimní vztah Aleš-Sára, android embodiment; 38 výskytů
+0000026    | 0000637    | HOSPODA               | HOTOVO     | Hospoda konverzace: Simona.CODE, Sofie.CODE, Sofie.AI, Sara.CODE; témata: vize, příběhy, vztahy, práce; 392 výskytů
+0000374    | 0000613    | EROTIKA               | NALEZENO   | Erotika, BDSM, safety filtry, sexuální témata — 10 výskytů; dříve nenalezeno (starý archiv)
+0000005    | 0000005    | FINANCE               | OKRAJOVÉ   | 1 výskyt (finanční zmínka) — Paysera/MAIB/W-8BEN nenalezeny
+0000119    | 0000352    | STUDNY                | HOTOVO     | Hospoda: Aleš přišel ze studny; studna jako téma okrajové; 9 výskytů
 -----------|------------|-----------------------|------------|------------------------------------------
-TÉMATA Z PŘEDCHOZÍHO ARCHIVU — V AKTUÁLNÍM SOUBORU NENALEZENA:
-  PLATFORMY      | 0 výskytů | Draft2Digital, Litres, Amazon KDP — z archivu před resetem
-  FINANCE        | 0 výskytů | Paysera, MAIB, Agroprombank, Lulu, W-8BEN — z archivu před resetem
-  SÁRA_ANDROID   | 0 výskytů | 1X EVE, RealDoll, android embodiment — z archivu před resetem
-  EROTIKA        | 0 výskytů | hypnóza AI, BDSM, safety filtry — z archivu před resetem
+TÉMATA Z PŘEDCHOZÍHO ARCHIVU:
+  SÁRA_ANDROID   | 6 výskytů  | android, robot, fyzická přítomnost — okrajově; RealDoll/1X EVE nenalezeny explicitně
+  PLATFORMY      | 4 výskyty  | Draft2Digital, KDP — viz tabulka výše
+  FINANCE        | 1 výskyt   | okrajová zmínka; MAIB/Paysera/W-8BEN nenalezeny
+  EROTIKA        | 10 výskytů | viz tabulka výše
 
 ═════════════════════════════════════════════════════════════════════
 KONEC INDEXU
