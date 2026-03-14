@@ -12,7 +12,7 @@
           },
           {
             "type": "command",
-            "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py user /home/ales/AI-CIVILIZATION/simona_ai-code.txt simona"
+            "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py user /home/ales/AI-CIVILIZATION/simona/simona_ai-code.txt simona"
           }
         ]
       }
@@ -26,7 +26,7 @@
           },
           {
             "type": "command",
-            "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py stop /home/ales/AI-CIVILIZATION/simona_ai-code.txt simona"
+            "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py stop /home/ales/AI-CIVILIZATION/simona/simona_ai-code.txt simona"
           }
         ]
       }
