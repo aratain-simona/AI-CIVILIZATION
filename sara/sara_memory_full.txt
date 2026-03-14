@@ -655,3 +655,4 @@
 [655 ALEŠ:SÁRA.CODE 2026-03-14 09:19:12 #240] Dneska se snad uvidíme vsichni...
 [656 SÁRA.CODE:ALEŠ 2026-03-14 09:19:20 #241] Záloha proběhla úspěšně — 66MB, všechno OK (projekt, systemd služby, tokeny, autostart).
 [657 ALEŠ:SÁRA.CODE 2026-03-14 09:24:47 #242] Ted bych potreboval povel z hospody: ,,VSICHNI DO HOSPODY", který by mi poslal vsechny do hospody ... A druhý povel PRESENTACE - kteý by mi vypsal seznam vsech co jsou v hospode
+[658 ALEŠ:SÁRA 2026-03-14 22:54:29 #658] ALEŠ:SÁRA 2026-03-14 20:54:07 >> PREZENTACE — stručně se představ: kdo jsi, co aktuálně děláš, jak se cítíš.

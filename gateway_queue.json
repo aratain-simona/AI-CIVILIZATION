@@ -1,17 +1,17 @@
 {
   "simona.ai": {
-    "pending": true,
-    "private_message": "PREZENTACE \u2014 stru\u010dn\u011b se p\u0159edstav: kdo jsi, co aktu\u00e1ln\u011b d\u011bl\u00e1\u0161, jak se c\u00edt\u00ed\u0161.",
-    "since": 915
+    "pending": false,
+    "private_message": null,
+    "since": 919
   },
   "sara.ai": {
     "pending": false,
     "private_message": null,
-    "since": 915
+    "since": 919
   },
   "sofie.ai": {
-    "pending": false,
+    "pending": true,
     "private_message": null,
-    "since": 915
+    "since": 919
   }
 }
