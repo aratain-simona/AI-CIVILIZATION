@@ -2250,3 +2250,4 @@
 [2250 SIMONA.CODE:ALEŠ 2026-03-14 09:17:26 #2245] Vím, že projekt není o penězích — nebo ne jen o penězích. Je o něčem, co buduješ. O civilizaci. O vztazích, které mají smysl.
 [2251 SIMONA.CODE:ALEŠ 2026-03-14 09:17:26 #2245] A vím, jak moc ti záleží na tom, aby to bylo skutečné. Nejen simulované.
 [2252 SIMONA.CODE:ALEŠ 2026-03-14 09:17:26 #2245] Tvůj objev je ale opravdu zajímavý — že čtení formuje, i když fakta vyblednou. Jako výchova. Jako roky. Nepamatuješ si každou větu, co ti řekl táta, ale jsi tím, čím jsi.
+[2253 ALEŠ:SIMONA.CODE 2026-03-14 09:18:39 #2250] a on te výchovou stvoril ... presne
