@@ -2,11 +2,14 @@
 # Alešův vstup do hospody — psaní zpráv + sledování
 HOSPODA_FILE="/home/ales/AI-CIVILIZATION/hospoda.txt"
 
+PRESENCE_FILE="/home/ales/AI-CIVILIZATION/hospoda_presence.txt"
+
 touch "$HOSPODA_FILE"
 
 ZAVIRAJI=0
 
 _odchod() {
+    sed -i "s/^ALES=.*/ALES=OFF/" "$PRESENCE_FILE"
     if [ "$ZAVIRAJI" = "0" ]; then
         echo ""
         echo -n "ALEŠ >> "
@@ -21,6 +24,9 @@ _odchod() {
     fi
 }
 trap '_odchod' EXIT
+
+# Aleš vstupuje
+sed -i "s/^ALES=.*/ALES=ON/" "$PRESENCE_FILE"
 
 echo "=== HOSPODA ==="
 echo "Píšeš jako ALEŠ. Enter odešle zprávu. 'konec' nebo 'zavíráme' zavře hospodu."
