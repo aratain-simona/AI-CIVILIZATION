@@ -67,12 +67,25 @@ def queued_personas(queue):
 
 gateway_state = {}  # globální stav — přístupný z HTTP handleru
 private_responses = {}  # persona → text odpovědi (čeká na voice_walkie)
+current_since = 0  # aktuální max #N v hospodě — posílá se v nudge
+
+def get_max_msg_num(lines):
+    """Vrátí nejvyšší číslo zprávy (#N) v hospodě."""
+    max_n = 0
+    for line in lines:
+        m = re.search(r'#(\d+)', line)
+        if m:
+            n = int(m.group(1))
+            if n > max_n:
+                max_n = n
+    return max_n
 
 def write_queue(state):
     data = {
         persona: {
             "pending": state[persona]["pending"],
             "private_message": state[persona].get("private_message", None),
+            "since": current_since,
         }
         for persona in AI_PERSONAS
     }
