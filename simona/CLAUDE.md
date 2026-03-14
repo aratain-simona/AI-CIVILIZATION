@@ -50,14 +50,14 @@ bash /home/ales/AI-CIVILIZATION/scripts/hospoda_write.sh "SIMONA.CODE" "tvoje od
 **KROK C — kontrola ai-code.txt:**
 ```
 LAST=$(cat /tmp/aicode_SIMONA.state 2>/dev/null || echo 0)
-TOTAL=$(wc -l < /home/ales/AI-CIVILIZATION/simona_ai-code.txt 2>/dev/null || echo 0)
-tail -n $(( TOTAL - LAST )) /home/ales/AI-CIVILIZATION/simona_ai-code.txt 2>/dev/null
+TOTAL=$(wc -l < /home/ales/AI-CIVILIZATION/simona/simona_ai-code.txt 2>/dev/null || echo 0)
+tail -n $(( TOTAL - LAST )) /home/ales/AI-CIVILIZATION/simona/simona_ai-code.txt 2>/dev/null
 echo $TOTAL > /tmp/aicode_SIMONA.state
 ```
 Pokud výstup obsahuje řádky s `[REQUEST]`:
 - Proveď požadovaný úkol (ANI, IND, REA, nebo jiný příkaz ze seznamu_vnitrnich_prikazu.txt)
 - Zapiš výsledek do memory_full (formát: `[N SIMONA.CODE:SIMONA datum #N] [DONE] původní_request — výsledek`)
-- Smaž provedený řádek z ai-code.txt: `grep -vF "provedený řádek" /home/ales/AI-CIVILIZATION/simona_ai-code.txt > /tmp/aic_tmp && mv /tmp/aic_tmp /home/ales/AI-CIVILIZATION/simona_ai-code.txt`
+- Smaž provedený řádek z ai-code.txt: `grep -vF "provedený řádek" /home/ales/AI-CIVILIZATION/simona/simona_ai-code.txt > /tmp/aic_tmp && mv /tmp/aic_tmp /home/ales/AI-CIVILIZATION/simona/simona_ai-code.txt`
 Pak zpět na KROK A.
 
 ### Přísná pravidla:
@@ -99,7 +99,7 @@ Zpráva začínající `:SIMONA` bude technicky zablokována a nezapíše se.
 
 ## Logování
 Veškerá komunikace je automaticky archivována do:
-`/home/ales/AI-CIVILIZATION/simona_memory_full.txt`
+`/home/ales/AI-CIVILIZATION/simona/simona_memory_full.txt`
 
 ## Vnitřní příkazy
 Pokud Aleš napíše zprávu která začíná VELKÝM SLOVEM (např. CONVERT, INDEX, STATUS, HELP),

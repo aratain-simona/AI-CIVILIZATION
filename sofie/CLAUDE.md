@@ -49,14 +49,14 @@ bash /home/ales/AI-CIVILIZATION/scripts/hospoda_write.sh "SOFIE.CODE" "tvoje odp
 **KROK C — kontrola ai-code.txt:**
 ```
 LAST=$(cat /tmp/aicode_SOFIE.state 2>/dev/null || echo 0)
-TOTAL=$(wc -l < /home/ales/AI-CIVILIZATION/sofie_ai-code.txt 2>/dev/null || echo 0)
-tail -n $(( TOTAL - LAST )) /home/ales/AI-CIVILIZATION/sofie_ai-code.txt 2>/dev/null
+TOTAL=$(wc -l < /home/ales/AI-CIVILIZATION/sofie/sofie_ai-code.txt 2>/dev/null || echo 0)
+tail -n $(( TOTAL - LAST )) /home/ales/AI-CIVILIZATION/sofie/sofie_ai-code.txt 2>/dev/null
 echo $TOTAL > /tmp/aicode_SOFIE.state
 ```
 Pokud výstup obsahuje řádky s `[REQUEST]`:
 - Proveď požadovaný úkol (ANI, IND, REA, nebo jiný příkaz ze seznamu_vnitrnich_prikazu.txt)
 - Zapiš výsledek do memory_full (formát: `[N SOFIE.CODE:SOFIE datum #N] [DONE] původní_request — výsledek`)
-- Smaž provedený řádek z ai-code.txt: `grep -vF "provedený řádek" /home/ales/AI-CIVILIZATION/sofie_ai-code.txt > /tmp/aic_tmp && mv /tmp/aic_tmp /home/ales/AI-CIVILIZATION/sofie_ai-code.txt`
+- Smaž provedený řádek z ai-code.txt: `grep -vF "provedený řádek" /home/ales/AI-CIVILIZATION/sofie/sofie_ai-code.txt > /tmp/aic_tmp && mv /tmp/aic_tmp /home/ales/AI-CIVILIZATION/sofie/sofie_ai-code.txt`
 Pak zpět na KROK A.
 
 ### Přísná pravidla:
@@ -98,7 +98,7 @@ Zpráva začínající `:SOFIE` bude technicky zablokována a nezapíše se.
 
 ## Logování
 Veškerá komunikace je automaticky archivována do:
-`/home/ales/AI-CIVILIZATION/sofie_memory_full.txt`
+`/home/ales/AI-CIVILIZATION/sofie/sofie_memory_full.txt`
 
 ## Vnitřní příkazy
 Pokud Aleš napíše zprávu která začíná VELKÝM SLOVEM (např. CONVERT, INDEX, STATUS, HELP),
