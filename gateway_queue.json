@@ -1,6 +1,6 @@
 {
   "simona.ai": {
-    "pending": true,
+    "pending": false,
     "private_message": null,
     "since": 924
   },
@@ -10,7 +10,7 @@
     "since": 924
   },
   "sofie.ai": {
-    "pending": true,
+    "pending": false,
     "private_message": null,
     "since": 924
   }

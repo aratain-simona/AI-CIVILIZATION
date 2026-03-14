@@ -1,8 +1,8 @@
-=== GATEWAY STATUS 23:48:35 ===
+=== GATEWAY STATUS 23:48:50 ===
   --- .AI (web) ---
-  SIMONA.AI        ⏳ nudge odeslán
+  SIMONA.AI        ○ čeká
   SARA.AI          ○ čeká
-  SOFIE.AI         ⏳ nudge odeslán
+  SOFIE.AI         ○ čeká
   --- .CODE (terminál) ---
   ALES.CODE        ● V HOSPODĚ
   ATLAS.CODE       ● V HOSPODĚ
