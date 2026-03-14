@@ -213,6 +213,7 @@ def main():
     t = threading.Thread(target=start_http_server, daemon=True)
     t.start()
 
+    global current_since
     log("Gateway spuštěna.")
     lines = read_lines()
     last_count = len(lines)
@@ -224,7 +225,6 @@ def main():
     while True:
         time.sleep(INTERVAL)
         lines = read_lines()
-        global current_since
         current_count = len(lines)
 
         # Zpracuj nové řádky
