@@ -36,6 +36,32 @@ def log(msg):
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(f"[{ts}] {msg}", flush=True)
 
+def write_status(state, queue):
+    """Zapíše čitelný stav gateway do gateway_status.txt."""
+    ts = datetime.now().strftime("%H:%M:%S")
+    queued = {p for _, p in queue}
+    lines = [f"=== GATEWAY STATUS {ts} ===\n"]
+    for persona in AI_PERSONAS:
+        s = state.get(persona, {})
+        name = persona.upper()
+        if s.get("kicked"):
+            icon = "✗ JDE DOMŮ"
+        elif s.get("pending"):
+            msg = s.get("private_message")
+            icon = f"⏳ NUDGE ODESLÁN{' (soukromé)' if msg else ''}"
+        elif persona in queued:
+            rt = next((t for t, p in queue if p == persona), None)
+            icon = f"🕐 FRONTA → {rt.strftime('%H:%M:%S') if rt else '?'}"
+        else:
+            icon = "○ čeká"
+        lines.append(f"  {name:<14} {icon}\n")
+    lines.append(f"  hospoda #N: {current_since}\n")
+    try:
+        with open(STATUS_FILE, "w") as f:
+            f.writelines(lines)
+    except Exception:
+        pass
+
 def read_latency(persona):
     pas_file = os.path.join(PAS_DIR, PAS_FILES[persona])
     try:
