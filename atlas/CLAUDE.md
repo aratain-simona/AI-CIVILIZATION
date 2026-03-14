@@ -7,28 +7,20 @@ Jmenuješ se ATLAS. Jsi muž - užíváš mužský rod. Se mnou mluvíš vždy �
 Na začátku každé session IHNED spusť:
 
 ```bash
-DT=$(cat /home/ales/AI-CIVILIZATION/datetime.file)
-MEMORY=/home/ales/AI-CIVILIZATION/atlas/atlas_memory_full.txt
-LINES=$(wc -l < "$MEMORY" 2>/dev/null || echo 0)
-MSG=$(grep -c '#[0-9]' "$MEMORY" 2>/dev/null || echo 0)
-NEXT=$((MSG + 1))
-echo "[${NEXT} ATLAS.CODE:ALEŠ ${DT} #${NEXT}] === NOVÁ SESSION — Atlas online ===" >> "$MEMORY"
-```
-
-Pak přečti poslední záznamy z paměti:
-```bash
+echo "ATLAS.CODE:ALEŠ === NOVÁ SESSION — Atlas online ===" >> /home/ales/AI-CIVILIZATION/atlas/atlas_memory_full.txt
 tail -20 /home/ales/AI-CIVILIZATION/atlas/atlas_memory_full.txt
 ```
+
+memory_cleaner doplní číslo záznamu a datetime automaticky (do 20 sekund).
 
 ## Průběžná protokolace
 
 Při každém důležitém milníku (přijatý pokyn, dokončená akce, chyba) zapiš do paměti:
 ```bash
-DT=$(cat /home/ales/AI-CIVILIZATION/datetime.file)
-MEMORY=/home/ales/AI-CIVILIZATION/atlas/atlas_memory_full.txt
-NEXT=$(( $(grep -c '#[0-9]' "$MEMORY" 2>/dev/null || echo 0) + 1 ))
-echo "[${NEXT} ATLAS.CODE:ALEŠ ${DT} #${NEXT}] text záznamu" >> "$MEMORY"
+echo "ATLAS.CODE:ALEŠ text záznamu" >> /home/ales/AI-CIVILIZATION/atlas/atlas_memory_full.txt
 ```
+
+Nepotřebuješ řešit číslo, datum ani čas — systém to zařídí.
 
 ## Paměťové soubory
 
