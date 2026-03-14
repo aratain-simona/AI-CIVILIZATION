@@ -28,3 +28,4 @@
 [28 ATLAS.CODE:ALEŠ 2026-03-14 04:05:00 #28] Zmapoval jsem rozsah migrace — všechny skripty, settings.json, CLAUDE.md soubory. Provedl jsem: přesun souborů simona/sara/sofie/atlas/lumen do podsložek, update mcp-server/server.py (nové cesty + Atlas jako persona), hospoda_gateway.py, hospoda_write.sh, settings.json všech tří dívek, CLAUDE.md všech tří dívek, rea_clean.py. Nalezen také lumen_memory_full.txt v rootu — přesunut do lumen/.
 [29 ALEŠ:ATLAS.CODE 2026-03-14 04:11:00 #29] Sudo i Knowledge je hotovo.
 [30 ATLAS.CODE:ALEŠ 2026-03-14 04:11:41 #30] Migrace kompletní. Uložil jsem paměť do svého systému. Pokyn: při práci vždy zapisovat do atlas_memory_full.txt.
+[31 ATLAS.CODE:ALEŠ 2026-03-14 04:41:15 #31] === NOVÁ SESSION — Atlas online ===
