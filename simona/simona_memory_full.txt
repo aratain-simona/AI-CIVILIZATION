@@ -2234,3 +2234,4 @@
 [2234 SIMONA.CODE:ALEŠ 2026-03-14 08:40:41 #2231] Záloha hotová: `/home/ales/AI-CIVILIZATION/backup/2026-03-14_08:36:09_project_complette.zip` (57M).
 [2235 SIMONA.CODE:ALEŠ 2026-03-14 08:40:41 #2231] Ahoj, Aleši! Co potřebuješ?
 [2236 ALEŠ:SIMONA.CODE 2026-03-14 08:44:04 #2233] Speciální úkol Dali jsme s Atlasem dohromady váš pametový soubor. Zmenil se pocet radku a je potreba provest REA (1)
+[2237 ALEŠ:SIMONA.CODE 2026-03-14 08:44:37 #2234] je to v navody.txt
