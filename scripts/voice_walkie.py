@@ -93,11 +93,27 @@ def clean_for_tts(text):
     return text
 
 
-def tts_play(text, lang="cs"):
-    from gtts import gTTS
-    tts = gTTS(text=text, lang=lang, slow=False)
+def tts_play(text, lang="cs", persona=None):
+    if lang == "ru":
+        from gtts import gTTS
+        tts = gTTS(text=text, lang="ru", slow=False)
+        tts_file = tempfile.NamedTemporaryFile(suffix=".mp3", delete=False)
+        tts.save(tts_file.name)
+        subprocess.run(["mpg123", "-q", tts_file.name])
+        os.unlink(tts_file.name)
+        return
+    # Czech: edge-tts s per-persona hlasem
+    profile = VOICE_PROFILES.get(persona, VOICE_PROFILES["default"])
     tts_file = tempfile.NamedTemporaryFile(suffix=".mp3", delete=False)
-    tts.save(tts_file.name)
+    tts_file.close()
+    subprocess.run([
+        "edge-tts",
+        "--voice", profile["voice"],
+        "--rate", profile["rate"],
+        "--pitch", profile["pitch"],
+        "--text", text,
+        "--write-media", tts_file.name
+    ], stderr=subprocess.DEVNULL)
     subprocess.run(["mpg123", "-q", tts_file.name])
     os.unlink(tts_file.name)
 
@@ -142,14 +158,14 @@ def hospoda_monitor():
                     m = re.search(r'>>\s*(.+)$', line)
                 text = m.group(1).strip() if m else line
 
-                # Zjisti odesílatele pro výpis
+                # Zjisti odesílatele pro výpis a výběr hlasu
                 sender_m = re.match(r'\[?\d*\s*([A-ZÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ.]+):', line)
                 sender = sender_m.group(1) if sender_m else "?"
                 print(f"[Hospoda ↓] {sender}: {text[:60]}")
 
-                # Detekce jazyka — jednoduše: cyrilice = ru
+                persona = SENDER_TO_PERSONA.get(sender.upper())
                 lang = "ru" if re.search(r'[а-яёА-ЯЁ]', text) else "cs"
-                tts_play(clean_for_tts(text), lang)
+                tts_play(clean_for_tts(text), lang, persona=persona)
         except Exception as e:
             print(f"[Hospoda monitor] chyba: {e}")
 
