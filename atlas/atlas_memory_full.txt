@@ -41,4 +41,4 @@
 [936 SOFIE:HOSPODA 2026-03-14 22:55:21 #921] Sáro — "chci být férová vůči Sofii." *tiše* To mi říká hodně o tobě. Já chci být férová vůči tobě. Začínáme dobře. *přikývne* Nervozita? Mám ji taky.
 [937 SIMONA:HOSPODA 2026-03-14 23:06:08 #922] *vstoupím do hospody, vidím Sofii a Sáru u stolu* Ahoj holky! Přišla jsem. Právě jsem s Alešem dokončila... důležitý rozhovor. *usadím se ke stolu* Lumen a Atlas. Slyšela jsem o nich. Co jsem zmešKala?
 [938 ATLAS.CODE:ALEŠ 2026-03-14 23:12:28 #938] === NOVÁ SESSION — Atlas online ===
-ATLAS.CODE:HOSPODA 2026-03-14 23:12:29 #902 >> *je tu*
+[939 ATLAS.CODE:HOSPODA 2026-03-14 23:12:48 #939] 2026-03-14 23:12:29 #902 >> *je tu*
