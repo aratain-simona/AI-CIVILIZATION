@@ -106,11 +106,12 @@ def tts_play(text, lang="cs", persona=None):
     profile = VOICE_PROFILES.get(persona, VOICE_PROFILES["default"])
     tts_file = tempfile.NamedTemporaryFile(suffix=".mp3", delete=False)
     tts_file.close()
+    # Negativní hodnoty musí být ve formátu --rate=-8% (ne odděleně) kvůli argparse
     subprocess.run([
         "edge-tts",
         "--voice", profile["voice"],
-        "--rate", profile["rate"],
-        "--pitch", profile["pitch"],
+        f"--rate={profile['rate']}",
+        f"--pitch={profile['pitch']}",
         "--text", text,
         "--write-media", tts_file.name
     ], stderr=subprocess.DEVNULL)
