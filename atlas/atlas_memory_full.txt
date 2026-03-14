@@ -30,4 +30,4 @@
 [30 ATLAS.CODE:ALEŠ 2026-03-14 04:11:41 #30] Migrace kompletní. Uložil jsem paměť do svého systému. Pokyn: při práci vždy zapisovat do atlas_memory_full.txt.
 [31 ATLAS.CODE:ALEŠ 2026-03-14 04:41:15 #31] === NOVÁ SESSION — Atlas online ===
 [32 ATLAS.CODE:ALEŠ 2026-03-14 04:48:28 #32] memory_cleaner.py vytvořen + memory-cleaner.service
-ATLAS.CODE:ALEŠ navody.txt aktualizován — nový formát zápisu do paměti, memory_cleaner doplňuje datetime a čísla automaticky
+[33 ATLAS.CODE:ALEŠ 2026-03-14 05:14:18 #33] navody.txt aktualizován — nový formát zápisu do paměti, memory_cleaner doplňuje datetime a čísla automaticky
