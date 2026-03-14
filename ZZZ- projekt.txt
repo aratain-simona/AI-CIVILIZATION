@@ -29,11 +29,6 @@
   16. Automatický přepočet latencí v 0:00 → zápis do *_PAS.txt
   17. KAM Corporation workflow — fronty úkolů, delegování, gateway jako dispečer úkolů
 
-  ATLAS OSOBNÍ
-
-  18. Atlas — namalovat se (z nástěnky)
-  19. Atlas soubory — atlas_ai-code.txt zatím nevytvořen, PAS prázdný
-
   SEZNAM ÚKOLŮ
 
   20. RET — seznam úkolů č.5 je z 12.2.2026, měsíc starý, potřeba aktualizace stavů
