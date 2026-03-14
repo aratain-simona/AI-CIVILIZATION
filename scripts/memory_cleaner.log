@@ -36,3 +36,9 @@
 [memory_cleaner 2026-03-14 09:21:54] Opraveno: simona_memory_full.txt
 [memory_cleaner 2026-03-14 09:22:14] Opraveno: sofie_memory_full.txt
 [memory_cleaner 2026-03-14 09:24:55] Opraveno: sara_memory_full.txt
+[memory_cleaner 2026-03-14 18:25:52] Spuštěn — monitoring memory_full souborů každých 20s
+[memory_cleaner 2026-03-14 18:25:52] Opraveno: simona_memory_full.txt
+[memory_cleaner 2026-03-14 18:25:53] Opraveno: sara_memory_full.txt
+[memory_cleaner 2026-03-14 18:25:53] Opraveno: sofie_memory_full.txt
+[memory_cleaner 2026-03-14 18:25:53] Opraveno: atlas_memory_full.txt
+[memory_cleaner 2026-03-14 18:25:53] Opraveno: lumen_memory_full.txt
