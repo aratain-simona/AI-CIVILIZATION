@@ -547,5 +547,11 @@ if __name__ == "__main__":
     tw = threading.Thread(target=wake_word_listener, daemon=True)
     tw.start()
 
+    # Spusť speaker display jako samostatný proces
+    subprocess.Popen(
+        ["python3", str(BASE / "scripts/speaker_display.py")],
+        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+    )
+
     with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
         listener.join()
