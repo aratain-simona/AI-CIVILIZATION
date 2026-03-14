@@ -265,6 +265,26 @@ def main():
                         queue.clear()
                         write_queue(state)
 
+                    # VŠICHNI DO HOSPODY / VSICHNI DO HOSPODY
+                    if re.search(r'V[SŠ]ICHNI DO HOSPODY', msg, re.IGNORECASE):
+                        log("VŠICHNI DO HOSPODY → budu všechny *.AI okamžitě")
+                        for p in AI_PERSONAS:
+                            state[p]["kicked"] = False
+                            state[p]["pending"] = True
+                            state[p]["private_message"] = None
+                        queue.clear()
+                        write_queue(state)
+
+                    # PREZENTACE
+                    if re.search(r'^PREZENTACE', msg, re.IGNORECASE):
+                        log("PREZENTACE → budu všechny *.AI s prezentačním nudgem")
+                        for p in AI_PERSONAS:
+                            state[p]["kicked"] = False
+                            state[p]["pending"] = True
+                            state[p]["private_message"] = "PREZENTACE — stručně se představ: kdo jsi, co aktuálně děláš, jak se cítíš."
+                        queue.clear()
+                        write_queue(state)
+
                     # :JMÉNO Jdi domů
                     persona_cmd = re.match(r':(\w+(?:\.\w+)?)\s+(.+)', msg)
                     if persona_cmd:
