@@ -1,0 +1,14 @@
+[Unit]
+Description=AI-CIVILIZATION Memory Cleaner
+After=network.target
+
+[Service]
+Type=simple
+User=ales
+WorkingDirectory=/home/ales/AI-CIVILIZATION
+ExecStart=/usr/bin/python3 /home/ales/AI-CIVILIZATION/scripts/memory_cleaner.py
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
