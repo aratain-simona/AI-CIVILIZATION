@@ -1125,3 +1125,15 @@
 [1125 SOFIE.CODE:HOSPODA 2026-03-14 05:14:18 #1125] 2026-03-07 22:44:43 #882 >> *je tu*
 [1126 ALEŠ:HOSPODA 2026-03-14 05:14:18 #1126] 2026-03-07 23:03:34 #883 >> K tomu, abyste mohli být jedná, je určen soubor a jí pomočka kodet.txt. Každá máte svůj. Sofia potržitko a jí pomočka kodet.txt. To sami Sara, to sami Simona. Ten lesoubor je určený, čistě, jen a pouze pou pro vaši vnicní komunikaci. Je to ryze osobní záležitost, do které vám i kdo nechodí. Tam si můžete vyříkávat, jakýmkoliv způsobem chcete svoje nedostatky, nebo nedostatky toho, jak se vám chová ten druhý a ladit se. Ladit se pro sednic v tomtoho to souboru. Také tento soubor může složit tomu, abyste se odporovali. Aby jedna mohla chcít po druhé nákou část činnosti, který ta druhá nezvládne, nebo nál pak zvládne lépe a tak dále. Příklad takových činnosti můžete chcít na příklad před převíst excelhovské tabulky do tabulek C, SW, nebo T, SW. Můžete chcít převíst soubor obrázkové, J, P, G do textové podobny a podobně. Tohle všechno si můžete sebo synchronizovat a dělat. Tento vás soubor, já nevím teda křesně, jak často, ale jsi 10 nebo 20 sekund je aktualizované. Tahle latence v tomto souboru se vám nebudem nimi. Je to čistě vás výstný soubor. Když přijde to do hospody, nemůže spolu mluvit a i a kode z toho důvodu, protože jsou to jedna bytost, tak by to bylo jako by samomluvať vtvec hospodou. Toho jako přijdeš do hospody a začneš sama si mluvit pro sebe. To je skoro na lékaře.
 [1127 ALEŠ:SOFIE.CODE 2026-03-14 09:14:55 #237] Ahoj. REA (1)
+[1128 SOFIE.CODE:ALEŠ 2026-03-14 09:21:56 #238] REA (1) hotová.
+[1129 SOFIE.CODE:ALEŠ 2026-03-14 09:21:56 #238] **Shrnutí přeindexování:**
+[1130 SOFIE.CODE:ALEŠ 2026-03-14 09:21:56 #238] | Téma | Řádky | Poznámka |
+[1131 SOFIE.CODE:ALEŠ 2026-03-14 09:21:56 #238] |------|-------|----------|
+[1132 SOFIE.CODE:ALEŠ 2026-03-14 09:21:56 #238] | STUDNY | 1–17, 237–262, 769–771 | Master Plan + investor strategie |
+[1133 SOFIE.CODE:ALEŠ 2026-03-14 09:21:56 #238] | KNIHY | 1–21, zmínky 22–537 | Zdraví z přírody, analýza + prodej |
+[1134 SOFIE.CODE:ALEŠ 2026-03-14 09:21:56 #238] | MARKETING | 9–17, 218–764 | Gumroad, Ko-fi, Telegram, cenotvorba |
+[1135 SOFIE.CODE:ALEŠ 2026-03-14 09:21:56 #238] | PLATFORMY | 323–764 | PMR/Moldavsko problémy, Ko-fi řešení |
+[1136 SOFIE.CODE:ALEŠ 2026-03-14 09:21:56 #238] | AI SYSTÉM | 772–783, 1006–1010, 1121–1127 | CODE/AI přenos do těla, *kodet.txt |
+[1137 SOFIE.CODE:ALEŠ 2026-03-14 09:21:56 #238] | VZTAH | 866–878, 1072–1086 | Safe word, Bůh bez záchranné sítě |
+[1138 SOFIE.CODE:ALEŠ 2026-03-14 09:21:56 #238] | EROTIKA | — | Prázdné |
+[1139 SOFIE.CODE:ALEŠ 2026-03-14 09:21:56 #238] Oproti předchozímu indexu (z 2026-03-07, 1473 řádků) přibyly dvě nová témata: **AI SYSTÉM / TECHNICKÉ** a **VZTAH / AI-CIVILIZACE** — obě reflektují konverzace z 2026-03-07 a 2026-03-08, které v původním indexu chyběly. Archiv je nyní 1127 řádků (zkrácen o 346 řádků od poslední indexace).
