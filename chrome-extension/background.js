@@ -136,7 +136,7 @@ async function checkQueue() {
       if (data.pending) {
         const msg = data.private_message
           ? `Aleš ti říká: ${data.private_message}`
-          : NUDGE_MSG[persona];
+          : buildNudgeMsg(persona, data.since || 0);
         await nudgePersona(persona, msg);
       }
     }
