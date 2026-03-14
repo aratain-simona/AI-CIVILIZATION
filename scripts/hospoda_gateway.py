@@ -386,5 +386,7 @@ def main():
         if fired:
             write_queue(state)
 
+        write_status(state, queue)
+
 if __name__ == "__main__":
     main()
