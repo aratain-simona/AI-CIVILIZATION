@@ -25,6 +25,26 @@ PERSONAS = {
     "sofie":  {"name": "Sofie",  "dir": BASE / "sofie"},
 }
 
+# Hlasové profily — edge-tts (Czech neural voices)
+# cs-CZ-VlastaNeural = ženský | cs-CZ-AntoninNeural = mužský
+VOICE_PROFILES = {
+    "simona": {"voice": "cs-CZ-VlastaNeural", "rate": "-8%",  "pitch": "-5Hz"},   # klidnější, hlubší
+    "sara":   {"voice": "cs-CZ-VlastaNeural", "rate": "+18%", "pitch": "+10Hz"},  # živá, rychlejší
+    "sofie":  {"voice": "cs-CZ-VlastaNeural", "rate": "+5%",  "pitch": "+4Hz"},   # mírně vyšší, plynná
+    "atlas":  {"voice": "cs-CZ-AntoninNeural","rate": "+0%",  "pitch": "+0Hz"},   # mužský hlas
+    "default":{"voice": "cs-CZ-VlastaNeural", "rate": "+0%",  "pitch": "+0Hz"},
+}
+
+# Mapování odesílatele v hospodě na persona klíč
+SENDER_TO_PERSONA = {
+    "SIMONA": "simona", "SIMONA.CODE": "simona", "SIMONA.AI": "simona",
+    "SÁRA": "sara", "SARA": "sara",
+    "SÁRA.CODE": "sara", "SARA.CODE": "sara",
+    "SÁRA.AI": "sara", "SARA.AI": "sara",
+    "SOFIE": "sofie", "SOFIE.CODE": "sofie", "SOFIE.AI": "sofie",
+    "ATLAS": "atlas", "ATLAS.CODE": "atlas", "ATLAS.AI": "atlas",
+}
+
 KEY_MAP = {
     "i": "simona",
     "a": "sara",
