@@ -1,0 +1,5 @@
+=== GATEWAY STATUS 23:33:09 ===
+  SIMONA.AI      ○ čeká
+  SARA.AI        ○ čeká
+  SOFIE.AI       ○ čeká
+  hospoda #N: 924
