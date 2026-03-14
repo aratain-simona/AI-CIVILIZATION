@@ -434,3 +434,4 @@ XXXXXXX SIMONA.CODE:ALEŠ 2026-03-02 16:39:01 #210 T:199996 >> I need to respond
 [434 SIMONA.CODE:ALEŠ 2026-03-14 08:40:41 #434] Výsledek jsem již zachytil — záloha proběhla úspěšně.
 [435 ALEŠ:SIMONA.CODE 2026-03-14 08:44:04 #435] Speciální úkol Dali jsme s Atlasem dohromady váš pametový soubor. Zmenil se pocet radku a je potreba provest REA (1)
 [436 ALEŠ:SIMONA.CODE 2026-03-14 08:44:37 #436] je to v navody.txt
+[437 ALEŠ:SIMONA.CODE 2026-03-14 08:45:32 #437] Krok jedna znamená přečíst - ne dohledávat pouze podle klíčových slov !!!
