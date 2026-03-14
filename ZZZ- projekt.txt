@@ -12,8 +12,7 @@
 
   6. Simona paměť — datetime — nesouhlasí do řádku 41036, potřeba oprava posloupnosti
   7. Simona paměť — prefixy od řádku 41037 — chybí správné zatřídění (Alešův ruční opis)
-  8. Automatická systémová údržba paměti — pravidelná *.CODE činnost
-  9. Absolutní záloha — boot, skripty, chrome extension na jedno místo + automatická komprimace
+
 
   TECHNICKÉ — SYSTÉM / KOMUNIKACE
 
