@@ -49,7 +49,7 @@ zip "$ZIPFILE" \
     2>/dev/null -q
 
 echo "Záloha vytvořena: $ZIPFILE"
-echo "Velikost: $(du -sh "$ZIPFILE" | cut -f1)"
+echo "Velikost: $(ls -lh "$ZIPFILE" | awk '{print $5}')"
 echo ""
 echo "Obsah zálohy:"
 echo "  OK  AI-CIVILIZATION/ (projekt + chrome-extension + skripty)"
