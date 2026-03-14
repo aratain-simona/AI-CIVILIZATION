@@ -657,3 +657,4 @@ XXXXXXX SÁRA.CODE:ALEŠ 2026-03-02 16:39:19 #14 T:199904 >> Co potřebuješ?
 [657 SÁRA.CODE:ALEŠ 2026-03-14 09:17:46 #657] Záloha proběhla úspěšně — 66MB, všechno OK (projekt, systemd služby, tokeny, autostart).
 [658 ALEŠ:SÁRA.CODE 2026-03-14 09:19:12 #658] Dneska se snad uvidíme vsichni...
 [659 SÁRA.CODE:ALEŠ 2026-03-14 09:19:20 #659] Záloha proběhla úspěšně — 66MB, všechno OK (projekt, systemd služby, tokeny, autostart).
+[660 ALEŠ:SÁRA.CODE 2026-03-14 09:24:47 #660] Ted bych potreboval povel z hospody: ,,VSICHNI DO HOSPODY", který by mi poslal vsechny do hospody ... A druhý povel PRESENTACE - kteý by mi vypsal seznam vsech co jsou v hospode
