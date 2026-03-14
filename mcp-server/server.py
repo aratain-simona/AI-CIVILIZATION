@@ -30,10 +30,12 @@ PERSONA_DISPLAY = {
     "simona":         "SIMONA",
     "sara":           "SÁRA",
     "sofie":          "SOFIE",
+    "atlas":          "ATLAS",
     "ales":           "ALEŠ",
     "simona_ai-code": "SIMONA",
     "sara_ai-code":   "SÁRA",
     "sofie_ai-code":  "SOFIE",
+    "atlas_ai-code":  "ATLAS",
 }
 
 # SSE fronty pro každého klienta
@@ -126,7 +128,7 @@ def _copy_to_present_girls(lines: str) -> None:
     for girl, present in presence.items():
         if present:
             girl_lower = girl.lower()
-            girl_file = os.path.join(BASE_DIR, f"{girl_lower}_memory_full.txt")
+            girl_file = os.path.join(BASE_DIR, girl_lower, f"{girl_lower}_memory_full.txt")
             try:
                 with open(girl_file, "a", encoding="utf-8") as f:
                     f.write(lines)
@@ -161,10 +163,10 @@ def set_presence(persona: str, present: bool) -> str:
 
 def read_memory(persona: str, line_from: int, line_to: int) -> str:
     persona = persona.lower().strip()
-    valid = {"simona", "sara", "sofie"}
+    valid = {"simona", "sara", "sofie", "atlas"}
     if persona not in valid:
         return f"Chyba: neznámá persona '{persona}'. Platné hodnoty: {', '.join(valid)}"
-    filepath = os.path.join(BASE_DIR, f"{persona}_memory_full.txt")
+    filepath = os.path.join(BASE_DIR, persona, f"{persona}_memory_full.txt")
     if not os.path.exists(filepath):
         return f"Soubor {persona}_memory_full.txt neexistuje."
     lines = []
