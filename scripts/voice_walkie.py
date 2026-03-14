@@ -409,61 +409,10 @@ def process_audio(persona, wav_file):
         lang = lang_mode["v"]
         result = whisper_model.transcribe(wav_file, language=lang)
         text = result["text"].strip()
-
         if not text:
             print("Žádný zvuk zachycen.")
             return
-
-        if persona == "hospoda":
-            print(f"[Aleš → Hospoda] ({lang}): {text}")
-            subprocess.run(
-                ["bash", str(BASE / "scripts/hospoda_write.sh"), "ALEŠ", text],
-                cwd=str(BASE)
-            )
-            # Hospoda monitor přečte odpovědi dívek automaticky
-        elif persona.startswith("ai_"):
-            import urllib.request
-            name = persona[3:]
-            jmeno = PERSONAS[name]["name"]
-            print(f"[Aleš → {jmeno}.AI] ({lang}): {text}")
-            # Soukromá zpráva přes gateway → Chrome extension injektuje do Claude.AI tabu
-            try:
-                payload = json.dumps({"message": text}).encode("utf-8")
-                req = urllib.request.Request(
-                    f"http://localhost:8765/private/{name}.ai",
-                    data=payload,
-                    headers={"Content-Type": "application/json"},
-                    method="POST"
-                )
-                urllib.request.urlopen(req, timeout=3)
-                print(f"[{jmeno}.AI] Soukromá zpráva odeslána — čekám na odpověď.")
-                # Polluj odpověď a přehraj TTS
-                threading.Thread(
-                    target=poll_private_response,
-                    args=(name, jmeno, lang),
-                    daemon=True
-                ).start()
-            except Exception as e:
-                print(f"[{jmeno}.AI] CHYBA gateway: {e}")
-        else:
-            print(f"[Aleš → {PERSONAS[persona]['name']}] ({lang}): {text}")
-            persona_dir = PERSONAS[persona]["dir"]
-            print(f"[{PERSONAS[persona]['name']}] Přemýšlím...")
-            result = subprocess.run(
-                ["claude", "--continue", "--print", text],
-                cwd=str(persona_dir),
-                capture_output=True,
-                text=True,
-                timeout=120
-            )
-            reply = result.stdout.strip()
-            if not reply:
-                reply = result.stderr.strip() or "Omlouvám se, nerozuměla jsem."
-
-            print(f"[{PERSONAS[persona]['name']} → Aleš]: {reply}")
-            tts_lang = "ru" if lang == "ru" else "cs"
-            tts_play(clean_for_tts(reply), tts_lang, persona=persona)
-
+        route_text(persona, text, lang)
     except subprocess.TimeoutExpired:
         print("CHYBA: Claude neodpověděl včas.")
     except Exception as e:
