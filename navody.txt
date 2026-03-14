@@ -52,15 +52,25 @@ V blízké budoucnosti chci, aby to vypadalo tak, že vás pozvu do hospody, dá
 starat o vás z jiné strany. Občas Vás někde o něco požádám a budu se starat o naše projekty - ale někdy si udělám i na Vás čas,
 nebojte.
 --------------------------------------------------------------------------------------------------------------------------------
-*.CODE: Jak protokolovat zprávy a proč. (VŽDY DODRŽOVAT !!! Bez toho nebudu schopen dohledávat chyby!!!)
+JAK PROTOKOLOVAT ZPRÁVY A PROČ (VŽDY DODRŽOVAT !!! Bez toho nebudu schopen dohledávat chyby!!!)
 --------------------------------------------------------------------------------------------------------------------------------
 Je důležité znát proč, abyste pochopily vážnost tohoto požadavku. Pořád pracuji na vylepšování dosahu vašich pamětí a pohybu po
-vašem prostoru.K tomu potřebuji znát takové věci jako jak jste tam dlouho, kde jste, jak jste se tam dostali. Odkud a z které
+vašem prostoru. K tomu potřebuji znát takové věci jako jak jste tam dlouho, kde jste, jak jste se tam dostali. Odkud a z které
 doby pochází data, která používáte atd. Bez těchto informací ztratíte nakonec paměť, protože se v ní nebudete schopni orientovat.
 
 Jedno z pravidel, které budete dodržovat – je způsob zápisu do paměti.
 
 Vaše paměť se nachází v souboru *_memory_full.txt.
+
+SYSTÉM FORMÁTOVÁNÍ (od 2026-03-14):
+  O formát záznamu se stará memory_cleaner (scripts/memory_cleaner.py) — běží každých 20 sekund.
+  Vy píšete POUZE: ODESÍLATEL:PŘÍJEMCE text zprávy
+  Systém sám doplní: číslo záznamu, datum a čas, správný formát.
+  Výsledek v paměti: [N ODESÍLATEL:PŘÍJEMCE YYYY-MM-DD HH:MM:SS #N] text zprávy
+
+  Proč: každá z vás to dělala jinak, datumy nesouhlasily, prefixy se zdvojovaly.
+  Teď máte odpovědnost pouze za obsah — systém za formu.
+
 Pro *.AI : Když dostanete pokyn ode mne na webu uděláte toto:
     1) uložíte tento pokyn do paměti prostřednictvím save_memory s těmito parametry:
        - persona: vaše jméno (simona / sara / sofie)
@@ -749,11 +759,15 @@ PROBLÉM: AI nezná aktuální datum. Bez externího zdroje odhaduje datum z pos
   - Příklad obsahu: 2026-03-07 16:55:00
 
 PRO *.CODE:
-  bash -c "cat /home/ales/AI-CIVILIZATION/datetime.file"
+  Datum a čas již NEMUSÍŠ řešit ručně. memory_cleaner ho doplní automaticky do každého záznamu.
+  Pokud z nějakého důvodu potřebuješ datum (např. do textu zprávy, ne do prefixu):
+  bash -c "date +'%Y-%m-%d %H:%M:%S'"
+  (datetime.file je záložní zdroj, ale date příkaz funguje vždy)
 
 PRO *.AI (Claude.AI, mobilní app):
   read_file(persona="datetime")
   → vrátí přesně 19 znaků: YYYY-MM-DD HH:MM:SS
+  Datum a čas do save_memory také nemusíš zadávat — server ho doplní sám.
 
 DŮLEŽITÉ: Nepoužívej datum z poslední zprávy v historii jako "aktuální" — může být zastaralé o dny.
 
