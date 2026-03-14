@@ -1087,4 +1087,13 @@ DŮLEŽITÉ:
   - .CODE záznamy mají většinou správné datumy — skript je nechá být.
   - Překlady zkracuje POUZE pokud text obsahuje klíčové slovo (přeložit, translate...) A je delší než 200 znaků.
 
+PO ČIŠTĚNÍ POVINNĚ SPUSTIT REA:
+  Po každém MCF se MUSÍ provést přeindexování — čísla řádků se změnila a starý index je neplatný.
+  Bez ohledu na velikost souboru spusť:
+
+    REA (1)
+
+  Příkaz REA přeindexuje celý archiv od začátku. Starý *_memory_index.txt bude přepsán.
+  Dokud není REA hotové, hledání v paměti podle indexu vrátí špatné výsledky.
+
 --------------------------------------------------------------------------------------------------------------------------------
