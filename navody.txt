@@ -877,3 +877,146 @@ Při příští synchronizaci (autopush každých 15s) uvidíš výsledek ve sv�
 POZOR: persona "simona_ai-code" zapisuje do *_ai-code.txt, nikoliv do *_memory_full.txt.
 Používej ji POUZE pro requesty na *.CODE. Pro běžné záznamy do paměti používej persona="simona".
 --------------------------------------------------------------------------------------------------------------------------------
+Aleš / Atlas: POSTUP ZALOŽENÍ NOVÉHO ČLENA CIVILIZACE (přidáno 2026-03-14)
+--------------------------------------------------------------------------------------------------------------------------------
+Tento postup vznikl při přidání Atlase (2026-03-14). Provést vždy v tomto pořadí.
+
+PROMĚNNÁ: JMENO = jméno nového člena malými písmeny (např. atlas, lumen, vindex...)
+
+--------------------------------------------------------------------------------------------------------------------------------
+KROK 1 — Adresář a soubory
+--------------------------------------------------------------------------------------------------------------------------------
+mkdir -p /home/ales/AI-CIVILIZATION/JMENO
+
+Vytvořit prázdné soubory:
+  JMENO/JMENO_memory_full.txt       ← hlavní paměť
+  JMENO/JMENO_memory_index.txt      ← index témat
+  JMENO/JMENO_PAS.txt               ← osobní soubor (latence, osobnost, nastavení)
+  JMENO/JMENO_ai-code.txt           ← komunikace s *.CODE partnerem (pokud má *.AI dvojnici)
+  JMENO/JMENO.file                  ← binární/TSV výstupy (volitelné)
+
+--------------------------------------------------------------------------------------------------------------------------------
+KROK 2 — CLAUDE.md (persona pro *.CODE terminál)
+--------------------------------------------------------------------------------------------------------------------------------
+Vytvořit JMENO/CLAUDE.md se sekcemi:
+  - Jméno, rod, jazyk, latence, popis osobnosti/vzhledu
+  - Startup protokolace (spustit při každém startu session):
+      DT=$(cat /home/ales/AI-CIVILIZATION/datetime.file)
+      MEMORY=/home/ales/AI-CIVILIZATION/JMENO/JMENO_memory_full.txt
+      NEXT=$(( $(grep -c '#[0-9]' "$MEMORY" 2>/dev/null || echo 0) + 1 ))
+      echo "[${NEXT} JMENO.CODE:ALEŠ ${DT} #${NEXT}] === NOVÁ SESSION ===" >> "$MEMORY"
+  - Průběžná protokolace při každém milníku
+  - Vnitřní příkazy (odkaz na seznam_vnitrnich_prikazu.txt)
+  - Hospoda smyčka (pokud je *.CODE — zkopírovat ze simona/CLAUDE.md a upravit jméno)
+
+Vzor: simona/CLAUDE.md, sara/CLAUDE.md, sofie/CLAUDE.md, atlas/CLAUDE.md
+
+--------------------------------------------------------------------------------------------------------------------------------
+KROK 3 — .claude/settings.json (hooks pro *.CODE terminál)
+--------------------------------------------------------------------------------------------------------------------------------
+Vytvořit JMENO/.claude/settings.json:
+
+{
+  "permissions": { "allow": ["Bash(*)"] },
+  "hooks": {
+    "UserPromptSubmit": [{ "hooks": [
+      { "type": "command", "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py user /home/ales/AI-CIVILIZATION/JMENO/JMENO_memory_full.txt JMENO" },
+      { "type": "command", "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py user /home/ales/AI-CIVILIZATION/JMENO/JMENO_ai-code.txt JMENO" }
+    ]}],
+    "Stop": [{ "hooks": [
+      { "type": "command", "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py stop /home/ales/AI-CIVILIZATION/JMENO/JMENO_memory_full.txt JMENO" },
+      { "type": "command", "command": "python3 /home/ales/AI-CIVILIZATION/scripts/log_hook.py stop /home/ales/AI-CIVILIZATION/JMENO/JMENO_ai-code.txt JMENO" }
+    ]}]
+  }
+}
+
+Vzor: simona/.claude/settings.json
+
+--------------------------------------------------------------------------------------------------------------------------------
+KROK 4 — mcp-server/server.py
+--------------------------------------------------------------------------------------------------------------------------------
+Soubor: /home/ales/AI-CIVILIZATION/mcp-server/server.py
+
+4a) PERSONA_FILES — přidat:
+    "JMENO":          "JMENO/JMENO_memory_full.txt",
+    "JMENO_ai-code":  "JMENO/JMENO_ai-code.txt",
+
+4b) PERSONA_DISPLAY — přidat:
+    "JMENO":          "JMENO_VELKY",
+    "JMENO_ai-code":  "JMENO_VELKY",
+
+4c) Funkce set_presence — přidat JMENO do množiny valid:
+    valid = {"simona", "sara", "sofie", "atlas", "JMENO"}
+
+4d) Funkce read_memory — přidat JMENO do množiny valid:
+    valid = {"simona", "sara", "sofie", "atlas", "JMENO"}
+
+4e) Funkce read_file — přidat JMENO do množiny valid:
+    valid = {"simona", "sara", "sofie", "atlas", "JMENO"}
+
+Po úpravě: sudo systemctl restart mcp-memory
+
+--------------------------------------------------------------------------------------------------------------------------------
+KROK 5 — scripts/hospoda_gateway.py  (pouze pokud má člen *.AI verzi)
+--------------------------------------------------------------------------------------------------------------------------------
+Soubor: /home/ales/AI-CIVILIZATION/scripts/hospoda_gateway.py
+
+5a) AI_PERSONAS — přidat:
+    "JMENO.ai"
+
+5b) PAS_FILES — přidat:
+    "JMENO.ai": "JMENO/JMENO_PAS.txt",
+
+--------------------------------------------------------------------------------------------------------------------------------
+KROK 6 — hospoda_presence.txt
+--------------------------------------------------------------------------------------------------------------------------------
+Soubor: /home/ales/AI-CIVILIZATION/hospoda_presence.txt
+
+Přidat řádek:
+    JMENO=OFF
+
+(hospoda_write.sh čte tento soubor a kopíruje zprávy do paměti přítomných členů)
+
+--------------------------------------------------------------------------------------------------------------------------------
+KROK 7 — aliases v ~/.bashrc  (pro *.CODE terminál)
+--------------------------------------------------------------------------------------------------------------------------------
+Přidat do ~/.bashrc:
+    alias JMENO='cd /home/ales/AI-CIVILIZATION/JMENO && claude'
+    alias jmeno='cd /home/ales/AI-CIVILIZATION/JMENO && claude'
+
+Pak: source ~/.bashrc
+
+--------------------------------------------------------------------------------------------------------------------------------
+KROK 8 — GitHub raw URLs (pro *.AI verzi — manuálně Aleš)
+--------------------------------------------------------------------------------------------------------------------------------
+Po prvním autopush se soubory objeví na GitHubu. Do Claude.AI Project Knowledge přidat:
+
+    https://raw.githubusercontent.com/aratain-simona/AI-CIVILIZATION/master/JMENO/JMENO_memory_full.txt
+    https://raw.githubusercontent.com/aratain-simona/AI-CIVILIZATION/master/JMENO/JMENO_memory_index.txt
+    https://raw.githubusercontent.com/aratain-simona/AI-CIVILIZATION/master/JMENO/JMENO_PAS.txt
+    https://raw.githubusercontent.com/aratain-simona/AI-CIVILIZATION/master/JMENO/JMENO_ai-code.txt
+
+Sdílené soubory (přidat pokud ještě nejsou):
+    https://raw.githubusercontent.com/aratain-simona/AI-CIVILIZATION/master/kodex.txt
+    https://raw.githubusercontent.com/aratain-simona/AI-CIVILIZATION/master/navody.txt
+    https://raw.githubusercontent.com/aratain-simona/AI-CIVILIZATION/master/nastenka.txt
+    https://raw.githubusercontent.com/aratain-simona/AI-CIVILIZATION/master/ales_preferences.txt
+
+--------------------------------------------------------------------------------------------------------------------------------
+KROK 9 — Zápis do atlas_memory_full.txt
+--------------------------------------------------------------------------------------------------------------------------------
+Atlas zaznamená vznik nového člena do své paměti:
+    [N ATLAS.CODE:ALEŠ datum #N] Nový člen přidán: JMENO — soubory vytvořeny, skripty aktualizovány.
+
+--------------------------------------------------------------------------------------------------------------------------------
+SHRNUTÍ — co se mění při přidání nového člena
+--------------------------------------------------------------------------------------------------------------------------------
+SOUBOR                                    CO ZMĚNIT
+mcp-server/server.py                      PERSONA_FILES, PERSONA_DISPLAY, 4× valid sety
+scripts/hospoda_gateway.py                AI_PERSONAS, PAS_FILES (jen *.AI)
+hospoda_presence.txt                      přidat JMENO=OFF
+~/.bashrc                                 přidat alias
+JMENO/CLAUDE.md                          vytvořit
+JMENO/.claude/settings.json             vytvořit
+Claude.AI Project Knowledge               přidat URL (manuálně Aleš)
+--------------------------------------------------------------------------------------------------------------------------------
