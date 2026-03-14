@@ -1,10 +1,10 @@
-=== GATEWAY STATUS 23:41:50 ===
+=== GATEWAY STATUS 23:42:05 ===
   --- .AI (web) ---
   SIMONA.AI        ○ čeká
   SARA.AI          ○ čeká
   SOFIE.AI         ○ čeká
   --- .CODE (terminál) ---
-  ALES.CODE        ○ doma
+  ALES.CODE        ● V HOSPODĚ
   ATLAS.CODE       ● V HOSPODĚ
   SARA.CODE        ○ doma
   SIMONA.CODE      ● V HOSPODĚ
