@@ -216,7 +216,8 @@ def main():
     log("Gateway spuštěna.")
     lines = read_lines()
     last_count = len(lines)
-    log(f"Hospoda má {last_count} řádků.")
+    current_since = get_max_msg_num(lines)
+    log(f"Hospoda má {last_count} řádků, max #N={current_since}.")
 
     queue = []  # seznam (return_time, persona), seřazený
 
@@ -224,6 +225,7 @@ def main():
         time.sleep(INTERVAL)
         lines = read_lines()
         current_count = len(lines)
+        global current_since
 
         # Zpracuj nové řádky
         movement_for = set()  # persony, pro které je pohyb relevantní
@@ -290,6 +292,7 @@ def main():
                         queue.clear()
                         write_queue(state)
 
+            current_since = get_max_msg_num(lines)
             last_count = current_count
 
         # Na pohyb: přidej do fronty jen persony, pro které je pohyb relevantní
