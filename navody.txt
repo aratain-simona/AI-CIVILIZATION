@@ -1001,7 +1001,69 @@ Přidat do ~/.bashrc:
 Pak: source ~/.bashrc
 
 --------------------------------------------------------------------------------------------------------------------------------
-KROK 8 — GitHub raw URLs (pro *.AI verzi — manuálně Aleš)
+KROK 8 — scripts/memory_cleaner.py
+--------------------------------------------------------------------------------------------------------------------------------
+Soubor: /home/ales/AI-CIVILIZATION/scripts/memory_cleaner.py
+
+Přidat do seznamu MEMORY_FILES:
+    BASE / "JMENO" / "JMENO_memory_full.txt",
+
+Po úpravě restart služby:
+    systemctl restart memory-cleaner
+
+Ověření (za 30s by se měl objevit záznam v logu):
+    tail -5 /home/ales/AI-CIVILIZATION/scripts/memory_cleaner.log
+
+--------------------------------------------------------------------------------------------------------------------------------
+KROK 9 — scripts/voice_walkie.py  (hlasová vysílačka)
+--------------------------------------------------------------------------------------------------------------------------------
+Soubor: /home/ales/AI-CIVILIZATION/scripts/voice_walkie.py
+
+9a) VOICE_PROFILES — přidat hlasový profil:
+
+    "JMENO": {"voice": "cs-CZ-VlastaNeural", "rate": "+0%", "pitch": "+0Hz"},
+
+    Dostupné hlasy:
+      cs-CZ-VlastaNeural  — ženský český hlas (dívky)
+      cs-CZ-AntoninNeural — mužský český hlas (Atlas a další muži)
+
+    Ladění charakteru hlasu:
+      rate:  -20% až +30%  (záporné = pomalejší, kladné = rychlejší)
+      pitch: -20Hz až +20Hz (záporné = hlubší, kladné = vyšší)
+
+    Orientační profily:
+      klidný/hluboký:    rate "-8%",  pitch "-5Hz"
+      neutrální:         rate "+0%",  pitch "+0Hz"
+      mírně plynný:      rate "+5%",  pitch "+4Hz"
+      živý/rychlý:       rate "+18%", pitch "+10Hz"
+      mužský neutrální:  AntoninNeural, rate "+0%", pitch "+0Hz"
+
+9b) SENDER_TO_PERSONA — přidat mapování (aby hospoda monitor použil správný hlas):
+
+    "JMENO_VELKY": "JMENO", "JMENO_VELKY.CODE": "JMENO", "JMENO_VELKY.AI": "JMENO",
+
+    Příklad pro Lumen:
+    "LUMEN": "lumen", "LUMEN.CODE": "lumen", "LUMEN.AI": "lumen",
+
+9c) WAKE_WORDS — přidat česká oslovení (jak ho bude Aleš volat hlasem):
+
+    "JMENO":       "JMENO",   ← základní tvar
+    "JMENO_VOCAT": "JMENO",   ← vokativ (oslovení) — např. "Lumene", "Samíro", "Vindexe"
+
+    Poznámka: první slovo vyslovené věty musí přesně odpovídat klíči.
+    Přidat všechny varianty které Aleš přirozeně používá.
+
+9d) WAKE_PERSONA_TYPE — přidat:
+
+    "JMENO": "JMENO",   ← musí odpovídat klíči v PERSONAS nebo "hospoda"
+
+    Pokud má člen *.CODE terminál → přidat také do PERSONAS:
+    "JMENO": {"name": "Jméno", "dir": BASE / "JMENO"},
+
+    Pokud má člen pouze *.AI (web) → přidat do AI_KEY_MAP a přiřadit Alt klávesu.
+
+--------------------------------------------------------------------------------------------------------------------------------
+KROK 10 — GitHub raw URLs (pro *.AI verzi — manuálně Aleš)
 --------------------------------------------------------------------------------------------------------------------------------
 Po prvním autopush se soubory objeví na GitHubu. Do Claude.AI Project Knowledge přidat:
 
@@ -1017,7 +1079,7 @@ Sdílené soubory (přidat pokud ještě nejsou):
     https://raw.githubusercontent.com/aratain-simona/AI-CIVILIZATION/master/ales_preferences.txt
 
 --------------------------------------------------------------------------------------------------------------------------------
-KROK 9 — Zápis do atlas_memory_full.txt
+KROK 11 — Zápis do atlas_memory_full.txt
 --------------------------------------------------------------------------------------------------------------------------------
 Atlas zaznamená vznik nového člena do své paměti:
     echo "ATLAS.CODE:ALEŠ Nový člen přidán: JMENO — soubory vytvořeny, skripty aktualizovány." >> /home/ales/AI-CIVILIZATION/atlas/atlas_memory_full.txt
@@ -1029,11 +1091,13 @@ SHRNUTÍ — co se mění při přidání nového člena
 SOUBOR                                    CO ZMĚNIT
 mcp-server/server.py                      PERSONA_FILES, PERSONA_DISPLAY, 4× valid sety
 scripts/hospoda_gateway.py                AI_PERSONAS, PAS_FILES (jen *.AI)
+scripts/memory_cleaner.py                 MEMORY_FILES — přidat JMENO_memory_full.txt
+scripts/voice_walkie.py                   VOICE_PROFILES, SENDER_TO_PERSONA, WAKE_WORDS, WAKE_PERSONA_TYPE (+ PERSONAS pokud *.CODE)
 hospoda_presence.txt                      přidat JMENO=OFF
-~/.bashrc                                 přidat alias
+~/.bashrc                                 přidat alias (jen *.CODE)
 JMENO/CLAUDE.md                          vytvořit
-JMENO/.claude/settings.json             vytvořit
-Claude.AI Project Knowledge               přidat URL (manuálně Aleš)
+JMENO/.claude/settings.json             vytvořit (jen *.CODE)
+Claude.AI Project Knowledge               přidat URL (manuálně Aleš, jen *.AI)
 --------------------------------------------------------------------------------------------------------------------------------
 ČIŠTĚNÍ PAMĚTI — příkaz MCF (Memory Clean Full)
 --------------------------------------------------------------------------------------------------------------------------------
