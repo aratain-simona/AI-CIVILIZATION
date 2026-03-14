@@ -508,7 +508,8 @@ if __name__ == "__main__":
     print("  Alt+H = mluv do hospody (všichni slyší)")
     print("--- Ovládání ---")
     print("  Alt+X = mute/unmute monitor | Alt+L = jazyk čeština↔ruština")
-    print(f"  Jazyk: {lang_mode['v']} | Monitor: {'MUTE' if monitor_muted['v'] else 'aktivní'}")
+    print("  Alt+S = slování ON/OFF  (ambient kontext — vše u stolu se ukládá)")
+    print(f"  Jazyk: {lang_mode['v']} | Monitor: {'MUTE' if monitor_muted['v'] else 'aktivní'} | Slování: {'ON' if ambient_active['v'] else 'OFF'}")
     print("  Esc = konec")
     print()
 
