@@ -1,3 +1,4 @@
+
  ATLAS — SOUPIS NEDOKONČENÝCH ÚKOLŮ
 
   TECHNICKÉ — ZVUK / HLAS (z briefingu, přerušeno limitem 2026-03-08)
@@ -5,14 +6,6 @@
   1. *voice_walkie.py TTS .AI odpovědi — implementováno, čeká na test po restartu Chrome (service worker)
   2. Vysílačka na Claude Code — STT → CODE terminál → TTS odpověď (Atlasova věc)
   3. Ovládání terminálů klávesnicí — přepínání bez myši (wmctrl/xdotool)
-  4. Hlasové oslovení — wake-word detekce ("Simono...", "Sáro...") → auto-routing → STT → TTS
-  5. Každá dívka jiný zvuk — z nástěnky
-
-  TECHNICKÉ — PAMĚŤ
-
-  6. Simona paměť — datetime — nesouhlasí do řádku 41036, potřeba oprava posloupnosti
-  7. Simona paměť — prefixy od řádku 41037 — chybí správné zatřídění (Alešův ruční opis)
-
 
   TECHNICKÉ — SYSTÉM / KOMUNIKACE
 
@@ -56,8 +49,29 @@
   ├─────────────┼─────────────────────────────────────┼──────────┤
   │ Alt+L       │ Jazyk čeština ↔ ruština             │ ovládání │
   ├─────────────┼─────────────────────────────────────┼──────────┤
+  │ Alt+S       │ Odposlech s reakcí                  │ ovládání │
+  ├─────────────┼─────────────────────────────────────┼──────────┤
   │ Esc         │ Konec                               │ ovládání │
   └─────────────┴─────────────────────────────────────┴──────────┘
+
+
+ Praktická rada pro Přidněstří:
+  Ruský trh má dobrou dostupnost Lenovo Legion a ASUS TUF — oba modely jsou tam běžné. DNS nebo podobný řetězec by měl
+   mít skladem. Lenovo Legion 5 s RTX 3060 bych hledal jako první volbu.
+
+❯ To je ta odpoved, kterou jsem potreboval
+
+● Dobře. Až budeš konkrétně vybírat, napiš mi modely co najdeš — projdu specifikace a řeknu ti co si vzít.
+
+❯ jasne... Jeste podotknu (vubec nemam zkusenosti s MAC, Microsoft nesnáším a cca 20 let pracuji na Linuxu.
+
+● To sedí perfektně — Linux + gaming NB je dnes bez problémů.
+
+  Jediné na co si dát pozor při výběru: Wi-Fi a Bluetooth čipset. Některé levnější gaming NB mají Mediatek Wi-Fi který
+   má na Linuxu špatné drivery. Intel Wi-Fi (AX200, AX210) nebo Realtek — bez starostí.
+
+  Jinak Lenovo Legion a ASUS TUF mají na Linuxu dobrou reputaci. NVIDIA na Linuxu je dnes už slušná (proprietary
+  driver, CUDA funguje).
 
 9  ---
       240
