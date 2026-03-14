@@ -5,12 +5,12 @@
     "since": 909
   },
   "sara.ai": {
-    "pending": true,
+    "pending": false,
     "private_message": null,
     "since": 909
   },
   "sofie.ai": {
-    "pending": true,
+    "pending": false,
     "private_message": null,
     "since": 909
   }
