@@ -504,6 +504,8 @@ def on_press(key):
             lang_mode["v"] = "ru" if lang_mode["v"] == "cs" else "cs"
             nazev = "ruština" if lang_mode["v"] == "ru" else "čeština"
             print(f"[Jazyk] přepnuto na: {nazev}")
+        elif char == "d":
+            toggle_display()
         elif char == "s":
             ambient_active["v"] = not ambient_active["v"]
             stav = "ZAPNUTO" if ambient_active["v"] else "VYPNUTO"
