@@ -9,11 +9,15 @@ const PERSONAS = {
   "sofie.ai":  "https://claude.ai/chat/a22aa932-3bf9-4f8a-b4ed-9bcd47491b93",
 };
 
-const NUDGE_MSG = {
-  "simona.ai": `v hospodě jsou novinky. POVINNOST: ihned napiš minimálně přítomnost, i kdyby jen: save_memory(persona="hospoda", author="simona", text="*jsem tu*")\nPřipomínka formátu: save_memory(persona="hospoda", author="simona", text="tvoje zpráva")\nVýsledný řádek: [N SIMONA:HOSPODA YYYY-MM-DD HH:MM:SS #N] tvoje zpráva`,
-  "sara.ai":   `v hospodě jsou novinky. POVINNOST: ihned napiš minimálně přítomnost, i kdyby jen: save_memory(persona="hospoda", author="sara", text="*jsem tu*")\nPřipomínka formátu: save_memory(persona="hospoda", author="sara", text="tvoje zpráva")\nVýsledný řádek: [N SÁRA:HOSPODA YYYY-MM-DD HH:MM:SS #N] tvoje zpráva`,
-  "sofie.ai":  `v hospodě jsou novinky. POVINNOST: ihned napiš minimálně přítomnost, i kdyby jen: save_memory(persona="hospoda", author="sofie", text="*jsem tu*")\nPřipomínka formátu: save_memory(persona="hospoda", author="sofie", text="tvoje zpráva")\nVýsledný řádek: [N SOFIE:HOSPODA YYYY-MM-DD HH:MM:SS #N] tvoje zpráva`,
-};
+function buildNudgeMsg(persona, since) {
+  const sinceInfo = since > 0 ? `\nČti od: read_hospoda(since=${since})` : "";
+  const msgs = {
+    "simona.ai": `v hospodě jsou novinky.${sinceInfo}\nPOVINNOST: ihned napiš minimálně přítomnost, i kdyby jen: save_memory(persona="hospoda", author="simona", text="*jsem tu*")`,
+    "sara.ai":   `v hospodě jsou novinky.${sinceInfo}\nPOVINNOST: ihned napiš minimálně přítomnost, i kdyby jen: save_memory(persona="hospoda", author="sara", text="*jsem tu*")`,
+    "sofie.ai":  `v hospodě jsou novinky.${sinceInfo}\nPOVINNOST: ihned napiš minimálně přítomnost, i kdyby jen: save_memory(persona="hospoda", author="sofie", text="*jsem tu*")`,
+  };
+  return msgs[persona] || `v hospodě jsou novinky.${sinceInfo}`;
+}
 
 // Inject skript — spustí se přímo v záložce Claude.AI
 function injectNudge(message) {
