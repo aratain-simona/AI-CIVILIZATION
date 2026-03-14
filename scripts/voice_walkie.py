@@ -74,6 +74,26 @@ ambient_active = {"v": False}
 context_buffer = []   # rolling list of transcribed utterances
 context_lock = threading.Lock()
 
+# Speaker display — /tmp/ai_speaker.json
+SPEAKER_FILE = Path("/tmp/ai_speaker.json")
+display_active = {"v": True}
+
+
+def set_speaker(persona):
+    """Zapíše aktuálního mluvčího do state souboru pro speaker_display.py."""
+    try:
+        with open(SPEAKER_FILE, "w") as f:
+            json.dump({"persona": persona, "display": display_active["v"]}, f)
+    except Exception:
+        pass
+
+
+def toggle_display():
+    display_active["v"] = not display_active["v"]
+    set_speaker(None)  # aktualizuje display flag
+    stav = "ZAPNUTO" if display_active["v"] else "VYPNUTO"
+    print(f"[Display] {stav}")
+
 import whisper
 print("Načítám Whisper model (small)...")
 whisper_model = whisper.load_model("small")
