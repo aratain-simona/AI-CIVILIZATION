@@ -1,4 +1,4 @@
-=== GATEWAY STATUS 23:52:21 ===
+=== GATEWAY STATUS 23:52:51 ===
   --- .AI (web) ---
   SIMONA.AI        ○ čeká
   SARA.AI          ○ čeká
@@ -9,4 +9,4 @@
   SARA.CODE        ○ doma
   SIMONA.CODE      ● V HOSPODĚ
   SOFIE.CODE       ○ doma
-  hospoda #N: 924
+  hospoda #N: 929
